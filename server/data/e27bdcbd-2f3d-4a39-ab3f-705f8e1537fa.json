@@ -1,0 +1,278 @@
+{
+    "entityName": "P Bhd and S Bhd",
+    "topic": "Consolidated Financial Statements",
+    "data": [
+        {
+            "id": 1,
+            "type": "journal",
+            "name": "General Journal",
+            "entries": [
+                {
+                    "date": "2022",
+                    "center": true
+                },
+                {
+                    "date": "Jan 1",
+                    "particular": "Property, Plant and Machinery",
+                    "debit": 237000,
+                    "credit": 0
+                },
+                {
+                    "date": "",
+                    "particular": "Inventory",
+                    "debit": 54000,
+                    "credit": 0
+                },
+                {
+                    "date": "",
+                    "particular": "Trade Receivables",
+                    "debit": 26400,
+                    "credit": 0
+                },
+                {
+                    "date": "",
+                    "particular": "Trade Payables",
+                    "debit": 0,
+                    "credit": 39000
+                },
+                {
+                    "date": "",
+                    "particular": "Business Purchase",
+                    "debit": 0,
+                    "credit": 200000
+                },
+                {
+                    "date": "",
+                    "particular": "Goodwill",
+                    "debit": 0,
+                    "credit": 78400
+                },
+                {
+                    "date": "1",
+                    "particular": "Business Purchase",
+                    "debit": 200000,
+                    "credit": 0
+                },
+                {
+                    "date": "",
+                    "particular": "Vendor - S Bhd",
+                    "debit": 0,
+                    "credit": 200000
+                },
+                {
+                    "isNew": true,
+                    "date": "",
+                    "particular": "",
+                    "debit": 0,
+                    "credit": 0
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "type": "ledger",
+            "nature": "TMP",
+            "name": "Business Purchase",
+            "entries": [
+                {
+                    "date": "Jan 1",
+                    "particular": "Property, Plant and Machinery",
+                    "side": "credit",
+                    "amount": 237000
+                },
+                {
+                    "date": "1",
+                    "particular": "Inventory",
+                    "side": "credit",
+                    "amount": 54000
+                },
+                {
+                    "date": "1",
+                    "particular": "Trade Receivables",
+                    "side": "credit",
+                    "amount": 26400
+                },
+                {
+                    "date": "Jan 1",
+                    "particular": "Trade Payables",
+                    "side": "debit",
+                    "amount": 39000
+                },
+                {
+                    "date": "1",
+                    "particular": "Vendor - S Bhd",
+                    "side": "debit",
+                    "amount": 200000
+                },
+                {
+                    "date": "1",
+                    "particular": "Retained Profits - Gain On Bargain Purchase",
+                    "side": "debit",
+                    "amount": 78400
+                },
+                {
+                    "date": "1",
+                    "particular": "TOTAL",
+                    "side": "debit"
+                },
+                {
+                    "date": "",
+                    "particular": "",
+                    "side": "debit",
+                    "amount": 0
+                },
+                {
+                    "date": "",
+                    "particular": "",
+                    "side": "credit",
+                    "amount": 0
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "type": "ledger",
+            "nature": "L",
+            "name": "Vendor - S Bhd",
+            "entries": [
+                {
+                    "date": "",
+                    "particular": "",
+                    "side": "debit",
+                    "amount": 0
+                },
+                {
+                    "date": "",
+                    "particular": "",
+                    "side": "credit",
+                    "amount": 0
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "type": "statement",
+            "name": "Consolidated Statement of Comprehensive Income",
+            "columnCount": 2,
+            "entries": [
+                {
+                    "particular": "Revenue",
+                    "amount": [
+                        0,
+                        200000
+                    ]
+                },
+                {
+                    "particular": "Cost of Sales",
+                    "amount": [
+                        0,
+                        -120000
+                    ],
+                    "underline": [
+                        false,
+                        true
+                    ]
+                },
+                {
+                    "particular": "Gross Profit",
+                    "amount": [
+                        0,
+                        80000
+                    ]
+                },
+                {
+                    "particular": "Distribution Costs",
+                    "amount": [
+                        15000,
+                        0
+                    ]
+                },
+                {
+                    "particular": "Administrative Expenses",
+                    "amount": [
+                        25000,
+                        -40000
+                    ],
+                    "underline": [
+                        true,
+                        true
+                    ]
+                },
+                {
+                    "particular": "",
+                    "amount": [
+                        0,
+                        40000
+                    ]
+                },
+                {
+                    "particular": "Other Income",
+                    "particularUnderline": true,
+                    "amount": [
+                        0,
+                        2000
+                    ],
+                    "underline": [
+                        false,
+                        true
+                    ]
+                },
+                {
+                    "particular": "Operating Profit",
+                    "amount": [
+                        0,
+                        42000
+                    ]
+                },
+                {
+                    "particular": "Finance Costs",
+                    "amount": [
+                        0,
+                        -10000
+                    ],
+                    "underline": [
+                        false,
+                        true
+                    ]
+                },
+                {
+                    "particular": "Profit Before Tax",
+                    "amount": [
+                        0,
+                        32000
+                    ]
+                },
+                {
+                    "particular": "Income Tax Expense",
+                    "amount": [
+                        0,
+                        -8000
+                    ],
+                    "underline": [
+                        false,
+                        true
+                    ]
+                },
+                {
+                    "particular": "Profit for the Year",
+                    "bold": true,
+                    "amount": [
+                        0,
+                        24000
+                    ],
+                    "underline": [
+                        false,
+                        "double"
+                    ]
+                },
+                {
+                    "particular": "",
+                    "amount": [
+                        0,
+                        0
+                    ]
+                }
+            ]
+        }
+    ]
+}
