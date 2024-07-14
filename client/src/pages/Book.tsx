@@ -23,8 +23,11 @@ function Book() {
     fetch(`http://localhost:3000/${id}`)
       .then((res) => res.json())
       .then((data) => {
-        setEverything(data);
-        setData(data.data[0]);
+        console.log(data.data);
+        if (data.status === "success") {
+          setEverything(data.data);
+          setData(data.data.data[0] || null);
+        }
       });
   }, []);
 
@@ -40,57 +43,58 @@ function Book() {
         setCurrentDocument={setData}
       />
       <div className="w-3/4 h-full overflow-y-auto p-8 flex flex-col">
-        {(() => {
-          switch (data.type) {
-            case "journal":
-              return (
-                <Journal
-                  key={`doc-${data.id}`}
-                  data={data.entries}
-                  setData={(newData) => {
-                    const newEverything = { ...everything };
-                    newEverything.data.find(
-                      (item) => item.id === data.id
-                    ).entries = newData;
-                    setEverything(newEverything);
-                  }}
-                />
-              );
-            case "ledger":
-              return (
-                <Ledger
-                  key={`doc-${data.id}`}
-                  data={data.entries}
-                  name={data.name}
-                  setData={(newData) => {
-                    const newEverything = { ...everything };
-                    newEverything.data.find(
-                      (item) => item.id === data.id
-                    ).entries = newData;
-                    setEverything(newEverything);
-                  }}
-                />
-              );
-            case "statement":
-              return (
-                <Statement
-                  key={`doc-${data.id}`}
-                  data={data.entries}
-                  name={data.name}
-                  columnCount={data.columnCount}
-                  setData={(newData) => {
-                    const newEverything = { ...everything };
-                    newEverything.data.find(
-                      (item) => item.id === data.id
-                    ).entries = newData;
-                    setEverything(newEverything);
-                  }}
-                />
-              );
-            default:
-              return <h1>Default</h1>;
-          }
-        })()}
+        {data !== null &&
+          (() => {
+            switch (data.type) {
+              case "journal":
+                return (
+                  <Journal
+                    key={`doc-${data.id}`}
+                    data={data.entries}
+                    setData={(newData) => {
+                      const newEverything = { ...everything };
+                      newEverything.data.find(
+                        (item) => item.id === data.id
+                      ).entries = newData;
+                      setEverything(newEverything);
+                    }}
+                  />
+                );
+              case "ledger":
+                return (
+                  <Ledger
+                    key={`doc-${data.id}`}
+                    data={data.entries}
+                    name={data.name}
+                    setData={(newData) => {
+                      const newEverything = { ...everything };
+                      newEverything.data.find(
+                        (item) => item.id === data.id
+                      ).entries = newData;
+                      setEverything(newEverything);
+                    }}
+                  />
+                );
+              case "statement":
+                return (
+                  <Statement
+                    key={`doc-${data.id}`}
+                    data={data.entries}
+                    name={data.name}
+                    columnCount={data.columnCount}
+                    setData={(newData) => {
+                      const newEverything = { ...everything };
+                      newEverything.data.find(
+                        (item) => item.id === data.id
+                      ).entries = newData;
+                      setEverything(newEverything);
+                    }}
+                  />
+                );
+              default:
+                return <h1>Default</h1>;
+            }
+          })()}
       </div>
     </>
   );

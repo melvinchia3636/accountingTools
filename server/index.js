@@ -1,26 +1,28 @@
 const express = require("express");
 const cors = require("cors");
+const fs = require("fs");
 
 const app = express();
 
 app.use(cors());
+app.use(express.json());
 
 app.get("/list", (req, res) => {
-  const data = require("fs")
-    .readdirSync("./data")
-    .map((file) => {
-      const data = JSON.parse(
-        require("fs").readFileSync(`./data/${file}`, "utf8")
-      );
+  const data = fs.readdirSync("./data").map((file) => {
+    const data = JSON.parse(fs.readFileSync(`./data/${file}`, "utf8"));
 
-      return {
-        id: file.replace(".json", ""),
-        name: data.entityName,
-        topic: data.topic,
-      };
-    });
+    return {
+      id: file.replace(".json", ""),
+      code: data.code,
+      name: data.entityName,
+      topic: data.topic,
+    };
+  });
 
-  res.json(data);
+  res.json({
+    status: "success",
+    data,
+  });
 });
 
 app.get("/:id", (req, res) => {
@@ -33,10 +35,25 @@ app.get("/:id", (req, res) => {
   }
 
   const data = JSON.parse(
-    require("fs").readFileSync(`./data/${req.params.id}.json`, "utf8")
+    fs.readFileSync(`./data/${req.params.id}.json`, "utf8")
   );
 
-  res.json(data);
+  res.json({
+    status: "success",
+    data,
+  });
+});
+
+app.post("/create", (req, res) => {
+  const id = require("uuid").v4();
+  const { code, name, topic } = req.body;
+
+  fs.writeFileSync(
+    `./data/${id}.json`,
+    JSON.stringify({ code, entityName: name, topic, data: [] }, null, 2)
+  );
+
+  res.json({ status: "success", data: id });
 });
 
 app.listen(3000, () => {

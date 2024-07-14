@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Book from "./pages/Book";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Route path="/book/:id" element={<Book />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer theme="dark" position="bottom-center" />
     </main>
   );
 }
