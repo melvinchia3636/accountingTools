@@ -119,6 +119,52 @@ app.post("/create/journal/:bookId", (req, res) => {
   res.json({ status: "success" });
 });
 
+app.post("/create/ledger/:bookId", (req, res) => {
+  const { bookId } = req.params;
+  const { name, nature } = req.body;
+
+  if (
+    !bookId.match(
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
+    )
+  ) {
+    return res.status(400).send("Invalid book ID");
+  }
+
+  if (!["A", "L", "E", "INC", "EXP"].includes(nature)) {
+    return res.status(400).send("Invalid type");
+  }
+
+  const book = JSON.parse(
+    fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
+  );
+
+  book.data.push({
+    id: book.data[book.data.length - 1]?.id + 1 || 1,
+    type: "ledger",
+    name,
+    nature,
+    entries: [
+      {
+        date: "",
+        particular: "",
+        side: "debit",
+        amount: 0,
+      },
+      {
+        date: "",
+        particular: "",
+        side: "credit",
+        amount: 0,
+      },
+    ],
+  });
+
+  fs.writeFileSync(`./data/${bookId}.json`, JSON.stringify(book, null, 2));
+
+  res.json({ status: "success" });
+});
+
 app.post("/create/statement/:bookId", (req, res) => {
   const { bookId } = req.params;
   const { name, subtitle, columnCount } = req.body;
@@ -164,6 +210,27 @@ app.delete("/delete/book/:id", (req, res) => {
   }
 
   fs.unlinkSync(`./data/${req.params.id}.json`);
+
+  res.json({ status: "success" });
+});
+
+app.post("/save/:id", (req, res) => {
+  if (
+    !req.params.id.match(
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
+    )
+  ) {
+    return res.status(400).send("Invalid ID");
+  }
+
+  if (!fs.existsSync(`./data/${req.params.id}.json`)) {
+    return res.status(404).send("Book not found");
+  }
+
+  fs.writeFileSync(
+    `./data/${req.params.id}.json`,
+    JSON.stringify(req.body.data, null, 2)
+  );
 
   res.json({ status: "success" });
 });

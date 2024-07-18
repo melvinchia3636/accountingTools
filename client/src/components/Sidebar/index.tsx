@@ -36,7 +36,7 @@ function Sidebar({
               to="/"
               className="w-8 h-8 transition-all rounded-md hover:bg-zinc-100/10 hover:text-zinc-200 text-zinc-500 flex items-center justify-center"
             >
-              <Icon icon="uil:arrow-left" className="w-6 h-6" />
+              <Icon icon="uil:arrow-left" className="w-6 h-6 shrink-0" />
             </Link>
             <div>
               <h1 className="text-lg font-medium text-zinc-200 flex items-center">
@@ -52,7 +52,8 @@ function Sidebar({
               </MenuButton>
               <MenuItems
                 transition
-                className="absolute w-52 rounded-lg right-0 top-10 border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+                anchor="bottom end"
+                className="rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:12px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
               >
                 <MenuItem>
                   <button
@@ -196,7 +197,8 @@ function Sidebar({
             </MenuButton>
             <MenuItems
               transition
-              className="absolute -translate-y-[135%] origin-top-left w-full rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+              anchor="top start"
+              className="w-[var(--button-width)] rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:16px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
             >
               {[
                 { name: "Journal", icon: "uil:file-alt" },
@@ -241,12 +243,14 @@ function Sidebar({
         onClose={() => {
           toggleCreateLedgerModal(false);
         }}
+        reloadBook={reloadEverything}
       />
       <CreateStatementModal
         isOpen={createStatementModalOpen}
         onClose={() => {
           toggleCreateStatementModal(false);
         }}
+        reloadBook={reloadEverything}
       />
       <DeleteBookConfirmationModal
         isOpen={deleteBookConfirmationModalOpen}

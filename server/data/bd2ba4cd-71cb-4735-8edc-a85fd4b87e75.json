@@ -11,11 +11,55 @@
       "columnCount": 2,
       "entries": [
         {
-          "particular": "",
+          "particular": "Sales",
           "amount": [
             0,
             0
           ]
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Net Sales",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
         }
       ]
     },

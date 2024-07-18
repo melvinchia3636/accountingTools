@@ -38,8 +38,8 @@ function CreateJournalModal({
         if (data.status === "success") {
           onClose();
           setTimeout(() => {
+            toast.success("Journal created successfully");
             reloadBook();
-            toast.success("Book created successfully");
           }, 700);
         }
       });

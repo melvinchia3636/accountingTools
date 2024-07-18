@@ -106,7 +106,7 @@ function ModifyBookModal({
                   className="text-xl flex gap-2 items-center text-zinc-200 font-medium"
                 >
                   <Icon icon="tabler:pencil-plus" className="w-6 h-6" />
-                  {openType === "update" ? "update" : "Create"} Book
+                  {openType === "update" ? "Update" : "Create"} Book
                 </DialogTitle>
                 <p className="mt-2 text-zinc-500">
                   {openType === "update"

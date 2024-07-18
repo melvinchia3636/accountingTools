@@ -1,14 +1,85 @@
-import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxOption,
+  ComboboxOptions,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Field,
+  Label,
+} from "@headlessui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React from "react";
+import React, { useState } from "react";
+import Input from "../Input";
+import CreateButton from "../CreateButton";
+import { toast } from "react-toastify";
+import { useParams } from "react-router-dom";
+
+const NATURES = [
+  { id: "A", name: "Asset" },
+  { id: "L", name: "Liability" },
+  { id: "E", name: "Equity" },
+  { id: "IN", name: "Income" },
+  { id: "EX", name: "Expense" },
+];
 
 function CreateLedgerModal({
   isOpen,
   onClose,
+  reloadBook,
 }: {
   isOpen: boolean;
   onClose: () => void;
+  reloadBook: () => void;
 }): React.ReactElement {
+  const { id } = useParams();
+  const [name, setName] = useState("");
+  const [selectedNature, setSelectedNature] = useState<{
+    id: string;
+    name: string;
+  } | null>(null);
+  const [query, setQuery] = useState("");
+
+  const filteredNatures =
+    query === ""
+      ? NATURES
+      : NATURES.filter((type) => {
+          return type.name.toLowerCase().includes(query.toLowerCase());
+        });
+
+  function onSubmit() {
+    if (
+      name.trim() === "" ||
+      !selectedNature ||
+      ![...NATURES.map((type) => type.id)].includes(selectedNature?.id)
+    ) {
+      toast.error("Please fill all the fields");
+      return;
+    }
+
+    fetch(`http://localhost:3000/create/ledger/${id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        nature: selectedNature.id,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          onClose();
+          setTimeout(() => {
+            toast.success("Ledger created successfully");
+            reloadBook();
+          }, 700);
+        }
+      });
+  }
+
   return (
     <Dialog
       open={isOpen}
@@ -42,6 +113,51 @@ function CreateLedgerModal({
                 onClick={onClose}
               />
             </div>
+
+            <div className="flex flex-col gap-6 mt-6">
+              <Input
+                name="Ledger Name"
+                icon="tabler:square-letter-t"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <Field className="relative w-full min-w-[200px] h-14 group">
+                <div className="absolute grid w-5 h-5 place-items-center text-zinc-500 group-focus-within:text-zinc-100 top-1/2 right-5 -translate-y-[55%]">
+                  <Icon icon={"tabler:report-money"} className="w-6 h-6" />
+                </div>
+                <Combobox
+                  value={selectedNature}
+                  immediate
+                  onChange={(type) => setSelectedNature(type)}
+                  onClose={() => setQuery("")}
+                >
+                  <ComboboxInput
+                    displayValue={(type) => type?.name}
+                    onChange={(event) => setQuery(event.target.value)}
+                    className="w-full h-full px-3 py-3 font-sans text-base font-normal transition-all bg-transparent border rounded-md peer text-zinc-200 outline outline-0 focus:outline-0 disabled:bg-zinc-50 disabled:border-0 placeholder-shown:border-[1.5px] placeholder-shown:border-zinc-700 placeholder-shown:border-t-zinc-700 focus:border-2 border-t-transparent focus:border-t-transparent border-zinc-700 focus:border-zinc-200"
+                    placeholder=" "
+                  />
+                  <ComboboxOptions
+                    anchor="bottom"
+                    className="z-10 w-[var(--input-width)] mt-2 bg-zinc-800 rounded-md shadow-lg"
+                  >
+                    {filteredNatures.map((type) => (
+                      <ComboboxOption
+                        key={type.id}
+                        value={type}
+                        className="px-4 py-4 text-zinc-200 hover:bg-zinc-700"
+                      >
+                        {type.name}
+                      </ComboboxOption>
+                    ))}
+                  </ComboboxOptions>
+                </Combobox>
+                <Label className="flex w-full h-full select-none pointer-events-none absolute left-0 font-normal !overflow-visible truncate peer-placeholder-shown:text-zinc-500 leading-[0.8] peer-focus:font-medium peer-focus:leading-[0.8] peer-disabled:text-transparent peer-disabled:peer-placeholder-shown:text-zinc-500 transition-all -top-[5px] peer-placeholder-shown:text-base text-[14px] peer-focus:text-[14px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[4.1] text-zinc-500 peer-focus:text-zinc-200 before:border-zinc-700 peer-focus:before:!border-zinc-200 after:border-zinc-700 peer-focus:after:!border-zinc-200">
+                  Ledger Nature
+                </Label>
+              </Field>
+            </div>
+            <CreateButton action="Create" onSubmit={onSubmit} />
           </DialogPanel>
         </div>
       </div>

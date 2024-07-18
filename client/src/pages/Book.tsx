@@ -6,6 +6,7 @@ import Statement from "../components/Statement";
 import { useNavigate, useParams } from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import ModifyBookModal from "../components/Modals/ModifyBookModal";
+import { toast } from "react-toastify";
 
 function Book(): React.ReactElement {
   const [everything, setEverything] = useState<any>("loading");
@@ -26,6 +27,29 @@ function Book(): React.ReactElement {
         }
       });
   }
+
+  useEffect(() => {
+    document.onkeydown = (e) => {
+      if (e.key === "s" && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault();
+        fetch(`http://localhost:3000/save/${id}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            data: everything,
+          }),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.status === "success") {
+              toast.success("Saved successfully");
+            }
+          });
+      }
+    };
+  }, [everything, id]);
 
   useEffect(() => {
     if (

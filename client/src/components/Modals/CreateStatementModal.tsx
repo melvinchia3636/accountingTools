@@ -9,9 +9,11 @@ import { toast } from "react-toastify";
 function CreateStatementModal({
   isOpen,
   onClose,
+  reloadBook,
 }: {
   isOpen: boolean;
   onClose: () => void;
+  reloadBook: () => void;
 }): React.ReactElement {
   const [name, setName] = useState("");
   const [subtitle, setSubtitle] = useState("");
@@ -40,7 +42,8 @@ function CreateStatementModal({
         if (data.status === "success") {
           onClose();
           setTimeout(() => {
-            window.location.reload();
+            toast.success("Statement created successfully");
+            reloadBook();
           }, 700);
         }
       });
