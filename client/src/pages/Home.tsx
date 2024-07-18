@@ -2,20 +2,13 @@ import { Button } from "@headlessui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CreateBookModal from "../components/Modals/CreateBookModal";
-import { toast } from "react-toastify";
+import ModifyBookModal from "../components/Modals/ModifyBookModal";
 
 function Home() {
   const [data, setData] = useState<any>(null);
-  const [isCreateBookModalOpen, toggleCreateBookModal] = useState(false);
-
-  function open() {
-    toggleCreateBookModal(true);
-  }
-
-  function close() {
-    toggleCreateBookModal(false);
-  }
+  const [modifyBookModalOpenType, setModifyBookModalOpenType] = useState<
+    "create" | "update" | null
+  >(null);
 
   function fetchData() {
     setData(null);
@@ -48,7 +41,9 @@ function Home() {
           All Books
         </h1>
         <Button
-          onClick={open}
+          onClick={() => {
+            setModifyBookModalOpenType("create");
+          }}
           className="px-6 py-3 bg-zinc-200 hover:bg-zinc-300 transition-all text-zinc-900 rounded-md flex items-center font-medium gap-2 justify-center"
         >
           <Icon icon="uil:plus" className="w-5 h-5" />
@@ -59,9 +54,9 @@ function Home() {
         {data.map((item: any) => (
           <li
             key={item.id}
-            className="border-2 border-zinc-800 shadow-md hover:bg-zinc-100/5 transition-all rounded-md p-4"
+            className="border-2 border-zinc-800 shadow-md hover:bg-zinc-100/5 transition-all rounded-md"
           >
-            <Link to={`/book/${item.id}`}>
+            <Link to={`/book/${item.id}`} className="p-4 block">
               <div className="flex items-center w-full justify-between">
                 <h2 className="text-xl font-medium">{item.name}</h2>
                 <code className="text-zinc-500">{item.code}</code>
@@ -71,15 +66,13 @@ function Home() {
           </li>
         ))}
       </ul>
-      <CreateBookModal
-        isOpen={isCreateBookModalOpen}
+      <ModifyBookModal
+        openType={modifyBookModalOpenType ? "create" : null}
         onClose={() => {
-          close();
-          setTimeout(() => {
-            fetchData();
-            toast.success("Book created successfully");
-          }, 1000);
+          setModifyBookModalOpenType(null);
         }}
+        reloadBooks={fetchData}
+        existingBook={null}
       />
     </div>
   );

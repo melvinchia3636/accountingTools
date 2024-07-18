@@ -61,6 +61,7 @@
             "id": 4,
             "type": "statement",
             "name": "Consolidated Statement of Comprehensive Income",
+            "subtitle": "For the year ended 31 December 2023",
             "columnCount": 2,
             "entries": [
                 {
@@ -136,7 +137,7 @@
                     "particular": "Finance Costs",
                     "amount": [
                         0,
-                        -10000
+                        -7000
                     ],
                     "underline": [
                         false,
@@ -173,6 +174,22 @@
                         "double"
                     ]
                 },
+                {
+                    "particular": "",
+                    "amount": [
+                        0,
+                        0
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "type": "statement",
+            "name": "Statement of Financial Position",
+            "subtitle": "As at 31 December 2017",
+            "columnCount": 2,
+            "entries": [
                 {
                     "particular": "",
                     "amount": [
