@@ -99,8 +99,7 @@ function CreateStatementModal({
               <Input
                 name="Number of Columns"
                 icon="uil:grid"
-                type="number"
-                value={columnCount === 0 ? "" : columnCount}
+                value={columnCount + ""}
                 onChange={(e) => setColumnCount(parseInt(e.target.value) || 0)}
               />
             </div>

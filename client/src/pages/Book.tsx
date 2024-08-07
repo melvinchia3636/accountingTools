@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 
 function Book(): React.ReactElement {
   const [everything, setEverything] = useState<any>("loading");
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null);
   const { id } = useParams();
   const navigate = useNavigate();
   const [modifyBookModalOpenType, setModifyBookModalOpenType] = useState<
@@ -102,6 +102,8 @@ function Book(): React.ReactElement {
                     key={`doc-${data.id}`}
                     data={data.entries}
                     name={data.name}
+                    companyName={everything.entityName}
+                    columnCount={data.column}
                     setData={(newData) => {
                       const newEverything = { ...everything };
                       newEverything.data.find(

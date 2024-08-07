@@ -153,6 +153,33 @@ function Statement({
                         setData(newData);
                       }
                     }}
+                    onKeyDown={(e) => {
+                      if (e.key === "u" && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault();
+                        const underline = (
+                          item.underline || Array(columnCount).fill(false)
+                        ).map((item, i) =>
+                          columnIndex === i
+                            ? item === true
+                              ? "double"
+                              : item === "double"
+                              ? false
+                              : true
+                            : item
+                        );
+
+                        const newData = data.map((item, i) =>
+                          rowIndex === i
+                            ? {
+                                ...item,
+                                underline,
+                              }
+                            : item
+                        );
+
+                        setData(newData);
+                      }
+                    }}
                     onChange={(e) => {
                       const newData = [...data];
                       newData[rowIndex].amount = newData[rowIndex].amount.map(

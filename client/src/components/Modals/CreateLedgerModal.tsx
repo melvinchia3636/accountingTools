@@ -39,6 +39,7 @@ function CreateLedgerModal({
     id: string;
     name: string;
   } | null>(null);
+  const [columnCount, setColumnCount] = useState(1);
   const [query, setQuery] = useState("");
 
   const filteredNatures =
@@ -52,7 +53,8 @@ function CreateLedgerModal({
     if (
       name.trim() === "" ||
       !selectedNature ||
-      ![...NATURES.map((type) => type.id)].includes(selectedNature?.id)
+      ![...NATURES.map((type) => type.id)].includes(selectedNature?.id) ||
+      columnCount === 0
     ) {
       toast.error("Please fill all the fields");
       return;
@@ -66,6 +68,7 @@ function CreateLedgerModal({
       body: JSON.stringify({
         name,
         nature: selectedNature.id,
+        columnCount,
       }),
     })
       .then((res) => res.json())
@@ -156,6 +159,12 @@ function CreateLedgerModal({
                   Ledger Nature
                 </Label>
               </Field>
+              <Input
+                name="Number of Columns"
+                icon="uil:grid"
+                value={columnCount === 0 ? "" : columnCount + ""}
+                onChange={(e) => setColumnCount(parseInt(e.target.value) || 0)}
+              />
             </div>
             <CreateButton action="Create" onSubmit={onSubmit} />
           </DialogPanel>

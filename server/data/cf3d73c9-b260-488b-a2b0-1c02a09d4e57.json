@@ -1,0 +1,393 @@
+{
+  "code": "UEB-2020-2",
+  "entityName": "Peh, Pak, Wee",
+  "topic": "Partnership Withdrawal and Admission",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Revaluation",
+      "nature": "E",
+      "column": 1,
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Inventory",
+          "side": "debit",
+          "amount": [
+            365
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Allowance for Doubtful Debts",
+          "side": "debit",
+          "amount": [
+            255
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Partners' Capital - Profit on Revaluation",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Peh (1/2 * RM 16,780)",
+          "side": "debit",
+          "amount": [
+            8390
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Pak (1/5 * RM 16,780)",
+          "side": "debit",
+          "amount": [
+            3356
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Wee (3/10 * RM 16,780)",
+          "side": "debit",
+          "amount": [
+            5034
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Building",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Plant and Machinery",
+          "side": "credit",
+          "amount": [
+            5500
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            6900
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Goodwill",
+      "nature": "A",
+      "column": 1,
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            25000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Partners' Capital",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Peh (RM5,000 x 1/2)",
+          "side": "debit",
+          "amount": [
+            2500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Pak (RM 5,000 x 1/5)",
+          "side": "debit",
+          "amount": [
+            1000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Wee (RM 5,000 x 3/10)",
+          "side": "debit",
+          "amount": [
+            1500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            15000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Partners' Capital",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Peh",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Wee",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Wong",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            15000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

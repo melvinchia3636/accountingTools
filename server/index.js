@@ -121,7 +121,7 @@ app.post("/create/journal/:bookId", (req, res) => {
 
 app.post("/create/ledger/:bookId", (req, res) => {
   const { bookId } = req.params;
-  const { name, nature } = req.body;
+  const { name, nature, columnCount } = req.body;
 
   if (
     !bookId.match(
@@ -135,6 +135,10 @@ app.post("/create/ledger/:bookId", (req, res) => {
     return res.status(400).send("Invalid type");
   }
 
+  if (columnCount < 1) {
+    return res.status(400).send("Invalid column count");
+  }
+
   const book = JSON.parse(
     fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
   );
@@ -144,18 +148,19 @@ app.post("/create/ledger/:bookId", (req, res) => {
     type: "ledger",
     name,
     nature,
+    column: columnCount,
     entries: [
       {
         date: "",
         particular: "",
         side: "debit",
-        amount: 0,
+        amount: Array(columnCount).fill(0),
       },
       {
         date: "",
         particular: "",
         side: "credit",
-        amount: 0,
+        amount: Array(columnCount).fill(0),
       },
     ],
   });
