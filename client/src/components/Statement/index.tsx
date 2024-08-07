@@ -1,19 +1,26 @@
 import React from "react";
+import HeaderInput from "../HeaderInput";
 
 function Statement({
   data,
+  headers,
   companyName,
   name,
   columnCount,
+  topTextColumnCount,
   subtitle,
   setData,
+  setHeaders,
 }: {
   data: any[];
+  headers: string[][];
   companyName: string;
   name: string;
   columnCount: number;
+  topTextColumnCount: number;
   subtitle: string;
   setData: React.Dispatch<React.SetStateAction<any[]>>;
+  setHeaders: React.Dispatch<React.SetStateAction<any[]>>;
 }) {
   return (
     <div className="w-full flex-1 mt-8 overflow-y-auto">
@@ -23,18 +30,25 @@ function Statement({
       <h3 className="text-2xl text-center font-semibold mt-2">{name}</h3>
       <p className="text-xl text-center text-zinc-500 mt-2">{subtitle}</p>
       <table className="w-full border-2 mt-8 border-zinc-700 table-fixed">
-        <thead className="border-2 border-zinc-700">
-          <tr className="text-zinc-500">
-            <th className="py-2 border-r-2 w-full border-zinc-700"></th>
-            {Array.from({ length: columnCount }).map((_, index) => (
-              <th
-                key={index}
-                className={`py-2 border-r-2 w-3/12 border-zinc-700`}
-              >
-                RM
-              </th>
-            ))}
-          </tr>
+        <thead className="font-semibold text-center">
+          {Array.from({ length: topTextColumnCount }).map((_, i) => (
+            <tr key={i} className="text-zinc-500 border-2 border-zinc-700">
+              <td className="py-2 border-r-2 w-full border-zinc-700"></td>
+              {Array.from({ length: columnCount }).map((_, j) => (
+                <td
+                  key={j}
+                  className={`py-2 border-r-2 w-3/12 border-zinc-700`}
+                >
+                  <HeaderInput
+                    headers={headers}
+                    setHeaders={setHeaders}
+                    i={i}
+                    j={j}
+                  />
+                </td>
+              ))}
+            </tr>
+          ))}
         </thead>
         <tbody>
           {data.map((item, rowIndex) => (

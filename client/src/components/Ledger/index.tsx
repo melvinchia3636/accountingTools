@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import HeaderInput from "../HeaderInput";
 
 interface ILedgerEntry {
   date: string;
@@ -9,10 +10,13 @@ interface ILedgerEntry {
 
 function Ledger({
   data,
+  headers,
   name,
   companyName,
   setData,
   columnCount,
+  setHeaders,
+  topTextColumnCount,
 }: {
   data: {
     date: string;
@@ -20,10 +24,15 @@ function Ledger({
     side: "debit" | "credit";
     amount: number[];
   }[];
+  headers: { debit: string[]; credit: string[] }[];
   companyName: string;
   name: string;
   setData: React.Dispatch<React.SetStateAction<ILedgerEntry[]>>;
+  setHeaders: React.Dispatch<
+    React.SetStateAction<{ debit: string[]; credit: string[] }[]>
+  >;
   columnCount: number;
+  topTextColumnCount: number;
 }) {
   const [debitEntries, setDebitEntries] = useState<ILedgerEntry[]>(
     data.filter((item) => item.side === "debit")
@@ -129,31 +138,48 @@ function Ledger({
       </h3>
       <h4 className="text-lg text-center mt-8 font-medium">{name}</h4>
       <table className="w-full border-2 border-zinc-700 mt-2 table-fixed">
-        <thead className="border-2 border-zinc-700">
-          <tr className="text-zinc-500">
-            <th className="py-2 border-r-2 w-24 border-zinc-700"></th>
-            <th className="py-2 w-full border-r-2 border-zinc-700"></th>
-            {Array(columnCount)
-              .fill(0)
-              .map((_, i) => (
-                <th
-                  className={`py-2 w-4/12 ${
-                    i === columnCount - 1
-                      ? "border-r-[6px] border-double"
-                      : "border-r-2"
-                  } border-zinc-700`}
-                >
-                  RM
-                </th>
-              ))}
-            <th className="py-2 border-r-2 w-24 border-zinc-700"></th>
-            <th className="py-2 w-full border-r-2 border-zinc-700"></th>
-            {Array(columnCount)
-              .fill(0)
-              .map(() => (
-                <th className="py-2 w-4/12 border-r-2 border-zinc-700">RM</th>
-              ))}
-          </tr>
+        <thead>
+          {Array.from({ length: topTextColumnCount }).map((_, i) => (
+            <tr key={i} className="text-zinc-500 border-2 border-zinc-700">
+              <td className="py-2 border-r-2 w-24 border-zinc-700"></td>
+              <td className="py-2 w-full border-r-2 border-zinc-700"></td>
+              {Array(columnCount)
+                .fill(0)
+                .map((_, j) => (
+                  <th
+                    key={j}
+                    className={`py-2 w-4/12 ${
+                      j === columnCount - 1
+                        ? "border-r-[6px] border-double"
+                        : "border-r-2"
+                    } border-zinc-700`}
+                  >
+                    <HeaderInput
+                      headers={headers}
+                      setHeaders={setHeaders}
+                      i={i}
+                      j={j}
+                      side="debit"
+                    />
+                  </th>
+                ))}
+              <td className="py-2 border-r-2 w-24 border-zinc-700"></td>
+              <td className="py-2 w-full border-r-2 border-zinc-700"></td>
+              {Array(columnCount)
+                .fill(0)
+                .map((_, j) => (
+                  <th className="py-2 w-4/12 border-r-2 border-zinc-700">
+                    <HeaderInput
+                      headers={headers}
+                      setHeaders={setHeaders}
+                      i={i}
+                      j={j}
+                      side="credit"
+                    />
+                  </th>
+                ))}
+            </tr>
+          ))}
         </thead>
         <tbody>
           {Array.from({ length: maxEntries }).map(

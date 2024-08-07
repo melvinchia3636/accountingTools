@@ -91,7 +91,7 @@ function CreateJournalModal({
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
-            <CreateButton onSubmit={onSubmit} />
+            <CreateButton action="Create" onSubmit={onSubmit} />
           </DialogPanel>
         </div>
       </div>

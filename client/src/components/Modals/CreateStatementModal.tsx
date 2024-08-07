@@ -18,10 +18,16 @@ function CreateStatementModal({
   const [name, setName] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [columnCount, setColumnCount] = useState(1);
+  const [topTextColumnCount, setTopTextColumnCount] = useState(1);
   const { id } = useParams();
 
   function onSubmit() {
-    if (name.trim() === "" || columnCount === 0 || subtitle.trim() === "") {
+    if (
+      name.trim() === "" ||
+      columnCount <= 0 ||
+      subtitle.trim() === "" ||
+      topTextColumnCount <= 0
+    ) {
       toast.error("Please fill all the fields");
       return;
     }
@@ -35,6 +41,7 @@ function CreateStatementModal({
         name,
         subtitle,
         columnCount,
+        topTextColumnCount,
       }),
     })
       .then((res) => res.json())
@@ -101,6 +108,14 @@ function CreateStatementModal({
                 icon="uil:grid"
                 value={columnCount + ""}
                 onChange={(e) => setColumnCount(parseInt(e.target.value) || 0)}
+              />
+              <Input
+                name="Number of Top Text Columns"
+                icon="tabler:square-t"
+                value={topTextColumnCount + ""}
+                onChange={(e) =>
+                  setTopTextColumnCount(parseInt(e.target.value) || 0)
+                }
               />
             </div>
             <CreateButton action="Create" onSubmit={onSubmit} />

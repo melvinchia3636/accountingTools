@@ -9,6 +9,17 @@
       "name": "Revaluation",
       "nature": "E",
       "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
       "entries": [
         {
           "date": "2020",
@@ -44,26 +55,10 @@
         },
         {
           "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
           "particular": "- Peh (1/2 * RM 16,780)",
           "side": "debit",
           "amount": [
             8390
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
           ]
         },
         {
@@ -156,22 +151,6 @@
         },
         {
           "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
           "particular": "TOTAL",
           "side": "credit",
           "amount": [
@@ -194,6 +173,17 @@
       "name": "Goodwill",
       "nature": "A",
       "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
       "entries": [
         {
           "date": "2020",
@@ -237,26 +227,10 @@
         },
         {
           "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
           "particular": "- Wee (RM 5,000 x 3/10)",
           "side": "debit",
           "amount": [
             1500
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
           ]
         },
         {
@@ -332,27 +306,11 @@
           ]
         },
         {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
           "date": "1",
           "particular": "Balance c/d",
           "side": "credit",
           "amount": [
             15000
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
           ]
         },
         {

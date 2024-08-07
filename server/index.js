@@ -121,7 +121,7 @@ app.post("/create/journal/:bookId", (req, res) => {
 
 app.post("/create/ledger/:bookId", (req, res) => {
   const { bookId } = req.params;
-  const { name, nature, columnCount } = req.body;
+  const { name, nature, columnCount, topTextColumnCount } = req.body;
 
   if (
     !bookId.match(
@@ -139,6 +139,10 @@ app.post("/create/ledger/:bookId", (req, res) => {
     return res.status(400).send("Invalid column count");
   }
 
+  if (topTextColumnCount < 1) {
+    return res.status(400).send("Invalid top text column count");
+  }
+
   const book = JSON.parse(
     fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
   );
@@ -149,6 +153,7 @@ app.post("/create/ledger/:bookId", (req, res) => {
     name,
     nature,
     column: columnCount,
+    topTextColumnCount,
     entries: [
       {
         date: "",
@@ -172,7 +177,7 @@ app.post("/create/ledger/:bookId", (req, res) => {
 
 app.post("/create/statement/:bookId", (req, res) => {
   const { bookId } = req.params;
-  const { name, subtitle, columnCount } = req.body;
+  const { name, subtitle, columnCount, topTextColumnCount } = req.body;
 
   if (
     !bookId.match(
@@ -180,6 +185,14 @@ app.post("/create/statement/:bookId", (req, res) => {
     )
   ) {
     return res.status(400).send("Invalid book ID");
+  }
+
+  if (columnCount < 1) {
+    return res.status(400).send("Invalid column count");
+  }
+
+  if (topTextColumnCount < 1) {
+    return res.status(400).send("Invalid top text column count");
   }
 
   const book = JSON.parse(
@@ -192,6 +205,8 @@ app.post("/create/statement/:bookId", (req, res) => {
     name,
     subtitle,
     columnCount,
+    topTextColumnCount,
+    headers: Array(topTextColumnCount).fill(Array(columnCount).fill("")),
     entries: [
       {
         particular: "",
@@ -236,6 +251,28 @@ app.post("/save/:id", (req, res) => {
     `./data/${req.params.id}.json`,
     JSON.stringify(req.body.data, null, 2)
   );
+
+  res.json({ status: "success" });
+});
+
+app.delete("/delete/document/:bookId/:documentID", (req, res) => {
+  const { bookId, documentID } = req.params;
+
+  if (
+    !bookId.match(
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
+    )
+  ) {
+    return res.status(400).send("Invalid book ID");
+  }
+
+  const book = JSON.parse(
+    fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
+  );
+
+  book.data = book.data.filter((doc) => doc.id !== parseInt(documentID));
+
+  fs.writeFileSync(`./data/${bookId}.json`, JSON.stringify(book, null, 2));
 
   res.json({ status: "success" });
 });
