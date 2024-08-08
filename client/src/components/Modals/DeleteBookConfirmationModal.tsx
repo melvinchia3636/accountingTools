@@ -56,28 +56,30 @@ function DeleteBookConfirmationModal({
             transition
             className="w-full max-w-lg rounded-xl bg-zinc-900 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
           >
-            <div className="w-full flex justify-between gap-8">
-              <div>
-                <DialogTitle
-                  as="h3"
-                  className="text-xl flex gap-2 items-center text-red-500 font-medium"
-                >
-                  <Icon icon="tabler:trash" className="w-6 h-6" />
-                  Are you sure?
-                </DialogTitle>
-                <p className="mt-2 text-zinc-500">
-                  Are you sure you want to delete this book? This action cannot
-                  be undone.
-                </p>
-              </div>
-              <Icon
-                icon="uil:times"
-                className="w-6 h-6 shrink-0 mt-2 cursor-pointer text-zinc-500 hover:text-zinc-200"
-                onClick={onClose}
-              />
+            <div className="w-full flex justify-between items-center gap-8">
+              <DialogTitle
+                as="h3"
+                className="text-xl flex gap-2 items-center text-red-500 font-medium"
+              >
+                <Icon icon="tabler:trash" className="w-6 h-6" />
+                Are you sure?
+              </DialogTitle>
+              <button className="shrink-0 w-8 h-8 flex items-center justify-center hover:bg-zinc-100/10 rounded-md transition-all cursor-pointer text-zinc-500 hover:text-zinc-200">
+                <Icon
+                  icon="uil:times"
+                  className="w-6 h-6"
+                  onClick={() => {
+                    onClose();
+                  }}
+                />
+              </button>
             </div>
+            <p className="mt-2 text-zinc-500">
+              Are you sure you want to delete this book? This action cannot be
+              undone.
+            </p>
             <p className="text-zinc-500 mt-4 mb-4">
-              Please type the name of the book to confirm.
+              Please type the book name to confirm.
             </p>
             <Input
               name="Book Name"

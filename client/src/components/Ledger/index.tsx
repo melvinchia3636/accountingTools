@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HeaderInput from "../HeaderInput";
+import LedgerHeader from "./components/LedgerHeader";
 
 interface ILedgerEntry {
   date: string;
@@ -42,7 +42,7 @@ function Ledger({
   );
   const maxEntries = Math.max(debitEntries.length, creditEntries.length);
 
-  function updateBottomRow(
+  function updateEntry(
     newData: ILedgerEntry[],
     index: number,
     side: "debit" | "credit"
@@ -97,7 +97,7 @@ function Ledger({
     setData([..._debitEntries, ..._creditEntries]);
   }
 
-  useEffect(() => {
+  function balanceEntries() {
     if (debitEntries.length > creditEntries.length) {
       setCreditEntries([
         ...creditEntries,
@@ -125,6 +125,10 @@ function Ledger({
         })),
       ]);
     }
+  }
+
+  useEffect(() => {
+    balanceEntries();
   }, [debitEntries, creditEntries]);
 
   return (
@@ -137,284 +141,257 @@ function Ledger({
         General Ledger
       </h3>
       <h4 className="text-lg text-center mt-8 font-medium">{name}</h4>
-      <table className="w-full border-2 border-zinc-700 mt-2 table-fixed">
-        <thead>
-          {Array.from({ length: topTextColumnCount }).map((_, i) => (
-            <tr key={i} className="text-zinc-500 border-2 border-zinc-700">
-              <td className="py-2 border-r-2 w-24 border-zinc-700"></td>
-              <td className="py-2 w-full border-r-2 border-zinc-700"></td>
-              {Array(columnCount)
-                .fill(0)
-                .map((_, j) => (
-                  <th
-                    key={j}
-                    className={`py-2 w-4/12 ${
-                      j === columnCount - 1
-                        ? "border-r-[6px] border-double"
-                        : "border-r-2"
-                    } border-zinc-700`}
-                  >
-                    <HeaderInput
-                      headers={headers}
-                      setHeaders={setHeaders}
-                      i={i}
-                      j={j}
-                      side="debit"
-                    />
-                  </th>
-                ))}
-              <td className="py-2 border-r-2 w-24 border-zinc-700"></td>
-              <td className="py-2 w-full border-r-2 border-zinc-700"></td>
-              {Array(columnCount)
-                .fill(0)
-                .map((_, j) => (
-                  <th className="py-2 w-4/12 border-r-2 border-zinc-700">
-                    <HeaderInput
-                      headers={headers}
-                      setHeaders={setHeaders}
-                      i={i}
-                      j={j}
-                      side="credit"
-                    />
-                  </th>
-                ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {Array.from({ length: maxEntries }).map(
-            (_, index) =>
-              (Boolean(
-                debitEntries[index]?.date ||
-                  creditEntries[index]?.date ||
-                  debitEntries[index]?.particular ||
-                  creditEntries[index]?.particular ||
-                  debitEntries[index]?.amount ||
-                  creditEntries[index]?.amount
-              ) ||
-                index === maxEntries - 1) && (
-                <tr key={index} className="text-zinc-200">
-                  {debitEntries[index] && (
-                    <>
-                      <td className="py-2 border-r-2 p-4 border-zinc-700 text-right">
-                        <input
-                          type="text"
-                          value={debitEntries[index]?.date}
-                          onChange={(e) => {
-                            const newData = [...debitEntries];
-                            newData[index].date = e.target.value;
-                            updateBottomRow(newData, index, "debit");
-                          }}
-                          onBlur={checkAndClearEmptyRow}
-                          className={`w-full h-full bg-transparent text-right ${
-                            debitEntries[index]?.particular === "TOTAL"
-                              ? "text-transparent"
-                              : "text-zinc-200"
-                          }`}
-                        />
-                      </td>
-                      <td className="py-2 border-r-2 p-4 border-zinc-700">
-                        <input
-                          type="text"
-                          value={debitEntries[index]?.particular}
-                          onChange={(e) => {
-                            const newData = [...debitEntries];
-                            newData[index].particular = e.target.value;
-                            updateBottomRow(newData, index, "debit");
-                          }}
-                          onBlur={checkAndClearEmptyRow}
-                          className={`w-full h-full bg-transparent ${
-                            debitEntries[index]?.particular === "TOTAL"
-                              ? "text-transparent"
-                              : "text-zinc-200"
-                          }`}
-                        />
-                      </td>
-                      {debitEntries[index]?.particular === "TOTAL"
-                        ? Array(columnCount)
-                            .fill(0)
-                            .map((_, i) => (
-                              <td
-                                className={`${
-                                  i === columnCount - 1
-                                    ? "border-r-[6px] border-double"
-                                    : "border-r-2"
-                                } border-zinc-700`}
-                              >
-                                <div className="border-b-4 border-zinc-500 border-double">
-                                  <div className="border-t text-right border-zinc-500 p-4 py-2">
-                                    {(() => {
-                                      const allEntries = debitEntries.slice(
-                                        0,
-                                        index
-                                      );
-                                      const splitByTotal = allEntries.reduce(
-                                        (acc, item) => {
-                                          if (item.particular === "TOTAL") {
-                                            acc.push([]);
-                                          } else {
-                                            acc[acc.length - 1].push(item);
-                                          }
-                                          return acc;
-                                        },
-                                        [[]] as ILedgerEntry[][]
-                                      );
+      <div className="overflow-x-auto">
+        <table className="w-full border-2 border-zinc-700 mt-2">
+          <LedgerHeader
+            columnCount={columnCount}
+            topTextColumnCount={topTextColumnCount}
+            headers={headers}
+            setHeaders={setHeaders}
+          />
+          <tbody>
+            {Array.from({ length: maxEntries }).map(
+              (_, index) =>
+                (Boolean(
+                  debitEntries[index]?.date ||
+                    creditEntries[index]?.date ||
+                    debitEntries[index]?.particular ||
+                    creditEntries[index]?.particular ||
+                    debitEntries[index]?.amount ||
+                    creditEntries[index]?.amount
+                ) ||
+                  index === maxEntries - 1) && (
+                  <tr key={index} className="text-zinc-200">
+                    {debitEntries[index] && (
+                      <>
+                        <td className="py-2 border-r-2 p-4 border-zinc-700 text-right">
+                          <input
+                            type="text"
+                            value={debitEntries[index]?.date}
+                            onChange={(e) => {
+                              const newData = [...debitEntries];
+                              newData[index].date = e.target.value;
+                              updateEntry(newData, index, "debit");
+                            }}
+                            onBlur={checkAndClearEmptyRow}
+                            className={`w-14 h-full bg-transparent ${
+                              debitEntries[index]?.date.match(/^\d{4}$/)
+                                ? "text-center"
+                                : "text-right"
+                            } ${
+                              debitEntries[index]?.particular === "TOTAL"
+                                ? "text-transparent"
+                                : "text-zinc-200"
+                            }`}
+                          />
+                        </td>
+                        <td className="py-2 border-r-2 p-4 border-zinc-700">
+                          <input
+                            type="text"
+                            value={debitEntries[index]?.particular}
+                            onChange={(e) => {
+                              const newData = [...debitEntries];
+                              newData[index].particular = e.target.value;
+                              updateEntry(newData, index, "debit");
+                            }}
+                            onBlur={checkAndClearEmptyRow}
+                            className={`min-w-96 w-full h-full bg-transparent ${
+                              debitEntries[index]?.particular === "TOTAL"
+                                ? "text-transparent"
+                                : "text-zinc-200"
+                            }`}
+                          />
+                        </td>
+                        {debitEntries[index]?.particular === "TOTAL"
+                          ? Array(columnCount)
+                              .fill(0)
+                              .map((_, i) => (
+                                <td
+                                  className={`${
+                                    i === columnCount - 1
+                                      ? "border-r-[6px] border-double"
+                                      : "border-r-2"
+                                  } border-zinc-700`}
+                                >
+                                  <div className="border-b-4 border-zinc-500 border-double">
+                                    <div className="border-t text-right border-zinc-500 p-4 py-2">
+                                      {(() => {
+                                        const allEntries = debitEntries.slice(
+                                          0,
+                                          index
+                                        );
+                                        const splitByTotal = allEntries.reduce(
+                                          (acc, item) => {
+                                            if (item.particular === "TOTAL") {
+                                              acc.push([]);
+                                            } else {
+                                              acc[acc.length - 1].push(item);
+                                            }
+                                            return acc;
+                                          },
+                                          [[]] as ILedgerEntry[][]
+                                        );
 
-                                      return splitByTotal
-                                        .pop()
-                                        ?.filter((item) => item.amount[i])
-                                        .reduce(
-                                          (acc, item) => acc + item.amount[i],
-                                          0
-                                        )
-                                        .toLocaleString();
-                                    })()}
+                                        return splitByTotal
+                                          .pop()
+                                          ?.filter((item) => item.amount[i])
+                                          .reduce(
+                                            (acc, item) => acc + item.amount[i],
+                                            0
+                                          )
+                                          .toLocaleString();
+                                      })()}
+                                    </div>
                                   </div>
-                                </div>
-                              </td>
-                            ))
-                        : Array(columnCount)
-                            .fill(0)
-                            .map((_, i) => (
-                              <td
-                                className={`py-2 p-4 ${
-                                  i === columnCount - 1
-                                    ? "border-r-[6px] border-double"
-                                    : "border-r-2"
-                                } border-zinc-700 text-right`}
-                              >
-                                <input
-                                  type="text"
-                                  value={
-                                    debitEntries[index]?.amount[i]
-                                      ? debitEntries[index]?.amount[
-                                          i
-                                        ].toLocaleString()
-                                      : ""
-                                  }
-                                  onBlur={checkAndClearEmptyRow}
-                                  onChange={(e) => {
-                                    const newData = [...debitEntries];
-                                    newData[index].amount[i] =
-                                      parseInt(
-                                        e.target.value.replace(/,/g, "")
-                                      ) || 0;
+                                </td>
+                              ))
+                          : Array(columnCount)
+                              .fill(0)
+                              .map((_, i) => (
+                                <td
+                                  className={`py-2 p-4 ${
+                                    i === columnCount - 1
+                                      ? "border-r-[6px] border-double"
+                                      : "border-r-2"
+                                  } border-zinc-700 text-right`}
+                                >
+                                  <input
+                                    type="text"
+                                    value={
+                                      debitEntries[index]?.amount[i]
+                                        ? debitEntries[index]?.amount[
+                                            i
+                                          ].toLocaleString()
+                                        : ""
+                                    }
+                                    onBlur={checkAndClearEmptyRow}
+                                    onChange={(e) => {
+                                      const newData = [...debitEntries];
+                                      newData[index].amount[i] =
+                                        parseInt(
+                                          e.target.value.replace(/,/g, "")
+                                        ) || 0;
 
-                                    updateBottomRow(newData, index, "debit");
-                                  }}
-                                  className="w-full h-full bg-transparent text-right text-zinc-200"
-                                />
-                              </td>
-                            ))}
-                    </>
-                  )}
-                  {creditEntries[index] && (
-                    <>
-                      <td className="py-2 border-r-2 p-4 border-zinc-700 text-right">
-                        <input
-                          type="text"
-                          value={creditEntries[index]?.date}
-                          onChange={(e) => {
-                            const newData = [...creditEntries];
-                            newData[index].date = e.target.value;
-                            updateBottomRow(newData, index, "credit");
-                          }}
-                          onBlur={checkAndClearEmptyRow}
-                          className={`w-full h-full bg-transparent text-right ${
-                            creditEntries[index]?.particular === "TOTAL"
-                              ? "text-transparent"
-                              : "text-zinc-200"
-                          }`}
-                        />
-                      </td>
-                      <td className="py-2 border-r-2 p-4 border-zinc-700">
-                        <input
-                          type="text"
-                          value={creditEntries[index]?.particular}
-                          onChange={(e) => {
-                            const newData = [...creditEntries];
-                            newData[index].particular = e.target.value;
-                            updateBottomRow(newData, index, "credit");
-                          }}
-                          onBlur={checkAndClearEmptyRow}
-                          className={`w-full h-full bg-transparent ${
-                            creditEntries[index]?.particular === "TOTAL"
-                              ? "text-transparent"
-                              : "text-zinc-200"
-                          }`}
-                        />
-                      </td>
-                      {creditEntries[index]?.particular === "TOTAL"
-                        ? Array(columnCount)
-                            .fill(0)
-                            .map((_, i) => (
-                              <td className="border-r-2 border-zinc-700">
-                                <div className="border-b-4  border-zinc-500 border-double">
-                                  <div className="border-t text-right border-zinc-500 p-4 py-2">
-                                    {(() => {
-                                      const allEntries = creditEntries.slice(
-                                        0,
-                                        index
-                                      );
+                                      updateEntry(newData, index, "debit");
+                                    }}
+                                    className="w-20 h-full bg-transparent text-right text-zinc-200"
+                                  />
+                                </td>
+                              ))}
+                      </>
+                    )}
+                    {creditEntries[index] && (
+                      <>
+                        <td className="py-2 border-r-2 p-4 border-zinc-700 text-right">
+                          <input
+                            type="text"
+                            value={creditEntries[index]?.date}
+                            onChange={(e) => {
+                              const newData = [...creditEntries];
+                              newData[index].date = e.target.value;
+                              updateEntry(newData, index, "credit");
+                            }}
+                            onBlur={checkAndClearEmptyRow}
+                            className={`w-14 h-full bg-transparent ${
+                              creditEntries[index]?.date.match(/^\d{4}$/)
+                                ? "text-center"
+                                : "text-right"
+                            }  ${
+                              creditEntries[index]?.particular === "TOTAL"
+                                ? "text-transparent"
+                                : "text-zinc-200"
+                            }`}
+                          />
+                        </td>
+                        <td className="py-2 border-r-2 p-4 border-zinc-700">
+                          <input
+                            type="text"
+                            value={creditEntries[index]?.particular}
+                            onChange={(e) => {
+                              const newData = [...creditEntries];
+                              newData[index].particular = e.target.value;
+                              updateEntry(newData, index, "credit");
+                            }}
+                            onBlur={checkAndClearEmptyRow}
+                            className={`min-w-96 w-full h-full bg-transparent ${
+                              creditEntries[index]?.particular === "TOTAL"
+                                ? "text-transparent"
+                                : "text-zinc-200"
+                            }`}
+                          />
+                        </td>
+                        {creditEntries[index]?.particular === "TOTAL"
+                          ? Array(columnCount)
+                              .fill(0)
+                              .map((_, i) => (
+                                <td className="border-r-2 border-zinc-700">
+                                  <div className="border-b-4  border-zinc-500 border-double">
+                                    <div className="border-t text-right border-zinc-500 p-4 py-2">
+                                      {(() => {
+                                        const allEntries = creditEntries.slice(
+                                          0,
+                                          index
+                                        );
 
-                                      const splitByTotal = allEntries.reduce(
-                                        (acc, item) => {
-                                          if (item.particular === "TOTAL") {
-                                            acc.push([]);
-                                          } else {
-                                            acc[acc.length - 1].push(item);
-                                          }
-                                          return acc;
-                                        },
-                                        [[]] as ILedgerEntry[][]
-                                      );
+                                        const splitByTotal = allEntries.reduce(
+                                          (acc, item) => {
+                                            if (item.particular === "TOTAL") {
+                                              acc.push([]);
+                                            } else {
+                                              acc[acc.length - 1].push(item);
+                                            }
+                                            return acc;
+                                          },
+                                          [[]] as ILedgerEntry[][]
+                                        );
 
-                                      return splitByTotal
-                                        .pop()
-                                        ?.filter((item) => item.amount[i])
-                                        .reduce(
-                                          (acc, item) => acc + item.amount[i],
-                                          0
-                                        )
-                                        .toLocaleString();
-                                    })()}
+                                        return splitByTotal
+                                          .pop()
+                                          ?.filter((item) => item.amount[i])
+                                          .reduce(
+                                            (acc, item) => acc + item.amount[i],
+                                            0
+                                          )
+                                          .toLocaleString();
+                                      })()}
+                                    </div>
                                   </div>
-                                </div>
-                              </td>
-                            ))
-                        : Array(columnCount)
-                            .fill(0)
-                            .map((_, i) => (
-                              <td className="py-2 p-4 border-r-2 border-zinc-700 text-right">
-                                <input
-                                  type="text"
-                                  value={
-                                    creditEntries[index]?.amount[i]
-                                      ? creditEntries[index]?.amount[
-                                          i
-                                        ].toLocaleString()
-                                      : ""
-                                  }
-                                  onBlur={checkAndClearEmptyRow}
-                                  onChange={(e) => {
-                                    const newData = [...creditEntries];
-                                    newData[index].amount[i] =
-                                      parseInt(
-                                        e.target.value.replace(/,/g, "")
-                                      ) || 0;
-                                    updateBottomRow(newData, index, "credit");
-                                  }}
-                                  className="w-full h-full bg-transparent text-right text-zinc-200"
-                                />
-                              </td>
-                            ))}
-                    </>
-                  )}
-                </tr>
-              )
-          )}
-        </tbody>
-      </table>
+                                </td>
+                              ))
+                          : Array(columnCount)
+                              .fill(0)
+                              .map((_, i) => (
+                                <td className="py-2 p-4 border-r-2 border-zinc-700 text-right">
+                                  <input
+                                    type="text"
+                                    value={
+                                      creditEntries[index]?.amount[i]
+                                        ? creditEntries[index]?.amount[
+                                            i
+                                          ].toLocaleString()
+                                        : ""
+                                    }
+                                    onBlur={checkAndClearEmptyRow}
+                                    onChange={(e) => {
+                                      const newData = [...creditEntries];
+                                      newData[index].amount[i] =
+                                        parseInt(
+                                          e.target.value.replace(/,/g, "")
+                                        ) || 0;
+                                      updateEntry(newData, index, "credit");
+                                    }}
+                                    className="w-20 h-full bg-transparent text-right text-zinc-200"
+                                  />
+                                </td>
+                              ))}
+                      </>
+                    )}
+                  </tr>
+                )
+            )}
+          </tbody>
+        </table>
+      </div>
     </>
   );
 }

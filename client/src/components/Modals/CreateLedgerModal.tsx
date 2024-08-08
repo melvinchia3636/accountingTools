@@ -10,7 +10,7 @@ import {
   Label,
 } from "@headlessui/react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Input from "../Input";
 import CreateButton from "../CreateButton";
 import { toast } from "react-toastify";
@@ -18,10 +18,15 @@ import { useParams } from "react-router-dom";
 
 const NATURES = [
   { id: "A", name: "Asset" },
+  { id: "A-", name: "Asset (Contra)" },
   { id: "L", name: "Liability" },
+  { id: "L-", name: "Liability (Contra)" },
   { id: "E", name: "Equity" },
   { id: "IN", name: "Income" },
-  { id: "EX", name: "Expense" },
+  { id: "IN-", name: "Income (Contra)" },
+  { id: "EX", name: "Expenses" },
+  { id: "EX-", name: "Income (Contra)" },
+  { id: "TEMP", name: "Temporary" },
 ];
 
 function CreateLedgerModal({
@@ -86,6 +91,15 @@ function CreateLedgerModal({
       });
   }
 
+  useEffect(() => {
+    if (isOpen) {
+      setName("");
+      setSelectedNature(null);
+      setColumnCount(1);
+      setTopTextColumnCount(1);
+    }
+  }, [isOpen]);
+
   return (
     <Dialog
       open={isOpen}
@@ -145,7 +159,7 @@ function CreateLedgerModal({
                   />
                   <ComboboxOptions
                     anchor="bottom"
-                    className="z-10 w-[var(--input-width)] mt-2 bg-zinc-800 rounded-md shadow-lg"
+                    className="z-10 w-[var(--input-width)] !max-h-96 mt-2 bg-zinc-800 rounded-md shadow-lg"
                   >
                     {filteredNatures.map((type) => (
                       <ComboboxOption

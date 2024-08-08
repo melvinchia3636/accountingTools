@@ -1,0 +1,219 @@
+{
+  "code": "UEB-2017-4B",
+  "entityName": "Hong Xian Trading",
+  "topic": "Consignment Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Consignor - Jun Yong Enterprise",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Apr 7",
+          "particular": "Bills Payable",
+          "side": "debit",
+          "amount": [
+            20000
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Carriage Charges",
+          "side": "debit",
+          "amount": [
+            975
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Warehouse Charges",
+          "side": "debit",
+          "amount": [
+            705
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Selling Expenses",
+          "side": "debit",
+          "amount": [
+            1445
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Commission Income",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Sales Commission",
+          "side": "debit",
+          "amount": [
+            5520
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Del Credere Commission",
+          "side": "debit",
+          "amount": [
+            1350
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Bank Draft",
+          "side": "debit",
+          "amount": [
+            39005
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Bank - Cash Sales",
+          "side": "credit",
+          "amount": [
+            24000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Consignment Accounts Receivable - Credit Sales",
+          "side": "credit",
+          "amount": [
+            45000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

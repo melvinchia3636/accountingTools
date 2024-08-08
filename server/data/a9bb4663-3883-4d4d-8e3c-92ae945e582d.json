@@ -1,0 +1,629 @@
+{
+  "code": "UEB-2017-6A",
+  "entityName": "Hassan (Head)",
+  "topic": "Branch (Decentralised)",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Branch Current",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2016",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            62400
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Delivery Charges (RM4,200 x 1/3)",
+          "side": "debit",
+          "amount": [
+            1400
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Profit and Loss - Branch Net Profit",
+          "side": "debit",
+          "amount": [
+            61688
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            90888
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Goods in Transit",
+          "side": "credit",
+          "amount": [
+            10500
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Cash in Transit",
+          "side": "credit",
+          "amount": [
+            24100
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            90888
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Income Statement",
+      "subtitle": "For The Year Ended 30 June 2017",
+      "columnCount": 6,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "Head",
+          "Head",
+          "Branch",
+          "Branch",
+          "Combined",
+          "Combined"
+        ],
+        [
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Sales",
+          "amount": [
+            0,
+            335700,
+            0,
+            185400,
+            0,
+            521100
+          ]
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            29800,
+            0,
+            6300,
+            0,
+            36100,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Purchases ",
+          "amount": [
+            277600,
+            0,
+            0,
+            0,
+            277600,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Goods Sent to Branch",
+          "amount": [
+            -102600,
+            0,
+            0,
+            0,
+            "(Contra)",
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          "text": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "Goods Received from Head Office",
+          "amount": [
+            0,
+            0,
+            92100,
+            0,
+            "(Contra)",
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "tabIn": true,
+          "dashed": [
+            true,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "text": [
+            false,
+            false,
+            false,
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            204800,
+            0,
+            98400,
+            0,
+            313700,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Closing Inventory",
+          "amount": [
+            -21700,
+            0,
+            -8900,
+            0,
+            -30600,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "            Goods In Transit",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            -10500,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "tabIn": true,
+          "dashed": [
+            true,
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            -183100,
+            0,
+            -89500,
+            0,
+            -272600
+          ],
+          "underline": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Gross Profit",
+          "amount": [
+            0,
+            152600,
+            0,
+            95900,
+            0,
+            248500
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Discounts Allowed",
+          "amount": [
+            5500,
+            0,
+            0,
+            0,
+            5500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Salaries",
+          "amount": [
+            24000,
+            0,
+            8200,
+            0,
+            32200,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Electricity and Telephone Charges",
+          "amount": [
+            14900,
+            0,
+            11600,
+            0,
+            26500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Fire Insurance",
+          "amount": [
+            17600,
+            0,
+            9300,
+            0,
+            26900,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Delivery Charges",
+          "amount": [
+            2800,
+            0,
+            1400,
+            0,
+            4200,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Non-current Assets",
+          "amount": [
+            18176,
+            -82976,
+            3712,
+            -34212,
+            21888,
+            -117188
+          ],
+          "underline": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net Profit",
+          "amount": [
+            0,
+            69624,
+            0,
+            61688,
+            0,
+            131312
+          ],
+          "underline": [
+            false,
+            "double",
+            false,
+            "double",
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

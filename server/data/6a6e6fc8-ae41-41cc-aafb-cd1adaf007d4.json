@@ -1,0 +1,664 @@
+{
+  "code": "UEB-2017-1",
+  "entityName": "Lee Enterprise",
+  "topic": "Sole Proprietorship Accounts",
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Income Statement",
+      "subtitle": "For The Half Year Ended 30 September 2017",
+      "columnCount": 3,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Sales",
+          "amount": [
+            0,
+            0,
+            48500
+          ]
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            0,
+            21960,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Purchases",
+          "amount": [
+            17880,
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Carriage Inwards",
+          "amount": [
+            760,
+            0,
+            0
+          ],
+          "underline": [
+            false,
+            false,
+            false
+          ],
+          "tabIn": true
+        },
+        {
+          "particular": "Wages on Packaging (RM2,100 - RM400)",
+          "amount": [
+            1700,
+            20340,
+            0
+          ],
+          "underline": [
+            true,
+            true,
+            false
+          ],
+          "tabIn": true
+        },
+        {
+          "particular": "Cost of Goods Available for Sales",
+          "amount": [
+            0,
+            42300,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Less: Closing Inventory",
+          "amount": [
+            0,
+            -11209,
+            -31091
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true
+        },
+        {
+          "particular": "Gross Profit",
+          "amount": [
+            0,
+            0,
+            17409
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Other Income",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Dividends Income",
+          "amount": [
+            0,
+            175,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Discounts Received",
+          "amount": [
+            0,
+            260,
+            435
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            17844
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Vehicle Running Expenses",
+          "amount": [
+            0,
+            540,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Salaries (RM8,000 + RM1,000)",
+          "amount": [
+            0,
+            9000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Water and Electricity",
+          "amount": [
+            0,
+            870,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Assessment and Quit Rent",
+          "amount": [
+            0,
+            1200,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Printing and Stationery",
+          "amount": [
+            0,
+            500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Advertising Expenses",
+          "amount": [
+            0,
+            650,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Carriage Outwards",
+          "amount": [
+            0,
+            250,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Telephone Charges",
+          "amount": [
+            0,
+            450,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Interest on Loan (RM11,000 x 5% x 1/2)",
+          "amount": [
+            0,
+            275,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Bad Debts",
+          "amount": [
+            0,
+            100,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Increase in Allowance for Doubtful Debts (RM(42,000 - 100) x 5%)",
+          "amount": [
+            0,
+            205,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Depreciation of Delivery Van (RM7,600 x 10% x 1/2)",
+          "amount": [
+            0,
+            380,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Depreciation of Machinery ([RM(33,600 - 11,200) x 1/2 + RM 11,200 x 1/4] x 10%)",
+          "amount": [
+            0,
+            1400,
+            -15820
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true
+        },
+        {
+          "particular": "Net Profit",
+          "amount": [
+            0,
+            0,
+            2024
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Statement of Financial Position",
+      "subtitle": "As At 30 September 2017",
+      "columnCount": 3,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Assets",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Machinery (RM33,600 - RM1,400)",
+          "amount": [
+            0,
+            32200,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Delivery Van (RM7,600 - RM380)",
+          "amount": [
+            0,
+            7220,
+            39420
+          ],
+          "underline": [
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "Investment",
+          "amount": [
+            0,
+            0,
+            6000
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            45420
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Assets",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Inventory",
+          "amount": [
+            0,
+            11209,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Accounts Receivable (RM4,200 - RM100)",
+          "amount": [
+            4100,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Less: Allowance for Doubtful Debts",
+          "amount": [
+            -205,
+            3895,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accrued Divident Income",
+          "amount": [
+            0,
+            75,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Prepaid Wages",
+          "amount": [
+            0,
+            400,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Cash At Bank",
+          "amount": [
+            0,
+            3300,
+            18879
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "Net Assets",
+          "amount": [
+            0,
+            0,
+            64299
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Equity",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Capital",
+          "amount": [
+            0,
+            0,
+            45000
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Add: Net Profit",
+          "amount": [
+            0,
+            0,
+            2024
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            47024
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Non-current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Loan from Yong",
+          "amount": [
+            0,
+            11000,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Accounts Payable",
+          "amount": [
+            5000,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Accrued Salaries",
+          "amount": [
+            1000,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Accrued Interest on Loan",
+          "amount": [
+            275,
+            6275,
+            0
+          ],
+          "underline": [
+            true,
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "Total Liabilities",
+          "amount": [
+            0,
+            0,
+            -17275
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Total Equity and Liabilities",
+          "amount": [
+            0,
+            0,
+            64299
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

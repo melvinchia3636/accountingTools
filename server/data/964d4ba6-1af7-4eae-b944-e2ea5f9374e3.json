@@ -1,0 +1,573 @@
+{
+  "code": "UEB-2017-4A",
+  "entityName": "Jun Yong Enterprise",
+  "topic": "Consignment Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Consignee - Hong Xian Trading",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            ""
+          ],
+          "credit": [
+            ""
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Consignment",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Cash Sales",
+          "side": "debit",
+          "amount": [
+            24000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Credit Sales",
+          "side": "debit",
+          "amount": [
+            45000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Apr 7",
+          "particular": "Bills Receivable",
+          "side": "credit",
+          "amount": [
+            20000
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Consignment",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Carriage Charges",
+          "side": "credit",
+          "amount": [
+            975
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Warehouse Charges",
+          "side": "credit",
+          "amount": [
+            705
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Selling Expenses",
+          "side": "credit",
+          "amount": [
+            1445
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Sales Commission",
+          "side": "credit",
+          "amount": [
+            5520
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Del Credere Commission",
+          "side": "credit",
+          "amount": [
+            1350
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Bank Draft",
+          "side": "credit",
+          "amount": [
+            39005
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Consignment",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Apr 2",
+          "particular": "Goods Sent on Consignment (RM650 x 60)",
+          "side": "debit",
+          "amount": [
+            39000
+          ]
+        },
+        {
+          "date": "3",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Freight Charges",
+          "side": "debit",
+          "amount": [
+            3500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Insurance Premium",
+          "side": "debit",
+          "amount": [
+            2100
+          ]
+        },
+        {
+          "date": "Apr 8",
+          "particular": "Bills Receivable - Discounting Charges (RM20,000 x 5%)",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Consignee - Hong Xian Trading",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Carriage Charges",
+          "side": "debit",
+          "amount": [
+            975
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Warehouse Charges",
+          "side": "debit",
+          "amount": [
+            705
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Selling Expenses",
+          "side": "debit",
+          "amount": [
+            1445
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Sales Commission (RM69,000 x 8%)",
+          "side": "debit",
+          "amount": [
+            5520
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Del Credere Commission (RM45,000 x 3%)",
+          "side": "debit",
+          "amount": [
+            1350
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Profit and Loss - Profit on Consignment",
+          "side": "debit",
+          "amount": [
+            24085
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Consignee - Hong Xian Trading",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Cash Sales",
+          "side": "credit",
+          "amount": [
+            24000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Credit Sales",
+          "side": "credit",
+          "amount": [
+            45000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Unsold Inventory c/d",
+          "side": "credit",
+          "amount": [
+            10680
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "name": "Statement of Calculation of Unsold Inventory",
+      "subtitle": "As At 30 September 2017",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Unsold Inventory [RM60 x (650 - 200 - 300)]",
+          "amount": [
+            0,
+            9000
+          ]
+        },
+        {
+          "particular": "Add: Expenses",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Freight Charges",
+          "amount": [
+            3500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Insurance Premium",
+          "amount": [
+            2100,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Carriage Charges",
+          "amount": [
+            975,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "Warehouse Charges",
+          "amount": [
+            705,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "tabIn": true
+        },
+        {
+          "particular": "",
+          "amount": [
+            7280,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Less: Expenses for Sold Inventory (RM7,280 x 500/650)",
+          "amount": [
+            -5600,
+            1680
+          ],
+          "underline": [
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            10680
+          ],
+          "underline": [
+            false,
+            "double"
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

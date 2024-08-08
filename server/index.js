@@ -16,12 +16,17 @@ app.get("/list", (req, res) => {
       code: data.code,
       name: data.entityName,
       topic: data.topic,
+      docAmount: {
+        journal: data.data.filter((doc) => doc.type === "journal").length,
+        ledger: data.data.filter((doc) => doc.type === "ledger").length,
+        statement: data.data.filter((doc) => doc.type === "statement").length,
+      },
     };
   });
 
   res.json({
     status: "success",
-    data,
+    data: data.sort((a, b) => a.code.localeCompare(b.code)),
   });
 });
 
@@ -131,7 +136,11 @@ app.post("/create/ledger/:bookId", (req, res) => {
     return res.status(400).send("Invalid book ID");
   }
 
-  if (!["A", "L", "E", "INC", "EXP"].includes(nature)) {
+  if (
+    !["A", "A-", "L", "L-", "E", "IN", "IN-", "EX", "EX-", "TEMP"].includes(
+      nature
+    )
+  ) {
     return res.status(400).send("Invalid type");
   }
 
@@ -154,6 +163,10 @@ app.post("/create/ledger/:bookId", (req, res) => {
     nature,
     column: columnCount,
     topTextColumnCount,
+    headers: Array(topTextColumnCount).fill({
+      debit: Array(columnCount).fill(""),
+      credit: Array(columnCount).fill(""),
+    }),
     entries: [
       {
         date: "",

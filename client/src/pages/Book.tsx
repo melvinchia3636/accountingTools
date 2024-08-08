@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import Journal from "../components/Journal";
 import Ledger from "../components/Ledger";
 import Statement from "../components/Statement";
-import { useNavigate, useParams } from "react-router-dom";
+import {
+  useBeforeUnload,
+  useBlocker,
+  useNavigate,
+  useParams,
+} from "react-router-dom";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import ModifyBookModal from "../components/Modals/ModifyBookModal";
 import { toast } from "react-toastify";
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
 import DeleteDocumentConfirmationModal from "../components/Modals/DeleteDocumentConfirmationModal";
+import UnsaveChangeLeaveConfirmationModal from "../components/Modals/UnsaveChangeLeaveConfirmationModal";
 
 function Book(): React.ReactElement {
   const [everything, setEverything] = useState<any>("loading");
@@ -19,6 +25,8 @@ function Book(): React.ReactElement {
     "create" | "update" | null
   >(null);
   const [deleteDocumentModalOpen, setDeleteDocumentModalOpen] = useState(false);
+  const [saved, setSaved] = useState(true);
+  const [firstFetch, setFirstFetch] = useState(true);
 
   function fetchData() {
     fetch(`http://localhost:3000/${id}`)
@@ -27,6 +35,28 @@ function Book(): React.ReactElement {
         if (data.status === "success") {
           setEverything(data.data);
           setData(data.data.data[0] || null);
+          setTimeout(() => {
+            setFirstFetch(false);
+          }, 100);
+        }
+      });
+  }
+
+  async function saveData() {
+    await fetch(`http://localhost:3000/save/${id}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        data: everything,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          setSaved(true);
+          toast.success("Saved successfully");
         }
       });
   }
@@ -35,21 +65,7 @@ function Book(): React.ReactElement {
     document.onkeydown = (e) => {
       if (e.key === "s" && (e.ctrlKey || e.metaKey)) {
         e.preventDefault();
-        fetch(`http://localhost:3000/save/${id}`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            data: everything,
-          }),
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.status === "success") {
-              toast.success("Saved successfully");
-            }
-          });
+        saveData();
       }
     };
   }, [everything, id]);
@@ -66,6 +82,17 @@ function Book(): React.ReactElement {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (!firstFetch) {
+      setSaved(false);
+    }
+  }, [everything]);
+
+  const blocker = useBlocker(
+    ({ currentLocation, nextLocation }) =>
+      !saved && currentLocation.pathname !== nextLocation.pathname
+  );
+
   if (everything === "loading") {
     return <div>Loading...</div>;
   }
@@ -80,8 +107,9 @@ function Book(): React.ReactElement {
         openModifyBookModal={() => {
           setModifyBookModalOpenType("update");
         }}
+        saved={saved}
       />
-      <div className="w-3/4 h-full overflow-y-auto p-8 flex flex-col relative">
+      <div className="w-full h-full overflow-y-auto p-8 pb-0 flex flex-col relative">
         <div className="absolute right-8 top-8">
           <Menu>
             <MenuButton className="w-8 h-8 text-zinc-500 hover:bg-zinc-100/10 hover:text-zinc-200 transition-all rounded-md flex items-center justify-center">
@@ -218,6 +246,20 @@ function Book(): React.ReactElement {
         }}
         documentID={data?.id}
         refreshData={fetchData}
+      />
+      <UnsaveChangeLeaveConfirmationModal
+        isOpen={blocker.state === "blocked"}
+        proceed={() => {
+          if (blocker.state === "blocked") {
+            blocker.proceed();
+          }
+        }}
+        saveData={saveData}
+        cancel={() => {
+          if (blocker.state === "blocked") {
+            blocker.reset();
+          }
+        }}
       />
     </>
   );

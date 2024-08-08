@@ -1,0 +1,406 @@
+{
+  "code": "UEB-2017-2",
+  "entityName": "ABC Bhd",
+  "topic": "Business Purchase",
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "2017",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "Jan 1",
+          "particular": "Freehold Premises",
+          "debit": 38000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Motor Vehicles",
+          "debit": 17000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Office Furniture",
+          "debit": 15000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Inventory",
+          "debit": 2000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Trade Receivables",
+          "debit": 1800,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Goodwill",
+          "debit": 50200,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Trade Payables",
+          "debit": 0,
+          "credit": 4000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Business Purchase",
+          "debit": 0,
+          "credit": 120000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "TOTAL",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Business Purchase",
+          "debit": 120000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Vendor - Metro",
+          "debit": 0,
+          "credit": 120000
+        },
+        {
+          "isNew": false,
+          "date": "Feb 1",
+          "particular": "Bank",
+          "debit": 130000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Application and Alloment",
+          "debit": 0,
+          "credit": 130000
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Application and Allotment",
+          "debit": 130000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Ordinary Share Capital",
+          "debit": 0,
+          "credit": 100000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Share Premium",
+          "debit": 0,
+          "credit": 30000
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Vendor - Metro",
+          "debit": 120000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Ordinary Share Capital",
+          "debit": 0,
+          "credit": 50000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 0,
+          "credit": 70000
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Formation Expenses",
+          "debit": 3000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 0,
+          "credit": 3000
+        },
+        {
+          "isNew": false,
+          "date": " ",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Statement of Financial Position",
+      "subtitle": "As At 1 February 2017",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Assets",
+          "amount": [
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Freehold Premises",
+          "amount": [
+            38000,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Motor Vehicles",
+          "amount": [
+            17000,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Office Furniture",
+          "amount": [
+            15000,
+            70000
+          ],
+          "underline": [
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "Goodwill",
+          "amount": [
+            0,
+            50200
+          ],
+          "underline": [
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            120200
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Assets",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Inventory",
+          "amount": [
+            2000,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Trade Receivables",
+          "amount": [
+            1800,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Bank (RM130,000 - RM70,000 - RM3,000)",
+          "amount": [
+            57000,
+            60800
+          ],
+          "underline": [
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "Total Assets",
+          "amount": [
+            0,
+            181000
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Equity",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Ordinary Share Capital (RM100,000 + RM50,000",
+          "amount": [
+            0,
+            150000
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Share Premium",
+          "amount": [
+            0,
+            30000
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Retained Profits",
+          "amount": [
+            0,
+            -3000
+          ],
+          "underline": [
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Total Equity",
+          "amount": [
+            0,
+            177000
+          ],
+          "underline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Trade Payables",
+          "amount": [
+            0,
+            4000
+          ],
+          "underline": [
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Total Equity and Liabilities",
+          "amount": [
+            0,
+            181000
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

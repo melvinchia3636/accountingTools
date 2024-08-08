@@ -1,0 +1,976 @@
+{
+  "code": "UEB-2017-3",
+  "entityName": "Fang, Guan, Hong, Jia",
+  "topic": "Partnership Withdrawal and Admission",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Revaluation",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Inventory (RM42,300 - RM40,500)",
+          "side": "debit",
+          "amount": [
+            1800
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Allowance for Doubtful Debts",
+          "side": "debit",
+          "amount": [
+            600
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Goodwill (RM10,000 - RM7,000)",
+          "side": "debit",
+          "amount": [
+            3000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Motor Vehicles (RM30,000 x 20%)",
+          "side": "debit",
+          "amount": [
+            6000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Capital - Gain on Revaluation",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Fang (RM12,600 x 3/6)",
+          "side": "debit",
+          "amount": [
+            6300
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Guan (RM12,600 x 2/6)",
+          "side": "debit",
+          "amount": [
+            4200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Hong (RM12,600 x 1/6)",
+          "side": "debit",
+          "amount": [
+            2100
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Premises (RM151,000 - RM127,000)",
+          "side": "credit",
+          "amount": [
+            24000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Capital",
+      "nature": "E",
+      "column": 4,
+      "topTextColumnCount": 2,
+      "headers": [
+        {
+          "debit": [
+            "Fang",
+            "Guan",
+            "Hong",
+            "Jia"
+          ],
+          "credit": [
+            "Fang",
+            "Guan",
+            "Hong",
+            "Jia"
+          ]
+        },
+        {
+          "debit": [
+            "RM",
+            "RM",
+            "RM",
+            "RM"
+          ],
+          "credit": [
+            "RM",
+            "RM",
+            "RM",
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Current",
+          "side": "debit",
+          "amount": [
+            0,
+            2512,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Motor Vehicles - taken over",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            24000,
+            0
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Loan from Hong",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            20000,
+            0
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            1778,
+            0
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            98014,
+            66688,
+            0,
+            80000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            85000,
+            65000,
+            35000,
+            0
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Current",
+          "side": "credit",
+          "amount": [
+            6714,
+            0,
+            8678,
+            0
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Bank",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0,
+            80000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Revaluation - Gain on Revaluation",
+          "side": "credit",
+          "amount": [
+            6300,
+            4200,
+            2100,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            98014,
+            66688,
+            0,
+            80000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Bank",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Capital - Jia",
+          "side": "debit",
+          "amount": [
+            80000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            21522
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2017",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            4200
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Capital - Hong",
+          "side": "credit",
+          "amount": [
+            1778
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            50000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Inventory",
+          "side": "credit",
+          "amount": [
+            2500
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            21522
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "name": "Statament of Financial Position",
+      "subtitle": "As At 1 January 2017",
+      "columnCount": 3,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Assets",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Premises",
+          "amount": [
+            0,
+            151000,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Motor Vehicles",
+          "amount": [
+            0,
+            50000,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Fixtures and Fittings",
+          "amount": [
+            0,
+            4810,
+            205810
+          ],
+          "underline": [
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "Goodwill",
+          "amount": [
+            0,
+            0,
+            7000
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            212810
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Assets",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Inventory (RM40,500 + RM2,500)",
+          "amount": [
+            0,
+            43000,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Trade Receivables",
+          "amount": [
+            35000,
+            0,
+            0
+          ],
+          "underline": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Allowance for Doubtful Debts",
+          "amount": [
+            -600,
+            34400,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bank",
+          "amount": [
+            0,
+            21522,
+            98922
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "Total Assets",
+          "amount": [
+            0,
+            0,
+            311732
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Total Equity",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Capital",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "- Fang",
+          "amount": [
+            0,
+            0,
+            98014
+          ],
+          "underline": false
+        },
+        {
+          "particular": "- Guan",
+          "amount": [
+            0,
+            0,
+            66688
+          ],
+          "underline": false
+        },
+        {
+          "particular": "- Jia",
+          "amount": [
+            0,
+            0,
+            80000
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Total Equity",
+          "amount": [
+            0,
+            0,
+            244702
+          ],
+          "underline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Non-current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Loan from Fang",
+          "amount": [
+            28000,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Loan from Hong",
+          "amount": [
+            20000,
+            48000,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Trade Payables",
+          "amount": [
+            0,
+            19030,
+            0
+          ],
+          "underline": [
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "Total Liabilities",
+          "amount": [
+            0,
+            0,
+            -67030
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Total Equity and Liabilities",
+          "amount": [
+            0,
+            0,
+            311732
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

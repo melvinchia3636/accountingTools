@@ -35,10 +35,7 @@ function Statement({
             <tr key={i} className="text-zinc-500 border-2 border-zinc-700">
               <td className="py-2 border-r-2 w-full border-zinc-700"></td>
               {Array.from({ length: columnCount }).map((_, j) => (
-                <td
-                  key={j}
-                  className={`py-2 border-r-2 w-3/12 border-zinc-700`}
-                >
+                <td key={j} className={`p-2 border-r-2 w-32 border-zinc-700`}>
                   <HeaderInput
                     headers={headers}
                     setHeaders={setHeaders}
@@ -153,7 +150,17 @@ function Statement({
                 >
                   <input
                     type="text"
-                    value={amount === 0 ? "" : amount.toLocaleString()}
+                    value={
+                      item.text?.[columnIndex]
+                        ? amount
+                        : item.dashed?.[columnIndex]
+                        ? "-"
+                        : amount === 0
+                        ? ""
+                        : amount > 0
+                        ? amount.toLocaleString()
+                        : `(${(-amount).toLocaleString()})`
+                    }
                     onBlur={() => {
                       if (rowIndex === data.length - 1) {
                         return;
@@ -193,15 +200,69 @@ function Statement({
 
                         setData(newData);
                       }
+
+                      if (e.key === "-" && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault();
+                        const newData = [...data];
+                        newData[rowIndex].amount = newData[rowIndex].amount.map(
+                          (item, i) => (i === columnIndex ? -item : item)
+                        );
+
+                        setData(newData);
+                      }
+
+                      if (e.key === "d" && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault();
+                        const dashed = (
+                          item.dashed || Array(columnCount).fill(false)
+                        ).map((item, i) => (columnIndex === i ? !item : item));
+
+                        const newData = data.map((item, i) =>
+                          rowIndex === i
+                            ? {
+                                ...item,
+                                dashed,
+                              }
+                            : item
+                        );
+
+                        setData(newData);
+                      }
+
+                      if (e.key === "t" && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault();
+                        const text = (
+                          item.text || Array(columnCount).fill(false)
+                        ).map((item, i) => (columnIndex === i ? !item : item));
+
+                        const newData = data.map((item, i) =>
+                          rowIndex === i
+                            ? {
+                                ...item,
+                                text,
+                              }
+                            : item
+                        );
+
+                        setData(newData);
+                      }
                     }}
                     onChange={(e) => {
                       const newData = [...data];
                       newData[rowIndex].amount = newData[rowIndex].amount.map(
                         (item, i) =>
                           i === columnIndex
-                            ? parseInt(e.target.value.replace(/,/g, "")) || 0
+                            ? newData[rowIndex].text?.[columnIndex]
+                              ? e.target.value
+                              : parseInt(e.target.value.replace(/,/g, "")) || 0
                             : item
                       );
+
+                      newData[rowIndex].dashed = newData[rowIndex].dashed
+                        ? newData[rowIndex].dashed.map((item, i) =>
+                            i === columnIndex ? false : item
+                          )
+                        : Array(columnCount).fill(false);
 
                       if (rowIndex === data.length - 1) {
                         const newEntry = {
@@ -217,7 +278,9 @@ function Statement({
 
                       setData(newData);
                     }}
-                    className="w-full h-full bg-transparent text-right text-zinc-200"
+                    className={`w-24 h-full bg-transparent ${
+                      item.dashed?.[columnIndex] ? "text-center" : "text-right"
+                    } text-zinc-200`}
                   />
                 </td>
               ))}

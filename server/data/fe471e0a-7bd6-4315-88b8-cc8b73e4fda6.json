@@ -1,0 +1,101 @@
+{
+  "code": "UEB-2018-2",
+  "entityName": "Seaview Bhd",
+  "topic": "Company Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Income Statement",
+      "subtitle": "For The Year Ended 31 December 2017",
+      "columnCount": 3,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Statement of Changes in Equity",
+      "subtitle": "For The Year Ended 31 December 2017",
+      "columnCount": 6,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "Share Capital",
+          "Share Premium",
+          "Assets Replacement Reserve",
+          "General Reserve",
+          "Retained Profits",
+          "Total"
+        ],
+        [
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "name": "Statement of Financial Position",
+      "subtitle": "As At 31 December 2017",
+      "columnCount": 3,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ],
+        [
+          "Cost",
+          "Accumulated Depreciation",
+          "Carrying Amount"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
