@@ -1,0 +1,187 @@
+{
+  "code": "UEB-2022-5B",
+  "entityName": "Ling",
+  "topic": "Joint Venture",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Joint Venture With Yang",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "May 1",
+          "particular": "Bank - Purchases (RM18,000 x 1/2)",
+          "side": "debit",
+          "amount": [
+            9000
+          ]
+        },
+        {
+          "date": "20",
+          "particular": "Bank - Transport Fees",
+          "side": "debit",
+          "amount": [
+            400
+          ]
+        },
+        {
+          "date": "Apr 5",
+          "particular": "Bank - Selling Expenses",
+          "side": "debit",
+          "amount": [
+            100
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Repair Expenses",
+          "side": "debit",
+          "amount": [
+            100
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Profit and Loss",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Sales Commisssion",
+          "side": "debit",
+          "amount": [
+            1000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Profit on Joint Venture",
+          "side": "debit",
+          "amount": [
+            8600
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Bank - to Yang",
+          "side": "debit",
+          "amount": [
+            4400
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Apr 5",
+          "particular": "Bank - Sales",
+          "side": "credit",
+          "amount": [
+            20000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Motor Van - taken over (RM4,000 x 90%)",
+          "side": "credit",
+          "amount": [
+            3600
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "code": "UEB-2022-5C",
+  "entityName": "Yang and Ling",
+  "topic": "Joint Venture",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Memorandum Joint Venture",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "",
+          "particular": "Purchases",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Yang",
+          "side": "debit",
+          "amount": [
+            9000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Ling",
+          "side": "debit",
+          "amount": [
+            9000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Rental Expenses - Yang",
+          "side": "debit",
+          "amount": [
+            1800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Insurance Expenses - Yang",
+          "side": "debit",
+          "amount": [
+            250
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Selling Expenses",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Yang",
+          "side": "debit",
+          "amount": [
+            50
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Ling",
+          "side": "debit",
+          "amount": [
+            100
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Transport Fees - Ling",
+          "side": "debit",
+          "amount": [
+            400
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Repair Expenses - Ling",
+          "side": "debit",
+          "amount": [
+            100
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Motor Van - Yang",
+          "side": "debit",
+          "amount": [
+            4000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Sales Commission - Ling (RM20,000 x 5%)",
+          "side": "debit",
+          "amount": [
+            1000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Profit on Joint Venture",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Yang (RM12,900 x 1/3)",
+          "side": "debit",
+          "amount": [
+            4300
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Ling (RM12,900 x 2/3)",
+          "side": "debit",
+          "amount": [
+            8600
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Sales",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Yang",
+          "side": "credit",
+          "amount": [
+            15000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Ling",
+          "side": "credit",
+          "amount": [
+            20000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Motor Van taken over: Ling",
+          "side": "credit",
+          "amount": [
+            3600
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

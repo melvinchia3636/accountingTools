@@ -1,0 +1,245 @@
+{
+  "code": "UEB-2022-1",
+  "entityName": "LWW",
+  "topic": "Amalgamation of Partnerships",
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "2022",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "Jan 1",
+          "particular": "Premises (RM100,000 x 150%)",
+          "debit": 150000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Machinery (RM25,000 - RM5,000)",
+          "debit": 20000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Motor Vehicles",
+          "debit": 23000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Inventory",
+          "debit": 13000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Receivable",
+          "debit": 10000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank (RM26,250 - RM15,000)",
+          "debit": 11250,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Goodwill",
+          "debit": 10000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Payable",
+          "debit": 0,
+          "credit": 12000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital - Lin",
+          "debit": 0,
+          "credit": 225250
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "TOTAL",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Premises (RM60,000 x 130%)",
+          "debit": 78000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Machinery",
+          "debit": 15000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Motor Vehicles",
+          "debit": 25000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Inventory",
+          "debit": 25000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Receivable",
+          "debit": 28000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank (RM23,464 - RM14,000",
+          "debit": 9464,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Goodwill",
+          "debit": 8800,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Payable",
+          "debit": 0,
+          "credit": 15000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital - Wong",
+          "debit": 0,
+          "credit": 174264
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "TOTAL",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Motor Vehicles",
+          "debit": 28000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 130000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital - Wan",
+          "debit": 0,
+          "credit": 158000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "TOTAL",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Capital: Goodwill written off",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "- Lin (RM18,800 x 2/4)",
+          "debit": 9400,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "- Wong",
+          "debit": 4700,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "- Wan",
+          "debit": 4700,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Goodwill (RM10,000 + RM8,800)",
+          "debit": 0,
+          "credit": 18800
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "TOTAL",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": " ",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    }
+  ]
+}

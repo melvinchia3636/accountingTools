@@ -1,0 +1,923 @@
+{
+  "code": "UEB-2022-6",
+  "entityName": "Hew Enterprise",
+  "topic": "Hire Purchase",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Motor Vehicle",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 31",
+          "particular": "Hire Purchase Vendor",
+          "side": "debit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Disposal of Vehicle",
+          "side": "credit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Hire Purchase Vendor",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Apr 1",
+          "particular": "Bank - Deposit (RM100,000 x 10%)",
+          "side": "debit",
+          "amount": [
+            10000
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Bank - 1st Instalment",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM(100,000 x 90% +100,000 x 90% x 3% x 6) x 1/24]",
+          "side": "debit",
+          "amount": [
+            4425
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Bank - 2nd Instalment",
+          "side": "debit",
+          "amount": [
+            4425
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Bank - 3rd Instalment",
+          "side": "debit",
+          "amount": [
+            4425
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            92925
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 31",
+          "particular": "Bank - 4th Instalment",
+          "side": "debit",
+          "amount": [
+            4425
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Bank - 5th Instalment",
+          "side": "debit",
+          "amount": [
+            4425
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Bank - 6th Instalment",
+          "side": "debit",
+          "amount": [
+            4425
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Bank - Final Settlement",
+          "side": "debit",
+          "amount": [
+            69000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Hire Purchase Interest Suspense",
+          "side": "debit",
+          "amount": [
+            12150
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 31",
+          "particular": "Motor Vehicle",
+          "side": "credit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "Apr 1",
+          "particular": "Hire Purchase Interest Suspense",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM100,000 x 90% x 3% x 24/4)",
+          "side": "credit",
+          "amount": [
+            16200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            92925
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Profit and Loss - Termination Charges",
+          "side": "credit",
+          "amount": [
+            1500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Hire Purchase Interest Suspense",
+      "nature": "EX",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Apr 1",
+          "particular": "Hire Purchase Vendor",
+          "side": "debit",
+          "amount": [
+            16200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            14175
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Profit and Loss - Hire Purchase Interest",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM16,200 x 1/6 x 9/12)",
+          "side": "credit",
+          "amount": [
+            2025
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            14175
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Hire Purchase vendor",
+          "side": "credit",
+          "amount": [
+            2025
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Profit and Loss - Hire Purchase Interest",
+          "side": "credit",
+          "amount": [
+            12150
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ledger",
+      "name": "Profit and Loss",
+      "nature": "E",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Hire Purchase Interest",
+          "side": "debit",
+          "amount": [
+            2025
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Depreciation of Motor Vehicle ",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM100,000 x 20% x 9/12)",
+          "side": "debit",
+          "amount": [
+            15000
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Hire Purchase Interest",
+          "side": "debit",
+          "amount": [
+            2025
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Termination Charges",
+          "side": "debit",
+          "amount": [
+            1500
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Depreciation of Motor Vehicle ",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM100,000 x 20% x 9/12)",
+          "side": "debit",
+          "amount": [
+            15999
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Loss on Disposal of Vehicle",
+          "side": "debit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ledger",
+      "name": "Disposal of Vehicle",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Motor Vehicles",
+          "side": "debit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Accumulated Depreciaton of Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM100,000 x 20% x 18/12)",
+          "side": "credit",
+          "amount": [
+            30000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Insurance Company",
+          "side": "credit",
+          "amount": [
+            65000
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Profit and Loss - Loss on Disposal of Vehicle",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,959 @@
+{
+  "code": "UEB-2022-2",
+  "entityName": "Allstar Enterprise",
+  "topic": "Sole Proprietorship Accounts",
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Income Statement",
+      "subtitle": "For The Year Ended 30 June 2022",
+      "columnCount": 3,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Sales",
+          "amount": [
+            0,
+            0,
+            94500
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Sales Returns",
+          "amount": [
+            0,
+            0,
+            -4500
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net Sales",
+          "amount": [
+            0,
+            0,
+            90000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            0,
+            5500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Purchases",
+          "amount": [
+            61300,
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Custom Duties",
+          "amount": [
+            1400,
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Carriage Inwards (RM1,800 x 1/2)",
+          "amount": [
+            900,
+            63600,
+            0
+          ],
+          "underline": [
+            true,
+            true,
+            false
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            69100,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Closing Inventory",
+          "amount": [
+            0,
+            -6900,
+            62200
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Gross Profit",
+          "amount": [
+            0,
+            0,
+            27800
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Other Income",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Bad Debts Recovered",
+          "amount": [
+            0,
+            325,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Commissiono Income (RM500 - RM300 x 2/5)",
+          "amount": [
+            0,
+            380,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Discounts Received",
+          "amount": [
+            0,
+            1275,
+            1980
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            29780
+          ],
+          "underline": [
+            false,
+            false,
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Salaries",
+          "amount": [
+            0,
+            8500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Carraige Outwards (RM1,800 x 1/2)",
+          "amount": [
+            0,
+            900,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Postage",
+          "amount": [
+            0,
+            300,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Rental Expenses (RM9,000 x 3/4)",
+          "amount": [
+            0,
+            6750,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Motor Expenses (RM710 x 1/2)",
+          "amount": [
+            0,
+            355,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "General Expenses",
+          "amount": [
+            0,
+            2531,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bad Debts",
+          "amount": [
+            0,
+            1700,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Wages (RM100 x 12)",
+          "amount": [
+            0,
+            1200,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Interest on Loan (RM5,000 x 8% x 9/12)",
+          "amount": [
+            0,
+            300,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Increase in Allowance for Doubtful Debts (RM90,000 x 2% - RM700)",
+          "amount": [
+            0,
+            1100,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Motor Vehicles [RM(12,000 - 2,880) x 20%]",
+          "amount": [
+            0,
+            1824,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Furniture and Fittings [RM(5,800 - 600) x 1/5]",
+          "amount": [
+            0,
+            1040,
+            -26500
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net Profit",
+          "amount": [
+            0,
+            0,
+            3280
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Statement of Financial Position",
+      "subtitle": "As At 30 June 2022",
+      "columnCount": 3,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ],
+        [
+          "Cost",
+          "Accumulated Depreciation",
+          "Carrying Amount"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Accounts",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Motor Vehicles",
+          "amount": [
+            12000,
+            -4704,
+            7296
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Furniture and Fittings",
+          "amount": [
+            5800,
+            -2340,
+            3460
+          ],
+          "underline": [
+            true,
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            17800,
+            -7044,
+            10756
+          ],
+          "underline": [
+            "double",
+            "double",
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Current Assets",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Inventory",
+          "amount": [
+            0,
+            6900,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accounts Receivable",
+          "amount": [
+            15700,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Allowance for Doubtful Debts",
+          "amount": [
+            -1800,
+            13900,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Prepaid Rental Expenses (RM9,000 x 1/4)",
+          "amount": [
+            0,
+            2250,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Petty Cash",
+          "amount": [
+            0,
+            969,
+            24019
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Assets",
+          "amount": [
+            0,
+            0,
+            34775
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Owner's Equity",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Capital",
+          "amount": [
+            0,
+            0,
+            15000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Add: Net Profit",
+          "amount": [
+            0,
+            0,
+            3280
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            18280
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Drawings (RM1,090 + RM710 x 1/2",
+          "amount": [
+            0,
+            0,
+            -1445
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Equity",
+          "amount": [
+            0,
+            0,
+            16835
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Non-current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "8% Loan from Johnson",
+          "amount": [
+            0,
+            5000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Accounts Payable",
+          "amount": [
+            9625,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accrued Wages (RM100 x 12)",
+          "amount": [
+            1200,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accrued Interest on Loan (RM5,000 x 8% x 9/12)",
+          "amount": [
+            300,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Unearned Commission Income (RM300 x 2/5)",
+          "amount": [
+            120,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bank Overdraft",
+          "amount": [
+            1695,
+            12940,
+            0
+          ],
+          "underline": [
+            true,
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Liabilities",
+          "amount": [
+            0,
+            0,
+            17940
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Equity and Liabilities",
+          "amount": [
+            0,
+            0,
+            34775
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "code": "UEB-2022-5A",
+  "entityName": "Yang",
+  "topic": "Joint Venture",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Joint Venture with Ling",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "Mar 1",
+          "particular": "Bank - Purchases (RM18,000 x 1/2)",
+          "side": "debit",
+          "amount": [
+            9000
+          ]
+        },
+        {
+          "date": "2",
+          "particular": "Bank - Rental Expenses (RM900 x 2)",
+          "side": "debit",
+          "amount": [
+            1800
+          ]
+        },
+        {
+          "date": "12",
+          "particular": "Bank - Insurance Expenses",
+          "side": "debit",
+          "amount": [
+            250
+          ]
+        },
+        {
+          "date": "15",
+          "particular": "Bank - Motor Van",
+          "side": "debit",
+          "amount": [
+            4000
+          ]
+        },
+        {
+          "date": "28",
+          "particular": "Bank - Selling Expenses",
+          "side": "debit",
+          "amount": [
+            50
+          ]
+        },
+        {
+          "date": "Apr 30",
+          "particular": "Profit and Loss - Profit on Joint Venture",
+          "side": "debit",
+          "amount": [
+            4300
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 28",
+          "particular": "Bank - Sales",
+          "side": "credit",
+          "amount": [
+            12000
+          ]
+        },
+        {
+          "date": "Apr 20",
+          "particular": "Bank - Sales",
+          "side": "credit",
+          "amount": [
+            3000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - from Ling",
+          "side": "credit",
+          "amount": [
+            4400
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
