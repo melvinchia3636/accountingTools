@@ -610,6 +610,430 @@
           ]
         }
       ]
+    },
+    {
+      "id": 5,
+      "type": "statement",
+      "name": "Income Statement",
+      "subtitle": "For The Year Ended 31 December 2020",
+      "columnCount": 3,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Revenue (RM2,000 + RM12,000 + RM83,688)",
+          "amount": [
+            0,
+            0,
+            97688
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            0,
+            13000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Purchases (RM2,020 + RM34,866)",
+          "amount": [
+            36866,
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Carriage Inwards",
+          "amount": [
+            500,
+            37366,
+            0
+          ],
+          "underline": [
+            true,
+            true,
+            false
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            50366,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " Less: Closing Inventory",
+          "amount": [
+            0,
+            -14500,
+            -35886
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Gross Profit",
+          "amount": [
+            0,
+            0,
+            61802
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Other Income",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Rental Income",
+          "amount": [
+            0,
+            2400,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bad Debts Recovered",
+          "amount": [
+            0,
+            500,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Discounts Received",
+          "amount": [
+            0,
+            120,
+            3020
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            64822
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Rental Expenses",
+          "amount": [
+            0,
+            3600,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Wages and Salaries",
+          "amount": [
+            0,
+            22000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Sundry Expenses",
+          "amount": [
+            0,
+            850,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Advertising",
+          "amount": [
+            0,
+            1426,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Stationery",
+          "amount": [
+            0,
+            260,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Maintenance of Motor Vehicles",
+          "amount": [
+            0,
+            650,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Interest on Loan ",
+          "amount": [
+            0,
+            1000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Motor Vehicles (RM60,000 x 10%)",
+          "amount": [
+            0,
+            6000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Office Equipment (RM25,000 + RM450 - RM23,000)",
+          "amount": [
+            0,
+            2450,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bad Debts",
+          "amount": [
+            0,
+            130,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Discounts Allowed",
+          "amount": [
+            0,
+            168,
+            -38534
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net Profit",
+          "amount": [
+            0,
+            0,
+            26288
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
     }
   ]
 }
