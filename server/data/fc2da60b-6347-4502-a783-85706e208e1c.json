@@ -1,0 +1,609 @@
+{
+  "code": "UEB-2019-2",
+  "entityName": "Ahmad and Hassan",
+  "topic": "Partnership Financial Statement",
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "2018",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "Jan 1",
+          "particular": "Motor Vehicles",
+          "debit": 4200,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Machinery",
+          "debit": 1350,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Goodwill",
+          "debit": 5000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Cash",
+          "debit": 8000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Inventory",
+          "debit": 1530,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Receivable",
+          "debit": 1800,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Allowance for Doubtful Debts",
+          "debit": 0,
+          "credit": 180
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Payable",
+          "debit": 0,
+          "credit": 1700
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital - Ahmad",
+          "debit": 0,
+          "credit": 20000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "TOTAL",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "1",
+          "particular": "Motor Vehicles",
+          "debit": 2300,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Machinery",
+          "debit": 1400,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Goodwill",
+          "debit": 4000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Cash",
+          "debit": 5000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Inventory",
+          "debit": 1310,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Receivable",
+          "debit": 2100,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Allowance for Doubtful Debts",
+          "debit": 0,
+          "credit": 210
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Accounts Payable",
+          "debit": 0,
+          "credit": 900
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital - Hassan",
+          "debit": 0,
+          "credit": 15000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "TOTAL",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Income Statement (Extract)",
+      "subtitle": "For The Year Ended 31 December 2018",
+      "columnCount": 3,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Net Profit",
+          "amount": [
+            0,
+            0,
+            10979
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Add: Interest on Drawings",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "- Ahmad (RM2,800 x 5%)",
+          "amount": [
+            0,
+            140,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "- Hassan (RM3,100 x 5%)",
+          "amount": [
+            0,
+            155,
+            295
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            11274
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Appropriations",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Interest on Partners' Capital",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true
+        },
+        {
+          "particular": "- Ahmad (RM20,000 x 7%)",
+          "amount": [
+            1400,
+            0,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "- Hassan (RM15,000 x 7%)",
+          "amount": [
+            1050,
+            2450,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            false
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Partner's Salaries - Hassan",
+          "amount": [
+            0,
+            3000,
+            -5450
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            5824
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Balance of Profit Shared",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "- Ahmad (RM5,824 x 4/7)",
+          "amount": [
+            0,
+            3328,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "- Hassan (RM5,824 x 3/7)",
+          "amount": [
+            0,
+            2496,
+            5824
+          ],
+          "underline": [
+            false,
+            true,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Partners' Current",
+      "nature": "E",
+      "column": 2,
+      "topTextColumnCount": 2,
+      "headers": [
+        {
+          "debit": [
+            "Ahmad",
+            "Hassan"
+          ],
+          "credit": [
+            "Ahmad",
+            "Hassan"
+          ]
+        },
+        {
+          "debit": [
+            "RM",
+            "RM"
+          ],
+          "credit": [
+            "RM",
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2018",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Drawings",
+          "side": "debit",
+          "amount": [
+            2800,
+            3100
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Profit and Loss Appropriations",
+          "side": "debit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Interest on Partners' Drawings",
+          "side": "debit",
+          "amount": [
+            140,
+            155
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            1788,
+            3291
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "2018",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Profit and Loss Appropriations",
+          "side": "credit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Interest on Capital",
+          "side": "credit",
+          "amount": [
+            1400,
+            1050
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Partner's Salaries",
+          "side": "credit",
+          "amount": [
+            0,
+            3000
+          ],
+          "dashed": [
+            true,
+            false
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Balance of Profit Shared",
+          "side": "credit",
+          "amount": [
+            3328,
+            2496
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            1877,
+            3291
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

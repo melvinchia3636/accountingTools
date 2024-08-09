@@ -55,7 +55,7 @@ function Sidebar({
               </Link>
               <div>
                 <h1 className="text-lg font-medium text-zinc-200 flex items-center">
-                  {everything.entityName}
+                  {everything.code}
                 </h1>
                 <p className="text-sm text-zinc-500">{everything.topic}</p>
               </div>

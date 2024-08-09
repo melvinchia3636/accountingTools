@@ -1,0 +1,457 @@
+{
+  "code": "UEB-2018-6",
+  "entityName": "Baba Stores",
+  "topic": "Departmental Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Income Statement",
+      "subtitle": "For The Year Ended 31 December 2017",
+      "columnCount": 6,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "Souvenir",
+          "Souvenir",
+          "Toys",
+          "Toys",
+          "Total",
+          "Total"
+        ],
+        [
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Sales",
+          "amount": [
+            0,
+            172000,
+            0,
+            150000,
+            0,
+            322000
+          ],
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            8400,
+            0,
+            3890,
+            0,
+            12290,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Purchases",
+          "amount": [
+            87000,
+            0,
+            69400,
+            0,
+            156400,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            true,
+            false,
+            true,
+            false
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            95400,
+            0,
+            73290,
+            0,
+            168690,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Closing Inventory",
+          "amount": [
+            -16700,
+            -78700,
+            -5710,
+            -67580,
+            -22410,
+            -146280
+          ],
+          "underline": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Gross Profit",
+          "amount": [
+            0,
+            93300,
+            0,
+            82420,
+            0,
+            175720
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Other Income",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Decrease in Allowance for Doubtful Debts (RM25,000 x 2% - RM1,250)",
+          "amount": [
+            0,
+            750,
+            0,
+            0,
+            0,
+            750
+          ],
+          "underline": [
+            false,
+            true,
+            false,
+            true,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false,
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            94050,
+            0,
+            82420,
+            0,
+            176470
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Commission Expenses",
+          "amount": [
+            4665,
+            0,
+            4121,
+            0,
+            8786,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Salaries and Wages",
+          "amount": [
+            8400,
+            0,
+            7200,
+            0,
+            15600,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Water and Electricity [RM(4,800 + 420) x 1/2]",
+          "amount": [
+            2610,
+            0,
+            2610,
+            0,
+            5220,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Insurance Expenses [RM(6,400 - 1,500) x 1/2]",
+          "amount": [
+            2450,
+            0,
+            2450,
+            0,
+            4900,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bad Debts",
+          "amount": [
+            200,
+            0,
+            0,
+            0,
+            200,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Fixtures and Fittings (RM60,000 x 10% x 1/2)",
+          "amount": [
+            3000,
+            0,
+            3000,
+            0,
+            6000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Advertising Expenses (RM3,600 x 1/2)",
+          "amount": [
+            1800,
+            -23125,
+            1800,
+            -21181,
+            3600,
+            -44306
+          ],
+          "underline": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net Profit",
+          "amount": [
+            0,
+            70925,
+            0,
+            61239,
+            0,
+            132164
+          ],
+          "underline": [
+            false,
+            "double",
+            false,
+            "double",
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

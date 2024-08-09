@@ -1,0 +1,283 @@
+{
+  "code": "UEB-2018-4C",
+  "entityName": "Susan and Irene",
+  "topic": "Joint Venture",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Memorandum Joint Venture",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "",
+          "particular": "Purchases - Susan",
+          "side": "debit",
+          "amount": [
+            14800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Rental Expenses - Susan",
+          "side": "debit",
+          "amount": [
+            800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Carriage Expneses",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Susan",
+          "side": "debit",
+          "amount": [
+            120
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Irene",
+          "side": "debit",
+          "amount": [
+            140
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Packaging Expenses",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Susan",
+          "side": "debit",
+          "amount": [
+            80
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Irene",
+          "side": "debit",
+          "amount": [
+            60
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Commission Income",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Susan (RM12,000 x 2%)",
+          "side": "debit",
+          "amount": [
+            240
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Irene (RM11,500 x 2%)",
+          "side": "debit",
+          "amount": [
+            230
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Profit on Joint Venture",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Susan (RM7,530 x 1/2)",
+          "side": "debit",
+          "amount": [
+            3765
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Irene (RM7,530 x 1/2)",
+          "side": "debit",
+          "amount": [
+            3765
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Sales",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Susan (RM4,300 + RM3,980 + RM3,720)",
+          "side": "credit",
+          "amount": [
+            12000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Irene (RM3,100 + RM5,600 + RM2,800)",
+          "side": "credit",
+          "amount": [
+            11500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Inventory: taken over",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Susan",
+          "side": "credit",
+          "amount": [
+            250
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Irene",
+          "side": "credit",
+          "amount": [
+            250
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

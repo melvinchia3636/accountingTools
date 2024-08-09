@@ -6,6 +6,7 @@ interface ILedgerEntry {
   particular: string;
   side: "debit" | "credit";
   amount: number[];
+  dashed?: boolean[];
 }
 
 function Ledger({
@@ -258,7 +259,9 @@ function Ledger({
                                   <input
                                     type="text"
                                     value={
-                                      debitEntries[index]?.amount[i]
+                                      debitEntries[index]?.dashed?.[i]
+                                        ? "-"
+                                        : debitEntries[index]?.amount[i]
                                         ? debitEntries[index]?.amount[
                                             i
                                           ].toLocaleString()
@@ -267,6 +270,12 @@ function Ledger({
                                     onBlur={checkAndClearEmptyRow}
                                     onChange={(e) => {
                                       const newData = [...debitEntries];
+
+                                      const dashed =
+                                        newData[index].dashed ||
+                                        Array(columnCount).fill(false);
+                                      dashed[i] = false;
+
                                       newData[index].amount[i] =
                                         parseInt(
                                           e.target.value.replace(/,/g, "")
@@ -274,7 +283,27 @@ function Ledger({
 
                                       updateEntry(newData, index, "debit");
                                     }}
-                                    className="w-20 h-full bg-transparent text-right text-zinc-200"
+                                    onKeyDown={(e) => {
+                                      if (
+                                        e.key === "d" &&
+                                        (e.ctrlKey || e.metaKey)
+                                      ) {
+                                        e.preventDefault();
+                                        const newData = [...debitEntries];
+                                        const dashed =
+                                          newData[index].dashed ||
+                                          Array(columnCount).fill(false);
+                                        dashed[i] = !dashed[i];
+                                        newData[index].dashed = dashed;
+                                        setDebitEntries(newData);
+                                        setData([...newData, ...creditEntries]);
+                                      }
+                                    }}
+                                    className={`w-20 h-full bg-transparent ${
+                                      debitEntries[index]?.dashed?.[i]
+                                        ? "text-center"
+                                        : "text-right"
+                                    } text-zinc-200`}
                                   />
                                 </td>
                               ))}
@@ -365,7 +394,9 @@ function Ledger({
                                   <input
                                     type="text"
                                     value={
-                                      creditEntries[index]?.amount[i]
+                                      creditEntries[index]?.dashed?.[i]
+                                        ? "-"
+                                        : creditEntries[index]?.amount[i]
                                         ? creditEntries[index]?.amount[
                                             i
                                           ].toLocaleString()
@@ -374,13 +405,41 @@ function Ledger({
                                     onBlur={checkAndClearEmptyRow}
                                     onChange={(e) => {
                                       const newData = [...creditEntries];
+
+                                      const dashed =
+                                        newData[index].dashed ||
+                                        Array(columnCount).fill(false);
+                                      dashed[i] = false;
+
                                       newData[index].amount[i] =
                                         parseInt(
-                                          e.target.value.replace(/,/g, "")
+                                          e.target.value
+                                            .replace(/,/g, "")
+                                            .replace(/-/g, "")
                                         ) || 0;
                                       updateEntry(newData, index, "credit");
                                     }}
-                                    className="w-20 h-full bg-transparent text-right text-zinc-200"
+                                    onKeyDown={(e) => {
+                                      if (
+                                        e.key === "d" &&
+                                        (e.ctrlKey || e.metaKey)
+                                      ) {
+                                        e.preventDefault();
+                                        const newData = [...creditEntries];
+                                        const dashed =
+                                          newData[index].dashed ||
+                                          Array(columnCount).fill(false);
+                                        dashed[i] = !dashed[i];
+                                        newData[index].dashed = dashed;
+                                        setCreditEntries(newData);
+                                        setData([...debitEntries, ...newData]);
+                                      }
+                                    }}
+                                    className={`w-20 h-full bg-transparent ${
+                                      creditEntries[index]?.dashed?.[i]
+                                        ? "text-center"
+                                        : "text-right"
+                                    } text-zinc-200`}
                                   />
                                 </td>
                               ))}

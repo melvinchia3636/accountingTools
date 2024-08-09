@@ -934,6 +934,120 @@
           ]
         }
       ]
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "name": "Statement of Calculuation of Hire Purchase Price",
+      "subtitle": "-",
+      "columnCount": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Cash Price",
+          "amount": [
+            105000
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Less: Deposit",
+          "amount": [
+            -53000
+          ],
+          "underline": [
+            true
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Total amount to be financed",
+          "amount": [
+            52000
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Add: Total hire purchase interest (RM52,000 x 12% x 5)",
+          "amount": [
+            31200
+          ],
+          "underline": [
+            true
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Total amount of interest",
+          "amount": [
+            83200
+          ],
+          "underline": [
+            "double"
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Yearly hire purchase instalment (RM83,200 x 1/5)",
+          "amount": [
+            16640
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Yearly hire purchase interest (RM31,200 x 1/5)",
+          "amount": [
+            6240
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Hire purchase price (RM105,000 + RM31,200)",
+          "amount": [
+            136200
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0
+          ],
+          "underline": false
+        }
+      ]
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
-  "code": "UEB-2017-6B",
-  "entityName": "Hassan (Branch)",
-  "topic": "Branch (Decentralised)",
+  "code": "UEB-2018-4B",
+  "entityName": "Irene",
+  "topic": "Joint Venture",
   "data": [
     {
       "id": 1,
       "type": "ledger",
-      "name": "Head Office Current",
-      "nature": "L",
+      "name": "Joint Venture with Susan",
+      "nature": "TEMP",
       "column": 1,
       "topTextColumnCount": 1,
       "headers": [
@@ -22,7 +22,7 @@
       ],
       "entries": [
         {
-          "date": "2017",
+          "date": "2018",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -30,11 +30,67 @@
           ]
         },
         {
-          "date": "Jun 30",
-          "particular": "Balance c/d",
+          "date": "Jan 8",
+          "particular": "Bank - to Susan",
           "side": "debit",
           "amount": [
-            90888
+            6500
+          ]
+        },
+        {
+          "date": "16",
+          "particular": "Bank - Carriage Expenses",
+          "side": "debit",
+          "amount": [
+            140
+          ]
+        },
+        {
+          "date": "Feb 15",
+          "particular": "Bank - Packaging Expeneses",
+          "side": "debit",
+          "amount": [
+            60
+          ]
+        },
+        {
+          "date": "28",
+          "particular": "Profit and Loss",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Commission Income",
+          "side": "debit",
+          "amount": [
+            230
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Profit on Joint Venture",
+          "side": "debit",
+          "amount": [
+            3765
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Bank - to Susan",
+          "side": "debit",
+          "amount": [
+            1055
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
           ]
         },
         {
@@ -46,9 +102,49 @@
           ]
         },
         {
+          "date": "2018",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 15",
+          "particular": "Bank - Cash Sales",
+          "side": "credit",
+          "amount": [
+            3100
+          ]
+        },
+        {
+          "date": "16",
+          "particular": "Alice - Credit Sales",
+          "side": "credit",
+          "amount": [
+            5600
+          ]
+        },
+        {
+          "date": "Feb 15",
+          "particular": "Bank - Cash Sales",
+          "side": "credit",
+          "amount": [
+            2800
+          ]
+        },
+        {
+          "date": "25",
+          "particular": "Purchases - Inventory taken over (RM500 x 1/2)",
+          "side": "credit",
+          "amount": [
+            250
+          ]
+        },
+        {
           "date": "",
           "particular": "",
-          "side": "debit",
+          "side": "credit",
           "amount": [
             0
           ]
@@ -56,7 +152,15 @@
         {
           "date": "",
           "particular": "",
-          "side": "debit",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
           "amount": [
             0
           ]
@@ -64,97 +168,9 @@
         {
           "date": "",
           "particular": "TOTAL",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "2016",
-          "particular": "",
           "side": "credit",
           "amount": [
             0
-          ]
-        },
-        {
-          "date": "Jul 1",
-          "particular": "Balance b/d",
-          "side": "credit",
-          "amount": [
-            27800
-          ]
-        },
-        {
-          "date": "2017",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Delivery Charges",
-          "side": "credit",
-          "amount": [
-            1400
-          ]
-        },
-        {
-          "date": "30",
-          "particular": "Profit and Loss - Branch Profit",
-          "side": "credit",
-          "amount": [
-            61688
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "2017",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Jul 1",
-          "particular": "Balance b/d",
-          "side": "credit",
-          "amount": [
-            90888
           ]
         },
         {

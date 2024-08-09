@@ -1,12 +1,12 @@
 {
-  "code": "UEB-2020-2",
-  "entityName": "Peh, Pak, Wee",
-  "topic": "Partnership Withdrawal and Admission",
+  "code": "UEB-2018-3",
+  "entityName": "Ahmed, Chong, Raj",
+  "topic": "Partnership Dissolution",
   "data": [
     {
       "id": 1,
       "type": "ledger",
-      "name": "Revaluation",
+      "name": "Realisation",
       "nature": "TEMP",
       "column": 1,
       "topTextColumnCount": 1,
@@ -22,7 +22,7 @@
       ],
       "entries": [
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -30,24 +30,64 @@
           ]
         },
         {
-          "date": "Jul 1",
+          "date": "Sep 30",
+          "particular": "Building",
+          "side": "debit",
+          "amount": [
+            52360
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Office Equipment",
+          "side": "debit",
+          "amount": [
+            11600
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Motor Vehicles",
+          "side": "debit",
+          "amount": [
+            29500
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Office Furniture",
+          "side": "debit",
+          "amount": [
+            2640
+          ]
+        },
+        {
+          "date": "30",
           "particular": "Inventory",
           "side": "debit",
           "amount": [
-            365
+            23900
           ]
         },
         {
-          "date": "1",
-          "particular": "Allowance for Doubtful Debts",
+          "date": "30",
+          "particular": "Trade Receivables",
           "side": "debit",
           "amount": [
-            255
+            22800
           ]
         },
         {
-          "date": "1",
-          "particular": "Partners' Capital - Profit on Revaluation",
+          "date": "30",
+          "particular": "Bank - Dissolution Expenses",
+          "side": "debit",
+          "amount": [
+            1285
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
           "side": "debit",
           "amount": [
             0
@@ -55,26 +95,26 @@
         },
         {
           "date": "",
-          "particular": "- Peh (1/2 * RM 16,780)",
+          "particular": "",
           "side": "debit",
           "amount": [
-            8390
+            0
           ]
         },
         {
           "date": "",
-          "particular": "- Pak (1/5 * RM 16,780)",
+          "particular": "",
           "side": "debit",
           "amount": [
-            3356
+            0
           ]
         },
         {
           "date": "",
-          "particular": "- Wee (3/10 * RM 16,780)",
+          "particular": "",
           "side": "debit",
           "amount": [
-            5034
+            0
           ]
         },
         {
@@ -94,7 +134,7 @@
           ]
         },
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "credit",
           "amount": [
@@ -102,32 +142,8 @@
           ]
         },
         {
-          "date": "Jul 1",
-          "particular": "Building",
-          "side": "credit",
-          "amount": [
-            5000
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Plant and Machinery",
-          "side": "credit",
-          "amount": [
-            5500
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Motor Vehicles",
-          "side": "credit",
-          "amount": [
-            6900
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
+          "date": "Sep 30",
+          "particular": "Bank",
           "side": "credit",
           "amount": [
             0
@@ -135,7 +151,55 @@
         },
         {
           "date": "",
-          "particular": "",
+          "particular": "- Building",
+          "side": "credit",
+          "amount": [
+            60000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Office Equipment",
+          "side": "credit",
+          "amount": [
+            9800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            18300
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Bank - Trade Receivables (RM22,800 - RM1,500)",
+          "side": "credit",
+          "amount": [
+            21300
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Capital: Motor Vehicles taken over - Ahmed",
+          "side": "credit",
+          "amount": [
+            10000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Capital: Inventory taken over - Chong",
+          "side": "credit",
+          "amount": [
+            19200
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Capital: Loss on Realisation",
           "side": "credit",
           "amount": [
             0
@@ -143,10 +207,26 @@
         },
         {
           "date": "",
-          "particular": "",
+          "particular": "- Ahmed",
           "side": "credit",
           "amount": [
-            0
+            2194
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Chong",
+          "side": "credit",
+          "amount": [
+            2194
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Raj",
+          "side": "credit",
+          "amount": [
+            1097
           ]
         },
         {
@@ -170,7 +250,218 @@
     {
       "id": 2,
       "type": "ledger",
-      "name": "Goodwill",
+      "name": "Capital",
+      "nature": "E",
+      "column": 3,
+      "topTextColumnCount": 2,
+      "headers": [
+        {
+          "debit": [
+            "Ahmed",
+            "Chong",
+            "Raj"
+          ],
+          "credit": [
+            "Ahmed",
+            "Chong",
+            "Raj"
+          ]
+        },
+        {
+          "debit": [
+            "RM",
+            "RM",
+            "RM"
+          ],
+          "credit": [
+            "RM",
+            "RM",
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2018",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Realisation: Assets taken over",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Motor Vehicles",
+          "side": "debit",
+          "amount": [
+            10000,
+            0,
+            0
+          ],
+          "dashed": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Inventory",
+          "side": "debit",
+          "amount": [
+            0,
+            19200,
+            0
+          ],
+          "dashed": [
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Realisation: Loss on Realisation",
+          "side": "debit",
+          "amount": [
+            2194,
+            2194,
+            1097
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            37806,
+            31106,
+            18903
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "2018",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            50000,
+            40000,
+            20000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Trade Payables",
+          "side": "credit",
+          "amount": [
+            343,
+            12500,
+            0
+          ],
+          "dashed": [
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Bank",
       "nature": "A",
       "column": 1,
       "topTextColumnCount": 1,
@@ -186,7 +477,7 @@
       ],
       "entries": [
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -194,16 +485,16 @@
           ]
         },
         {
-          "date": "Jul 1",
+          "date": "Sep 30",
           "particular": "Balance b/d",
           "side": "debit",
           "amount": [
-            25000
+            9700
           ]
         },
         {
-          "date": "1",
-          "particular": "Partners' Capital",
+          "date": "30",
+          "particular": "Realisation",
           "side": "debit",
           "amount": [
             0
@@ -211,26 +502,34 @@
         },
         {
           "date": "",
-          "particular": "- Peh (RM5,000 x 1/2)",
+          "particular": "- Building",
           "side": "debit",
           "amount": [
-            2500
+            60000
           ]
         },
         {
           "date": "",
-          "particular": "- Pak (RM 5,000 x 1/5)",
+          "particular": "- Office Equipment",
           "side": "debit",
           "amount": [
-            1000
+            9800
           ]
         },
         {
           "date": "",
-          "particular": "- Wee (RM 5,000 x 3/10)",
+          "particular": "- Motor Vehicles",
           "side": "debit",
           "amount": [
-            1500
+            18300
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Realisation - Trade Receivables",
+          "side": "debit",
+          "amount": [
+            21300
           ]
         },
         {
@@ -242,22 +541,6 @@
           ]
         },
         {
-          "date": "2020",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Jul 1",
-          "particular": "Balance b/d",
-          "side": "debit",
-          "amount": [
-            15000
-          ]
-        },
-        {
           "date": "",
           "particular": "",
           "side": "debit",
@@ -266,7 +549,7 @@
           ]
         },
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "credit",
           "amount": [
@@ -274,8 +557,24 @@
           ]
         },
         {
-          "date": "Jul 1",
-          "particular": "Partners' Capital",
+          "date": "Sep 30",
+          "particular": "Bank Loan",
+          "side": "credit",
+          "amount": [
+            30000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Realisation- Dissolution Expenses",
+          "side": "credit",
+          "amount": [
+            1285
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Capital",
           "side": "credit",
           "amount": [
             0
@@ -283,34 +582,26 @@
         },
         {
           "date": "",
-          "particular": "- Peh",
+          "particular": "- Ahmed",
           "side": "credit",
           "amount": [
-            5000
+            37806
           ]
         },
         {
           "date": "",
-          "particular": "- Wee",
+          "particular": "- Chong",
           "side": "credit",
           "amount": [
-            5000
+            31106
           ]
         },
         {
           "date": "",
-          "particular": "- Wong",
+          "particular": "- Raj",
           "side": "credit",
           "amount": [
-            5000
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Balance c/d",
-          "side": "credit",
-          "amount": [
-            15000
+            18903
           ]
         },
         {
@@ -326,320 +617,6 @@
           "particular": "",
           "side": "credit",
           "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "type": "ledger",
-      "name": "Partners' Capital",
-      "nature": "E",
-      "column": 4,
-      "topTextColumnCount": 2,
-      "headers": [
-        {
-          "debit": [
-            "Peh",
-            "Pak",
-            "Wee",
-            "Wong"
-          ],
-          "credit": [
-            "Peh",
-            "Pak",
-            "Wee",
-            "Wong"
-          ]
-        },
-        {
-          "debit": [
-            "RM",
-            "RM",
-            "RM",
-            "RM"
-          ],
-          "credit": [
-            "RM",
-            "RM",
-            "RM",
-            "RM"
-          ]
-        }
-      ],
-      "entries": [
-        {
-          "date": "2020",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "date": "Jul 1",
-          "particular": "Partners' Current",
-          "side": "debit",
-          "amount": [
-            0,
-            300,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Goodwill - written off",
-          "side": "debit",
-          "amount": [
-            5000,
-            0,
-            5000,
-            5000
-          ],
-          "dashed": [
-            false,
-            true,
-            false,
-            false
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Office Equipment - taken over",
-          "side": "debit",
-          "amount": [
-            0,
-            30000,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Loan from Pak",
-          "side": "debit",
-          "amount": [
-            0,
-            12014,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Bank",
-          "side": "debit",
-          "amount": [
-            0,
-            36042,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Balance c/d",
-          "side": "debit",
-          "amount": [
-            200000,
-            0,
-            200000,
-            200000
-          ],
-          "dashed": [
-            false,
-            true,
-            false,
-            false
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "debit",
-          "amount": [
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "date": "2020",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "date": "Jul 1",
-          "particular": "Balance b/d",
-          "side": "credit",
-          "amount": [
-            185000,
-            74000,
-            111000,
-            0
-          ],
-          "dashed": [
-            false,
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Revaluation - Profit on Revaluation",
-          "side": "credit",
-          "amount": [
-            8390,
-            3356,
-            5034,
-            0
-          ],
-          "dashed": [
-            false,
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Goodwill",
-          "side": "credit",
-          "amount": [
-            2500,
-            1000,
-            1500,
-            0
-          ],
-          "dashed": [
-            false,
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Bank",
-          "side": "credit",
-          "amount": [
-            9110,
-            0,
-            87466,
-            205000
-          ],
-          "dashed": [
-            false,
-            true,
-            false,
-            false
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "credit",
-          "amount": [
-            0,
-            0,
-            0,
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0,
-            0,
-            0,
             0
           ]
         }
