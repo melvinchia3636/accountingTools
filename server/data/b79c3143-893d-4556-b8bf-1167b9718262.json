@@ -1,0 +1,271 @@
+{
+  "code": "UEB-2021-6B",
+  "entityName": "Oakley",
+  "topic": "Bills of Exchange",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Bills Payable",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 5",
+          "particular": "Bank (Bill A Retired)",
+          "side": "debit",
+          "amount": [
+            5900
+          ]
+        },
+        {
+          "date": "5",
+          "particular": "Discounts Received",
+          "side": "debit",
+          "amount": [
+            100
+          ]
+        },
+        {
+          "date": "Mar 6",
+          "particular": "Bank (Bill E Honoured)",
+          "side": "debit",
+          "amount": [
+            5300
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            6000
+          ]
+        },
+        {
+          "date": "Feb 6",
+          "particular": "Bills Payable (Bill E, due 6/3)",
+          "side": "credit",
+          "amount": [
+            5300
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Travis Bhd",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Feb 6",
+          "particular": "Returns Outwards",
+          "side": "debit",
+          "amount": [
+            200
+          ]
+        },
+        {
+          "date": "6",
+          "particular": "Bills Payable (Bill E, due 6/3)",
+          "side": "debit",
+          "amount": [
+            5300
+          ]
+        },
+        {
+          "date": "Apr 30",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            2000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            7500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "May 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            2000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -32,10 +32,13 @@ function Statement({
       <table className="w-full border-2 mt-8 border-zinc-700 table-fixed">
         <thead className="font-semibold text-center">
           {Array.from({ length: topTextColumnCount }).map((_, i) => (
-            <tr key={i} className="text-zinc-500 border-2 border-zinc-700">
+            <tr key={i} className="text-zinc-500">
               <td className="py-2 border-r-2 w-full border-zinc-700"></td>
               {Array.from({ length: columnCount }).map((_, j) => (
-                <td key={j} className={`p-2 border-r-2 w-32 border-zinc-700`}>
+                <td
+                  key={j}
+                  className={`p-2 border-r-2 border-b-2 w-32 border-zinc-700`}
+                >
                   <HeaderInput
                     headers={headers}
                     setHeaders={setHeaders}

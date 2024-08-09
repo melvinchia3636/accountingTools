@@ -1,0 +1,245 @@
+{
+  "code": "UEB-2021-6A",
+  "entityName": "Travis Bhd",
+  "topic": "Bills of Exchange",
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "2021",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "Jan 2",
+          "particular": "Teddy",
+          "debit": 3000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 0,
+          "credit": 3000
+        },
+        {
+          "isNew": false,
+          "date": "2",
+          "particular": "Teddy",
+          "debit": 7000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Payable (Bill B, payable 2/3)",
+          "debit": 0,
+          "credit": 7000
+        },
+        {
+          "isNew": false,
+          "date": "3",
+          "particular": "Bills Receivable (Bill C, due 3/3)",
+          "debit": 5000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Payable (Bill D, due 4/3)",
+          "debit": 4000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Stanley",
+          "debit": 0,
+          "credit": 9000
+        },
+        {
+          "isNew": false,
+          "date": "3",
+          "particular": "Bank - Bill C Discounted",
+          "debit": 4920,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Discounting Charges",
+          "debit": 80,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill C)",
+          "debit": 0,
+          "credit": 5000
+        },
+        {
+          "isNew": false,
+          "date": "4",
+          "particular": "Freddie",
+          "debit": 4000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill D Negotiated)",
+          "debit": 0,
+          "credit": 4000
+        },
+        {
+          "isNew": false,
+          "date": "5",
+          "particular": "Bank (Bill A Retired)",
+          "debit": 5900,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Discounts Allowed",
+          "debit": 100,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill A)",
+          "debit": 0,
+          "credit": 6000
+        },
+        {
+          "isNew": false,
+          "date": "Feb 6",
+          "particular": "Returns Inwards",
+          "debit": 200,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Oakley",
+          "debit": 0,
+          "credit": 200
+        },
+        {
+          "isNew": false,
+          "date": "6",
+          "particular": "Bills Receivable (Bill E, due 6/3)",
+          "debit": 5300,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Oak Ley",
+          "debit": 0,
+          "credit": 5300
+        },
+        {
+          "isNew": false,
+          "date": "Mar 2",
+          "particular": "Bills Payable (Bill B Honoured)",
+          "debit": 7000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 0,
+          "credit": 7000
+        },
+        {
+          "isNew": false,
+          "date": "3",
+          "particular": "Stanley",
+          "debit": 5050,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank - Noting Charges",
+          "debit": 0,
+          "credit": 50
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank - Bill C Dishonoured",
+          "debit": 0,
+          "credit": 5000
+        },
+        {
+          "isNew": false,
+          "date": "3",
+          "particular": "Bank",
+          "debit": 1000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Stanley",
+          "debit": 0,
+          "credit": 1000
+        },
+        {
+          "isNew": false,
+          "date": "3",
+          "particular": "Bills Receivable (Bill F, due 3/5)",
+          "debit": 4090,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Stanley",
+          "debit": 0,
+          "credit": 4050
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Interest Income",
+          "debit": 0,
+          "credit": 40
+        },
+        {
+          "isNew": false,
+          "date": "6",
+          "particular": "Bank - Bill E Honoured",
+          "debit": 5300,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill E)",
+          "debit": 0,
+          "credit": 5300
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    }
+  ]
+}
