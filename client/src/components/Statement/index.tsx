@@ -1,5 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import HeaderInput from "../HeaderInput";
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxOption,
+  ComboboxOptions,
+  Field,
+} from "@headlessui/react";
+import { useParams } from "react-router-dom";
 
 function Statement({
   data,
@@ -11,6 +19,7 @@ function Statement({
   subtitle,
   setData,
   setHeaders,
+  addColumn,
 }: {
   data: any[];
   headers: string[][];
@@ -21,7 +30,50 @@ function Statement({
   subtitle: string;
   setData: React.Dispatch<React.SetStateAction<any[]>>;
   setHeaders: React.Dispatch<React.SetStateAction<any[]>>;
+  addColumn: (side: "left" | "right", colIndex: number) => void;
 }) {
+  const { id } = useParams();
+  const [autofillData, setAutofillData] = useState<string[]>([]);
+  const [query, setQuery] = useState("");
+  const filteredItems = [
+    ...new Set([
+      ...autofillData,
+      ...data
+        .map(
+          (item) =>
+            item.particular.replace(/\(.*\)|\[.*\]/g, "").trim() as string
+        )
+        .filter((item) => item),
+    ]),
+  ]
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+    .filter((item) => {
+      return item.toLowerCase().includes(query.toLowerCase());
+    })
+    .sort(
+      (a, b) =>
+        a.toLowerCase().indexOf(query.toLowerCase()) -
+        b.toLowerCase().indexOf(query.toLowerCase())
+    );
+
+  function fetchAutoFillData() {
+    fetch(
+      `http://localhost:3000/autofill/statement-particulars/${id}/${encodeURIComponent(
+        name
+      )}`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          setAutofillData(data.data);
+        }
+      });
+  }
+
+  useState(() => {
+    fetchAutoFillData();
+  }, []);
+
   return (
     <div className="w-full flex-1 mt-8 overflow-y-auto">
       <h2 className="text-xl text-zinc-500 text-center">
@@ -54,91 +106,137 @@ function Statement({
           {data.map((item, rowIndex) => (
             <tr key={rowIndex} className="text-zinc-200">
               <td className={`py-2 border-r-2 p-4 border-zinc-700 `}>
-                <input
-                  type="text"
-                  value={item.particular}
-                  onChange={(e) => {
-                    const newData = [...data];
-                    newData[rowIndex].particular = e.target.value;
+                <Field>
+                  <Combobox
+                    value={item.particular}
+                    onChange={(e) => {
+                      const newData = [...data];
+                      newData[rowIndex].particular = e ?? "";
 
-                    if (rowIndex === data.length - 1) {
-                      const newEntry = {
-                        particular: "",
-                        amount: Array.from({ length: columnCount }).map(
-                          () => 0
-                        ),
-                        underline: false,
-                      };
+                      if (rowIndex === data.length - 1) {
+                        const newEntry = {
+                          particular: "",
+                          amount: Array.from({ length: columnCount }).map(
+                            () => 0
+                          ),
+                          underline: false,
+                        };
 
-                      newData.push(newEntry);
-                    }
+                        newData.push(newEntry);
+                      }
 
-                    setData(newData);
-                  }}
-                  onBlur={() => {
-                    if (rowIndex === data.length - 1) {
-                      return;
-                    }
-
-                    if (
-                      item.amount.every((item) => item === 0) &&
-                      item.particular === ""
-                    ) {
-                      const newData = data.filter((_, i) => i !== rowIndex);
                       setData(newData);
-                    }
-                  }}
-                  onKeyDown={(e) => {
-                    if (e.key === "b" && (e.metaKey || e.ctrlKey)) {
-                      e.preventDefault();
-                      const newData = data.map((item, i) =>
-                        rowIndex === i
-                          ? {
-                              ...item,
-                              bold: !item.bold,
-                              particularUnderline: false,
-                            }
-                          : item
-                      );
-                      setData(newData);
-                    }
+                    }}
+                    onClose={() => {
+                      setQuery("");
 
-                    if (e.key === "u" && (e.metaKey || e.ctrlKey)) {
-                      e.preventDefault();
-                      const newData = data.map((item, i) =>
-                        rowIndex === i
-                          ? {
-                              ...item,
-                              bold: false,
-                              particularUnderline: !item.particularUnderline,
-                            }
-                          : item
-                      );
-                      setData(newData);
-                    }
+                      if (rowIndex === data.length - 1) {
+                        return;
+                      }
 
-                    if (e.key === " " && (e.metaKey || e.ctrlKey)) {
-                      e.preventDefault();
-                      const newData = data.map((item, i) =>
-                        rowIndex === i
-                          ? {
-                              ...item,
-                              underline: item.underline,
-                              tabIn: !item.tabIn,
-                            }
-                          : item
-                      );
-                      setData(newData);
-                    }
-                  }}
-                  className={`bg-transparent w-full ${
-                    item.bold ? "font-bold" : ""
-                  } ${
-                    item.particularUnderline
-                      ? "underline decoration-2 underline-offset-4 font-semibold"
-                      : ""
-                  } ${item.tabIn ? "pl-8" : ""}`}
-                />
+                      if (
+                        item.amount.every((item) => item === 0) &&
+                        item.particular === ""
+                      ) {
+                        const newData = data.filter((_, i) => i !== rowIndex);
+                        setData(newData);
+                      }
+                    }}
+                  >
+                    <ComboboxInput
+                      displayValue={(item: string) => item}
+                      onChange={(e) => {
+                        setQuery(e.target.value);
+                      }}
+                      onBlur={() => {
+                        if (rowIndex === data.length - 1) {
+                          return;
+                        }
+
+                        if (
+                          item.amount.every((item) => item === 0) &&
+                          item.particular === ""
+                        ) {
+                          const newData = data.filter((_, i) => i !== rowIndex);
+                          setData(newData);
+                        }
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "b" && (e.metaKey || e.ctrlKey)) {
+                          e.preventDefault();
+                          const newData = data.map((item, i) =>
+                            rowIndex === i
+                              ? {
+                                  ...item,
+                                  bold: !item.bold,
+                                  particularUnderline: false,
+                                }
+                              : item
+                          );
+                          setData(newData);
+                        }
+
+                        if (e.key === "u" && (e.metaKey || e.ctrlKey)) {
+                          e.preventDefault();
+                          const newData = data.map((item, i) =>
+                            rowIndex === i
+                              ? {
+                                  ...item,
+                                  bold: false,
+                                  particularUnderline:
+                                    !item.particularUnderline,
+                                }
+                              : item
+                          );
+                          setData(newData);
+                        }
+
+                        if (e.key === " " && (e.metaKey || e.ctrlKey)) {
+                          e.preventDefault();
+                          const newData = data.map((item, i) =>
+                            rowIndex === i
+                              ? {
+                                  ...item,
+                                  underline: item.underline,
+                                  tabIn: !item.tabIn,
+                                }
+                              : item
+                          );
+                          setData(newData);
+                        }
+                      }}
+                      className={`bg-transparent w-full ${
+                        item.bold ? "font-bold" : ""
+                      } ${
+                        item.particularUnderline
+                          ? "underline decoration-2 underline-offset-4 font-semibold"
+                          : ""
+                      } ${item.tabIn ? "pl-8" : ""}`}
+                    />
+                    <ComboboxOptions
+                      anchor="bottom"
+                      className="z-10 w-[var(--input-width)] !max-h-96 mt-2 bg-zinc-800 rounded-md shadow-lg"
+                    >
+                      {filteredItems.map((item) => (
+                        <ComboboxOption
+                          key={item}
+                          value={item}
+                          className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                        >
+                          {item}
+                        </ComboboxOption>
+                      ))}
+                      {query.length > 0 && !filteredItems.includes(query) && (
+                        <ComboboxOption
+                          value={query}
+                          className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                        >
+                          Create <span className="font-bold">"{query}"</span>
+                        </ComboboxOption>
+                      )}
+                    </ComboboxOptions>
+                  </Combobox>
+                </Field>
               </td>
               {item.amount.map((amount, columnIndex) => (
                 <td
@@ -248,6 +346,24 @@ function Statement({
                         );
 
                         setData(newData);
+                      }
+
+                      if (
+                        e.key === "l" &&
+                        e.shiftKey &&
+                        (e.metaKey || e.ctrlKey)
+                      ) {
+                        e.preventDefault();
+                        addColumn("left", columnIndex);
+                      }
+
+                      if (
+                        e.key === "r" &&
+                        e.shiftKey &&
+                        (e.metaKey || e.ctrlKey)
+                      ) {
+                        e.preventDefault();
+                        addColumn("right", columnIndex);
                       }
                     }}
                     onChange={(e) => {

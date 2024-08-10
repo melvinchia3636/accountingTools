@@ -5,6 +5,7 @@ import Input from "../Input";
 import CreateButton from "../CreateButton";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import AutofillInput from "../../AutofillInput";
 
 function CreateStatementModal({
   isOpen,
@@ -15,11 +16,22 @@ function CreateStatementModal({
   onClose: () => void;
   reloadBook: () => void;
 }): React.ReactElement {
+  const { id } = useParams();
   const [name, setName] = useState("");
   const [subtitle, setSubtitle] = useState("");
   const [columnCount, setColumnCount] = useState(1);
   const [topTextColumnCount, setTopTextColumnCount] = useState(1);
-  const { id } = useParams();
+  const [nameAutofillData, setNameAutofillData] = useState<string[]>([]);
+
+  function fetchAutoFillData() {
+    fetch(`http://localhost:3000/autofill/statement-names/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          setNameAutofillData(data.data);
+        }
+      });
+  }
 
   function onSubmit() {
     if (
@@ -32,7 +44,7 @@ function CreateStatementModal({
       return;
     }
 
-    fetch(`http://localhost:3000/create/statement/${id}`, {
+    fetch(`http://localhost:3000/statements/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,6 +74,8 @@ function CreateStatementModal({
       setSubtitle("");
       setColumnCount(1);
       setTopTextColumnCount(1);
+
+      fetchAutoFillData();
     }
   }, [isOpen]);
 
@@ -100,11 +114,12 @@ function CreateStatementModal({
             </div>
 
             <div className="flex flex-col gap-6 mt-6">
-              <Input
+              <AutofillInput
                 name="Statement Name"
                 icon="tabler:chart-line"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setName(e)}
+                autofillData={nameAutofillData}
               />
               <Input
                 name="Statement Subtitle"

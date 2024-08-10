@@ -24,7 +24,7 @@ function DeleteBookConfirmationModal({
       return;
     }
 
-    fetch(`http://localhost:3000/delete/book/${id}`, {
+    fetch(`http://localhost:3000/books/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
 import LedgerHeader from "./components/LedgerHeader";
+import { useParams } from "react-router-dom";
+import {
+  Combobox,
+  ComboboxInput,
+  ComboboxOption,
+  ComboboxOptions,
+  Field,
+} from "@headlessui/react";
 
 interface ILedgerEntry {
   date: string;
@@ -35,6 +43,8 @@ function Ledger({
   columnCount: number;
   topTextColumnCount: number;
 }) {
+  const { id } = useParams();
+  const [autofillData, setAutofillData] = useState<string[]>([]);
   const [debitEntries, setDebitEntries] = useState<ILedgerEntry[]>(
     data.filter((item) => item.side === "debit")
   );
@@ -42,6 +52,37 @@ function Ledger({
     data.filter((item) => item.side === "credit")
   );
   const maxEntries = Math.max(debitEntries.length, creditEntries.length);
+  const [query, setQuery] = useState("");
+  const filteredItems = [
+    ...new Set([
+      ...autofillData,
+      ...data
+        .map(
+          (item) =>
+            item.particular.replace(/\(.*\)|\[.*\]/g, "").trim() as string
+        )
+        .filter((item) => item && item !== "TOTAL"),
+    ]),
+  ]
+    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+    .filter((item) => {
+      return item.toLowerCase().includes(query.toLowerCase());
+    })
+    .sort(
+      (a, b) =>
+        a.toLowerCase().indexOf(query.toLowerCase()) -
+        b.toLowerCase().indexOf(query.toLowerCase())
+    );
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/autofill/ledger-particulars/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          setAutofillData(data.data);
+        }
+      });
+  }, []);
 
   function updateEntry(
     newData: ILedgerEntry[],
@@ -68,6 +109,8 @@ function Ledger({
 
       sides[side][1](newData);
     }
+
+    balanceEntries();
 
     setData(
       side === "debit"
@@ -187,21 +230,60 @@ function Ledger({
                           />
                         </td>
                         <td className="py-2 border-r-2 p-4 border-zinc-700">
-                          <input
-                            type="text"
-                            value={debitEntries[index]?.particular}
-                            onChange={(e) => {
-                              const newData = [...debitEntries];
-                              newData[index].particular = e.target.value;
-                              updateEntry(newData, index, "debit");
-                            }}
-                            onBlur={checkAndClearEmptyRow}
-                            className={`min-w-96 w-full h-full bg-transparent ${
-                              debitEntries[index]?.particular === "TOTAL"
-                                ? "text-transparent"
-                                : "text-zinc-200"
-                            }`}
-                          />
+                          <Field>
+                            <Combobox
+                              value={debitEntries[index]?.particular}
+                              onChange={(e) => {
+                                const newData = [...debitEntries];
+                                newData[index].particular = e || "";
+                                updateEntry(newData, index, "debit");
+                              }}
+                              onClose={() => {
+                                setQuery("");
+                                updateEntry(debitEntries, index, "debit");
+                              }}
+                            >
+                              <ComboboxInput
+                                displayValue={(item: string) => item}
+                                onChange={(e) => {
+                                  setQuery(e.target.value);
+                                  updateEntry(debitEntries, index, "debit");
+                                }}
+                                onBlur={checkAndClearEmptyRow}
+                                className={`min-w-96 w-full h-full bg-transparent ${
+                                  debitEntries[index]?.particular === "TOTAL"
+                                    ? "text-transparent"
+                                    : "text-zinc-200"
+                                }`}
+                              />
+                              <ComboboxOptions
+                                anchor="bottom"
+                                className="z-10 w-[var(--input-width)] !max-h-96 mt-2 bg-zinc-800 rounded-md shadow-lg"
+                              >
+                                {filteredItems.map((item) => (
+                                  <ComboboxOption
+                                    key={item}
+                                    value={item}
+                                    className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                                  >
+                                    {item}
+                                  </ComboboxOption>
+                                ))}
+                                {query.length > 0 &&
+                                  !filteredItems.includes(query) && (
+                                    <ComboboxOption
+                                      value={query}
+                                      className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                                    >
+                                      Create{" "}
+                                      <span className="font-bold">
+                                        "{query}"
+                                      </span>
+                                    </ComboboxOption>
+                                  )}
+                              </ComboboxOptions>
+                            </Combobox>
+                          </Field>
                         </td>
                         {debitEntries[index]?.particular === "TOTAL"
                           ? Array(columnCount)
@@ -333,21 +415,60 @@ function Ledger({
                           />
                         </td>
                         <td className="py-2 border-r-2 p-4 border-zinc-700">
-                          <input
-                            type="text"
-                            value={creditEntries[index]?.particular}
-                            onChange={(e) => {
-                              const newData = [...creditEntries];
-                              newData[index].particular = e.target.value;
-                              updateEntry(newData, index, "credit");
-                            }}
-                            onBlur={checkAndClearEmptyRow}
-                            className={`min-w-96 w-full h-full bg-transparent ${
-                              creditEntries[index]?.particular === "TOTAL"
-                                ? "text-transparent"
-                                : "text-zinc-200"
-                            }`}
-                          />
+                          <Field>
+                            <Combobox
+                              value={creditEntries[index]?.particular}
+                              onChange={(e) => {
+                                const newData = [...creditEntries];
+                                newData[index].particular = e || "";
+                                updateEntry(newData, index, "credit");
+                              }}
+                              onClose={() => {
+                                setQuery("");
+                                updateEntry(creditEntries, index, "credit");
+                              }}
+                            >
+                              <ComboboxInput
+                                displayValue={(item: string) => item}
+                                onChange={(e) => {
+                                  updateEntry(creditEntries, index, "credit");
+                                  setQuery(e.target.value);
+                                }}
+                                onBlur={checkAndClearEmptyRow}
+                                className={`min-w-96 w-full h-full bg-transparent ${
+                                  creditEntries[index]?.particular === "TOTAL"
+                                    ? "text-transparent"
+                                    : "text-zinc-200"
+                                }`}
+                              />
+                              <ComboboxOptions
+                                anchor="bottom"
+                                className="z-10 w-[var(--input-width)] !max-h-96 mt-2 bg-zinc-800 rounded-md shadow-lg"
+                              >
+                                {filteredItems.map((item) => (
+                                  <ComboboxOption
+                                    key={item}
+                                    value={item}
+                                    className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                                  >
+                                    {item}
+                                  </ComboboxOption>
+                                ))}
+                                {query.length > 0 &&
+                                  !filteredItems.includes(query) && (
+                                    <ComboboxOption
+                                      value={query}
+                                      className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                                    >
+                                      Create{" "}
+                                      <span className="font-bold">
+                                        "{query}"
+                                      </span>
+                                    </ComboboxOption>
+                                  )}
+                              </ComboboxOptions>
+                            </Combobox>
+                          </Field>
                         </td>
                         {creditEntries[index]?.particular === "TOTAL"
                           ? Array(columnCount)

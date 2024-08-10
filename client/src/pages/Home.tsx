@@ -24,7 +24,7 @@ function Home() {
 
   function fetchData() {
     setData(null);
-    fetch("http://localhost:3000/list")
+    fetch("http://localhost:3000/books")
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "success") {

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Input from "../Input";
 import { toast } from "react-toastify";
 import CreateButton from "../CreateButton";
+import AutofillInput from "../../AutofillInput";
 
 function ModifyBookModal({
   openType,
@@ -24,6 +25,17 @@ function ModifyBookModal({
   const [name, setName] = useState("");
   const [code, setCode] = useState("");
   const [topic, setTopic] = useState("");
+  const [topicAutofillData, setTopicAutofillData] = useState<string[]>([]);
+
+  function fetchAutoFillData() {
+    fetch("http://localhost:3000/autofill/book-topics")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          setTopicAutofillData(data.data);
+        }
+      });
+  }
 
   function onChange(e: React.ChangeEvent<HTMLInputElement>) {
     switch (e.target.name) {
@@ -46,7 +58,7 @@ function ModifyBookModal({
     }
 
     fetch(
-      `http://localhost:3000/${openType}/book${
+      `http://localhost:3000/books${
         openType === "update" ? `/${existingBook?.id}` : ""
       }`,
       {
@@ -83,6 +95,8 @@ function ModifyBookModal({
       setCode("");
       setTopic("");
     }
+
+    fetchAutoFillData();
   }, [openType, existingBook]);
 
   return (
@@ -134,11 +148,12 @@ function ModifyBookModal({
                 value={code}
                 onChange={onChange}
               />
-              <Input
+              <AutofillInput
                 name="Book Topic"
                 icon="tabler:key"
                 value={topic}
-                onChange={onChange}
+                onChange={(e) => setTopic(e)}
+                autofillData={topicAutofillData}
               />
             </div>
             <CreateButton

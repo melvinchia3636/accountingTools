@@ -24,7 +24,7 @@ function CreateJournalModal({
       return;
     }
 
-    fetch(`http://localhost:3000/create/journal/${id}`, {
+    fetch(`http://localhost:3000/journals/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

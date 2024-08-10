@@ -15,6 +15,7 @@ import Input from "../Input";
 import CreateButton from "../CreateButton";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
+import AutofillInput from "../../AutofillInput";
 
 const NATURES = [
   { id: "A", name: "Asset" },
@@ -47,6 +48,7 @@ function CreateLedgerModal({
   const [columnCount, setColumnCount] = useState(1);
   const [topTextColumnCount, setTopTextColumnCount] = useState(1);
   const [query, setQuery] = useState("");
+  const [nameAutofillData, setNameAutofillData] = useState<string[]>([]);
 
   const filteredNatures =
     query === ""
@@ -54,6 +56,16 @@ function CreateLedgerModal({
       : NATURES.filter((type) => {
           return type.name.toLowerCase().includes(query.toLowerCase());
         });
+
+  function fetchAutoFillData() {
+    fetch(`http://localhost:3000/autofill/ledger-names/${id}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "success") {
+          setNameAutofillData(data.data);
+        }
+      });
+  }
 
   function onSubmit() {
     if (
@@ -67,7 +79,7 @@ function CreateLedgerModal({
       return;
     }
 
-    fetch(`http://localhost:3000/create/ledger/${id}`, {
+    fetch(`http://localhost:3000/ledgers/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -97,6 +109,8 @@ function CreateLedgerModal({
       setSelectedNature(null);
       setColumnCount(1);
       setTopTextColumnCount(1);
+
+      fetchAutoFillData();
     }
   }, [isOpen]);
 
@@ -135,11 +149,12 @@ function CreateLedgerModal({
             </div>
 
             <div className="flex flex-col gap-6 mt-6">
-              <Input
+              <AutofillInput
                 name="Ledger Name"
                 icon="tabler:square-letter-t"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setName(e)}
+                autofillData={nameAutofillData}
               />
               <Field className="relative w-full min-w-[200px] h-14 group">
                 <div className="absolute grid w-5 h-5 place-items-center text-zinc-500 group-focus-within:text-zinc-100 top-1/2 right-5 -translate-y-[55%]">

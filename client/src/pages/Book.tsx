@@ -16,6 +16,10 @@ import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
 import DeleteDocumentConfirmationModal from "../components/Modals/DeleteDocumentConfirmationModal";
 import UnsaveChangeLeaveConfirmationModal from "../components/Modals/UnsaveChangeLeaveConfirmationModal";
 
+Array.prototype.insert = function (index, ...items) {
+  this.splice(index, 0, ...items);
+};
+
 function Book(): React.ReactElement {
   const [everything, setEverything] = useState<any>("loading");
   const [data, setData] = useState<any>(null);
@@ -29,7 +33,7 @@ function Book(): React.ReactElement {
   const [firstFetch, setFirstFetch] = useState(true);
 
   function fetchData() {
-    fetch(`http://localhost:3000/${id}`)
+    fetch(`http://localhost:3000/books/${id}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "success") {
@@ -43,7 +47,7 @@ function Book(): React.ReactElement {
   }
 
   async function saveData() {
-    await fetch(`http://localhost:3000/save/${id}`, {
+    await fetch(`http://localhost:3000/books/save/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,6 +71,10 @@ function Book(): React.ReactElement {
         e.preventDefault();
         saveData();
       }
+    };
+
+    return () => {
+      document.onkeydown = null;
     };
   }, [everything, id]);
 
@@ -209,6 +217,42 @@ function Book(): React.ReactElement {
                       newEverything.data.find(
                         (item) => item.id === data.id
                       ).headers = newHeaders;
+                      setEverything(newEverything);
+                    }}
+                    addColumn={(side: "left" | "right", colIndex: number) => {
+                      const newEverything = { ...everything };
+                      const target = newEverything.data.find(
+                        (item) => item.id === data.id
+                      );
+                      target.columnCount += 1;
+                      if (side === "left") {
+                        target.headers.forEach((header) => {
+                          header.insert(colIndex, "");
+                        });
+                        target.entries.forEach((entry) => {
+                          entry.amount.insert(colIndex, 0);
+                          if (entry.dashed) {
+                            entry.dashed.insert(colIndex, false);
+                          }
+                          if (entry.underline) {
+                            entry.underline.insert(colIndex, false);
+                          }
+                        });
+                      } else {
+                        target.headers.forEach((header) => {
+                          header.insert(colIndex + 1, "");
+                        });
+                        target.entries.forEach((entry) => {
+                          entry.amount.insert(colIndex + 1, 0);
+                          if (entry.dashed) {
+                            entry.dashed.insert(colIndex + 1, false);
+                          }
+                          if (entry.underline) {
+                            entry.underline.insert(colIndex + 1, false);
+                          }
+                        });
+                      }
+
                       setEverything(newEverything);
                     }}
                   />

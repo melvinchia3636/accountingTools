@@ -25,7 +25,7 @@ function DeleteDocumentConfirmationModal({
       return;
     }
 
-    fetch(`http://localhost:3000/delete/document/${id}/${documentID}`, {
+    fetch(`http://localhost:3000/documents/${id}/${documentID}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
