@@ -1,7 +1,7 @@
 import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useState } from 'react'
-import Input from '../Input'
+import Input from '../../../components/Input'
 import { toast } from 'react-toastify'
 import { useParams } from 'react-router-dom'
 
@@ -40,7 +40,8 @@ function DeleteDocumentConfirmationModal({
             toast.success('Book deleted successfully')
           }, 700)
         }
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(err)
         toast.error('Failed to delete book')
       })
@@ -89,7 +90,9 @@ function DeleteDocumentConfirmationModal({
               name="Delete Confirmation"
               icon="tabler:trash"
               value={confirmation}
-              onChange={(e) => { setName(e.target.value) }}
+              onChange={(e) => {
+                setName(e.target.value)
+              }}
             />
             <Button
               onClick={onSubmit}

@@ -2,11 +2,11 @@
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useEffect, useState } from 'react'
-import Input from '../Input'
-import CreateButton from '../CreateButton'
+import Input from '../../../../components/Input'
+import CreateButton from '../../../../components/CreateButton'
 import { useParams } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import AutofillInput from '../../AutofillInput'
+import AutofillInput from '../../../../AutofillInput'
 
 function CreateStatementModal({
   isOpen,
@@ -29,14 +29,15 @@ function CreateStatementModal({
       .then(async (res) => await res.json())
       .then((data) => {
         if (data.status === 'success') {
-          setNameAutofillData(data.data)
+          setNameAutofillData(data.data as string[])
         }
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(err)
       })
   }
 
-  function onSubmit() {
+  function onSubmit(): void {
     if (
       name.trim() === '' ||
       columnCount <= 0 ||
@@ -68,7 +69,8 @@ function CreateStatementModal({
             reloadBook()
           }, 700)
         }
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(err)
         toast.error('Failed to create statement')
       })
@@ -124,27 +126,34 @@ function CreateStatementModal({
                 name="Statement Name"
                 icon="tabler:chart-line"
                 value={name}
-                onChange={(e) => { setName(e) }}
+                onChange={(e) => {
+                  setName(e)
+                }}
                 autofillData={nameAutofillData}
               />
               <Input
                 name="Statement Subtitle"
                 icon="uil:text"
                 value={subtitle}
-                onChange={(e) => { setSubtitle(e.target.value) }}
+                onChange={(e) => {
+                  setSubtitle(e.target.value)
+                }}
               />
               <Input
                 name="Number of Columns"
                 icon="uil:grid"
                 value={columnCount + ''}
-                onChange={(e) => { setColumnCount(parseInt(e.target.value) || 0) }}
+                onChange={(e) => {
+                  setColumnCount(parseInt(e.target.value) || 0)
+                }}
               />
               <Input
                 name="Number of Top Text Columns"
                 icon="tabler:square-t"
                 value={topTextColumnCount + ''}
-                onChange={(e) => { setTopTextColumnCount(parseInt(e.target.value) || 0) }
-                }
+                onChange={(e) => {
+                  setTopTextColumnCount(parseInt(e.target.value) || 0)
+                }}
               />
             </div>
             <CreateButton action="Create" onSubmit={onSubmit} />

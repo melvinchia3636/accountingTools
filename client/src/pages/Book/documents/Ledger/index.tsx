@@ -16,7 +16,7 @@ import {
   type ILedgerHeader,
   LedgerSide,
   type ILedger
-} from '../../typescript/ledger.interface'
+} from '../../../../typescript/ledger.interface'
 
 function Ledger({
   data,

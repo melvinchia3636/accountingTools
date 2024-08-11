@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React from 'react'
-import { type IJournal } from '../../typescript/journal.interface'
+import { type IJournal } from '../../../../typescript/journal.interface'
 
 function Journal({
   data,
@@ -18,7 +18,7 @@ function Journal({
       <h3 className="text-2xl text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
         General Journal
       </h3>
-      <div className="w-full flex-1 mt-8 overflow-y-auto">
+      <div className="w-full flex-1 py-8 overflow-y-auto">
         <table className="w-full border-2 border-zinc-700">
           <thead className="border-2 border-zinc-700">
             <tr className="text-zinc-500">

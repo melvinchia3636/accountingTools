@@ -13,7 +13,7 @@ function SidebarWrapper({
   return (
     <div
       className={`relative transition-all shrink-0 ${
-        isExpanded ? 'w-1/5' : 'w-0'
+        isExpanded ? 'w-96' : 'w-0'
       } h-full`}
     >
       {!saved && (

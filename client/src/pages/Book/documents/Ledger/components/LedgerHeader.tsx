@@ -1,6 +1,6 @@
 import React from 'react'
-import HeaderInput from '../../HeaderInput'
-import { type ILedgerHeader } from '../../../typescript/ledger.interface'
+import HeaderInput from '../../../components/HeaderInput'
+import { type ILedgerHeader } from '../../../../../typescript/ledger.interface'
 
 function LedgerHeader({
   columnCount,

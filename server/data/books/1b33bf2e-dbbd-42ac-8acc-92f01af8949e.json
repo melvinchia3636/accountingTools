@@ -214,7 +214,7 @@
           ]
         },
         {
-          "particular": "Commissiono Income (RM500 - RM300 x 2/5)",
+          "particular": "Commission Income (RM500 - RM300 x 2/5)",
           "amount": [
             0,
             380,
@@ -510,7 +510,7 @@
       ],
       "entries": [
         {
-          "particular": "Non-current Accounts",
+          "particular": "Non-current Assets",
           "amount": [
             0,
             0,
@@ -955,5 +955,6 @@
         }
       ]
     }
-  ]
+  ],
+  "questionName": "UEB-2022-2"
 }

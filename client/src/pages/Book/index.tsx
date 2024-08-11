@@ -6,19 +6,19 @@
 /* eslint-disable no-extend-native */
 import React, { useEffect, useState } from 'react'
 import Sidebar from './components/Sidebar'
-import Journal from '../../components/Journal'
-import Ledger from '../../components/Ledger'
-import Statement from '../../components/Statement'
+import Journal from './documents/Journal'
+import Ledger from './documents/Ledger'
+import Statement from './documents/Statement'
 import { useBlocker, useNavigate, useParams } from 'react-router-dom'
 import { Icon } from '@iconify/react/dist/iconify.js'
-import ModifyBookModal from '../../components/Modals/ModifyBookModal'
 import { toast } from 'react-toastify'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
-import DeleteDocumentConfirmationModal from '../../components/Modals/DeleteDocumentConfirmationModal'
-import UnsaveChangeLeaveConfirmationModal from '../../components/Modals/UnsaveChangeLeaveConfirmationModal'
+import UnsaveChangeLeaveConfirmationModal from './modals/UnsaveChangeLeaveConfirmationModal'
 import { type IEverything } from '../../typescript/everything.interface'
 import { type IStatement } from '../../typescript/statement.interface'
 import { type ILedger } from '../../typescript/ledger.interface'
+import ModifyBookModal from '../Home/components/ModifyBookModal'
+import DeleteDocumentConfirmationModal from './modals/DeleteDocumentConfirmationModal'
 
 declare global {
   interface Array<T> {
@@ -134,39 +134,49 @@ function Book(): React.ReactElement {
         }}
         saved={saved}
       />
-      <div className="w-full h-full overflow-y-auto p-8 pb-0 flex flex-col relative">
-        <div className="absolute right-8 top-8">
-          <Menu>
-            <MenuButton className="w-8 h-8 text-zinc-500 hover:bg-zinc-100/10 hover:text-zinc-200 transition-all rounded-md flex items-center justify-center">
-              <Icon icon="tabler:dots-vertical" className="w-5 h-5" />
-            </MenuButton>
-            <MenuItems
-              transition
-              anchor="bottom end"
-              className="rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:12px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
-            >
-              <MenuItem>
-                <button
-                  onClick={() => {}}
-                  className="group flex w-full items-center gap-2 rounded-lg py-4 px-5 data-[focus]:text-zinc-200 data-[focus]:bg-white/10"
-                >
-                  <Icon icon="uil:edit" className="w-5 h-5" />
-                  Edit
-                </button>
-              </MenuItem>
-              <MenuItem>
-                <button
-                  onClick={() => {
-                    setDeleteDocumentModalOpen(true)
-                  }}
-                  className="group flex w-full items-center text-red-500 gap-2 rounded-lg py-4 px-5 data-[focus]:text-red-400 data-[focus]:bg-white/10"
-                >
-                  <Icon icon="uil:trash" className="w-5 h-5" />
-                  Delete
-                </button>
-              </MenuItem>
-            </MenuItems>
-          </Menu>
+      <div className="w-full h-full overflow-y-auto p-8 py-0 flex flex-col relative">
+        <div className="absolute right-8 top-8 flex items-center gap-2">
+          <a
+            href={`http://localhost:3000/questions/${id}`}
+            target="_blank"
+            rel="noreferrer"
+            className="w-8 h-8 text-zinc-500 hover:bg-zinc-100/10 hover:text-zinc-200 transition-all rounded-md flex items-center justify-center"
+          >
+            <Icon icon="tabler:question-circle" className="w-5 h-5" />
+          </a>
+          {data !== null && (
+            <Menu>
+              <MenuButton className="w-8 h-8 text-zinc-500 hover:bg-zinc-100/10 hover:text-zinc-200 transition-all rounded-md flex items-center justify-center">
+                <Icon icon="tabler:dots-vertical" className="w-5 h-5" />
+              </MenuButton>
+              <MenuItems
+                transition
+                anchor="bottom end"
+                className="rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:12px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+              >
+                <MenuItem>
+                  <button
+                    onClick={() => {}}
+                    className="group flex w-full items-center gap-2 rounded-lg py-4 px-5 data-[focus]:text-zinc-200 data-[focus]:bg-white/10"
+                  >
+                    <Icon icon="uil:edit" className="w-5 h-5" />
+                    Edit
+                  </button>
+                </MenuItem>
+                <MenuItem>
+                  <button
+                    onClick={() => {
+                      setDeleteDocumentModalOpen(true)
+                    }}
+                    className="group flex w-full items-center text-red-500 gap-2 rounded-lg py-4 px-5 data-[focus]:text-red-400 data-[focus]:bg-white/10"
+                  >
+                    <Icon icon="uil:trash" className="w-5 h-5" />
+                    Delete
+                  </button>
+                </MenuItem>
+              </MenuItems>
+            </Menu>
+          )}
         </div>
         {data !== null ? (
           (() => {

@@ -1,10 +1,10 @@
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useEffect, useState } from 'react'
-import Input from '../Input'
+import Input from '../../../components/Input'
 import { toast } from 'react-toastify'
-import CreateButton from '../CreateButton'
-import AutofillInput from '../../AutofillInput'
+import CreateButton from '../../../components/CreateButton'
+import AutofillInput from '../../../AutofillInput'
 
 function ModifyBookModal({
   openType,

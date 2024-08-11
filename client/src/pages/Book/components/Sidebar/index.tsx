@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import CreateJournalModal from '../../../../components/Modals/CreateJournalModal'
-import CreateLedgerModal from '../../../../components/Modals/CreateLedgerModal'
-import CreateStatementModal from '../../../../components/Modals/CreateStatementModal'
-import DeleteBookConfirmationModal from '../../../../components/Modals/DeleteBookConfirmationModal'
+import CreateJournalModal from '../../documents/Journal/CreateJournalModal'
+import CreateLedgerModal from '../../documents/Ledger/CreateLedgerModal'
+import CreateStatementModal from '../../documents/Statement/CreateStatementModal'
+import DeleteBookConfirmationModal from '../../modals/DeleteBookConfirmationModal'
 import SidebarSection from './components/SidebarSection'
 import CreateDocumentMenu from './components/CreateDocumentMenu'
 import SidebarHeader from './components/SidebarHeader'
 import SidebarWrapper from './components/SidebarWrapper'
-import { type Document, type IEverything } from '../../../../typescript/everything.interface'
+import {
+  type Document,
+  type IEverything
+} from '../../../../typescript/everything.interface'
 
 function Sidebar({
   everything,

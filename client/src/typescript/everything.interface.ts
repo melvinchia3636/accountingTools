@@ -7,6 +7,7 @@ export interface IEverything {
   entityName: string
   topic: string
   data: Document[]
+  questionName?: string
 }
 
 export type Document = IJournal | ILedger | IStatement

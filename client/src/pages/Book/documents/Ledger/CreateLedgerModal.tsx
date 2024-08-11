@@ -14,11 +14,11 @@ import {
 } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useEffect, useState } from 'react'
-import Input from '../Input'
-import CreateButton from '../CreateButton'
+import Input from '../../../../components/Input'
+import CreateButton from '../../../../components/CreateButton'
 import { toast } from 'react-toastify'
 import { useParams } from 'react-router-dom'
-import AutofillInput from '../../AutofillInput'
+import AutofillInput from '../../../../AutofillInput'
 
 const NATURES = [
   { id: 'A', name: 'Asset' },

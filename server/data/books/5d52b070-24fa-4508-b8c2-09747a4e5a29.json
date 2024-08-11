@@ -2,5 +2,828 @@
   "code": "GEA-2016-1",
   "entityName": "P Bhd and S Bhd",
   "topic": "Group Account",
-  "data": []
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Cost of Control",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "",
+          "particular": "Investment in S Bhd",
+          "side": "debit",
+          "amount": [
+            84600
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "80% of S Bhd",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Ordinary Share Capital (RM80,000 x 80%)",
+          "side": "credit",
+          "amount": [
+            64000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Share Premium (RM8,000 x 80%)",
+          "side": "credit",
+          "amount": [
+            6400
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Retained Profits - Pre-aquisition Profits",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "  (RM4,000 x 80%)]",
+          "side": "credit",
+          "amount": [
+            3200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "60% of S Bhd - Loan Notes (RM10,000 x 60%)",
+          "side": "credit",
+          "amount": [
+            6000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Goodwill",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Non-controlling Interests",
+      "nature": "E",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "",
+          "particular": "Unrealised Profits on Inventory",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM 10,000 x 1/5 x 20%)",
+          "side": "debit",
+          "amount": [
+            400
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Consolidated Statement of Financial Position",
+          "side": "debit",
+          "amount": [
+            31760
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "20% of S Bhd",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Ordinary Share Capital (RM80,000 x 20%)",
+          "side": "credit",
+          "amount": [
+            16000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Retained Profits (RM22,000 x 20%)",
+          "side": "credit",
+          "amount": [
+            4400
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Share Premium (RM8,000 x 20%)",
+          "side": "credit",
+          "amount": [
+            1600
+          ]
+        },
+        {
+          "date": "",
+          "particular": "100% of S Bhd - Preferred Share Capital",
+          "side": "credit",
+          "amount": [
+            10000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Depreciation of Unrealised Profit on Non-current Assets",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": " [RM(20,000 - 28,000 + 10,000) x 20% x 2] x 20%",
+          "side": "credit",
+          "amount": [
+            160
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Consolidated Retained Profits",
+      "nature": "E",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "",
+          "particular": "Unrealised Profits on Inventory",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": " (RM10,000 x 1/5 x 80%)",
+          "side": "debit",
+          "amount": [
+            1600
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Unrealised Profits on Non-current Assets",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "RM(20,000 - 28,000 + 10,000)",
+          "side": "debit",
+          "amount": [
+            2000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Consolidated Statement of Financial Position",
+          "side": "debit",
+          "amount": [
+            116440
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Balance b/d - P Bhd",
+          "side": "credit",
+          "amount": [
+            105000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Post-aquisition Profits - S Bhd",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM(22,000 - 4,000) x 80%]",
+          "side": "credit",
+          "amount": [
+            14400
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Depreciation of Unrealised Profit on Non-current Assets",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": " [RM(20,000 - 28,000 + 10,000) x 20% x 2] x 80%",
+          "side": "credit",
+          "amount": [
+            640
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "name": "Consolidated Statement of Financial Position",
+      "subtitle": "As At 31 December 2015",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Assets",
+          "amount": [
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Property, Plant and Equipment (RM60,000 + RM 108,000 - RM2,000)",
+          "amount": [
+            706000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Accumulated Depreciation (RM60,000 + RM20,000 - RM800)",
+          "amount": [
+            -79200,
+            626800
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Goodwill",
+          "amount": [
+            0,
+            5000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            631800
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Current Assets",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Inventory (RM80,000 + RM25,000 - RM2,000)",
+          "amount": [
+            103000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Trade Receivables (RM32,000 + RM18,000)",
+          "amount": [
+            50000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash and Cash Equivalents (RM10,400 + RM7,600 + RM1,400)",
+          "amount": [
+            19400,
+            172400
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Assets",
+          "amount": [
+            0,
+            804200
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Equity",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Ordinary Share Capital",
+          "amount": [
+            0,
+            400000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Preferred Share Capital",
+          "amount": [
+            0,
+            100000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Share Premium",
+          "amount": [
+            0,
+            50000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Retained Profits",
+          "amount": [
+            0,
+            116440
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            666440
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Non-controlling Interests",
+          "amount": [
+            0,
+            31760
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "bold": false,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Equity",
+          "amount": [
+            0,
+            698200
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Non-current Liabilities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Loan Notes (RM60,000 + RM10,000 - RM6,000)",
+          "amount": [
+            64000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Trade Payables (RM35,000 + RM7,000)",
+          "amount": [
+            42000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Liabilities",
+          "amount": [
+            0,
+            106000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Total Equity and Liabilities",
+          "amount": [
+            0,
+            804200
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ],
+  "questionName": "GEA-2016-1"
 }

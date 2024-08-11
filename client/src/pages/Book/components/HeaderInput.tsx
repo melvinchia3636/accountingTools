@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React, { useEffect, useRef } from 'react'
-import { type ILedgerHeader } from '../typescript/ledger.interface'
+import { type ILedgerHeader } from '../../typescript/ledger.interface'
 
 interface IBaseHeaderProps {
   i: number

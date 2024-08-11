@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
+const path = require("path");
 
 const booksRoute = require("./routes/books");
 const journalRoute = require("./routes/journals");
@@ -44,6 +45,30 @@ app.delete("/documents/:bookId/:documentID", (req, res) => {
   );
 
   res.json({ status: "success" });
+});
+
+app.get("/questions/:bookId", (req, res) => {
+  const { bookId } = req.params;
+
+  if (
+    !bookId.match(
+      /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/
+    )
+  ) {
+    return res.status(400).send("Invalid book ID");
+  }
+
+  const book = JSON.parse(
+    fs.readFileSync(`./data/books/${req.params.bookId}.json`, "utf8")
+  );
+
+  const questionName = book.questionName;
+
+  if (fs.existsSync(`./media/${questionName}.pdf`)) {
+    return res.sendFile(path.resolve(`./media/${questionName}.pdf`));
+  }
+
+  res.status(404).send("File not found");
 });
 
 app.listen(3000, () => {

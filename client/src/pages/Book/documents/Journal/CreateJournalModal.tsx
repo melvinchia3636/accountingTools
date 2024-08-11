@@ -1,8 +1,8 @@
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useEffect, useState } from 'react'
-import Input from '../Input'
-import CreateButton from '../CreateButton'
+import Input from '../../../../components/Input'
+import CreateButton from '../../../../components/CreateButton'
 import { toast } from 'react-toastify'
 import { useParams } from 'react-router-dom'
 
@@ -42,7 +42,8 @@ function CreateJournalModal({
             reloadBook()
           }, 700)
         }
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(err)
         toast.error('Failed to create journal')
       })
@@ -91,7 +92,9 @@ function CreateJournalModal({
                 name="Journal Name"
                 icon="tabler:file"
                 value={name}
-                onChange={(e) => { setName(e.target.value) }}
+                onChange={(e) => {
+                  setName(e.target.value)
+                }}
               />
             </div>
             <CreateButton action="Create" onSubmit={onSubmit} />

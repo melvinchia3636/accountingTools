@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/indent */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React, { useEffect, useState } from 'react'
-import HeaderInput from '../HeaderInput'
+import HeaderInput from '../../components/HeaderInput'
 import {
   Combobox,
   ComboboxInput,
@@ -11,7 +11,7 @@ import {
   Field
 } from '@headlessui/react'
 import { useParams } from 'react-router-dom'
-import { type IStatementEntry } from '../../typescript/statement.interface'
+import { type IStatementEntry } from '../../../../typescript/statement.interface'
 
 function Statement({
   data,
@@ -79,7 +79,7 @@ function Statement({
   }, [])
 
   return (
-    <div className="w-full flex-1 mt-8 overflow-y-auto">
+    <div className="w-full flex-1 py-8 overflow-y-auto">
       <h2 className="text-xl text-zinc-500 text-center">
         <span className="font-medium">{companyName}</span>
       </h2>
