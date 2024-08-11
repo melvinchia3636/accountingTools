@@ -1,46 +1,49 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useState } from "react";
-import Input from "../Input";
-import { toast } from "react-toastify";
-import { useParams } from "react-router-dom";
+import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React, { useState } from 'react'
+import Input from '../Input'
+import { toast } from 'react-toastify'
+import { useParams } from 'react-router-dom'
 
 function DeleteDocumentConfirmationModal({
   isOpen,
   onClose,
   documentID,
-  refreshData,
+  refreshData
 }: {
-  isOpen: boolean;
-  onClose: () => void;
-  documentID: string;
-  refreshData: () => void;
+  isOpen: boolean
+  onClose: () => void
+  documentID: string
+  refreshData: () => void
 }): React.ReactElement {
-  const [confirmation, setName] = useState("");
-  const { id } = useParams();
+  const [confirmation, setName] = useState('')
+  const { id } = useParams()
 
-  function onSubmit() {
-    if (confirmation.trim() !== "Confirm Delete") {
-      toast.error("Book name does not match");
-      return;
+  function onSubmit(): void {
+    if (confirmation.trim() !== 'Confirm Delete') {
+      toast.error('Book name does not match')
+      return
     }
 
     fetch(`http://localhost:3000/documents/${id}/${documentID}`, {
-      method: "DELETE",
+      method: 'DELETE',
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     })
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          onClose();
+        if (data.status === 'success') {
+          onClose()
           setTimeout(() => {
-            refreshData();
-            toast.success("Book deleted successfully");
-          }, 700);
+            refreshData()
+            toast.success('Book deleted successfully')
+          }, 700)
         }
-      });
+      }).catch((err) => {
+        console.error(err)
+        toast.error('Failed to delete book')
+      })
   }
 
   return (
@@ -70,7 +73,7 @@ function DeleteDocumentConfirmationModal({
                   icon="uil:times"
                   className="w-6 h-6"
                   onClick={() => {
-                    onClose();
+                    onClose()
                   }}
                 />
               </button>
@@ -80,17 +83,17 @@ function DeleteDocumentConfirmationModal({
               be undone.
             </p>
             <p className="text-zinc-500 mt-4 mb-4">
-              Please type "Confirm Delete" to confirm.
+              Please type &quot;Confirm Delete&quot; to confirm.
             </p>
             <Input
               name="Delete Confirmation"
               icon="tabler:trash"
               value={confirmation}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => { setName(e.target.value) }}
             />
             <Button
               onClick={onSubmit}
-              disabled={confirmation.trim() !== "Confirm Delete"}
+              disabled={confirmation.trim() !== 'Confirm Delete'}
               className="px-6 py-3 w-full mt-6 bg-red-500 hover:bg-red-600 disabled:hover:bg-zinc-500 disabled:bg-zinc-500 transition-all text-zinc-900 rounded-md flex items-center font-medium gap-2 justify-center"
             >
               <Icon icon="uil:trash" className="w-5 h-5" />
@@ -100,7 +103,7 @@ function DeleteDocumentConfirmationModal({
         </div>
       </div>
     </Dialog>
-  );
+  )
 }
 
-export default DeleteDocumentConfirmationModal;
+export default DeleteDocumentConfirmationModal

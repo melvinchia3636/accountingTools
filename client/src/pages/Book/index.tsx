@@ -1,108 +1,111 @@
-import React, { useCallback, useEffect, useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Journal from "../components/Journal";
-import Ledger from "../components/Ledger";
-import Statement from "../components/Statement";
-import {
-  useBeforeUnload,
-  useBlocker,
-  useNavigate,
-  useParams,
-} from "react-router-dom";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import ModifyBookModal from "../components/Modals/ModifyBookModal";
-import { toast } from "react-toastify";
-import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/react";
-import DeleteDocumentConfirmationModal from "../components/Modals/DeleteDocumentConfirmationModal";
-import UnsaveChangeLeaveConfirmationModal from "../components/Modals/UnsaveChangeLeaveConfirmationModal";
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+/* eslint-disable no-extend-native */
+import React, { useEffect, useState } from 'react'
+import Sidebar from './components/Sidebar'
+import Journal from '../../components/Journal'
+import Ledger from '../../components/Ledger'
+import Statement from '../../components/Statement'
+import { useBlocker, useNavigate, useParams } from 'react-router-dom'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import ModifyBookModal from '../../components/Modals/ModifyBookModal'
+import { toast } from 'react-toastify'
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
+import DeleteDocumentConfirmationModal from '../../components/Modals/DeleteDocumentConfirmationModal'
+import UnsaveChangeLeaveConfirmationModal from '../../components/Modals/UnsaveChangeLeaveConfirmationModal'
+import { type IEverything } from '../../typescript/everything.interface'
 
-Array.prototype.insert = function (index, ...items) {
-  this.splice(index, 0, ...items);
-};
+// @ts-expect-error cannot fix
+Array.prototype.insert = function (index: number, ...items: any[]): void {
+  this.splice(index, 0, ...items)
+}
 
 function Book(): React.ReactElement {
-  const [everything, setEverything] = useState<any>("loading");
-  const [data, setData] = useState<any>(null);
-  const { id } = useParams();
-  const navigate = useNavigate();
+  const [everything, setEverything] = useState<IEverything | 'loading'>('loading')
+  const [data, setData] = useState<any>(null)
+  const { id } = useParams()
+  const navigate = useNavigate()
   const [modifyBookModalOpenType, setModifyBookModalOpenType] = useState<
-    "create" | "update" | null
-  >(null);
-  const [deleteDocumentModalOpen, setDeleteDocumentModalOpen] = useState(false);
-  const [saved, setSaved] = useState(true);
-  const [firstFetch, setFirstFetch] = useState(true);
+  'create' | 'update' | null
+  >(null)
+  const [deleteDocumentModalOpen, setDeleteDocumentModalOpen] = useState(false)
+  const [saved, setSaved] = useState(true)
+  const [firstFetch, setFirstFetch] = useState(true)
 
-  function fetchData() {
+  function fetchData(): void {
     fetch(`http://localhost:3000/books/${id}`)
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          setEverything(data.data);
-          setData(data.data.data[0] || null);
+        if (data.status === 'success') {
+          setEverything(data.data)
+          setData(data.data.data[0] ?? null)
           setTimeout(() => {
-            setFirstFetch(false);
-          }, 100);
+            setFirstFetch(false)
+          }, 100)
         }
-      });
+      }).catch(() => {
+        navigate('/')
+      })
   }
 
-  async function saveData() {
+  async function saveData(): Promise<void> {
     await fetch(`http://localhost:3000/books/save/${id}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        data: everything,
-      }),
+        data: everything
+      })
     })
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          setSaved(true);
-          toast.success("Saved successfully");
+        if (data.status === 'success') {
+          setSaved(true)
+          toast.success('Saved successfully')
         }
-      });
+      })
   }
 
   useEffect(() => {
     document.onkeydown = (e) => {
-      if (e.key === "s" && (e.ctrlKey || e.metaKey)) {
-        e.preventDefault();
-        saveData();
+      if (e.key === 's' && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault()
+        saveData().catch(() => {
+          toast.error('Failed to save')
+        })
       }
-    };
+    }
 
     return () => {
-      document.onkeydown = null;
-    };
-  }, [everything, id]);
+      document.onkeydown = null
+    }
+  }, [everything, id])
 
   useEffect(() => {
     if (
-      !id?.match(
+      id?.match(
         /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
-      )
+      ) === null
     ) {
-      navigate("/");
+      navigate('/')
     }
 
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   useEffect(() => {
     if (!firstFetch) {
-      setSaved(false);
+      setSaved(false)
     }
-  }, [everything]);
+  }, [everything])
 
   const blocker = useBlocker(
     ({ currentLocation, nextLocation }) =>
       !saved && currentLocation.pathname !== nextLocation.pathname
-  );
+  )
 
-  if (everything === "loading") {
-    return <div>Loading...</div>;
+  if (everything === 'loading') {
+    return <div>Loading...</div>
   }
 
   return (
@@ -113,7 +116,7 @@ function Book(): React.ReactElement {
         setCurrentDocument={setData}
         reloadEverything={fetchData}
         openModifyBookModal={() => {
-          setModifyBookModalOpenType("update");
+          setModifyBookModalOpenType('update')
         }}
         saved={saved}
       />
@@ -140,7 +143,7 @@ function Book(): React.ReactElement {
               <MenuItem>
                 <button
                   onClick={() => {
-                    setDeleteDocumentModalOpen(true);
+                    setDeleteDocumentModalOpen(true)
                   }}
                   className="group flex w-full items-center text-red-500 gap-2 rounded-lg py-4 px-5 data-[focus]:text-red-400 data-[focus]:bg-white/10"
                 >
@@ -151,25 +154,26 @@ function Book(): React.ReactElement {
             </MenuItems>
           </Menu>
         </div>
-        {data !== null ? (
-          (() => {
-            switch (data.type) {
-              case "journal":
-                return (
+        {data !== null
+          ? (
+              (() => {
+                switch (data.type) {
+                  case 'journal':
+                    return (
                   <Journal
                     key={`doc-${data.id}`}
                     data={data.entries}
                     setData={(newData) => {
-                      const newEverything = { ...everything };
+                      const newEverything = { ...everything }
                       newEverything.data.find(
                         (item) => item.id === data.id
-                      ).entries = newData;
-                      setEverything(newEverything);
+                      ).entries = newData
+                      setEverything(newEverything)
                     }}
                   />
-                );
-              case "ledger":
-                return (
+                    )
+                  case 'ledger':
+                    return (
                   <Ledger
                     key={`doc-${data.id}`}
                     data={data.entries}
@@ -179,23 +183,23 @@ function Book(): React.ReactElement {
                     columnCount={data.column}
                     topTextColumnCount={data.topTextColumnCount}
                     setData={(newData) => {
-                      const newEverything = { ...everything };
+                      const newEverything = { ...everything }
                       newEverything.data.find(
                         (item) => item.id === data.id
-                      ).entries = newData;
-                      setEverything(newEverything);
+                      ).entries = newData
+                      setEverything(newEverything)
                     }}
                     setHeaders={(newHeaders) => {
-                      const newEverything = { ...everything };
+                      const newEverything = { ...everything }
                       newEverything.data.find(
                         (item) => item.id === data.id
-                      ).headers = newHeaders;
-                      setEverything(newEverything);
+                      ).headers = newHeaders
+                      setEverything(newEverything)
                     }}
                   />
-                );
-              case "statement":
-                return (
+                    )
+                  case 'statement':
+                    return (
                   <Statement
                     key={`doc-${data.id}`}
                     data={data.entries}
@@ -206,107 +210,108 @@ function Book(): React.ReactElement {
                     columnCount={data.columnCount}
                     topTextColumnCount={data.topTextColumnCount}
                     setData={(newData) => {
-                      const newEverything = { ...everything };
+                      const newEverything = { ...everything }
                       newEverything.data.find(
                         (item) => item.id === data.id
-                      ).entries = newData;
-                      setEverything(newEverything);
+                      ).entries = newData
+                      setEverything(newEverything)
                     }}
                     setHeaders={(newHeaders) => {
-                      const newEverything = { ...everything };
+                      const newEverything = { ...everything }
                       newEverything.data.find(
                         (item) => item.id === data.id
-                      ).headers = newHeaders;
-                      setEverything(newEverything);
+                      ).headers = newHeaders
+                      setEverything(newEverything)
                     }}
-                    addColumn={(side: "left" | "right", colIndex: number) => {
-                      const newEverything = { ...everything };
+                    addColumn={(side: 'left' | 'right', colIndex: number) => {
+                      const newEverything = { ...everything }
                       const target = newEverything.data.find(
                         (item) => item.id === data.id
-                      );
-                      target.columnCount += 1;
-                      if (side === "left") {
+                      )
+                      target.columnCount += 1
+                      if (side === 'left') {
                         target.headers.forEach((header) => {
-                          header.insert(colIndex, "");
-                        });
+                          header.insert(colIndex, '')
+                        })
                         target.entries.forEach((entry) => {
-                          entry.amount.insert(colIndex, 0);
+                          entry.amount.insert(colIndex, 0)
                           if (entry.dashed) {
-                            entry.dashed.insert(colIndex, false);
+                            entry.dashed.insert(colIndex, false)
                           }
                           if (entry.underline) {
-                            entry.underline.insert(colIndex, false);
+                            entry.underline.insert(colIndex, false)
                           }
-                        });
+                        })
                       } else {
                         target.headers.forEach((header) => {
-                          header.insert(colIndex + 1, "");
-                        });
+                          header.insert(colIndex + 1, '')
+                        })
                         target.entries.forEach((entry) => {
-                          entry.amount.insert(colIndex + 1, 0);
+                          entry.amount.insert(colIndex + 1, 0)
                           if (entry.dashed) {
-                            entry.dashed.insert(colIndex + 1, false);
+                            entry.dashed.insert(colIndex + 1, false)
                           }
                           if (entry.underline) {
-                            entry.underline.insert(colIndex + 1, false);
+                            entry.underline.insert(colIndex + 1, false)
                           }
-                        });
+                        })
                       }
 
-                      setEverything(newEverything);
+                      setEverything(newEverything)
                     }}
                   />
-                );
-              default:
-                return <h1>Default</h1>;
-            }
-          })()
-        ) : (
+                    )
+                  default:
+                    return <h1>Default</h1>
+                }
+              })()
+            )
+          : (
           <div className="w-full flex items-center justify-center h-full flex-col gap-12">
             <Icon icon="tabler:file-off" className="w-44 h-44 text-zinc-700" />
             <h1 className="text-3xl text-zinc-700 font-medium">
               No Document Selected
             </h1>
           </div>
-        )}
+            )}
       </div>
       <ModifyBookModal
         openType={modifyBookModalOpenType}
         onClose={() => {
-          setModifyBookModalOpenType(null);
+          setModifyBookModalOpenType(null)
         }}
         reloadBooks={fetchData}
         existingBook={{
-          id: id as string,
+          id: id!,
           name: everything.entityName,
           code: everything.code,
-          topic: everything.topic,
+          topic: everything.topic
         }}
       />
       <DeleteDocumentConfirmationModal
         isOpen={deleteDocumentModalOpen}
         onClose={() => {
-          setDeleteDocumentModalOpen(false);
+          setDeleteDocumentModalOpen(false)
         }}
         documentID={data?.id}
         refreshData={fetchData}
       />
       <UnsaveChangeLeaveConfirmationModal
-        isOpen={blocker.state === "blocked"}
+        isOpen={blocker.state === 'blocked'}
         proceed={() => {
-          if (blocker.state === "blocked") {
-            blocker.proceed();
+          if (blocker.state === 'blocked') {
+            blocker.proceed()
           }
         }}
         saveData={saveData}
         cancel={() => {
-          if (blocker.state === "blocked") {
-            blocker.reset();
+          if (blocker.state === 'blocked') {
+            blocker.reset()
           }
         }}
       />
     </>
-  );
+  )
 }
 
-export default Book;
+export default Book

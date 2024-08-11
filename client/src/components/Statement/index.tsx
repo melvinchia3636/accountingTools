@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-import HeaderInput from "../HeaderInput";
+/* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
+/* eslint-disable @typescript-eslint/indent */
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+import React, { useEffect, useState } from 'react'
+import HeaderInput from '../HeaderInput'
 import {
   Combobox,
   ComboboxInput,
   ComboboxOption,
   ComboboxOptions,
-  Field,
-} from "@headlessui/react";
-import { useParams } from "react-router-dom";
+  Field
+} from '@headlessui/react'
+import { useParams } from 'react-router-dom'
+import { type IStatementEntry } from '../../typescript/statement.interface'
 
 function Statement({
   data,
@@ -19,60 +23,60 @@ function Statement({
   subtitle,
   setData,
   setHeaders,
-  addColumn,
+  addColumn
 }: {
-  data: any[];
-  headers: string[][];
-  companyName: string;
-  name: string;
-  columnCount: number;
-  topTextColumnCount: number;
-  subtitle: string;
-  setData: React.Dispatch<React.SetStateAction<any[]>>;
-  setHeaders: React.Dispatch<React.SetStateAction<any[]>>;
-  addColumn: (side: "left" | "right", colIndex: number) => void;
-}) {
-  const { id } = useParams();
-  const [autofillData, setAutofillData] = useState<string[]>([]);
-  const [query, setQuery] = useState("");
+  data: IStatementEntry[]
+  headers: string[][]
+  companyName: string
+  name: string
+  columnCount: number
+  topTextColumnCount: number
+  subtitle: string
+  setData: React.Dispatch<React.SetStateAction<IStatementEntry[]>>
+  setHeaders: React.Dispatch<React.SetStateAction<string[][]>>
+  addColumn: (side: 'left' | 'right', colIndex: number) => void
+}): React.ReactElement {
+  const { id } = useParams()
+  const [autofillData, setAutofillData] = useState<string[]>([])
+  const [query, setQuery] = useState('')
   const filteredItems = [
     ...new Set([
       ...autofillData,
       ...data
-        .map(
-          (item) =>
-            item.particular.replace(/\(.*\)|\[.*\]/g, "").trim() as string
-        )
-        .filter((item) => item),
-    ]),
+        .map((item) => item.particular.replace(/\(.*\)|\[.*\]/g, '').trim())
+        .filter((item) => item)
+    ])
   ]
     .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
     .filter((item) => {
-      return item.toLowerCase().includes(query.toLowerCase());
+      return item.toLowerCase().includes(query.toLowerCase())
     })
     .sort(
       (a, b) =>
         a.toLowerCase().indexOf(query.toLowerCase()) -
         b.toLowerCase().indexOf(query.toLowerCase())
-    );
+    )
 
-  function fetchAutoFillData() {
+  function fetchAutoFillData(): void {
     fetch(
       `http://localhost:3000/autofill/statement-particulars/${id}/${encodeURIComponent(
         name
       )}`
     )
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          setAutofillData(data.data);
+        if (data.status === 'success') {
+          setAutofillData(data.data as string[])
         }
-      });
+      })
+      .catch((err) => {
+        console.error(err)
+      })
   }
 
-  useState(() => {
-    fetchAutoFillData();
-  }, []);
+  useEffect(() => {
+    fetchAutoFillData()
+  }, [])
 
   return (
     <div className="w-full flex-1 mt-8 overflow-y-auto">
@@ -89,7 +93,7 @@ function Statement({
               {Array.from({ length: columnCount }).map((_, j) => (
                 <td
                   key={j}
-                  className={`p-2 border-r-2 border-b-2 w-32 border-zinc-700`}
+                  className={'p-2 border-r-2 border-b-2 w-32 border-zinc-700'}
                 >
                   <HeaderInput
                     headers={headers}
@@ -105,113 +109,112 @@ function Statement({
         <tbody>
           {data.map((item, rowIndex) => (
             <tr key={rowIndex} className="text-zinc-200">
-              <td className={`py-2 border-r-2 p-4 border-zinc-700 `}>
+              <td className={'py-2 border-r-2 p-4 border-zinc-700 '}>
                 <Field>
                   <Combobox
                     value={item.particular}
                     onChange={(e) => {
-                      const newData = [...data];
-                      newData[rowIndex].particular = e ?? "";
+                      const newData = [...data]
+                      newData[rowIndex].particular = e ?? ''
 
                       if (rowIndex === data.length - 1) {
                         const newEntry = {
-                          particular: "",
+                          particular: '',
                           amount: Array.from({ length: columnCount }).map(
                             () => 0
                           ),
-                          underline: false,
-                        };
+                          underline: false as const
+                        }
 
-                        newData.push(newEntry);
+                        newData.push(newEntry)
                       }
 
-                      setData(newData);
+                      setData(newData)
                     }}
                     onClose={() => {
-                      setQuery("");
+                      setQuery('')
 
                       if (rowIndex === data.length - 1) {
-                        return;
+                        return
                       }
 
                       if (
                         item.amount.every((item) => item === 0) &&
-                        item.particular === ""
+                        item.particular === ''
                       ) {
-                        const newData = data.filter((_, i) => i !== rowIndex);
-                        setData(newData);
+                        const newData = data.filter((_, i) => i !== rowIndex)
+                        setData(newData)
                       }
                     }}
                   >
                     <ComboboxInput
                       displayValue={(item: string) => item}
                       onChange={(e) => {
-                        setQuery(e.target.value);
+                        setQuery(e.target.value)
                       }}
                       onBlur={() => {
                         if (rowIndex === data.length - 1) {
-                          return;
+                          return
                         }
 
                         if (
                           item.amount.every((item) => item === 0) &&
-                          item.particular === ""
+                          item.particular === ''
                         ) {
-                          const newData = data.filter((_, i) => i !== rowIndex);
-                          setData(newData);
+                          const newData = data.filter((_, i) => i !== rowIndex)
+                          setData(newData)
                         }
                       }}
                       onKeyDown={(e) => {
-                        if (e.key === "b" && (e.metaKey || e.ctrlKey)) {
-                          e.preventDefault();
+                        if (e.key === 'b' && (e.metaKey || e.ctrlKey)) {
+                          e.preventDefault()
                           const newData = data.map((item, i) =>
                             rowIndex === i
                               ? {
                                   ...item,
                                   bold: !item.bold,
-                                  particularUnderline: false,
+                                  particularUnderline: false
                                 }
                               : item
-                          );
-                          setData(newData);
+                          )
+                          setData(newData)
                         }
 
-                        if (e.key === "u" && (e.metaKey || e.ctrlKey)) {
-                          e.preventDefault();
+                        if (e.key === 'u' && (e.metaKey || e.ctrlKey)) {
+                          e.preventDefault()
                           const newData = data.map((item, i) =>
                             rowIndex === i
                               ? {
                                   ...item,
                                   bold: false,
-                                  particularUnderline:
-                                    !item.particularUnderline,
+                                  particularUnderline: !item.particularUnderline
                                 }
                               : item
-                          );
-                          setData(newData);
+                          )
+                          setData(newData)
                         }
 
-                        if (e.key === " " && (e.metaKey || e.ctrlKey)) {
-                          e.preventDefault();
+                        if (e.key === ' ' && (e.metaKey || e.ctrlKey)) {
+                          e.preventDefault()
                           const newData = data.map((item, i) =>
                             rowIndex === i
                               ? {
                                   ...item,
                                   underline: item.underline,
-                                  tabIn: !item.tabIn,
+                                  tabIn: !item.tabIn
                                 }
                               : item
-                          );
-                          setData(newData);
+                          )
+                          setData(newData)
                         }
                       }}
                       className={`bg-transparent w-full ${
-                        item.bold ? "font-bold" : ""
+                        item.bold ? 'font-bold' : ''
                       } ${
                         item.particularUnderline
-                          ? "underline decoration-2 underline-offset-4 font-semibold"
-                          : ""
-                      } ${item.tabIn ? "pl-8" : ""}`}
+                          ? 'underline decoration-2 underline-offset-4 font-semibold'
+                          : ''
+                      } ${item.tabIn ? 'pl-8' : ''}`}
                     />
                     <ComboboxOptions
                       anchor="bottom"
@@ -231,7 +234,8 @@ function Statement({
                           value={query}
                           className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
                         >
-                          Create <span className="font-bold">"{query}"</span>
+                          Create{' '}
+                          <span className="font-bold">&quot;{query}&quot;</span>
                         </ComboboxOption>
                       )}
                     </ComboboxOptions>
@@ -242,163 +246,164 @@ function Statement({
                 <td
                   key={columnIndex}
                   className={`py-2 border-r-2 p-4 border-zinc-700 text-right ${
-                    item.underline?.[columnIndex]
-                      ? item.underline?.[columnIndex] === "double"
-                        ? "border-b-[6px] border-double border-b-zinc-500"
-                        : "border-b-2 border-b-zinc-500"
-                      : ""
+                    item.underline && item.underline?.[columnIndex]
+                      ? item.underline?.[columnIndex] === 'double'
+                        ? 'border-b-[6px] border-double border-b-zinc-500'
+                        : 'border-b-2 border-b-zinc-500'
+                      : ''
                   }`}
                 >
                   <input
                     type="text"
                     value={
-                      item.text?.[columnIndex]
+                      item.text && item.text?.[columnIndex]
                         ? amount
-                        : item.dashed?.[columnIndex]
-                        ? "-"
+                        : item.dashed && item.dashed?.[columnIndex]
+                        ? '-'
                         : amount === 0
-                        ? ""
-                        : amount > 0
+                        ? ''
+                        : (amount as number) > 0
                         ? amount.toLocaleString()
                         : `(${(-amount).toLocaleString()})`
                     }
                     onBlur={() => {
                       if (rowIndex === data.length - 1) {
-                        return;
+                        return
                       }
 
                       if (
                         item.amount.every((item) => item === 0) &&
-                        item.particular === ""
+                        item.particular === ''
                       ) {
-                        const newData = data.filter((_, i) => i !== rowIndex);
-                        setData(newData);
+                        const newData = data.filter((_, i) => i !== rowIndex)
+                        setData(newData)
                       }
                     }}
                     onKeyDown={(e) => {
-                      if (e.key === "u" && (e.metaKey || e.ctrlKey)) {
-                        e.preventDefault();
+                      if (e.key === 'u' && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault()
                         const underline = (
                           item.underline || Array(columnCount).fill(false)
                         ).map((item, i) =>
                           columnIndex === i
                             ? item === true
-                              ? "double"
-                              : item === "double"
-                              ? false
-                              : true
+                              ? 'double'
+                              : item !== 'double'
                             : item
-                        );
+                        )
 
                         const newData = data.map((item, i) =>
                           rowIndex === i
                             ? {
                                 ...item,
-                                underline,
+                                underline
                               }
                             : item
-                        );
+                        )
 
-                        setData(newData);
+                        setData(newData)
                       }
 
-                      if (e.key === "-" && (e.metaKey || e.ctrlKey)) {
-                        e.preventDefault();
-                        const newData = [...data];
+                      if (e.key === '-' && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault()
+                        const newData = [...data]
                         newData[rowIndex].amount = newData[rowIndex].amount.map(
                           (item, i) => (i === columnIndex ? -item : item)
-                        );
+                        )
 
-                        setData(newData);
+                        setData(newData)
                       }
 
-                      if (e.key === "d" && (e.metaKey || e.ctrlKey)) {
-                        e.preventDefault();
+                      if (e.key === 'd' && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault()
                         const dashed = (
                           item.dashed || Array(columnCount).fill(false)
-                        ).map((item, i) => (columnIndex === i ? !item : item));
+                        ).map((item, i) => (columnIndex === i ? !item : item))
 
                         const newData = data.map((item, i) =>
                           rowIndex === i
                             ? {
                                 ...item,
-                                dashed,
+                                dashed
                               }
                             : item
-                        );
+                        )
 
-                        setData(newData);
+                        setData(newData)
                       }
 
-                      if (e.key === "t" && (e.metaKey || e.ctrlKey)) {
-                        e.preventDefault();
+                      if (e.key === 't' && (e.metaKey || e.ctrlKey)) {
+                        e.preventDefault()
                         const text = (
                           item.text || Array(columnCount).fill(false)
-                        ).map((item, i) => (columnIndex === i ? !item : item));
+                        ).map((item, i) => (columnIndex === i ? !item : item))
 
                         const newData = data.map((item, i) =>
                           rowIndex === i
                             ? {
                                 ...item,
-                                text,
+                                text
                               }
                             : item
-                        );
+                        )
 
-                        setData(newData);
+                        setData(newData)
                       }
 
                       if (
-                        e.key === "l" &&
+                        e.key === 'l' &&
                         e.shiftKey &&
                         (e.metaKey || e.ctrlKey)
                       ) {
-                        e.preventDefault();
-                        addColumn("left", columnIndex);
+                        e.preventDefault()
+                        addColumn('left', columnIndex)
                       }
 
                       if (
-                        e.key === "r" &&
+                        e.key === 'r' &&
                         e.shiftKey &&
                         (e.metaKey || e.ctrlKey)
                       ) {
-                        e.preventDefault();
-                        addColumn("right", columnIndex);
+                        e.preventDefault()
+                        addColumn('right', columnIndex)
                       }
                     }}
                     onChange={(e) => {
-                      const newData = [...data];
+                      const newData = [...data]
                       newData[rowIndex].amount = newData[rowIndex].amount.map(
                         (item, i) =>
                           i === columnIndex
-                            ? newData[rowIndex].text?.[columnIndex]
+                            ? newData[rowIndex].text &&
+                              newData[rowIndex].text?.[columnIndex]
                               ? e.target.value
-                              : parseInt(e.target.value.replace(/,/g, "")) || 0
+                              : parseInt(e.target.value.replace(/,/g, '')) || 0
                             : item
-                      );
+                      )
 
                       newData[rowIndex].dashed = newData[rowIndex].dashed
                         ? newData[rowIndex].dashed.map((item, i) =>
                             i === columnIndex ? false : item
                           )
-                        : Array(columnCount).fill(false);
+                        : Array(columnCount).fill(false)
 
                       if (rowIndex === data.length - 1) {
                         const newEntry = {
-                          particular: "",
+                          particular: '',
                           amount: Array.from({ length: columnCount }).map(
                             () => 0
                           ),
-                          underline: false,
-                        };
+                          underline: false as const
+                        }
 
-                        newData.push(newEntry);
+                        newData.push(newEntry)
                       }
 
-                      setData(newData);
+                      setData(newData)
                     }}
                     className={`w-24 h-full bg-transparent ${
-                      item.dashed?.[columnIndex] ? "text-center" : "text-right"
+                      item.dashed && item.dashed?.[columnIndex]
+                        ? 'text-center'
+                        : 'text-right'
                     } text-zinc-200`}
                   />
                 </td>
@@ -408,7 +413,7 @@ function Statement({
         </tbody>
       </table>
     </div>
-  );
+  )
 }
 
-export default Statement;
+export default Statement

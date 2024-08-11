@@ -1,17 +1,17 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React from "react";
+import { Button, Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React from 'react'
 
 function UnsaveChangeLeaveConfirmationModal({
   isOpen,
   proceed,
   saveData,
-  cancel,
+  cancel
 }: {
-  isOpen: boolean;
-  proceed: () => void;
-  saveData: () => Promise<void>;
-  cancel: () => void;
+  isOpen: boolean
+  proceed: () => void
+  saveData: () => Promise<void>
+  cancel: () => void
 }): React.ReactElement {
   return (
     <Dialog
@@ -42,7 +42,7 @@ function UnsaveChangeLeaveConfirmationModal({
                   icon="uil:times"
                   className="w-6 h-6"
                   onClick={() => {
-                    cancel();
+                    cancel()
                   }}
                 />
               </button>
@@ -54,7 +54,7 @@ function UnsaveChangeLeaveConfirmationModal({
             <div className="w-full flex gap-2">
               <Button
                 onClick={() => {
-                  proceed();
+                  proceed()
                 }}
                 className="px-6 w-1/2 py-3 mt-6 bg-red-500 hover:bg-red-600 disabled:hover:bg-zinc-500 disabled:bg-zinc-500 transition-all text-zinc-900 rounded-md flex items-center font-medium gap-2 justify-center"
               >
@@ -63,9 +63,13 @@ function UnsaveChangeLeaveConfirmationModal({
               </Button>
               <Button
                 onClick={() => {
-                  saveData().then(() => {
-                    proceed();
-                  });
+                  saveData()
+                    .then(() => {
+                      proceed()
+                    })
+                    .catch((err) => {
+                      console.error(err)
+                    })
                 }}
                 className="px-6 py-3 w-1/2 mt-6 bg-zinc-100 hover:bg-zinc-200 transition-all text-zinc-900 rounded-md flex items-center font-medium gap-2 justify-center"
               >
@@ -77,7 +81,7 @@ function UnsaveChangeLeaveConfirmationModal({
         </div>
       </div>
     </Dialog>
-  );
+  )
 }
 
-export default UnsaveChangeLeaveConfirmationModal;
+export default UnsaveChangeLeaveConfirmationModal

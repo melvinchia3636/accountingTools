@@ -1,13 +1,13 @@
-import { Button } from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React from "react";
+import { Button } from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React from 'react'
 
 function CreateButton({
   action,
-  onSubmit,
+  onSubmit
 }: {
-  action: string;
-  onSubmit: () => void;
+  action: string
+  onSubmit: () => void
 }): React.ReactElement {
   return (
     <Button
@@ -17,7 +17,7 @@ function CreateButton({
       {action}
       <Icon icon="uil:arrow-right" className="w-5 h-5" />
     </Button>
-  );
+  )
 }
 
-export default CreateButton;
+export default CreateButton

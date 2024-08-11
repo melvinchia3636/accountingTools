@@ -1,53 +1,56 @@
-import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useEffect, useState } from "react";
-import Input from "../Input";
-import CreateButton from "../CreateButton";
-import { toast } from "react-toastify";
-import { useParams } from "react-router-dom";
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React, { useEffect, useState } from 'react'
+import Input from '../Input'
+import CreateButton from '../CreateButton'
+import { toast } from 'react-toastify'
+import { useParams } from 'react-router-dom'
 
 function CreateJournalModal({
   isOpen,
   onClose,
-  reloadBook,
+  reloadBook
 }: {
-  isOpen: boolean;
-  onClose: () => void;
-  reloadBook: () => void;
+  isOpen: boolean
+  onClose: () => void
+  reloadBook: () => void
 }): React.ReactElement {
-  const [name, setName] = useState("");
-  const { id } = useParams();
+  const [name, setName] = useState('')
+  const { id } = useParams()
 
-  function onSubmit() {
-    if (name.trim() === "") {
-      toast.error("Please fill all the fields");
-      return;
+  function onSubmit(): void {
+    if (name.trim() === '') {
+      toast.error('Please fill all the fields')
+      return
     }
 
     fetch(`http://localhost:3000/journals/${id}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name,
-      }),
+        name
+      })
     })
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          onClose();
+        if (data.status === 'success') {
+          onClose()
           setTimeout(() => {
-            toast.success("Journal created successfully");
-            reloadBook();
-          }, 700);
+            toast.success('Journal created successfully')
+            reloadBook()
+          }, 700)
         }
-      });
+      }).catch((err) => {
+        console.error(err)
+        toast.error('Failed to create journal')
+      })
   }
 
   useEffect(() => {
-    setName("");
-  }, [isOpen]);
+    setName('')
+  }, [isOpen])
 
   return (
     <Dialog
@@ -88,7 +91,7 @@ function CreateJournalModal({
                 name="Journal Name"
                 icon="tabler:file"
                 value={name}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => { setName(e.target.value) }}
               />
             </div>
             <CreateButton action="Create" onSubmit={onSubmit} />
@@ -96,7 +99,7 @@ function CreateJournalModal({
         </div>
       </div>
     </Dialog>
-  );
+  )
 }
 
-export default CreateJournalModal;
+export default CreateJournalModal

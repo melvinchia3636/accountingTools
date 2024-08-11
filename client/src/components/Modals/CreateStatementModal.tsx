@@ -1,83 +1,89 @@
-import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useEffect, useState } from "react";
-import Input from "../Input";
-import CreateButton from "../CreateButton";
-import { useParams } from "react-router-dom";
-import { toast } from "react-toastify";
-import AutofillInput from "../../AutofillInput";
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React, { useEffect, useState } from 'react'
+import Input from '../Input'
+import CreateButton from '../CreateButton'
+import { useParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import AutofillInput from '../../AutofillInput'
 
 function CreateStatementModal({
   isOpen,
   onClose,
-  reloadBook,
+  reloadBook
 }: {
-  isOpen: boolean;
-  onClose: () => void;
-  reloadBook: () => void;
+  isOpen: boolean
+  onClose: () => void
+  reloadBook: () => void
 }): React.ReactElement {
-  const { id } = useParams();
-  const [name, setName] = useState("");
-  const [subtitle, setSubtitle] = useState("");
-  const [columnCount, setColumnCount] = useState(1);
-  const [topTextColumnCount, setTopTextColumnCount] = useState(1);
-  const [nameAutofillData, setNameAutofillData] = useState<string[]>([]);
+  const { id } = useParams()
+  const [name, setName] = useState('')
+  const [subtitle, setSubtitle] = useState('')
+  const [columnCount, setColumnCount] = useState(1)
+  const [topTextColumnCount, setTopTextColumnCount] = useState(1)
+  const [nameAutofillData, setNameAutofillData] = useState<string[]>([])
 
-  function fetchAutoFillData() {
+  function fetchAutoFillData(): void {
     fetch(`http://localhost:3000/autofill/statement-names/${id}`)
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          setNameAutofillData(data.data);
+        if (data.status === 'success') {
+          setNameAutofillData(data.data)
         }
-      });
+      }).catch((err) => {
+        console.error(err)
+      })
   }
 
   function onSubmit() {
     if (
-      name.trim() === "" ||
+      name.trim() === '' ||
       columnCount <= 0 ||
-      subtitle.trim() === "" ||
+      subtitle.trim() === '' ||
       topTextColumnCount <= 0
     ) {
-      toast.error("Please fill all the fields");
-      return;
+      toast.error('Please fill all the fields')
+      return
     }
 
     fetch(`http://localhost:3000/statements/${id}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name,
         subtitle,
         columnCount,
-        topTextColumnCount,
-      }),
+        topTextColumnCount
+      })
     })
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          onClose();
+        if (data.status === 'success') {
+          onClose()
           setTimeout(() => {
-            toast.success("Statement created successfully");
-            reloadBook();
-          }, 700);
+            toast.success('Statement created successfully')
+            reloadBook()
+          }, 700)
         }
-      });
+      }).catch((err) => {
+        console.error(err)
+        toast.error('Failed to create statement')
+      })
   }
 
   useEffect(() => {
     if (isOpen) {
-      setName("");
-      setSubtitle("");
-      setColumnCount(1);
-      setTopTextColumnCount(1);
+      setName('')
+      setSubtitle('')
+      setColumnCount(1)
+      setTopTextColumnCount(1)
 
-      fetchAutoFillData();
+      fetchAutoFillData()
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   return (
     <Dialog
@@ -118,27 +124,26 @@ function CreateStatementModal({
                 name="Statement Name"
                 icon="tabler:chart-line"
                 value={name}
-                onChange={(e) => setName(e)}
+                onChange={(e) => { setName(e) }}
                 autofillData={nameAutofillData}
               />
               <Input
                 name="Statement Subtitle"
                 icon="uil:text"
                 value={subtitle}
-                onChange={(e) => setSubtitle(e.target.value)}
+                onChange={(e) => { setSubtitle(e.target.value) }}
               />
               <Input
                 name="Number of Columns"
                 icon="uil:grid"
-                value={columnCount + ""}
-                onChange={(e) => setColumnCount(parseInt(e.target.value) || 0)}
+                value={columnCount + ''}
+                onChange={(e) => { setColumnCount(parseInt(e.target.value) || 0) }}
               />
               <Input
                 name="Number of Top Text Columns"
                 icon="tabler:square-t"
-                value={topTextColumnCount + ""}
-                onChange={(e) =>
-                  setTopTextColumnCount(parseInt(e.target.value) || 0)
+                value={topTextColumnCount + ''}
+                onChange={(e) => { setTopTextColumnCount(parseInt(e.target.value) || 0) }
                 }
               />
             </div>
@@ -147,7 +152,7 @@ function CreateStatementModal({
         </div>
       </div>
     </Dialog>
-  );
+  )
 }
 
-export default CreateStatementModal;
+export default CreateStatementModal

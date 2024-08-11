@@ -4,8 +4,8 @@ const fs = require("fs");
 const router = express.Router();
 
 router.get("/book-topics", (req, res) => {
-  const data = fs.readdirSync("./data").map((file) => {
-    const data = JSON.parse(fs.readFileSync(`./data/${file}`, "utf8"));
+  const data = fs.readdirSync("./data/books").map((file) => {
+    const data = JSON.parse(fs.readFileSync(`./data/books/${file}`, "utf8"));
     return data.topic;
   });
 
@@ -27,15 +27,15 @@ router.get("/ledger-names/:bookId", (req, res) => {
   }
 
   const book = JSON.parse(
-    fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
+    fs.readFileSync(`./data/books/${req.params.bookId}.json`, "utf8")
   );
 
   const topic = book.topic;
 
   const allBooks = fs
-    .readdirSync("./data")
+    .readdirSync("./data/books")
     .map((file) => {
-      const data = JSON.parse(fs.readFileSync(`./data/${file}`, "utf8"));
+      const data = JSON.parse(fs.readFileSync(`./data/books/${file}`, "utf8"));
       return data;
     })
     .filter((book) => book.topic === topic);
@@ -63,15 +63,15 @@ router.get("/statement-names/:bookId", (req, res) => {
   }
 
   const book = JSON.parse(
-    fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
+    fs.readFileSync(`./data/books/${req.params.bookId}.json`, "utf8")
   );
 
   const topic = book.topic;
 
   const allBooks = fs
-    .readdirSync("./data")
+    .readdirSync("./data/books")
     .map((file) => {
-      const data = JSON.parse(fs.readFileSync(`./data/${file}`, "utf8"));
+      const data = JSON.parse(fs.readFileSync(`./data/books/${file}`, "utf8"));
       return data;
     })
     .filter((book) => book.topic === topic);
@@ -99,13 +99,13 @@ router.get("/statement-particulars/:bookId/:docName", (req, res) => {
   }
 
   const book = JSON.parse(
-    fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
+    fs.readFileSync(`./data/books/${req.params.bookId}.json`, "utf8")
   );
 
   const docName = decodeURIComponent(req.params.docName);
 
-  const allBooks = fs.readdirSync("./data").map((file) => {
-    const data = JSON.parse(fs.readFileSync(`./data/${file}`, "utf8"));
+  const allBooks = fs.readdirSync("./data/books").map((file) => {
+    const data = JSON.parse(fs.readFileSync(`./data/books/${file}`, "utf8"));
     return data;
   });
 
@@ -138,11 +138,11 @@ router.get("/ledger-particulars/:bookId/", (req, res) => {
   }
 
   const book = JSON.parse(
-    fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
+    fs.readFileSync(`./data/books/${req.params.bookId}.json`, "utf8")
   );
 
-  const allBooks = fs.readdirSync("./data").map((file) => {
-    const data = JSON.parse(fs.readFileSync(`./data/${file}`, "utf8"));
+  const allBooks = fs.readdirSync("./data/books").map((file) => {
+    const data = JSON.parse(fs.readFileSync(`./data/books/${file}`, "utf8"));
     return data;
   });
 

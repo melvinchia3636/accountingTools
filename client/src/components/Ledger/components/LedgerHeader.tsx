@@ -1,19 +1,18 @@
-import React from "react";
-import HeaderInput from "../../HeaderInput";
+import React from 'react'
+import HeaderInput from '../../HeaderInput'
+import { type ILedgerHeader } from '../../../typescript/ledger.interface'
 
 function LedgerHeader({
   columnCount,
   topTextColumnCount,
   headers,
-  setHeaders,
+  setHeaders
 }: {
-  columnCount: number;
-  topTextColumnCount: number;
-  headers: { debit: string[]; credit: string[] }[];
-  setHeaders: React.Dispatch<
-    React.SetStateAction<{ debit: string[]; credit: string[] }[]>
-  >;
-}) {
+  columnCount: number
+  topTextColumnCount: number
+  headers: ILedgerHeader[]
+  setHeaders: React.Dispatch<React.SetStateAction<ILedgerHeader[]>>
+}): React.ReactElement {
   return (
     <thead>
       {Array.from({ length: topTextColumnCount }).map((_, i) => (
@@ -27,8 +26,8 @@ function LedgerHeader({
                 key={j}
                 className={`py-2 w-28 ${
                   j === columnCount - 1
-                    ? "border-r-[6px] border-double"
-                    : "border-r-2"
+                    ? 'border-r-[6px] border-double'
+                    : 'border-r-2'
                 } border-zinc-700`}
               >
                 <HeaderInput
@@ -45,7 +44,7 @@ function LedgerHeader({
           {Array(columnCount)
             .fill(0)
             .map((_, j) => (
-              <th className="py-2 w-28 border-r-2 border-zinc-700">
+              <th key={j} className="py-2 w-28 border-r-2 border-zinc-700">
                 <HeaderInput
                   headers={headers}
                   setHeaders={setHeaders}
@@ -58,7 +57,7 @@ function LedgerHeader({
         </tr>
       ))}
     </thead>
-  );
+  )
 }
 
-export default LedgerHeader;
+export default LedgerHeader

@@ -1,103 +1,110 @@
-import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useEffect, useState } from "react";
-import Input from "../Input";
-import { toast } from "react-toastify";
-import CreateButton from "../CreateButton";
-import AutofillInput from "../../AutofillInput";
+import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React, { useEffect, useState } from 'react'
+import Input from '../Input'
+import { toast } from 'react-toastify'
+import CreateButton from '../CreateButton'
+import AutofillInput from '../../AutofillInput'
 
 function ModifyBookModal({
   openType,
   onClose,
   reloadBooks,
-  existingBook,
+  existingBook
 }: {
-  openType: "update" | "create" | null;
-  onClose: () => void;
-  reloadBooks: () => void;
+  openType: 'update' | 'create' | null
+  onClose: () => void
+  reloadBooks: () => void
   existingBook: {
-    id: string;
-    name: string;
-    code: string;
-    topic: string;
-  } | null;
+    id: string
+    name: string
+    code: string
+    topic: string
+  } | null
 }): React.ReactElement {
-  const [name, setName] = useState("");
-  const [code, setCode] = useState("");
-  const [topic, setTopic] = useState("");
-  const [topicAutofillData, setTopicAutofillData] = useState<string[]>([]);
+  const [name, setName] = useState('')
+  const [code, setCode] = useState('')
+  const [topic, setTopic] = useState('')
+  const [topicAutofillData, setTopicAutofillData] = useState<string[]>([])
 
-  function fetchAutoFillData() {
-    fetch("http://localhost:3000/autofill/book-topics")
-      .then((res) => res.json())
+  function fetchAutoFillData(): void {
+    fetch('http://localhost:3000/autofill/book-topics')
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          setTopicAutofillData(data.data);
+        if (data.status === 'success') {
+          setTopicAutofillData(data.data as string[])
         }
-      });
+      })
+      .catch((err) => {
+        console.error(err)
+      })
   }
 
-  function onChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function onChange(e: React.ChangeEvent<HTMLInputElement>): void {
     switch (e.target.name) {
-      case "Book Name":
-        setName(e.target.value);
-        break;
-      case "Book Code":
-        setCode(e.target.value);
-        break;
-      case "Book Topic":
-        setTopic(e.target.value);
-        break;
+      case 'Book Name':
+        setName(e.target.value)
+        break
+      case 'Book Code':
+        setCode(e.target.value)
+        break
+      case 'Book Topic':
+        setTopic(e.target.value)
+        break
     }
   }
 
-  function onSubmit() {
-    if (name.trim() === "" || code.trim() === "" || topic.trim() === "") {
-      toast.error("Please fill all the fields");
-      return;
+  function onSubmit(): void {
+    if (name.trim() === '' || code.trim() === '' || topic.trim() === '') {
+      toast.error('Please fill all the fields')
+      return
     }
 
     fetch(
       `http://localhost:3000/books${
-        openType === "update" ? `/${existingBook?.id}` : ""
+        openType === 'update' ? `/${existingBook?.id}` : ''
       }`,
       {
-        method: openType === "update" ? "PUT" : "POST",
+        method: openType === 'update' ? 'PUT' : 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           name,
           code,
-          topic,
-        }),
+          topic
+        })
       }
     )
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          onClose();
+        if (data.status === 'success') {
+          onClose()
           setTimeout(() => {
-            reloadBooks();
-            toast.success(`Book ${openType + "d"} successfully`);
-          }, 700);
+            reloadBooks()
+            toast.success(`Book ${openType + 'd'} successfully`)
+          }, 700)
         }
-      });
+      })
+      .catch((err) => {
+        console.error(err)
+        toast.error(`Failed to ${openType} book`)
+      })
   }
 
   useEffect(() => {
-    if (openType === "update" && existingBook !== null) {
-      setName(existingBook.name);
-      setCode(existingBook.code);
-      setTopic(existingBook.topic);
+    if (openType === 'update' && existingBook !== null) {
+      setName(existingBook.name)
+      setCode(existingBook.code)
+      setTopic(existingBook.topic)
     } else {
-      setName("");
-      setCode("");
-      setTopic("");
+      setName('')
+      setCode('')
+      setTopic('')
     }
 
-    fetchAutoFillData();
-  }, [openType, existingBook]);
+    fetchAutoFillData()
+  }, [openType, existingBook])
 
   return (
     <Dialog
@@ -120,12 +127,12 @@ function ModifyBookModal({
                   className="text-xl flex gap-2 items-center text-zinc-200 font-medium"
                 >
                   <Icon icon="tabler:pencil-plus" className="w-6 h-6" />
-                  {openType === "update" ? "Update" : "Create"} Book
+                  {openType === 'update' ? 'Update' : 'Create'} Book
                 </DialogTitle>
                 <p className="mt-2 text-zinc-500">
-                  {openType === "update"
-                    ? "Edit the book details to update the book."
-                    : "Create a new book to start recording transactions."}
+                  {openType === 'update'
+                    ? 'Edit the book details to update the book.'
+                    : 'Create a new book to start recording transactions.'}
                 </p>
               </div>
               <Icon
@@ -152,19 +159,21 @@ function ModifyBookModal({
                 name="Book Topic"
                 icon="tabler:key"
                 value={topic}
-                onChange={(e) => setTopic(e)}
+                onChange={(e) => {
+                  setTopic(e)
+                }}
                 autofillData={topicAutofillData}
               />
             </div>
             <CreateButton
-              action={openType === "update" ? "Update" : "Create"}
+              action={openType === 'update' ? 'Update' : 'Create'}
               onSubmit={onSubmit}
             />
           </DialogPanel>
         </div>
       </div>
     </Dialog>
-  );
+  )
 }
 
-export default ModifyBookModal;
+export default ModifyBookModal

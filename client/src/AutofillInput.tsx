@@ -4,34 +4,34 @@ import {
   ComboboxInput,
   ComboboxOptions,
   ComboboxOption,
-  Label,
-} from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useState } from "react";
+  Label
+} from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React, { useState } from 'react'
 
 function AutofillInput({
   autofillData,
   name,
   icon,
   value,
-  onChange,
+  onChange
 }: {
-  autofillData: string[];
-  name: string;
-  icon: string;
-  value: string;
-  onChange: (e: string) => void;
-}) {
-  const [query, setQuery] = useState("");
+  autofillData: string[]
+  name: string
+  icon: string
+  value: string
+  onChange: (e: string) => void
+}): React.ReactElement {
+  const [query, setQuery] = useState('')
   const filteredItems = autofillData
     .filter((item) => {
-      return item.toLowerCase().includes(query.toLowerCase());
+      return item.toLowerCase().includes(query.toLowerCase())
     })
     .sort(
       (a, b) =>
         a.toLowerCase().indexOf(query.toLowerCase()) -
         b.toLowerCase().indexOf(query.toLowerCase())
-    );
+    )
 
   return (
     <Field className="relative w-full min-w-[200px] h-14 group">
@@ -41,12 +41,12 @@ function AutofillInput({
       <Combobox
         value={value}
         immediate
-        onChange={(e) => onChange(e ?? "")}
-        onClose={() => setQuery("")}
+        onChange={(e) => { onChange(e ?? '') }}
+        onClose={() => { setQuery('') }}
       >
         <ComboboxInput
           displayValue={(type: string) => type}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event) => { setQuery(event.target.value) }}
           className="w-full h-full px-3 py-3 font-sans text-base font-normal transition-all bg-transparent border rounded-md peer text-zinc-200 outline outline-0 focus:outline-0 disabled:bg-zinc-50 disabled:border-0 placeholder-shown:border-[1.5px] placeholder-shown:border-zinc-700 placeholder-shown:border-t-zinc-700 focus:border-2 border-t-transparent focus:border-t-transparent border-zinc-700 focus:border-zinc-200"
           placeholder=" "
         />
@@ -68,7 +68,7 @@ function AutofillInput({
               value={query}
               className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
             >
-              Create <span className="font-bold">"{query}"</span>
+              Create <span className="font-bold">&quot;{query}&quot;</span>
             </ComboboxOption>
           )}
         </ComboboxOptions>
@@ -77,7 +77,7 @@ function AutofillInput({
         {name}
       </Label>
     </Field>
-  );
+  )
 }
 
-export default AutofillInput;
+export default AutofillInput

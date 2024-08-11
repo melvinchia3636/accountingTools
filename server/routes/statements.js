@@ -24,7 +24,7 @@ router.post("/:bookId", (req, res) => {
   }
 
   const book = JSON.parse(
-    fs.readFileSync(`./data/${req.params.bookId}.json`, "utf8")
+    fs.readFileSync(`./data/books/${req.params.bookId}.json`, "utf8")
   );
 
   book.data.push({
@@ -43,7 +43,10 @@ router.post("/:bookId", (req, res) => {
     ],
   });
 
-  fs.writeFileSync(`./data/${bookId}.json`, JSON.stringify(book, null, 2));
+  fs.writeFileSync(
+    `./data/books/${bookId}.json`,
+    JSON.stringify(book, null, 2)
+  );
 
   res.json({ status: "success" });
 });

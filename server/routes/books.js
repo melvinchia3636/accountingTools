@@ -4,8 +4,8 @@ const fs = require("fs");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  const data = fs.readdirSync("./data").map((file) => {
-    const data = JSON.parse(fs.readFileSync(`./data/${file}`, "utf8"));
+  const data = fs.readdirSync("./data/books").map((file) => {
+    const data = JSON.parse(fs.readFileSync(`./data/books/${file}`, "utf8"));
 
     return {
       id: file.replace(".json", ""),
@@ -36,7 +36,7 @@ router.get("/:id", (req, res) => {
   }
 
   const data = JSON.parse(
-    fs.readFileSync(`./data/${req.params.id}.json`, "utf8")
+    fs.readFileSync(`./data/books/${req.params.id}.json`, "utf8")
   );
 
   res.json({
@@ -50,7 +50,7 @@ router.post("/", (req, res) => {
   const { code, name, topic } = req.body;
 
   fs.writeFileSync(
-    `./data/${id}.json`,
+    `./data/books/${id}.json`,
     JSON.stringify({ code, entityName: name, topic, data: [] }, null, 2)
   );
 
@@ -69,7 +69,7 @@ router.put("/:id", (req, res) => {
   const { code, name, topic } = req.body;
 
   const book = JSON.parse(
-    fs.readFileSync(`./data/${req.params.id}.json`, "utf8")
+    fs.readFileSync(`./data/books/${req.params.id}.json`, "utf8")
   );
 
   book.code = code;
@@ -77,7 +77,7 @@ router.put("/:id", (req, res) => {
   book.topic = topic;
 
   fs.writeFileSync(
-    `./data/${req.params.id}.json`,
+    `./data/books/${req.params.id}.json`,
     JSON.stringify(book, null, 2)
   );
 
@@ -93,7 +93,7 @@ router.delete("/:id", (req, res) => {
     return res.status(400).send("Invalid ID");
   }
 
-  fs.unlinkSync(`./data/${req.params.id}.json`);
+  fs.unlinkSync(`./data/books/${req.params.id}.json`);
 
   res.json({ status: "success" });
 });
@@ -107,12 +107,12 @@ router.post("/save/:id", (req, res) => {
     return res.status(400).send("Invalid ID");
   }
 
-  if (!fs.existsSync(`./data/${req.params.id}.json`)) {
+  if (!fs.existsSync(`./data/books/${req.params.id}.json`)) {
     return res.status(404).send("Book not found");
   }
 
   fs.writeFileSync(
-    `./data/${req.params.id}.json`,
+    `./data/books/${req.params.id}.json`,
     JSON.stringify(req.body.data, null, 2)
   );
 

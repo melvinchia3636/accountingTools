@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import {
   Combobox,
   ComboboxInput,
@@ -7,112 +8,117 @@ import {
   DialogPanel,
   DialogTitle,
   Field,
-  Label,
-} from "@headlessui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
-import React, { useEffect, useState } from "react";
-import Input from "../Input";
-import CreateButton from "../CreateButton";
-import { toast } from "react-toastify";
-import { useParams } from "react-router-dom";
-import AutofillInput from "../../AutofillInput";
+  Label
+} from '@headlessui/react'
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React, { useEffect, useState } from 'react'
+import Input from '../Input'
+import CreateButton from '../CreateButton'
+import { toast } from 'react-toastify'
+import { useParams } from 'react-router-dom'
+import AutofillInput from '../../AutofillInput'
 
 const NATURES = [
-  { id: "A", name: "Asset" },
-  { id: "A-", name: "Asset (Contra)" },
-  { id: "L", name: "Liability" },
-  { id: "L-", name: "Liability (Contra)" },
-  { id: "E", name: "Equity" },
-  { id: "IN", name: "Income" },
-  { id: "IN-", name: "Income (Contra)" },
-  { id: "EX", name: "Expenses" },
-  { id: "EX-", name: "Income (Contra)" },
-  { id: "TEMP", name: "Temporary" },
-];
+  { id: 'A', name: 'Asset' },
+  { id: 'A-', name: 'Asset (Contra)' },
+  { id: 'L', name: 'Liability' },
+  { id: 'L-', name: 'Liability (Contra)' },
+  { id: 'E', name: 'Equity' },
+  { id: 'IN', name: 'Income' },
+  { id: 'IN-', name: 'Income (Contra)' },
+  { id: 'EX', name: 'Expenses' },
+  { id: 'EX-', name: 'Income (Contra)' },
+  { id: 'TEMP', name: 'Temporary' }
+]
 
 function CreateLedgerModal({
   isOpen,
   onClose,
-  reloadBook,
+  reloadBook
 }: {
-  isOpen: boolean;
-  onClose: () => void;
-  reloadBook: () => void;
+  isOpen: boolean
+  onClose: () => void
+  reloadBook: () => void
 }): React.ReactElement {
-  const { id } = useParams();
-  const [name, setName] = useState("");
+  const { id } = useParams()
+  const [name, setName] = useState('')
   const [selectedNature, setSelectedNature] = useState<{
-    id: string;
-    name: string;
-  } | null>(null);
-  const [columnCount, setColumnCount] = useState(1);
-  const [topTextColumnCount, setTopTextColumnCount] = useState(1);
-  const [query, setQuery] = useState("");
-  const [nameAutofillData, setNameAutofillData] = useState<string[]>([]);
+    id: string
+    name: string
+  } | null>(null)
+  const [columnCount, setColumnCount] = useState(1)
+  const [topTextColumnCount, setTopTextColumnCount] = useState(1)
+  const [query, setQuery] = useState('')
+  const [nameAutofillData, setNameAutofillData] = useState<string[]>([])
 
   const filteredNatures =
-    query === ""
+    query === ''
       ? NATURES
       : NATURES.filter((type) => {
-          return type.name.toLowerCase().includes(query.toLowerCase());
-        });
+        return type.name.toLowerCase().includes(query.toLowerCase())
+      })
 
-  function fetchAutoFillData() {
+  function fetchAutoFillData(): void {
     fetch(`http://localhost:3000/autofill/ledger-names/${id}`)
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          setNameAutofillData(data.data);
+        if (data.status === 'success') {
+          setNameAutofillData(data.data)
         }
-      });
+      }).catch((err) => {
+        console.error(err)
+      })
   }
 
-  function onSubmit() {
+  function onSubmit(): void {
     if (
-      name.trim() === "" ||
+      name.trim() === '' ||
       !selectedNature ||
       ![...NATURES.map((type) => type.id)].includes(selectedNature?.id) ||
       columnCount === 0 ||
       topTextColumnCount === 0
     ) {
-      toast.error("Please fill all the fields");
-      return;
+      toast.error('Please fill all the fields')
+      return
     }
 
     fetch(`http://localhost:3000/ledgers/${id}`, {
-      method: "POST",
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
         name,
         nature: selectedNature.id,
         columnCount,
-        topTextColumnCount,
-      }),
+        topTextColumnCount
+      })
     })
-      .then((res) => res.json())
+      .then(async (res) => await res.json())
       .then((data) => {
-        if (data.status === "success") {
-          onClose();
+        if (data.status === 'success') {
+          onClose()
           setTimeout(() => {
-            toast.success("Ledger created successfully");
-            reloadBook();
-          }, 700);
+            toast.success('Ledger created successfully')
+            reloadBook()
+          }, 700)
         }
-      });
+      }).catch((err) => {
+        console.error(err)
+        toast.error('Failed to create ledger')
+      })
   }
 
   useEffect(() => {
     if (isOpen) {
-      setName("");
-      setSelectedNature(null);
-      setColumnCount(1);
-      setTopTextColumnCount(1);
+      setName('')
+      setSelectedNature(null)
+      setColumnCount(1)
+      setTopTextColumnCount(1)
 
-      fetchAutoFillData();
+      fetchAutoFillData()
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   return (
     <Dialog
@@ -153,22 +159,22 @@ function CreateLedgerModal({
                 name="Ledger Name"
                 icon="tabler:square-letter-t"
                 value={name}
-                onChange={(e) => setName(e)}
+                onChange={(e) => { setName(e) }}
                 autofillData={nameAutofillData}
               />
               <Field className="relative w-full min-w-[200px] h-14 group">
                 <div className="absolute grid w-5 h-5 place-items-center text-zinc-500 group-focus-within:text-zinc-100 top-1/2 right-5 -translate-y-[55%]">
-                  <Icon icon={"tabler:report-money"} className="w-6 h-6" />
+                  <Icon icon={'tabler:report-money'} className="w-6 h-6" />
                 </div>
                 <Combobox
                   value={selectedNature}
                   immediate
-                  onChange={(type) => setSelectedNature(type)}
-                  onClose={() => setQuery("")}
+                  onChange={(type) => { setSelectedNature(type) }}
+                  onClose={() => { setQuery('') }}
                 >
                   <ComboboxInput
                     displayValue={(type) => type?.name}
-                    onChange={(event) => setQuery(event.target.value)}
+                    onChange={(event) => { setQuery(event.target.value) }}
                     className="w-full h-full px-3 py-3 font-sans text-base font-normal transition-all bg-transparent border rounded-md peer text-zinc-200 outline outline-0 focus:outline-0 disabled:bg-zinc-50 disabled:border-0 placeholder-shown:border-[1.5px] placeholder-shown:border-zinc-700 placeholder-shown:border-t-zinc-700 focus:border-2 border-t-transparent focus:border-t-transparent border-zinc-700 focus:border-zinc-200"
                     placeholder=" "
                   />
@@ -194,15 +200,14 @@ function CreateLedgerModal({
               <Input
                 name="Number of Columns"
                 icon="uil:grid"
-                value={columnCount === 0 ? "" : columnCount + ""}
-                onChange={(e) => setColumnCount(parseInt(e.target.value) || 0)}
+                value={columnCount === 0 ? '' : columnCount + ''}
+                onChange={(e) => { setColumnCount(parseInt(e.target.value) || 0) }}
               />
               <Input
                 name="Number of Top Text Columns"
                 icon="uil:grid"
-                value={topTextColumnCount === 0 ? "" : topTextColumnCount + ""}
-                onChange={(e) =>
-                  setTopTextColumnCount(parseInt(e.target.value) || 0)
+                value={topTextColumnCount === 0 ? '' : topTextColumnCount + ''}
+                onChange={(e) => { setTopTextColumnCount(parseInt(e.target.value) || 0) }
                 }
               />
             </div>
@@ -211,7 +216,7 @@ function CreateLedgerModal({
         </div>
       </div>
     </Dialog>
-  );
+  )
 }
 
-export default CreateLedgerModal;
+export default CreateLedgerModal

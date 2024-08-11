@@ -1,17 +1,18 @@
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { Icon } from '@iconify/react/dist/iconify.js'
+import React from 'react'
 
 function Input({
   name,
   icon,
   value,
-  onChange,
+  onChange
 }: {
-  name: string;
-  icon: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  type?: string;
-}) {
+  name: string
+  icon: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  type?: string
+}): React.ReactElement {
   return (
     <div className="relative w-full min-w-[200px] h-14 group">
       <div className="absolute grid w-5 h-5 place-items-center text-zinc-500 group-focus-within:text-zinc-100 top-1/2 right-5 -translate-y-[55%]">
@@ -28,7 +29,7 @@ function Input({
         {name}
       </label>
     </div>
-  );
+  )
 }
 
-export default Input;
+export default Input
