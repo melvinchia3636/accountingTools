@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/indent */
+/* eslint-disable @typescript-eslint/member-delimiter-style */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import {
   Combobox,
@@ -55,17 +57,18 @@ function CreateLedgerModal({
     query === ''
       ? NATURES
       : NATURES.filter((type) => {
-        return type.name.toLowerCase().includes(query.toLowerCase())
-      })
+          return type.name.toLowerCase().includes(query.toLowerCase())
+        })
 
   function fetchAutoFillData(): void {
     fetch(`http://localhost:3000/autofill/ledger-names/${id}`)
       .then(async (res) => await res.json())
       .then((data) => {
         if (data.status === 'success') {
-          setNameAutofillData(data.data)
+          setNameAutofillData(data.data as string[])
         }
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(err)
       })
   }
@@ -103,7 +106,8 @@ function CreateLedgerModal({
             reloadBook()
           }, 700)
         }
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.error(err)
         toast.error('Failed to create ledger')
       })
@@ -159,7 +163,9 @@ function CreateLedgerModal({
                 name="Ledger Name"
                 icon="tabler:square-letter-t"
                 value={name}
-                onChange={(e) => { setName(e) }}
+                onChange={(e) => {
+                  setName(e)
+                }}
                 autofillData={nameAutofillData}
               />
               <Field className="relative w-full min-w-[200px] h-14 group">
@@ -169,12 +175,20 @@ function CreateLedgerModal({
                 <Combobox
                   value={selectedNature}
                   immediate
-                  onChange={(type) => { setSelectedNature(type) }}
-                  onClose={() => { setQuery('') }}
+                  onChange={(type) => {
+                    setSelectedNature(type)
+                  }}
+                  onClose={() => {
+                    setQuery('')
+                  }}
                 >
                   <ComboboxInput
-                    displayValue={(type) => type?.name}
-                    onChange={(event) => { setQuery(event.target.value) }}
+                    displayValue={(type: { id: string; name: string } | null) =>
+                      type?.name ?? ''
+                    }
+                    onChange={(event) => {
+                      setQuery(event.target.value)
+                    }}
                     className="w-full h-full px-3 py-3 font-sans text-base font-normal transition-all bg-transparent border rounded-md peer text-zinc-200 outline outline-0 focus:outline-0 disabled:bg-zinc-50 disabled:border-0 placeholder-shown:border-[1.5px] placeholder-shown:border-zinc-700 placeholder-shown:border-t-zinc-700 focus:border-2 border-t-transparent focus:border-t-transparent border-zinc-700 focus:border-zinc-200"
                     placeholder=" "
                   />
@@ -201,14 +215,17 @@ function CreateLedgerModal({
                 name="Number of Columns"
                 icon="uil:grid"
                 value={columnCount === 0 ? '' : columnCount + ''}
-                onChange={(e) => { setColumnCount(parseInt(e.target.value) || 0) }}
+                onChange={(e) => {
+                  setColumnCount(parseInt(e.target.value) || 0)
+                }}
               />
               <Input
                 name="Number of Top Text Columns"
                 icon="uil:grid"
                 value={topTextColumnCount === 0 ? '' : topTextColumnCount + ''}
-                onChange={(e) => { setTopTextColumnCount(parseInt(e.target.value) || 0) }
-                }
+                onChange={(e) => {
+                  setTopTextColumnCount(parseInt(e.target.value) || 0)
+                }}
               />
             </div>
             <CreateButton action="Create" onSubmit={onSubmit} />

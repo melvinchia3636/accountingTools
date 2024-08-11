@@ -11,13 +11,13 @@ interface IBaseHeaderProps {
 interface IHeaderPropsWithSide {
   side: 'debit' | 'credit'
   headers: ILedgerHeader[]
-  setHeaders: React.Dispatch<React.SetStateAction<ILedgerHeader[]>>
+  setHeaders: (headers: ILedgerHeader[]) => void
 }
 
 interface IHeaderPropsWithoutSide {
   side?: never
   headers: string[][]
-  setHeaders: React.Dispatch<React.SetStateAction<string[][]>>
+  setHeaders: (headers: string[][]) => void
 }
 
 type HeaderProps = (IHeaderPropsWithSide | IHeaderPropsWithoutSide) &

@@ -32,8 +32,8 @@ function Statement({
   columnCount: number
   topTextColumnCount: number
   subtitle: string
-  setData: React.Dispatch<React.SetStateAction<IStatementEntry[]>>
-  setHeaders: React.Dispatch<React.SetStateAction<string[][]>>
+  setData: (data: IStatementEntry[]) => void
+  setHeaders: (headers: string[][]) => void
   addColumn: (side: 'left' | 'right', colIndex: number) => void
 }): React.ReactElement {
   const { id } = useParams()

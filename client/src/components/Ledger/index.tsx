@@ -32,8 +32,8 @@ function Ledger({
   headers: ILedgerHeader[]
   companyName: string
   name: string
-  setData: React.Dispatch<React.SetStateAction<ILedger['entries']>>
-  setHeaders: React.Dispatch<React.SetStateAction<ILedgerHeader[]>>
+  setData: (data: ILedger['entries']) => void
+  setHeaders: (headers: ILedgerHeader[]) => void
   columnCount: number
   topTextColumnCount: number
 }): React.ReactElement {

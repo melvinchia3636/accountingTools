@@ -2,10 +2,10 @@ export interface IJournal {
   id: number
   type: string
   name: string
-  entries: Entry[]
+  entries: IJournalEntry[]
 }
 
-export interface Entry {
+export interface IJournalEntry {
   isNew: boolean
   date: string
   particular: string

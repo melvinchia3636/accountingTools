@@ -11,7 +11,7 @@ function LedgerHeader({
   columnCount: number
   topTextColumnCount: number
   headers: ILedgerHeader[]
-  setHeaders: React.Dispatch<React.SetStateAction<ILedgerHeader[]>>
+  setHeaders: (headers: ILedgerHeader[]) => void
 }): React.ReactElement {
   return (
     <thead>

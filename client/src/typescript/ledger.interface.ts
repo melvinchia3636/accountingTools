@@ -6,12 +6,12 @@ export interface ILedger {
   column?: number
   topTextColumnCount: number
   headers: Array<string[] | ILedgerHeader>
-  entries: Entry[]
+  entries: ILedgerEntry[]
   subtitle?: string
   columnCount?: number
 }
 
-export interface Entry {
+export interface ILedgerEntry {
   date?: string
   particular: string
   side?: LedgerSide
@@ -22,7 +22,7 @@ export interface Entry {
 
 export enum LedgerSide {
   Credit = 'credit',
-  Debit = 'debit',
+  Debit = 'debit'
 }
 
 export interface ILedgerHeader {

@@ -7,7 +7,7 @@ function Journal({
   setData
 }: {
   data: IJournal['entries']
-  setData: React.Dispatch<React.SetStateAction<IJournal['entries']>>
+  setData: (data: IJournal['entries']) => void
 }): React.ReactElement {
   return (
     <>
@@ -121,8 +121,7 @@ function Journal({
                     }`}
                   />
                 </td>
-                {item.particular === 'TOTAL'
-                  ? (
+                {item.particular === 'TOTAL' ? (
                   <td
                     className={`border-r-2 border-zinc-700 ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
@@ -140,7 +139,9 @@ function Journal({
                             }))
                             .slice(0, index)
 
-                          const splitByTotal = allEntries.reduce<Array<Array<{ particular: string, amount: number }>>>(
+                          const splitByTotal = allEntries.reduce<
+                            Array<Array<{ particular: string; amount: number }>>
+                          >(
                             (acc, item) => {
                               if (item.particular === 'TOTAL') {
                                 acc.push([])
@@ -160,8 +161,7 @@ function Journal({
                       </div>
                     </div>
                   </td>
-                    )
-                  : (
+                ) : (
                   <td
                     className={`py-2 border-r-2 p-4 border-zinc-700 text-right ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
@@ -204,9 +204,8 @@ function Journal({
                       className="w-full h-full bg-transparent text-right text-zinc-200"
                     />
                   </td>
-                    )}
-                {item.particular === 'TOTAL'
-                  ? (
+                )}
+                {item.particular === 'TOTAL' ? (
                   <td
                     className={`border-r-2 border-zinc-700 ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
@@ -224,7 +223,9 @@ function Journal({
                             }))
                             .slice(0, index)
 
-                          const splitByTotal = allEntries.reduce<Array<Array<{ particular: string, amount: number }>>>(
+                          const splitByTotal = allEntries.reduce<
+                            Array<Array<{ particular: string; amount: number }>>
+                          >(
                             (acc, item) => {
                               if (item.particular === 'TOTAL') {
                                 acc.push([])
@@ -244,8 +245,7 @@ function Journal({
                       </div>
                     </div>
                   </td>
-                    )
-                  : (
+                ) : (
                   <td
                     className={`py-2 p-4 text-right ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
@@ -288,7 +288,7 @@ function Journal({
                       className="w-full h-full bg-transparent text-right text-zinc-200"
                     />
                   </td>
-                    )}
+                )}
               </tr>
             ))}
           </tbody>

@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
+/* eslint-disable @typescript-eslint/indent */
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
+/* eslint-disable multiline-ternary */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable no-extend-native */
 import React, { useEffect, useState } from 'react'
@@ -13,19 +17,28 @@ import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import DeleteDocumentConfirmationModal from '../../components/Modals/DeleteDocumentConfirmationModal'
 import UnsaveChangeLeaveConfirmationModal from '../../components/Modals/UnsaveChangeLeaveConfirmationModal'
 import { type IEverything } from '../../typescript/everything.interface'
+import { type IStatement } from '../../typescript/statement.interface'
+import { type ILedger } from '../../typescript/ledger.interface'
 
-// @ts-expect-error cannot fix
+declare global {
+  interface Array<T> {
+    insert: (index: number, ...items: T[]) => void
+  }
+}
+
 Array.prototype.insert = function (index: number, ...items: any[]): void {
   this.splice(index, 0, ...items)
 }
 
 function Book(): React.ReactElement {
-  const [everything, setEverything] = useState<IEverything | 'loading'>('loading')
+  const [everything, setEverything] = useState<IEverything | 'loading'>(
+    'loading'
+  )
   const [data, setData] = useState<any>(null)
   const { id } = useParams()
   const navigate = useNavigate()
   const [modifyBookModalOpenType, setModifyBookModalOpenType] = useState<
-  'create' | 'update' | null
+    'create' | 'update' | null
   >(null)
   const [deleteDocumentModalOpen, setDeleteDocumentModalOpen] = useState(false)
   const [saved, setSaved] = useState(true)
@@ -42,7 +55,8 @@ function Book(): React.ReactElement {
             setFirstFetch(false)
           }, 100)
         }
-      }).catch(() => {
+      })
+      .catch(() => {
         navigate('/')
       })
   }
@@ -154,26 +168,28 @@ function Book(): React.ReactElement {
             </MenuItems>
           </Menu>
         </div>
-        {data !== null
-          ? (
-              (() => {
-                switch (data.type) {
-                  case 'journal':
-                    return (
+        {data !== null ? (
+          (() => {
+            switch (data.type) {
+              case 'journal':
+                return (
                   <Journal
                     key={`doc-${data.id}`}
                     data={data.entries}
                     setData={(newData) => {
                       const newEverything = { ...everything }
-                      newEverything.data.find(
+                      const target = newEverything.data.find(
                         (item) => item.id === data.id
-                      ).entries = newData
+                      )
+                      if (target !== undefined) {
+                        target.entries = newData
+                      }
                       setEverything(newEverything)
                     }}
                   />
-                    )
-                  case 'ledger':
-                    return (
+                )
+              case 'ledger':
+                return (
                   <Ledger
                     key={`doc-${data.id}`}
                     data={data.entries}
@@ -184,22 +200,28 @@ function Book(): React.ReactElement {
                     topTextColumnCount={data.topTextColumnCount}
                     setData={(newData) => {
                       const newEverything = { ...everything }
-                      newEverything.data.find(
+                      const target = newEverything.data.find(
                         (item) => item.id === data.id
-                      ).entries = newData
+                      )
+                      if (target !== undefined) {
+                        target.entries = newData
+                      }
                       setEverything(newEverything)
                     }}
                     setHeaders={(newHeaders) => {
                       const newEverything = { ...everything }
-                      newEverything.data.find(
+                      const target = newEverything.data.find(
                         (item) => item.id === data.id
-                      ).headers = newHeaders
+                      ) as ILedger
+                      if (target !== undefined) {
+                        target.headers = newHeaders
+                      }
                       setEverything(newEverything)
                     }}
                   />
-                    )
-                  case 'statement':
-                    return (
+                )
+              case 'statement':
+                return (
                   <Statement
                     key={`doc-${data.id}`}
                     data={data.entries}
@@ -211,23 +233,30 @@ function Book(): React.ReactElement {
                     topTextColumnCount={data.topTextColumnCount}
                     setData={(newData) => {
                       const newEverything = { ...everything }
-                      newEverything.data.find(
+
+                      const target = newEverything.data.find(
                         (item) => item.id === data.id
-                      ).entries = newData
+                      )
+                      if (target !== undefined) {
+                        target.entries = newData
+                      }
                       setEverything(newEverything)
                     }}
                     setHeaders={(newHeaders) => {
                       const newEverything = { ...everything }
-                      newEverything.data.find(
+                      const target = newEverything.data.find(
                         (item) => item.id === data.id
-                      ).headers = newHeaders
+                      ) as IStatement
+                      if (target !== undefined) {
+                        target.headers = newHeaders
+                      }
                       setEverything(newEverything)
                     }}
                     addColumn={(side: 'left' | 'right', colIndex: number) => {
                       const newEverything = { ...everything }
                       const target = newEverything.data.find(
                         (item) => item.id === data.id
-                      )
+                      ) as IStatement
                       target.columnCount += 1
                       if (side === 'left') {
                         target.headers.forEach((header) => {
@@ -260,20 +289,19 @@ function Book(): React.ReactElement {
                       setEverything(newEverything)
                     }}
                   />
-                    )
-                  default:
-                    return <h1>Default</h1>
-                }
-              })()
-            )
-          : (
+                )
+              default:
+                return <h1>Default</h1>
+            }
+          })()
+        ) : (
           <div className="w-full flex items-center justify-center h-full flex-col gap-12">
             <Icon icon="tabler:file-off" className="w-44 h-44 text-zinc-700" />
             <h1 className="text-3xl text-zinc-700 font-medium">
               No Document Selected
             </h1>
           </div>
-            )}
+        )}
       </div>
       <ModifyBookModal
         openType={modifyBookModalOpenType}
