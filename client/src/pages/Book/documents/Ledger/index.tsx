@@ -6,17 +6,14 @@ import React, { useEffect, useState } from 'react'
 import LedgerHeader from './components/LedgerHeader'
 import { useParams } from 'react-router-dom'
 import {
-  Combobox,
-  ComboboxInput,
-  ComboboxOption,
-  ComboboxOptions,
-  Field
-} from '@headlessui/react'
-import {
   type ILedgerHeader,
   LedgerSide,
   type ILedger
 } from '../../../../typescript/ledger.interface'
+import LedgerDateColumn from './components/LedgerDateColumn'
+import LedgerParticularColumn from './components/LedgerParticularColumn'
+import LedgerTotalColumn from './components/LedgerTotalColumn'
+import LedgerAmountColumn from './components/LedgerAmountColumn'
 
 function Ledger({
   data,
@@ -81,7 +78,7 @@ function Ledger({
   function updateEntry(
     newData: ILedger['entries'],
     index: number,
-    side: 'debit' | 'credit'
+    side: LedgerSide
   ): void {
     const sides: Record<
       string,
@@ -203,373 +200,103 @@ function Ledger({
                   <tr key={index} className="text-zinc-200">
                     {debitEntries[index] && (
                       <>
-                        <td className="py-2 border-r-2 p-4 border-zinc-700 text-right">
-                          <input
-                            type="text"
-                            value={debitEntries[index]?.date}
-                            onChange={(e) => {
-                              const newData = [...debitEntries]
-                              newData[index].date = e.target.value
-                              updateEntry(newData, index, 'debit')
-                            }}
-                            onBlur={checkAndClearEmptyRow}
-                            className={`w-14 h-full bg-transparent ${
-                              debitEntries[index]?.date?.match(/^\d{4}$/)
-                                ? 'text-center'
-                                : 'text-right'
-                            } ${
-                              debitEntries[index]?.particular === 'TOTAL'
-                                ? 'text-transparent'
-                                : 'text-zinc-200'
-                            }`}
-                          />
-                        </td>
-                        <td className="py-2 border-r-2 p-4 border-zinc-700">
-                          <Field>
-                            <Combobox
-                              value={debitEntries[index]?.particular}
-                              onChange={(e) => {
-                                const newData = [...debitEntries]
-                                newData[index].particular = e || ''
-                                updateEntry(newData, index, 'debit')
-                              }}
-                              onClose={() => {
-                                setQuery('')
-                                updateEntry(debitEntries, index, 'debit')
-                              }}
-                            >
-                              <ComboboxInput
-                                displayValue={(item: string) => item}
-                                onChange={(e) => {
-                                  setQuery(e.target.value)
-                                  updateEntry(debitEntries, index, 'debit')
-                                }}
-                                onBlur={checkAndClearEmptyRow}
-                                className={`min-w-96 w-full h-full bg-transparent ${
-                                  debitEntries[index]?.particular === 'TOTAL'
-                                    ? 'text-transparent'
-                                    : 'text-zinc-200'
-                                }`}
-                              />
-                              <ComboboxOptions
-                                anchor="bottom"
-                                className="z-10 w-[var(--input-width)] !max-h-96 mt-2 bg-zinc-800 rounded-md shadow-lg"
-                              >
-                                {filteredItems.map((item) => (
-                                  <ComboboxOption
-                                    key={item}
-                                    value={item}
-                                    className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
-                                  >
-                                    {item}
-                                  </ComboboxOption>
-                                ))}
-                                {query.length > 0 &&
-                                  !filteredItems.includes(query) && (
-                                    <ComboboxOption
-                                      value={query}
-                                      className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
-                                    >
-                                      Create{' '}
-                                      <span className="font-bold">
-                                        &quot;{query}&quot;
-                                      </span>
-                                    </ComboboxOption>
-                                  )}
-                              </ComboboxOptions>
-                            </Combobox>
-                          </Field>
-                        </td>
+                        <LedgerDateColumn
+                          index={index}
+                          side={LedgerSide.Debit}
+                          entries={debitEntries}
+                          updateEntry={updateEntry}
+                          checkAndClearEmptyRow={checkAndClearEmptyRow}
+                        />
+                        <LedgerParticularColumn
+                          index={index}
+                          side={LedgerSide.Debit}
+                          entries={debitEntries}
+                          updateEntry={updateEntry}
+                          checkAndClearEmptyRow={checkAndClearEmptyRow}
+                          filteredItems={filteredItems}
+                          query={query}
+                          setQuery={setQuery}
+                        />
                         {debitEntries[index]?.particular === 'TOTAL'
                           ? Array(columnCount)
                               .fill(0)
                               .map((_, i) => (
-                                <td
+                                <LedgerTotalColumn
                                   key={i}
-                                  className={`${
-                                    i === columnCount - 1
-                                      ? 'border-r-[6px] border-double'
-                                      : 'border-r-2'
-                                  } border-zinc-700`}
-                                >
-                                  <div className="border-b-4 border-zinc-500 border-double">
-                                    <div className="border-t text-right border-zinc-500 p-4 py-2">
-                                      {(() => {
-                                        const allEntries = debitEntries.slice(
-                                          0,
-                                          index
-                                        )
-                                        const splitByTotal = allEntries.reduce<
-                                          Array<ILedger['entries']>
-                                        >(
-                                          (acc, item) => {
-                                            if (item.particular === 'TOTAL') {
-                                              acc.push([])
-                                            } else {
-                                              acc[acc.length - 1].push(item)
-                                            }
-                                            return acc
-                                          },
-                                          [[]]
-                                        )
-
-                                        return splitByTotal
-                                          .pop()
-                                          ?.filter((item) => item.amount[i])
-                                          .reduce(
-                                            (acc, item) => acc + item.amount[i],
-                                            0
-                                          )
-                                          .toLocaleString()
-                                      })()}
-                                    </div>
-                                  </div>
-                                </td>
+                                  i={i}
+                                  side={LedgerSide.Debit}
+                                  columnCount={columnCount}
+                                  index={index}
+                                  entries={debitEntries}
+                                />
                               ))
                           : Array(columnCount)
                               .fill(0)
                               .map((_, i) => (
-                                <td
+                                <LedgerAmountColumn
                                   key={i}
-                                  className={`py-2 p-4 ${
-                                    i === columnCount - 1
-                                      ? 'border-r-[6px] border-double'
-                                      : 'border-r-2'
-                                  } border-zinc-700 text-right`}
-                                >
-                                  <input
-                                    type="text"
-                                    value={
-                                      debitEntries[index]?.dashed?.[i]
-                                        ? '-'
-                                        : debitEntries[index]?.amount[i]
-                                        ? debitEntries[index]?.amount[
-                                            i
-                                          ].toLocaleString()
-                                        : ''
-                                    }
-                                    onBlur={checkAndClearEmptyRow}
-                                    onChange={(e) => {
-                                      const newData = [...debitEntries]
-
-                                      const dashed =
-                                        newData[index].dashed ||
-                                        Array(columnCount).fill(false)
-                                      dashed[i] = false
-
-                                      newData[index].amount[i] =
-                                        parseInt(
-                                          e.target.value.replace(/,/g, '')
-                                        ) || 0
-
-                                      updateEntry(newData, index, 'debit')
-                                    }}
-                                    onKeyDown={(e) => {
-                                      if (
-                                        e.key === 'd' &&
-                                        (e.ctrlKey || e.metaKey)
-                                      ) {
-                                        e.preventDefault()
-                                        const newData = [...debitEntries]
-                                        const dashed =
-                                          newData[index].dashed ||
-                                          Array(columnCount).fill(false)
-                                        dashed[i] = !dashed[i]
-                                        newData[index].dashed = dashed
-                                        setDebitEntries(newData)
-                                        setData([...newData, ...creditEntries])
-                                      }
-                                    }}
-                                    className={`w-20 h-full bg-transparent ${
-                                      debitEntries[index]?.dashed?.[i]
-                                        ? 'text-center'
-                                        : 'text-right'
-                                    } text-zinc-200`}
-                                  />
-                                </td>
+                                  i={i}
+                                  index={index}
+                                  side={LedgerSide.Debit}
+                                  columnCount={columnCount}
+                                  entries={debitEntries}
+                                  setEntries={setDebitEntries}
+                                  otherEntries={creditEntries}
+                                  setData={setData}
+                                  updateEntry={updateEntry}
+                                  checkAndClearEmptyRow={checkAndClearEmptyRow}
+                                />
                               ))}
                       </>
                     )}
                     {creditEntries[index] && (
                       <>
-                        <td className="py-2 border-r-2 p-4 border-zinc-700 text-right">
-                          <input
-                            type="text"
-                            value={creditEntries[index]?.date}
-                            onChange={(e) => {
-                              const newData = [...creditEntries]
-                              newData[index].date = e.target.value
-                              updateEntry(newData, index, 'credit')
-                            }}
-                            onBlur={checkAndClearEmptyRow}
-                            className={`w-14 h-full bg-transparent ${
-                              creditEntries[index]?.date?.match(/^\d{4}$/)
-                                ? 'text-center'
-                                : 'text-right'
-                            }  ${
-                              creditEntries[index]?.particular === 'TOTAL'
-                                ? 'text-transparent'
-                                : 'text-zinc-200'
-                            }`}
-                          />
-                        </td>
-                        <td className="py-2 border-r-2 p-4 border-zinc-700">
-                          <Field>
-                            <Combobox
-                              value={creditEntries[index]?.particular}
-                              onChange={(e) => {
-                                const newData = [...creditEntries]
-                                newData[index].particular = e || ''
-                                updateEntry(newData, index, 'credit')
-                              }}
-                              onClose={() => {
-                                setQuery('')
-                                updateEntry(creditEntries, index, 'credit')
-                              }}
-                            >
-                              <ComboboxInput
-                                displayValue={(item: string) => item}
-                                onChange={(e) => {
-                                  updateEntry(creditEntries, index, 'credit')
-                                  setQuery(e.target.value)
-                                }}
-                                onBlur={checkAndClearEmptyRow}
-                                className={`min-w-96 w-full h-full bg-transparent ${
-                                  creditEntries[index]?.particular === 'TOTAL'
-                                    ? 'text-transparent'
-                                    : 'text-zinc-200'
-                                }`}
-                              />
-                              <ComboboxOptions
-                                anchor="bottom"
-                                className="z-10 w-[var(--input-width)] !max-h-96 mt-2 bg-zinc-800 rounded-md shadow-lg"
-                              >
-                                {filteredItems.map((item) => (
-                                  <ComboboxOption
-                                    key={item}
-                                    value={item}
-                                    className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
-                                  >
-                                    {item}
-                                  </ComboboxOption>
-                                ))}
-                                {query.length > 0 &&
-                                  !filteredItems.includes(query) && (
-                                    <ComboboxOption
-                                      value={query}
-                                      className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
-                                    >
-                                      Create{' '}
-                                      <span className="font-bold">
-                                        &quot;{query}&quot;
-                                      </span>
-                                    </ComboboxOption>
-                                  )}
-                              </ComboboxOptions>
-                            </Combobox>
-                          </Field>
-                        </td>
+                        <LedgerDateColumn
+                          index={index}
+                          side={LedgerSide.Credit}
+                          entries={creditEntries}
+                          updateEntry={updateEntry}
+                          checkAndClearEmptyRow={checkAndClearEmptyRow}
+                        />
+                        <LedgerParticularColumn
+                          index={index}
+                          side={LedgerSide.Credit}
+                          entries={creditEntries}
+                          updateEntry={updateEntry}
+                          checkAndClearEmptyRow={checkAndClearEmptyRow}
+                          filteredItems={filteredItems}
+                          query={query}
+                          setQuery={setQuery}
+                        />
                         {creditEntries[index]?.particular === 'TOTAL'
                           ? Array(columnCount)
                               .fill(0)
                               .map((_, i) => (
-                                <td
+                                <LedgerTotalColumn
                                   key={i}
-                                  className="border-r-2 border-zinc-700"
-                                >
-                                  <div className="border-b-4  border-zinc-500 border-double">
-                                    <div className="border-t text-right border-zinc-500 p-4 py-2">
-                                      {(() => {
-                                        const allEntries = creditEntries.slice(
-                                          0,
-                                          index
-                                        )
-
-                                        const splitByTotal = allEntries.reduce<
-                                          Array<ILedger['entries']>
-                                        >(
-                                          (acc, item) => {
-                                            if (item.particular === 'TOTAL') {
-                                              acc.push([])
-                                            } else {
-                                              acc[acc.length - 1].push(item)
-                                            }
-                                            return acc
-                                          },
-                                          [[]]
-                                        )
-
-                                        return splitByTotal
-                                          .pop()
-                                          ?.filter((item) => item.amount[i])
-                                          .reduce(
-                                            (acc, item) => acc + item.amount[i],
-                                            0
-                                          )
-                                          .toLocaleString()
-                                      })()}
-                                    </div>
-                                  </div>
-                                </td>
+                                  i={i}
+                                  side={LedgerSide.Credit}
+                                  columnCount={columnCount}
+                                  index={index}
+                                  entries={creditEntries}
+                                />
                               ))
                           : Array(columnCount)
                               .fill(0)
                               .map((_, i) => (
-                                <td
+                                <LedgerAmountColumn
                                   key={i}
-                                  className="py-2 p-4 border-r-2 border-zinc-700 text-right"
-                                >
-                                  <input
-                                    type="text"
-                                    value={
-                                      creditEntries[index]?.dashed?.[i]
-                                        ? '-'
-                                        : creditEntries[index]?.amount[i]
-                                        ? creditEntries[index]?.amount[
-                                            i
-                                          ].toLocaleString()
-                                        : ''
-                                    }
-                                    onBlur={checkAndClearEmptyRow}
-                                    onChange={(e) => {
-                                      const newData = [...creditEntries]
-
-                                      const dashed =
-                                        newData[index].dashed ||
-                                        Array(columnCount).fill(false)
-                                      dashed[i] = false
-
-                                      newData[index].amount[i] =
-                                        parseInt(
-                                          e.target.value
-                                            .replace(/,/g, '')
-                                            .replace(/-/g, '')
-                                        ) || 0
-                                      updateEntry(newData, index, 'credit')
-                                    }}
-                                    onKeyDown={(e) => {
-                                      if (
-                                        e.key === 'd' &&
-                                        (e.ctrlKey || e.metaKey)
-                                      ) {
-                                        e.preventDefault()
-                                        const newData = [...creditEntries]
-                                        const dashed =
-                                          newData[index].dashed ||
-                                          Array(columnCount).fill(false)
-                                        dashed[i] = !dashed[i]
-                                        newData[index].dashed = dashed
-                                        setCreditEntries(newData)
-                                        setData([...debitEntries, ...newData])
-                                      }
-                                    }}
-                                    className={`w-20 h-full bg-transparent ${
-                                      creditEntries[index]?.dashed?.[i]
-                                        ? 'text-center'
-                                        : 'text-right'
-                                    } text-zinc-200`}
-                                  />
-                                </td>
+                                  i={i}
+                                  index={index}
+                                  side={LedgerSide.Credit}
+                                  columnCount={columnCount}
+                                  entries={creditEntries}
+                                  setEntries={setCreditEntries}
+                                  otherEntries={debitEntries}
+                                  setData={setData}
+                                  updateEntry={updateEntry}
+                                  checkAndClearEmptyRow={checkAndClearEmptyRow}
+                                />
                               ))}
                       </>
                     )}
