@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function SidebarWrapper({
   children,
@@ -9,6 +9,20 @@ function SidebarWrapper({
   saved: boolean
 }): React.ReactElement {
   const [isExpanded, setIsExpanded] = useState(true)
+
+  useEffect(() => {
+    document.onkeydown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'b') {
+        e.preventDefault()
+        console.log('sus')
+        setIsExpanded(!isExpanded)
+      }
+    }
+
+    return () => {
+      document.onkeyup = null
+    }
+  }, [isExpanded])
 
   return (
     <div
