@@ -4,6 +4,7 @@ import ModifyBookModal from './components/ModifyBookModal'
 import { type IListEntry } from '../../typescript/home.interface'
 import HomeListItem from './components/HomeListItem'
 import HomeHeader from './components/HomeHeader'
+import Sidebar from './components/Sidebar'
 
 function Home(): React.ReactElement {
   const [data, setData] = useState<IListEntry[] | null>(null)
@@ -38,21 +39,24 @@ function Home(): React.ReactElement {
   }
 
   return (
-    <div className="w-full flex flex-col overflow-y-auto flex-1 p-24">
-      <HomeHeader setModifyBookModalOpenType={setModifyBookModalOpenType} />
-      <ul className="mt-8 flex flex-col gap-2 sm:grid-cols-2 lg:grid-cols-3">
-        {data.map((item) => (
-          <HomeListItem key={item.id} item={item} />
-        ))}
-      </ul>
-      <ModifyBookModal
-        openType={modifyBookModalOpenType !== null ? 'create' : null}
-        onClose={() => {
-          setModifyBookModalOpenType(null)
-        }}
-        reloadBooks={fetchData}
-        existingBook={null}
-      />
+    <div className="w-full flex-1 flex">
+      <Sidebar data={data} />
+      <div className="w-full flex flex-col overflow-y-auto flex-1 p-8">
+        <HomeHeader setModifyBookModalOpenType={setModifyBookModalOpenType} />
+        <ul className="mt-8 flex flex-col gap-2 sm:grid-cols-2 lg:grid-cols-3">
+          {data.map((item) => (
+            <HomeListItem key={item.id} item={item} />
+          ))}
+        </ul>
+        <ModifyBookModal
+          openType={modifyBookModalOpenType !== null ? 'create' : null}
+          onClose={() => {
+            setModifyBookModalOpenType(null)
+          }}
+          reloadBooks={fetchData}
+          existingBook={null}
+        />
+      </div>
     </div>
   )
 }

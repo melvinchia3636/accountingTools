@@ -2,6 +2,360 @@
   "code": "GEA-2018-3",
   "entityName": "Goodlink Bhd",
   "topic": "Statement of Cash Flows",
-  "data": [],
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Statement of Cash Flows",
+      "subtitle": "For The Year Ended 31 December 2017",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Cash Flows from Operating Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Cash receipts from customers (RM102,000 + RM1,200,000 - RM130,500)",
+          "amount": [
+            1171500,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash payments to suppliers (RM95,000 + RM610,000 - RM104,000)",
+          "amount": [
+            -601000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash paid to employees (RM12,000 + RM264,500 - RM21,000)",
+          "amount": [
+            -255500,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Other operating cash payments",
+          "amount": [
+            -114500,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash generated from operating activities",
+          "amount": [
+            200500,
+            0
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Tax paid (RM38,000 + RM34,500 - RM42,000)",
+          "amount": [
+            -30500,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash from Operating Activities",
+          "amount": [
+            0,
+            170000
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Cash Flows from Investing Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Proceeds from sale of Plant and Machinery",
+          "amount": [
+            18000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Payments to acquire Non-current Assets (RM720,000 + RM40,000 - RM25,000 + RM60,000 - RM575,000)",
+          "amount": [
+            -220000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Payments to acquire Long-term Investments (RM40,000 - RM25,000)",
+          "amount": [
+            -15000,
+            0
+          ],
+          "underline": [
+            false,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Dividend Income",
+          "amount": [
+            2000,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash used in Investing Activities",
+          "amount": [
+            0,
+            -215000
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Cash Flows from Investing Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Proceeds from issuance of ordinary share with premium (RM550,000 - RM440,000 + RM37,000 - RM26,000)",
+          "amount": [
+            121000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Redemption of 6% Loan Notes (RM180,000 - RM150,000)",
+          "amount": [
+            -30000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Interest paid",
+          "amount": [
+            -9000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Dividends paid",
+          "amount": [
+            -20500,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash from Financing Activities",
+          "amount": [
+            0,
+            61500
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Net increase in Cash and Cash Equivalents",
+          "amount": [
+            0,
+            16500
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Cash and Cash Equivalents as at 1 January 2017 (RM7,200 + RM9,800)",
+          "amount": [
+            0,
+            17000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash and Cash Equivalents as at 31 December 2017 (RM6,000 + RM27,500)",
+          "amount": [
+            0,
+            33500
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ],
   "questionName": "GEA-2018-3"
 }

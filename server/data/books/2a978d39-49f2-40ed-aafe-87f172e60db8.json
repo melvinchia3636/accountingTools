@@ -2,6 +2,323 @@
   "code": "GEA-2022-2",
   "entityName": "Empire Bhd",
   "topic": "Statement of Cash Flows",
-  "data": [],
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Statement of Cash Flows",
+      "subtitle": "For The Year Ended 31 December 2021",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Cash Flows from Operating Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Cash receipts from customers (RM280,000 + RM660,000 - RM196,000)",
+          "amount": [
+            744000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash payments to suppliers (RM174,000 + RM250,000 + RM152,000 - RM120,000 - 100,000)",
+          "amount": [
+            -356000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash paid to employees (RM4,000 + RM17,600 - RM7,000)",
+          "amount": [
+            -14600,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash generated from operating activities",
+          "amount": [
+            373400,
+            0
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Tax paid",
+          "amount": [
+            -38000,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "bold": false,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash from Operating Activities",
+          "amount": [
+            0,
+            335400
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Cash Flows from Investing Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Proceeds from sale of Plant and Machinery (RM90,000 - RM35,000 - RM10,000)",
+          "amount": [
+            45000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Payments to acquire Plant and Machinery (RM550,000 + RM90,000 - RM510,000)",
+          "amount": [
+            -130000,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash used in Investing Activities",
+          "amount": [
+            0,
+            -85000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Cash Flows from Financing Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Proceeds from issuance of 8% Loan Notes (RM370,000 - RM300,000)",
+          "amount": [
+            70000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Proceeds from issuance of ordinary share with premium (RM600,000 - RM400,000 + RM100,000)",
+          "amount": [
+            300000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Interest Expenses",
+          "amount": [
+            -31000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Dividends paid (RM100,000 + RM281,400 - RM361,400)",
+          "amount": [
+            -20000,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash from Financing Activities",
+          "amount": [
+            0,
+            319000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Net increase in Cash and Cash Equivalents",
+          "amount": [
+            0,
+            569400
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash and Cash Equivalents as at 1 January 2021",
+          "amount": [
+            0,
+            206000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash and Cash Equivalents as at 31 December 2021",
+          "amount": [
+            0,
+            775400
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ],
   "questionName": "GEA-2022-2"
 }

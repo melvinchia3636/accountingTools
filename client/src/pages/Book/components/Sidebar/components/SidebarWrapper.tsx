@@ -34,7 +34,7 @@ function SidebarWrapper({
         <span className="absolute top-2 right-2 rounded-md w-2 h-2 bg-zinc-500"></span>
       )}
       <aside
-        className={`h-full transition-all border-r border-zinc-700 py-8 ${
+        className={`h-full transition-all border-r-2 border-zinc-700 py-8 ${
           isExpanded ? 'px-8' : 'px-0'
         } overflow-hidden flex flex-col`}
       >
