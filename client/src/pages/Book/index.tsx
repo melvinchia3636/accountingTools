@@ -81,7 +81,7 @@ function Book(): React.ReactElement {
   }
 
   useEffect(() => {
-    document.onkeydown = (e) => {
+    document.body.onkeydown = (e) => {
       if (e.key === 's' && (e.ctrlKey || e.metaKey)) {
         e.preventDefault()
         saveData().catch(() => {
@@ -91,7 +91,7 @@ function Book(): React.ReactElement {
     }
 
     return () => {
-      document.onkeydown = null
+      document.body.onkeydown = null
     }
   }, [everything, id])
 
