@@ -1,13 +1,22 @@
+/* eslint-disable multiline-ternary */
 import React, { useMemo, useState } from 'react'
 import { type IListEntry } from '../../../../../typescript/home.interface'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { useSearchParams } from 'react-router-dom'
 
-function TopicSection({ data }: { data: IListEntry[] }): React.ReactElement {
+function TopicSection({
+  data,
+  setIsCollapsed
+}: {
+  data: IListEntry[]
+  setIsCollapsed: (isCollapsed: boolean) => void
+}): React.ReactElement {
   const [isCollapsed, setCollapsed] = useState(false)
   const topics = useMemo(
     () => [...new Set(data.map((e) => e.topic))].sort(),
     [data]
   )
+  const [searchParams, setSearchParams] = useSearchParams()
 
   return (
     <section className="space-y-2 mb-4">
@@ -22,7 +31,7 @@ function TopicSection({ data }: { data: IListEntry[] }): React.ReactElement {
             icon="material-symbols:topic-outline-rounded"
             className="size-6"
           />
-          topics
+          Topics
         </h2>
         <Icon
           icon="tabler:chevron-down"
@@ -40,12 +49,38 @@ function TopicSection({ data }: { data: IListEntry[] }): React.ReactElement {
         {topics.map((topic) => (
           <li
             key={topic}
-            className="p-4 pl-12 flex items-center justify-between gap-6 hover:bg-zinc-800 transition-all rounded-md"
+            onClick={() => {
+              setSearchParams({
+                ...Object.fromEntries(searchParams.entries()),
+                topic
+              })
+              setIsCollapsed(true)
+            }}
+            className={`pr-4 h-14 pl-12 cursor-pointer flex items-center justify-between gap-6 transition-all rounded-md ${
+              decodeURIComponent(searchParams.get('topic') ?? '') === topic
+                ? 'bg-zinc-900 text-zinc-100 font-semibold'
+                : 'hover:bg-zinc-900/50 text-zinc-500'
+            }`}
           >
             <span className="w-full truncate">{topic}</span>
-            <span className="font-medium text-zinc-500">
-              {data.filter((entry) => entry.topic === topic).length}
-            </span>
+            {searchParams.get('topic') === topic ? (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  const newSearchParams = { ...searchParams }
+                  searchParams.delete('topic')
+                  setSearchParams(newSearchParams)
+                  setIsCollapsed(true)
+                }}
+                className="p-1 rounded-md hover:bg-zinc-100/10 text-zinc-500 transition-all hover:text-zinc-100"
+              >
+                <Icon icon="tabler:x" className="size-5" />
+              </button>
+            ) : (
+              <span className="w-6 text-center text-zinc-500">
+                {data.filter((entry) => entry.topic === topic).length}
+              </span>
+            )}
           </li>
         ))}
       </ul>

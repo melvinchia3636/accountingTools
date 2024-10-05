@@ -7,7 +7,7 @@ function HomeListItem({ item }: { item: IListEntry }): React.ReactElement {
   return (
     <li
       key={item.id}
-      className="border-2 border-zinc-800 shadow-md hover:bg-zinc-100/5 transition-all rounded-md"
+      className="border-2 border-zinc-800 shadow-md hover:bg-zinc-900/50 transition-all rounded-md"
     >
       <Link
         to={`/book/${item.id}`}

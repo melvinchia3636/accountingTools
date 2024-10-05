@@ -2,6 +2,337 @@
   "code": "GEA-2021-3",
   "entityName": "SVS Bhd",
   "topic": "Statement of Cash Flows",
-  "data": [],
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Statement of Cash Flows",
+      "subtitle": "For The Year Ended 31 December 2020",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Cash Flows from Operating Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Profit before taxation",
+          "amount": [
+            0,
+            479000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Adjustment for:",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "    Depreciation",
+          "amount": [
+            0,
+            129000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "    Loss on Disposal of Motor Vehicles",
+          "amount": [
+            0,
+            3000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "    Interest Expenses",
+          "amount": [
+            0,
+            55000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "    Interest Income",
+          "amount": [
+            0,
+            -1000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Operating profit before working capital changes",
+          "amount": [
+            0,
+            665000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "    Decrease in Inventory",
+          "amount": [
+            50000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "    Decrease in Trade Receivables",
+          "amount": [
+            25000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "    Increase in Trade Payables",
+          "amount": [
+            52500,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "    Decrease in Accrued Wages and Salaries",
+          "amount": [
+            -12500,
+            115000
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash generated from operating activities",
+          "amount": [
+            0,
+            780000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Tax paid",
+          "amount": [
+            0,
+            -69000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash from Operating Activities",
+          "amount": [
+            0,
+            711000
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Cash Flows from Investing Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Taxation",
+      "nature": "EX",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            69000
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            53000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            62000
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Profit and Loss",
+          "side": "credit",
+          "amount": [
+            60000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ],
   "questionName": "GEA-2021-3"
 }

@@ -1,13 +1,22 @@
+/* eslint-disable multiline-ternary */
 import React, { useMemo, useState } from 'react'
 import { type IListEntry } from '../../../../../typescript/home.interface'
 import { Icon } from '@iconify/react/dist/iconify.js'
+import { useSearchParams } from 'react-router-dom'
 
-function SourceSection({ data }: { data: IListEntry[] }): React.ReactElement {
+function SourceSection({
+  data,
+  setIsCollapsed
+}: {
+  data: IListEntry[]
+  setIsCollapsed: (isCollapsed: boolean) => void
+}): React.ReactElement {
   const [isCollapsed, setCollapsed] = useState(false)
   const sources = useMemo(
     () => [...new Set(data.map((e) => e.code.split('-')[0]))].sort(),
     [data]
   )
+  const [searchParams, setSearchParams] = useSearchParams()
 
   return (
     <section className="space-y-2 mb-4">
@@ -37,15 +46,41 @@ function SourceSection({ data }: { data: IListEntry[] }): React.ReactElement {
         {sources.map((source) => (
           <li
             key={source}
-            className="p-4 pl-12 flex items-center justify-between gap-6 hover:bg-zinc-800 transition-all rounded-md"
+            onClick={() => {
+              setSearchParams({
+                ...Object.fromEntries(searchParams.entries()),
+                source
+              })
+              setIsCollapsed(true)
+            }}
+            className={`pr-4 h-14 pl-12 cursor-pointer flex items-center justify-between gap-6 transition-all rounded-md ${
+              searchParams.get('source') === source
+                ? 'bg-zinc-900 text-zinc-100 font-semibold'
+                : 'hover:bg-zinc-900/50 text-zinc-500'
+            }`}
           >
             <span className="w-full truncate">{source}</span>
-            <span className="font-medium text-zinc-500">
-              {
-                data.filter((entry) => entry.code.split('-')[0] === source)
-                  .length
-              }
-            </span>
+            {searchParams.get('source') === source ? (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  const newSearchParams = { ...searchParams }
+                  searchParams.delete('source')
+                  setSearchParams(newSearchParams)
+                  setIsCollapsed(true)
+                }}
+                className="p-1 rounded-md hover:bg-zinc-100/10 text-zinc-500 transition-all hover:text-zinc-100"
+              >
+                <Icon icon="tabler:x" className="size-5" />
+              </button>
+            ) : (
+              <span className="w-6 text-center text-zinc-500">
+                {
+                  data.filter((entry) => entry.code.split('-')[0] === source)
+                    .length
+                }
+              </span>
+            )}
           </li>
         ))}
       </ul>

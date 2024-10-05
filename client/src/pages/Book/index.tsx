@@ -134,7 +134,7 @@ function Book(): React.ReactElement {
         }}
         saved={saved}
       />
-      <div className="w-full h-full overflow-y-auto p-8 py-0 flex flex-col relative">
+      <div className="w-full h-full overflow-y-auto p-8 pb-0 flex flex-col relative">
         <div className="absolute right-8 top-8 flex items-center gap-2">
           <a
             href={`http://localhost:3000/questions/${id}`}
