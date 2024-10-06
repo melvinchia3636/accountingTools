@@ -12,9 +12,8 @@ function SidebarWrapper({
 
   useEffect(() => {
     document.onkeydown = (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'b') {
+      if ((e.metaKey || e.ctrlKey) && e.key === '`') {
         e.preventDefault()
-        console.log('sus')
         setIsExpanded(!isExpanded)
       }
     }

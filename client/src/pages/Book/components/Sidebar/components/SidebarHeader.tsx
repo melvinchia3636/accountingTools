@@ -1,7 +1,7 @@
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { type IEverything } from '../../../../../typescript/everything.interface'
 
 function SidebarHeader({
@@ -13,15 +13,19 @@ function SidebarHeader({
   openModifyBookModal: () => void
   toggleDeleteBookConfirmationModal: (arg0: boolean) => void
 }): React.ReactElement {
+  const navigate = useNavigate()
+
   return (
     <header className="flex items-center justify-between gap-2">
       <div className="flex items-center gap-2">
-        <Link
-          to="/"
+        <button
+          onClick={() => {
+            navigate(-1)
+          }}
           className="w-8 h-8 shrink-0 transition-all rounded-md hover:bg-zinc-100/10 hover:text-zinc-200 text-zinc-500 flex items-center justify-center"
         >
           <Icon icon="uil:arrow-left" className="w-6 h-6 shrink-0" />
-        </Link>
+        </button>
         <div>
           <h1 className="text-lg font-medium text-zinc-200 flex items-center">
             {everything.code}
@@ -37,7 +41,7 @@ function SidebarHeader({
           <MenuItems
             transition
             anchor="bottom end"
-            className="rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:12px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+            className="rounded-lg z-[60] border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:12px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
           >
             <MenuItem>
               <button

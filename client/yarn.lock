@@ -2769,6 +2769,11 @@ react-router@6.24.1:
   dependencies:
     "@remix-run/router" "1.17.1"
 
+react-to-print@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-to-print/-/react-to-print-3.0.1.tgz#feec2575073dbd15b28e4006f80a57043fd08e0a"
+  integrity sha512-WcGiim2VWiHW7TR0PB9Xqv/SOOtnDJbjhlSOeMB1N+lxyFLuoQ8GIoNAw/ci7+sCkbXreEKmiy1ZWgd87v7U2Q==
+
 react-toastify@^10.0.5:
   version "10.0.5"
   resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-10.0.5.tgz#6b8f8386060c5c856239f3036d1e76874ce3bd1e"

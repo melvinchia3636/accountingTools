@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/indent */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import React, { useEffect, useRef } from 'react'
-import { type ILedgerHeader } from '../../typescript/ledger.interface'
+import { type ILedgerHeader } from '../../../typescript/ledger.interface'
 
 interface IBaseHeaderProps {
   i: number
@@ -59,6 +59,7 @@ function HeaderInput({
           (e.target as HTMLTextAreaElement).scrollHeight
         }px`
       }}
+      id={`doc-header-${i}-${j}`}
       value={side ? headers[i][side][j] : headers[i][j]}
       className="w-full bg-transparent resize-none text-center"
     />

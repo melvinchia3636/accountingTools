@@ -20,7 +20,7 @@ function LedgerDateColumn({
   checkAndClearEmptyRow: () => void
 }): React.ReactElement {
   return (
-    <td className="py-2 border-r-2 p-4 border-zinc-700 text-right">
+    <td className="py-2 print:py-0.5 border-r-2 p-4 border-zinc-700 text-right">
       <input
         type="text"
         value={entries[index]?.date}
@@ -32,11 +32,7 @@ function LedgerDateColumn({
         onBlur={checkAndClearEmptyRow}
         className={`w-14 h-full bg-transparent ${
           entries[index]?.date?.match(/^\d{4}$/) ? 'text-center' : 'text-right'
-        }  ${
-          entries[index]?.particular === 'TOTAL'
-            ? 'text-transparent'
-            : 'text-zinc-200'
-        }`}
+        }  ${entries[index]?.particular === 'TOTAL' ? 'text-transparent' : ''}`}
       />
     </td>
   )

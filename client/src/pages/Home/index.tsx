@@ -1,7 +1,7 @@
 /* eslint-disable multiline-ternary */
 /* eslint-disable @typescript-eslint/indent */
 import React, { useEffect, useState } from 'react'
-import ModifyBookModal from './components/ModifyBookModal'
+import ModifyBookModal from '../Book/modals/ModifyBookModal'
 import { type IListEntry } from '../../typescript/home.interface'
 import HomeListItem from './components/HomeListItem'
 import HomeHeader from './components/HomeHeader'

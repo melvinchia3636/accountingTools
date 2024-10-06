@@ -16,6 +16,7 @@ import LedgerTotalColumn from './components/LedgerTotalColumn'
 import LedgerAmountColumn from './components/LedgerAmountColumn'
 
 function Ledger({
+  docRef,
   data,
   headers,
   name,
@@ -25,6 +26,7 @@ function Ledger({
   setHeaders,
   topTextColumnCount
 }: {
+  docRef: React.MutableRefObject<HTMLDivElement | null>
   data: ILedger['entries']
   headers: ILedgerHeader[]
   companyName: string
@@ -168,17 +170,21 @@ function Ledger({
   }, [debitEntries, creditEntries])
 
   return (
-    <>
-      <h2 className="text-lg text-zinc-500 underline decoration-zinc-500 underline-offset-4 decoration-2">
+    <div ref={docRef} className="w-full flex-1 py-8 print:px-8 overflow-y-auto">
+      <h2 className="text-lg print:text-sm text-zinc-500 underline decoration-zinc-500 underline-offset-4 decoration-2">
         In the books of{'  '}
-        <span className="font-semibold text-zinc-100">{companyName}</span>
+        <span className="font-semibold text-zinc-100 print:text-zinc-900">
+          {companyName}
+        </span>
       </h2>
-      <h3 className="text-2xl text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
+      <h3 className="text-2xl print:text-base text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
         General Ledger
       </h3>
-      <h4 className="text-lg text-center mt-8 font-medium">{name}</h4>
+      <h4 className="text-lg print:text-base text-center mt-8 print:mt-4 font-medium">
+        {name}
+      </h4>
       <div className="overflow-x-auto">
-        <table className="w-full border-2 border-zinc-700 mt-2">
+        <table className="w-full border-2 print:text-xs border-zinc-700 mt-2">
           <LedgerHeader
             columnCount={columnCount}
             topTextColumnCount={topTextColumnCount}
@@ -197,7 +203,7 @@ function Ledger({
                     creditEntries[index]?.amount
                 ) ||
                   index === maxEntries - 1) && (
-                  <tr key={index} className="text-zinc-200">
+                  <tr key={index}>
                     {debitEntries[index] && (
                       <>
                         <LedgerDateColumn
@@ -306,7 +312,7 @@ function Ledger({
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   )
 }
 

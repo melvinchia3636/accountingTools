@@ -2,6 +2,21 @@
   "code": "GEA-2018-1",
   "entityName": "Udomos Bhd",
   "topic": "Capital Reduction",
-  "data": [],
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    }
+  ],
   "questionName": "GEA-2018-1"
 }

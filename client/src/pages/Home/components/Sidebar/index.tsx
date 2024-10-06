@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react/dist/iconify.js'
-import React, { useState } from 'react'
+import React from 'react'
 import { type IListEntry } from '../../../../typescript/home.interface'
 import TopicSection from './components/TopicsSection'
 import YearSection from './components/YearSection'

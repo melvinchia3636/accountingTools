@@ -224,6 +224,219 @@
           "particularUnderline": true
         },
         {
+          "particular": "Proceeds from disposal of Motor Vehicles",
+          "amount": [
+            367000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Payments to acquire Plant and Machinery",
+          "amount": [
+            -194000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Payments to acquire Motor Vehicles",
+          "amount": [
+            -840000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Interest Income",
+          "amount": [
+            1000,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash used in Investing Activities",
+          "amount": [
+            0,
+            -666000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Cash Flows from Financing Activities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Proceeds from issuance of ordinary share with premium",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "[RM(1,200,000 - 1,000,000 + 266,000 - 100,000)]",
+          "amount": [
+            366000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Redemption of 10% Loan Notes (RM600,000 - RM550,000)",
+          "amount": [
+            -50000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Interest paid",
+          "amount": [
+            -55000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Dividends paid (RM438,000 + RM419,000 - RM561,500)",
+          "amount": [
+            -295500,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net cash used in Financing Activities",
+          "amount": [
+            0,
+            -34500
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Net increase in Cash and Cash Equivalents",
+          "amount": [
+            0,
+            10500
+          ],
+          "underline": false,
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash and Cash Equivalents as at 1 January 2020",
+          "amount": [
+            0,
+            50000
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash and Cash Equivalents as at 31 December 2020",
+          "amount": [
+            0,
+            60500
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
           "particular": "",
           "amount": [
             0,
@@ -313,6 +526,322 @@
           "side": "credit",
           "amount": [
             60000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Disposal of Motor Vehicles",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Motor Vehicles",
+          "side": "debit",
+          "amount": [
+            440000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Accumulated Depreciation of Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            70000
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bank",
+          "side": "credit",
+          "amount": [
+            367000
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Loss on Disposal of Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            3000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ledger",
+      "name": "Plant and Machinery",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2022",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            1850000
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            194000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2022",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            2044000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ledger",
+      "name": "Motor Vehicles",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            1400000
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            840000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Disposal of Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            440000
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            1800000
           ]
         },
         {

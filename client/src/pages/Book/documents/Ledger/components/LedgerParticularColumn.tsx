@@ -33,7 +33,7 @@ function LedgerParticularColumn({
   checkAndClearEmptyRow: () => void
 }): React.ReactElement {
   return (
-    <td className="py-2 border-r-2 p-4 border-zinc-700">
+    <td className="py-2 print:py-0.5 border-r-2 p-4 border-zinc-700">
       <Field>
         <Combobox
           value={entries[index]?.particular}
@@ -54,10 +54,8 @@ function LedgerParticularColumn({
               updateEntry(entries, index, side)
             }}
             onBlur={checkAndClearEmptyRow}
-            className={`min-w-96 w-full h-full bg-transparent ${
-              entries[index]?.particular === 'TOTAL'
-                ? 'text-transparent'
-                : 'text-zinc-200'
+            className={`min-w-96 print:min-w-64 w-full h-full bg-transparent ${
+              entries[index]?.particular === 'TOTAL' ? 'text-transparent' : ''
             }`}
           />
           <ComboboxOptions
@@ -68,7 +66,7 @@ function LedgerParticularColumn({
               <ComboboxOption
                 key={item}
                 value={item}
-                className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                className="px-4 py-4 data-[focus]:bg-zinc-700 transition-all"
               >
                 {item}
               </ComboboxOption>
@@ -76,7 +74,7 @@ function LedgerParticularColumn({
             {query.length > 0 && !filteredItems.includes(query) && (
               <ComboboxOption
                 value={query}
-                className="px-4 py-4 text-zinc-200 data-[focus]:bg-zinc-700 transition-all"
+                className="px-4 py-4 data-[focus]:bg-zinc-700 transition-all"
               >
                 Create <span className="font-bold">&quot;{query}&quot;</span>
               </ComboboxOption>

@@ -6,22 +6,26 @@ import React from 'react'
 import { type IJournal } from '../../../../typescript/journal.interface'
 
 function Journal({
+  docRef,
   data,
   setData
 }: {
+  docRef: React.RefObject<HTMLDivElement>
   data: IJournal['entries']
   setData: (data: IJournal['entries']) => void
 }): React.ReactElement {
   return (
-    <>
-      <h2 className="text-lg text-zinc-500 underline decoration-zinc-500 underline-offset-4 decoration-2">
+    <div ref={docRef} className="w-full flex-1 py-8 print:px-8 overflow-y-auto">
+      <h2 className="text-lg print:text-sm text-zinc-500 underline decoration-zinc-500 underline-offset-4 decoration-2">
         In the books of{'  '}
-        <span className="font-semibold text-zinc-100">S Bhd and P Bhd</span>
+        <span className="font-semibold text-zinc-100 print:text-zinc-900">
+          S Bhd and P Bhd
+        </span>
       </h2>
-      <h3 className="text-2xl text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
+      <h3 className="text-2xl print:text-base text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
         General Journal
       </h3>
-      <div className="w-full flex-1 py-8 overflow-y-auto">
+      <div className="w-full flex-1 mt-8 print:mt-4 overflow-y-auto print:text-xs">
         <table className="w-full border-2 border-zinc-700">
           <thead className="border-2 border-zinc-700">
             <tr className="text-zinc-500">
@@ -33,14 +37,8 @@ function Journal({
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr key={index} className="text-zinc-200">
-                <td
-                  className={`py-2 border-r-2 p-4 border-zinc-700 ${
-                    data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
-                      ? 'pb-10'
-                      : ''
-                  }`}
-                >
+              <tr key={index}>
+                <td className="py-2 print:py-0.5 border-r-2 p-4 border-zinc-700">
                   <input
                     type="text"
                     value={item.date}
@@ -74,15 +72,15 @@ function Journal({
                     }}
                     className={`w-full h-full bg-transparent ${
                       item.date.match(/^\d{4}$/) ? 'text-center' : 'text-right'
-                    } text-zinc-200`}
+                    }`}
                   />
                 </td>
                 <td
-                  className={`py-2 border-r-2 p-4 border-zinc-700 ${
+                  className={`py-2 print:py-0.5 border-r-2 p-4 border-zinc-700 ${
                     item.credit ? 'pl-12' : ''
                   } ${
                     data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
-                      ? 'border-b-2 border-zinc-700 pb-10'
+                      ? 'border-b-2 border-zinc-700 pb-10 print:pb-10'
                       : ''
                   }`}
                 >
@@ -118,9 +116,7 @@ function Journal({
                       }
                     }}
                     className={`w-full h-full bg-transparent ${
-                      item.particular === 'TOTAL'
-                        ? 'text-transparent'
-                        : 'text-zinc-200'
+                      item.particular === 'TOTAL' ? 'text-transparent' : ''
                     }`}
                   />
                 </td>
@@ -128,12 +124,12 @@ function Journal({
                   <td
                     className={`border-r-2 border-zinc-700 ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
-                        ? 'pb-10'
+                        ? ''
                         : ''
                     }`}
                   >
                     <div className="border-b-4  border-zinc-500 border-double">
-                      <div className="border-t text-right border-zinc-500 p-4 py-2">
+                      <div className="border-t text-right border-zinc-500 p-4 py-2 print:py-0.5">
                         {(() => {
                           const allEntries = data
                             .map((e) => ({
@@ -166,9 +162,9 @@ function Journal({
                   </td>
                 ) : (
                   <td
-                    className={`py-2 border-r-2 p-4 border-zinc-700 text-right ${
+                    className={`py-2 print:py-0.5 border-r-2 p-4 border-zinc-700 text-right ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
-                        ? 'pb-10'
+                        ? ''
                         : ''
                     }`}
                   >
@@ -204,7 +200,7 @@ function Journal({
                           setData(newData)
                         }
                       }}
-                      className="w-full h-full bg-transparent text-right text-zinc-200"
+                      className="w-full h-full bg-transparent text-right"
                     />
                   </td>
                 )}
@@ -212,12 +208,12 @@ function Journal({
                   <td
                     className={`border-r-2 border-zinc-700 ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
-                        ? 'pb-10'
+                        ? ''
                         : ''
                     }`}
                   >
                     <div className="border-b-4 border-zinc-500 border-double">
-                      <div className="border-t text-right border-zinc-500 p-4 py-2">
+                      <div className="border-t text-right border-zinc-500 p-4 py-2 print:py-0.5">
                         {(() => {
                           const allEntries = data
                             .map((e) => ({
@@ -252,7 +248,7 @@ function Journal({
                   <td
                     className={`py-2 p-4 text-right ${
                       data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
-                        ? 'pb-10'
+                        ? ''
                         : ''
                     }`}
                   >
@@ -288,7 +284,7 @@ function Journal({
                           setData(newData)
                         }
                       }}
-                      className="w-full h-full bg-transparent text-right text-zinc-200"
+                      className="w-full h-full bg-transparent text-right"
                     />
                   </td>
                 )}
@@ -297,7 +293,7 @@ function Journal({
           </tbody>
         </table>
       </div>
-    </>
+    </div>
   )
 }
 

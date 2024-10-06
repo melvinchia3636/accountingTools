@@ -10,7 +10,7 @@ function CreateDocumentMenu({
   ) => void
 }): React.ReactElement {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mt-8">
       <Menu>
         <MenuButton className="w-full py-3 bg-zinc-200 hover:bg-zinc-300 transition-all text-zinc-900 rounded-md flex items-center font-medium gap-2 justify-center">
           <Icon icon="uil:plus" className="w-5 h-5" />
@@ -19,7 +19,7 @@ function CreateDocumentMenu({
         <MenuItems
           transition
           anchor="top start"
-          className="w-[var(--button-width)] rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:16px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+          className="w-[var(--button-width)] z-[60] rounded-lg border bg-zinc-900 border-zinc-800 text-zinc-500 p-1 transition duration-100 ease-out [--anchor-gap:16px] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
         >
           {[
             { name: 'Journal', icon: 'uil:file-alt' },
@@ -28,7 +28,7 @@ function CreateDocumentMenu({
           ].map((item) => (
             <MenuItem key={item.name}>
               <button
-              type="button"
+                type="button"
                 onClick={() => {
                   openModal(
                     `create${item.name}` as

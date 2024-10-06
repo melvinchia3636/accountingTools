@@ -4,7 +4,7 @@
 /* eslint-disable multiline-ternary */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable no-extend-native */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Sidebar from './components/Sidebar'
 import Journal from './documents/Journal'
 import Ledger from './documents/Ledger'
@@ -17,8 +17,9 @@ import UnsaveChangeLeaveConfirmationModal from './modals/UnsaveChangeLeaveConfir
 import { type IEverything } from '../../typescript/everything.interface'
 import { type IStatement } from '../../typescript/statement.interface'
 import { type ILedger } from '../../typescript/ledger.interface'
-import ModifyBookModal from '../Home/components/ModifyBookModal'
+import ModifyBookModal from './modals/ModifyBookModal'
 import DeleteDocumentConfirmationModal from './modals/DeleteDocumentConfirmationModal'
+import { useReactToPrint } from 'react-to-print'
 
 declare global {
   interface Array<T> {
@@ -43,6 +44,36 @@ function Book(): React.ReactElement {
   const [deleteDocumentModalOpen, setDeleteDocumentModalOpen] = useState(false)
   const [saved, setSaved] = useState(true)
   const [firstFetch, setFirstFetch] = useState(true)
+  const docRef = useRef<HTMLDivElement>(null)
+
+  const onBeforePrint = (): void => {
+    const header = document.querySelectorAll('[id^="doc-header"]')
+    header.forEach((item) => {
+      ;(item as HTMLDivElement).style.fontSize = '0.75rem'
+      ;(item as HTMLDivElement).style.lineHeight = '1rem'
+      ;(item as HTMLDivElement).style.height = '1px'
+      ;(item as HTMLDivElement).style.height = `${
+        (item as HTMLDivElement).scrollHeight
+      }px`
+    })
+  }
+
+  const onAfterPrint = (): void => {
+    const header = document.querySelectorAll('[id^="doc-header"]')
+    header.forEach((item) => {
+      ;(item as HTMLDivElement).style.fontSize = ''
+      ;(item as HTMLDivElement).style.lineHeight = ''
+      ;(item as HTMLDivElement).style.height = '1px'
+      ;(item as HTMLDivElement).style.height = `${
+        (item as HTMLDivElement).scrollHeight
+      }px`
+    })
+  }
+
+  const reactToPrintFn = useReactToPrint({
+    contentRef: docRef,
+    onAfterPrint
+  })
 
   function fetchData(): void {
     fetch(`http://localhost:3000/books/${id}`)
@@ -134,7 +165,7 @@ function Book(): React.ReactElement {
         }}
         saved={saved}
       />
-      <div className="w-full h-full overflow-y-auto p-8 pb-0 flex flex-col relative">
+      <div className="w-full h-full overflow-y-auto px-8 flex flex-col relative">
         <div className="absolute right-8 top-8 flex items-center gap-2">
           <a
             href={`http://localhost:3000/questions/${id}`}
@@ -166,6 +197,18 @@ function Book(): React.ReactElement {
                 <MenuItem>
                   <button
                     onClick={() => {
+                      onBeforePrint()
+                      reactToPrintFn()
+                    }}
+                    className="group flex w-full items-center gap-2 rounded-lg py-4 px-5 data-[focus]:text-zinc-200 data-[focus]:bg-white/10"
+                  >
+                    <Icon icon="uil:print" className="w-5 h-5" />
+                    Print
+                  </button>
+                </MenuItem>
+                <MenuItem>
+                  <button
+                    onClick={() => {
                       setDeleteDocumentModalOpen(true)
                     }}
                     className="group flex w-full items-center text-red-500 gap-2 rounded-lg py-4 px-5 data-[focus]:text-red-400 data-[focus]:bg-white/10"
@@ -184,6 +227,7 @@ function Book(): React.ReactElement {
               case 'journal':
                 return (
                   <Journal
+                    docRef={docRef}
                     key={`doc-${data.id}`}
                     data={data.entries}
                     setData={(newData) => {
@@ -201,6 +245,7 @@ function Book(): React.ReactElement {
               case 'ledger':
                 return (
                   <Ledger
+                    docRef={docRef}
                     key={`doc-${data.id}`}
                     data={data.entries}
                     headers={data.headers}
@@ -233,6 +278,7 @@ function Book(): React.ReactElement {
               case 'statement':
                 return (
                   <Statement
+                    docRef={docRef}
                     key={`doc-${data.id}`}
                     data={data.entries}
                     headers={data.headers}

@@ -33,7 +33,7 @@ function LedgerAmountColumn({
   return (
     <td
       key={i}
-      className={`py-2 p-4 ${
+      className={`py-2 print:py-0.5 p-4 ${
         side === LedgerSide.Debit && i === columnCount - 1
           ? 'border-r-[6px] border-double'
           : 'border-r-2'
@@ -74,7 +74,7 @@ function LedgerAmountColumn({
         }}
         className={`w-20 h-full bg-transparent ${
           entries[index]?.dashed?.[i] ? 'text-center' : 'text-right'
-        } text-zinc-200`}
+        }`}
       />
     </td>
   )

@@ -26,7 +26,7 @@ function LedgerTotalColumn({
       } border-zinc-700`}
     >
       <div className="border-b-4  border-zinc-500 border-double">
-        <div className="border-t text-right border-zinc-500 p-4 py-2">
+        <div className="border-t text-right border-zinc-500 p-4 py-2 print:py-0.5">
           {(() => {
             const allEntries = entries.slice(0, index)
 
