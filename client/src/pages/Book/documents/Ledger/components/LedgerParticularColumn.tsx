@@ -60,7 +60,7 @@ function LedgerParticularColumn({
           />
           <ComboboxOptions
             anchor="bottom"
-            className="z-10 w-[var(--input-width)] !max-h-96 mt-2 bg-zinc-800 rounded-md shadow-lg"
+            className="z-10 w-[var(--input-width)] !max-h-96 mt-2 text-zinc-100 bg-zinc-800 rounded-md shadow-lg"
           >
             {filteredItems.map((item) => (
               <ComboboxOption

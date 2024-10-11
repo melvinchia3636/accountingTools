@@ -9,11 +9,409 @@
       "name": "General Journal",
       "entries": [
         {
+          "isNew": false,
+          "date": "Year 8",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "Jun 30",
+          "particular": "Ordinary Share Capital",
+          "debit": 100000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "6% Preferred Share Capital",
+          "debit": 200000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital Reduction",
+          "debit": 0,
+          "credit": 300000
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Share Premium",
+          "debit": 80000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital Reduction",
+          "debit": 0,
+          "credit": 80000
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Capital Reduction",
+          "debit": 283000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Retained Profits - Accumulated Loss",
+          "debit": 0,
+          "credit": 163000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Goowill and Trademarks",
+          "debit": 0,
+          "credit": 120000
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Capital Reduction - Dividends in Arrears",
+          "debit": 28800,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Ordinary Share Capital",
+          "debit": 0,
+          "credit": 28800
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Capital Reduction",
+          "debit": 10000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bad Debts - written off",
+          "debit": 0,
+          "credit": 8400
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Inventory - written off",
+          "debit": 0,
+          "credit": 1600
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Capital Reduction",
+          "debit": 50000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Plant and Machinery - written down",
+          "debit": 0,
+          "credit": 50000
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Capital Reduction - Cost of Scheme",
+          "debit": 4200,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 0,
+          "credit": 4200
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Capital Reduction",
+          "debit": 4000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Investment - Loss on Investment",
+          "debit": 0,
+          "credit": 4000
+        },
+        {
+          "isNew": false,
+          "date": "30",
+          "particular": "Bank (RM 100,000 x 95%)",
+          "debit": 95000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "7 1/2% Loan Notes",
+          "debit": 0,
+          "credit": 95000
+        },
+        {
           "isNew": true,
           "date": "",
           "particular": "",
           "debit": 0,
           "credit": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Capital Reduction",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "Year 8",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Retained Profit - Accumulated Loss",
+          "side": "debit",
+          "amount": [
+            163000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Goodwill and Trademarks",
+          "side": "debit",
+          "amount": [
+            120000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Ordinary Share Capital - Dividend in Arrears",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM400,000 x 6% x 4 / RM5 * 2 * RM 0.75]",
+          "side": "debit",
+          "amount": [
+            28800
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bad Debts - written off",
+          "side": "debit",
+          "amount": [
+            8400
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Inventory - written off",
+          "side": "debit",
+          "amount": [
+            1600
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Plant and Machinery - written down",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM(320,000 - 160,000 - 110,000)]",
+          "side": "debit",
+          "amount": [
+            50000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Quoted Investment - Loss on Investment",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM(90,000 / 2 - 41,000]",
+          "side": "debit",
+          "amount": [
+            4000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Cost fo Scheme",
+          "side": "debit",
+          "amount": [
+            4200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Year 8",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "6% Preferred Share Capital",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM(2.00 - 1.50) x RM400,000 / RM2]",
+          "side": "credit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Ordinary Share Capital",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM(1.00 - 0.75) x RM800,000 / RM1]",
+          "side": "credit",
+          "amount": [
+            200000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Share Premium",
+          "side": "credit",
+          "amount": [
+            80000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
         }
       ]
     }

@@ -2,6 +2,223 @@
   "code": "GEA-2019-2A",
   "entityName": "Su Bhd",
   "topic": "Capital Reduction",
-  "data": [],
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "X",
+          "particular": "Ordinary Share Capital",
+          "debit": 50000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "6% Preferred Share Capital",
+          "debit": 40000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Capital Reduction",
+          "debit": 0,
+          "credit": 90000
+        },
+        {
+          "isNew": false,
+          "date": "X",
+          "particular": "Capital Reduction",
+          "debit": 109000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Parents and Trademarks",
+          "debit": 0,
+          "credit": 20000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Retained Profits - Accumulated Losses",
+          "debit": 0,
+          "credit": 89000
+        },
+        {
+          "isNew": false,
+          "date": "X",
+          "particular": "Capital Reduction - Dividends in Arrears",
+          "debit": 25000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Ordinary Share Capital",
+          "debit": 0,
+          "credit": 25000
+        },
+        {
+          "isNew": false,
+          "date": "X",
+          "particular": "Capital Reduction",
+          "debit": 6000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Tangible Assets - written off",
+          "debit": 0,
+          "credit": 6000
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Capital Reduction",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "",
+          "particular": "Retained Profit - Accumulated Loss",
+          "side": "debit",
+          "amount": [
+            89000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Patents and Trademarks",
+          "side": "debit",
+          "amount": [
+            20000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Ordinary Share Capital - Dividend in Arrears",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "[RM0.50 x 50,000]",
+          "side": "debit",
+          "amount": [
+            25000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Tangible Assets - written down",
+          "side": "debit",
+          "amount": [
+            6000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "Ordinary Share Capital[RM0.50 x 200,000]",
+          "side": "credit",
+          "amount": [
+            100000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "6% Preferred Share Capital [RM0.40 x 100,000]",
+          "side": "credit",
+          "amount": [
+            40000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ],
   "questionName": "GEA-2019-2"
 }

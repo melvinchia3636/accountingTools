@@ -229,6 +229,7 @@ function Book(): React.ReactElement {
                   <Journal
                     docRef={docRef}
                     key={`doc-${data.id}`}
+                    companyName={everything.entityName}
                     data={data.entries}
                     setData={(newData) => {
                       const newEverything = { ...everything }

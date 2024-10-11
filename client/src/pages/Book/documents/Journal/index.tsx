@@ -8,10 +8,12 @@ import { type IJournal } from '../../../../typescript/journal.interface'
 function Journal({
   docRef,
   data,
+  companyName,
   setData
 }: {
   docRef: React.RefObject<HTMLDivElement>
   data: IJournal['entries']
+  companyName: string
   setData: (data: IJournal['entries']) => void
 }): React.ReactElement {
   return (
@@ -19,7 +21,7 @@ function Journal({
       <h2 className="text-lg print:text-sm text-zinc-500 underline decoration-zinc-500 underline-offset-4 decoration-2">
         In the books of{'  '}
         <span className="font-semibold text-zinc-100 print:text-zinc-900">
-          S Bhd and P Bhd
+          {companyName}
         </span>
       </h2>
       <h3 className="text-2xl print:text-base text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
@@ -71,7 +73,9 @@ function Journal({
                       }
                     }}
                     className={`w-full h-full bg-transparent ${
-                      item.date.match(/^\d{4}$/) ? 'text-center' : 'text-right'
+                      item.date.match(/(^\d{4}$)|(^Year \d+$)/)
+                        ? 'text-center'
+                        : 'text-right'
                     }`}
                   />
                 </td>
@@ -79,7 +83,8 @@ function Journal({
                   className={`py-2 print:py-0.5 border-r-2 p-4 border-zinc-700 ${
                     item.credit ? 'pl-12' : ''
                   } ${
-                    data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
+                    data[index + 1]?.date &&
+                    !item.date?.match(/(^\d{4}$)|(^Year \d+$)/)
                       ? 'border-b-2 border-zinc-700 pb-10 print:pb-10'
                       : ''
                   }`}
@@ -123,7 +128,8 @@ function Journal({
                 {item.particular === 'TOTAL' ? (
                   <td
                     className={`border-r-2 border-zinc-700 ${
-                      data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
+                      data[index + 1]?.date &&
+                      !item.date?.match(/(^\d{4}$)|(^Year \d+$)/)
                         ? ''
                         : ''
                     }`}
@@ -163,7 +169,8 @@ function Journal({
                 ) : (
                   <td
                     className={`py-2 print:py-0.5 border-r-2 p-4 border-zinc-700 text-right ${
-                      data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
+                      data[index + 1]?.date &&
+                      !item.date?.match(/(^\d{4}$)|(^Year \d+$)/)
                         ? ''
                         : ''
                     }`}
@@ -207,7 +214,8 @@ function Journal({
                 {item.particular === 'TOTAL' ? (
                   <td
                     className={`border-r-2 border-zinc-700 ${
-                      data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
+                      data[index + 1]?.date &&
+                      !item.date?.match(/(^\d{4}$)|(^Year \d+$)/)
                         ? ''
                         : ''
                     }`}
@@ -247,7 +255,8 @@ function Journal({
                 ) : (
                   <td
                     className={`py-2 p-4 text-right ${
-                      data[index + 1]?.date && !item.date?.match(/^\d{4}$/)
+                      data[index + 1]?.date &&
+                      !item.date?.match(/(^\d{4}$)|(^Year \d+$)/)
                         ? ''
                         : ''
                     }`}

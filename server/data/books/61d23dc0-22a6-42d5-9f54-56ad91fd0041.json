@@ -2,6 +2,293 @@
   "code": "GEA-2023-3",
   "entityName": "Mr. Ho",
   "topic": "Budgeting",
-  "data": [],
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Cash Budget",
+      "subtitle": "For The Three Months Ended March Year 7",
+      "columnCount": 3,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "Jan",
+          "Feb",
+          "Mar"
+        ],
+        [
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Cash Receipts",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Capital brought in",
+          "amount": [
+            100000,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "Cash Sales",
+          "amount": [
+            30000,
+            52000,
+            35000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Rental Income (RM12,000 / 4)",
+          "amount": [
+            3000,
+            0,
+            0
+          ],
+          "underline": [
+            true,
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            133000,
+            52000,
+            35000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash Payments",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Purchase of Premises",
+          "amount": [
+            80000,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "Salaries (RM1,200 x 2)",
+          "amount": [
+            2400,
+            2400,
+            2400
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "General Expenses (RM2,500 x 98%)",
+          "amount": [
+            2450,
+            2450,
+            2450
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Drawings",
+          "amount": [
+            2000,
+            2000,
+            2000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Payments for Fixture and Fittings",
+          "amount": [
+            0,
+            3000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Cash Purchases",
+          "amount": [
+            6000,
+            6600,
+            7500
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Trade Payables",
+          "amount": [
+            0,
+            14000,
+            15400
+          ],
+          "underline": [
+            true,
+            true,
+            true
+          ],
+          "dashed": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            92850,
+            30450,
+            29750
+          ],
+          "underline": [
+            true,
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Increase / (Decrease) in Cash",
+          "amount": [
+            40150,
+            21550,
+            5250
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Opening Cash Balance",
+          "amount": [
+            0,
+            40150,
+            61700
+          ],
+          "underline": [
+            true,
+            true,
+            true
+          ],
+          "dashed": [
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Closing Cash Balance",
+          "amount": [
+            40150,
+            61700,
+            66950
+          ],
+          "underline": [
+            "double",
+            "double",
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ],
   "questionName": "GEA-2023-3"
 }
