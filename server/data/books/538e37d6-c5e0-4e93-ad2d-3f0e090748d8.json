@@ -1,0 +1,463 @@
+{
+  "code": "UEB-2022-3",
+  "entityName": "Choo Fat Trading",
+  "topic": "Control Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Accounts Receivable Ledger Control",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            43750
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Sales (RM180,000 - RM25,000)",
+          "side": "debit",
+          "amount": [
+            155000
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bank - Refund",
+          "side": "debit",
+          "amount": [
+            900
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bank - Dishonoured Cheque",
+          "side": "debit",
+          "amount": [
+            5500
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bank - Noting Charges",
+          "side": "debit",
+          "amount": [
+            50
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Discounts Allowed - Withdrawn",
+          "side": "debit",
+          "amount": [
+            200
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bad Debts Recovered",
+          "side": "debit",
+          "amount": [
+            3150
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bills Receivable - Bill Dishonoured",
+          "side": "debit",
+          "amount": [
+            1000
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Interest Income",
+          "side": "debit",
+          "amount": [
+            120
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            2100
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2022",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            53110
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            1550
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Bank (RM135,750 - RM3,150)",
+          "side": "credit",
+          "amount": [
+            132600
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Discounts Allowed",
+          "side": "credit",
+          "amount": [
+            1380
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Returns Inwards",
+          "side": "credit",
+          "amount": [
+            4880
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bank - Bad Debts Recovered",
+          "side": "credit",
+          "amount": [
+            3150
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bad Debts",
+          "side": "credit",
+          "amount": [
+            4200
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bills Receivable",
+          "side": "credit",
+          "amount": [
+            6600
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Accounts Payable Ledger Control - Contra",
+          "side": "credit",
+          "amount": [
+            4300
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            53110
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2022",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            2100
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Accounts Payable Ledger Control",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            2800
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            96880
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Discounts Received",
+          "side": "debit",
+          "amount": [
+            1770
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Returns Outwards",
+          "side": "debit",
+          "amount": [
+            3650
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Accounts Receivable Ledger Control - Contra",
+          "side": "debit",
+          "amount": [
+            4300
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            27800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2022",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            900
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            39100
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Purchases (RM110,000 - RM14,000)",
+          "side": "credit",
+          "amount": [
+            96000
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bank - Refund",
+          "side": "credit",
+          "amount": [
+            1200
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            900
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2022",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            27800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

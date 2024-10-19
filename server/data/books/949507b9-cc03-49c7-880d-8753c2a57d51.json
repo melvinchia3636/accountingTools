@@ -1,0 +1,351 @@
+{
+  "code": "UEB-2020-4B",
+  "entityName": "Mr Tan (Consignee)",
+  "topic": "Consignment Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Consignor - Ling Bhd",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            ""
+          ],
+          "credit": [
+            ""
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 5",
+          "particular": "Bills Payable",
+          "side": "debit",
+          "amount": [
+            40000
+          ]
+        },
+        {
+          "date": "5",
+          "particular": "Bank - Carriage Expenses",
+          "side": "debit",
+          "amount": [
+            500
+          ]
+        },
+        {
+          "date": "5",
+          "particular": "Bank - Storage Expenses",
+          "side": "debit",
+          "amount": [
+            400
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Commission Income",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Sales Commission (RM54,000 x 5%)",
+          "side": "debit",
+          "amount": [
+            2700
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Del Credere Commission (RM54,000 x 1%)",
+          "side": "debit",
+          "amount": [
+            540
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Selling Expenses",
+          "side": "debit",
+          "amount": [
+            480
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Sight Draft",
+          "side": "debit",
+          "amount": [
+            11380
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "May 20",
+          "particular": "Bank - Insurance Claim",
+          "side": "credit",
+          "amount": [
+            2000
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Accounts Receivable - Credit Sales",
+          "side": "credit",
+          "amount": [
+            54000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Accounts Receivable",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Consignor - Ling Bhd - Credit Sales (RM1,800 x 30)",
+          "side": "debit",
+          "amount": [
+            54000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            1070
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Bank",
+          "side": "credit",
+          "amount": [
+            52800
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bad Debts",
+          "side": "credit",
+          "amount": [
+            130
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            1070
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

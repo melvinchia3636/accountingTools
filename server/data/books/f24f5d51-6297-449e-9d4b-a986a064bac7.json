@@ -1,0 +1,752 @@
+{
+  "code": "UEB-2020-6",
+  "entityName": "P Sdn Bhd",
+  "topic": "Hire Purchase",
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Statement of Calculuation of Hire Purchase Price",
+      "subtitle": "For The Year Ended 30 September 2020",
+      "columnCount": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Cash Price",
+          "amount": [
+            50000
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Less: Deposit",
+          "amount": [
+            -10000
+          ],
+          "underline": [
+            true
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Total amount to be financed",
+          "amount": [
+            40000
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Total amount of interest (RM40,000 x 8% x 4)",
+          "amount": [
+            12800
+          ],
+          "underline": [
+            true
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Total amount of instalments",
+          "amount": [
+            52800
+          ],
+          "underline": [
+            "double"
+          ],
+          "dashed": [
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Monthly instalment (RM52,800 / 48)",
+          "amount": [
+            1100
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Hire purchase Interest from 1 July 2020 to 30 September 2020 (RM12,800 / 48 x 3)",
+          "amount": [
+            800
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation for the year ended 30 September 2020 (RM50,000 x 20% x 1/2)",
+          "amount": [
+            5000
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Truck",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Hire Purchase Vendor - South Motor Company",
+          "side": "debit",
+          "amount": [
+            50000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            50000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            50000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Hire Purchase Vendor - South Motor Company",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Bank - Deposit",
+          "side": "debit",
+          "amount": [
+            10000
+          ]
+        },
+        {
+          "date": "Jul 31",
+          "particular": "Bank - 1st Instalment",
+          "side": "debit",
+          "amount": [
+            1100
+          ]
+        },
+        {
+          "date": "Aug 31",
+          "particular": "Bank - 2nd Instalment",
+          "side": "debit",
+          "amount": [
+            1100
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Bank - 3rd Instalment",
+          "side": "debit",
+          "amount": [
+            1100
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            37500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Truck",
+          "side": "credit",
+          "amount": [
+            50000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Hire Purchase Interest",
+          "side": "credit",
+          "amount": [
+            800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            37500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ledger",
+      "name": "Hire Purchase Interest",
+      "nature": "EX",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Hire Purchase Vendor - South Motor Company",
+          "side": "debit",
+          "amount": [
+            800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Profit and Loss",
+          "side": "credit",
+          "amount": [
+            800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ledger",
+      "name": "Accumulated Depreciation",
+      "nature": "A-",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Depreciation - Truck",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "statement",
+      "name": "Income Statement (Extract)",
+      "subtitle": "For The Year Ended 30 September 2020",
+      "columnCount": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Depreciation of Truck",
+          "amount": [
+            5000
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Hire Purchase Interest",
+          "amount": [
+            800
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "statement",
+      "name": "Statement of Financial Position (Extract)",
+      "subtitle": "As At 30 September 2020",
+      "columnCount": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Assets",
+          "amount": [
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Truck",
+          "amount": [
+            50000
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Less: Accumulated Depreciation",
+          "amount": [
+            -5000
+          ],
+          "underline": [
+            true
+          ],
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            45000
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Hire Purchase Vendor",
+          "amount": [
+            37500
+          ],
+          "underline": false,
+          "dashed": [
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

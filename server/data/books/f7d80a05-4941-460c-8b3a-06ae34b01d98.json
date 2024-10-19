@@ -1,0 +1,595 @@
+{
+  "code": "UEB-2020-4A",
+  "entityName": "Ling Bhd (Consignor)",
+  "topic": "Consignment Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Consignment to Mr. Tan",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 1",
+          "particular": "Goods Sent on Consignment",
+          "side": "debit",
+          "amount": [
+            60000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Bank",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Freight Charges",
+          "side": "debit",
+          "amount": [
+            2100
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Insurance Expenses",
+          "side": "debit",
+          "amount": [
+            1000
+          ]
+        },
+        {
+          "date": "5",
+          "particular": "Consignee - Mr. Tan",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Carriage Charges",
+          "side": "debit",
+          "amount": [
+            500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Storage Expenses",
+          "side": "debit",
+          "amount": [
+            400
+          ]
+        },
+        {
+          "date": "10",
+          "particular": "Bills Receivable - Discounting Charges",
+          "side": "debit",
+          "amount": [
+            500
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Consignee - Mr. Tan",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Selling Expenses",
+          "side": "debit",
+          "amount": [
+            480
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Sales Commission (RM54,000 x 5%)",
+          "side": "debit",
+          "amount": [
+            2700
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Del Credere Commission (RM54,000 x 1%)",
+          "side": "debit",
+          "amount": [
+            540
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Profit and Loss - Profit on Consignment",
+          "side": "debit",
+          "amount": [
+            11358
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 5",
+          "particular": "Goods Lost in Transit",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM(60,000 + 2,100 + 1,000) x 2/50",
+          "side": "credit",
+          "amount": [
+            2524
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Consignee - Mr. Tan - Sales (RM1,800 x 30)",
+          "side": "credit",
+          "amount": [
+            54000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Unsold Inventory c/d",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "(RM(60,000 + 2,100 + 1,000) x 18/50 + RM(500 + 400) x 18/48)",
+          "side": "credit",
+          "amount": [
+            23054
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Consignee - Mr. Tan",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "May 20",
+          "particular": "Goods Lost in Transit - Insurance Claim",
+          "side": "debit",
+          "amount": [
+            2000
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Consignment to Mr. Tan - Sales",
+          "side": "debit",
+          "amount": [
+            54000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 5",
+          "particular": "Bills Receivable",
+          "side": "credit",
+          "amount": [
+            40000
+          ]
+        },
+        {
+          "date": "5",
+          "particular": "Consignment to Mr. Tan",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Carriage Charges",
+          "side": "credit",
+          "amount": [
+            500
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Storage Expenses",
+          "side": "credit",
+          "amount": [
+            400
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Consignment to Mr. Tan",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Selling Expenses",
+          "side": "credit",
+          "amount": [
+            480
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Sales Commission",
+          "side": "credit",
+          "amount": [
+            2700
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Del Credere Commission",
+          "side": "credit",
+          "amount": [
+            540
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Sight Draft",
+          "side": "credit",
+          "amount": [
+            11380
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Goods Lost in Transit",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Mar 5",
+          "particular": "Consignment to Mr. Tan",
+          "side": "debit",
+          "amount": [
+            2524
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "May 20",
+          "particular": "Consignee - Mr. Tan - Insurance Claim",
+          "side": "credit",
+          "amount": [
+            2000
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Profit and Loss ",
+          "side": "credit",
+          "amount": [
+            524
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

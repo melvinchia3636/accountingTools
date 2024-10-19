@@ -1,0 +1,793 @@
+{
+  "code": "UEB-2020-5",
+  "entityName": "Mahang Bhd",
+  "topic": "Manufacturing Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Manufacturing Account",
+      "subtitle": "For The Year Ended 30 September 2020",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Cost of Materials Consumed",
+          "amount": [
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            0,
+            17200
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Purhcases",
+          "amount": [
+            85600,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Returns Outwards",
+          "amount": [
+            -1200,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            84400,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Carriage Inwards",
+          "amount": [
+            4400,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            88800,
+            0
+          ],
+          "underline": [
+            false,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Closing Inventory",
+          "amount": [
+            -19600,
+            69200
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            86400
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Direct Labour",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Direct Manufacturing Wages (RM60,000 + RM1,800)",
+          "amount": [
+            0,
+            61800
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Direct Expenses",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Royalties",
+          "amount": [
+            3200,
+            0
+          ],
+          "underline": [
+            false,
+            false
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Direct Factory Expenses",
+          "amount": [
+            12000,
+            15200
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "bold": false,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Prime Cost",
+          "amount": [
+            0,
+            163400
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Factory Overheads",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Salaries",
+          "amount": [
+            37800,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Repair Expenses (RM16,800 - RM12,000)",
+          "amount": [
+            4800,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Water and Electricity (RM(22,800 + 126) x 2/3)",
+          "amount": [
+            15284,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cleaning Expenses (RM3,600 x 2/3)",
+          "amount": [
+            2400,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Rates and Insurance (RM(5,100 - 600) x 2/3)",
+          "amount": [
+            3000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Machinery (RM(89,600 + 12,000) x 20%)",
+          "amount": [
+            20320,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Furniture and Fixtures (RM98,000 x 10% x 1/2)",
+          "amount": [
+            4900,
+            88504
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            251904
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Add: Opening Work-in-progress",
+          "amount": [
+            0,
+            6900
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            258804
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Closing Work-in-progress",
+          "amount": [
+            0,
+            -5200
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Production Cost of Finished Goods",
+          "amount": [
+            0,
+            253604
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Manufacturing Profit",
+          "amount": [
+            0,
+            25396
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Production Cost of Finished Goods c/d, at Market Price",
+          "amount": [
+            0,
+            279000
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Income Statement",
+      "subtitle": "For The Year Ended 30 September 2020",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Sales",
+          "amount": [
+            0,
+            558200
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Returns Inwards",
+          "amount": [
+            0,
+            -2600
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net Sales",
+          "amount": [
+            0,
+            555600
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Less: Cost of Sales",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Opening Inventory",
+          "amount": [
+            10300,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Production Cost of Finished Goods b/d, at market price",
+          "amount": [
+            279000,
+            0
+          ],
+          "underline": [
+            true,
+            false
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            289300,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Closing Inventory",
+          "amount": [
+            -14100,
+            -275200
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Gross Profit",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "- Trading Profit",
+          "amount": [
+            0,
+            280400
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "- Manufacturing Profit",
+          "amount": [
+            0,
+            25396
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            305796
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Other Income",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Discounts Received",
+          "amount": [
+            0,
+            1140
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            306936
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Carriage Outwards",
+          "amount": [
+            720,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Salaries",
+          "amount": [
+            19800,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Directors' Fees",
+          "amount": [
+            12500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Office General Expenses",
+          "amount": [
+            36992,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Water and Electricity (RM(22,800 + 126) x 1/3)",
+          "amount": [
+            7642,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cleaning Expenses (RM3,600 x 1/3)",
+          "amount": [
+            1200,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Rates and Insurance (RM(5,100 - 600) x 1/3)",
+          "amount": [
+            1500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Advertising Expenses",
+          "amount": [
+            2500,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Furniture and Fixtures (RM98,000 x 10% x 1/2)",
+          "amount": [
+            4900,
+            -87754
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Profit for the year",
+          "amount": [
+            0,
+            219182
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

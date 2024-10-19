@@ -1,0 +1,655 @@
+{
+  "code": "UEB-2020-3",
+  "entityName": "Karen",
+  "topic": "Correction of Errors",
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "2019",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "Dec 31",
+          "particular": "Furniture",
+          "debit": 2250,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Commission Received",
+          "debit": 0,
+          "credit": 2250
+        },
+        {
+          "isNew": false,
+          "date": "31",
+          "particular": "Melvin",
+          "debit": 220,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Kelvin",
+          "debit": 0,
+          "credit": 220
+        },
+        {
+          "isNew": false,
+          "date": "31",
+          "particular": "Sales (RM2,400 - RM2,040)",
+          "debit": 360,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Suspense",
+          "debit": 0,
+          "credit": 360
+        },
+        {
+          "isNew": false,
+          "date": "31",
+          "particular": "Bad Debts",
+          "debit": 150,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Suspense",
+          "debit": 5,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bad Debts Recovered",
+          "debit": 0,
+          "credit": 155
+        },
+        {
+          "isNew": false,
+          "date": "31",
+          "particular": "Suspense",
+          "debit": 65,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Discounts Received",
+          "debit": 0,
+          "credit": 65
+        },
+        {
+          "isNew": false,
+          "date": "31",
+          "particular": "Cash",
+          "debit": 140,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Suspense",
+          "debit": 0,
+          "credit": 140
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Suspense",
+      "nature": "TEMP",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Difference in Books",
+          "side": "debit",
+          "amount": [
+            430
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bad Debts Recovered",
+          "side": "debit",
+          "amount": [
+            5
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Discounts Received",
+          "side": "debit",
+          "amount": [
+            65
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Sales",
+          "side": "credit",
+          "amount": [
+            360
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Cash",
+          "side": "credit",
+          "amount": [
+            140
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "name": "Statement of Adjusted Net Profit",
+      "subtitle": "For The Year Ended 31 December 2019",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Net Loss before Adjustment",
+          "amount": [
+            0,
+            -510
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Add: Commission Received understated",
+          "amount": [
+            2250,
+            0
+          ],
+          "underline": false,
+          "tabIn": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bad Debts Recovered ommitted",
+          "amount": [
+            155,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Discounts Received not posted",
+          "amount": [
+            65,
+            2470
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            1960
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Sales overcast (RM2,400 - RM2,040)",
+          "amount": [
+            360,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bad Debts wrongly credited",
+          "amount": [
+            150,
+            -510
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Net Profit after Adjustment",
+          "amount": [
+            0,
+            1450
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "tabIn": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "statement",
+      "name": "Revised Statement of Financial Position",
+      "subtitle": "As At 31 December 2019",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Assets",
+          "amount": [
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Furniture (RM14,500 + RM2,250)",
+          "amount": [
+            0,
+            16750
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Assets",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Inventory",
+          "amount": [
+            7980,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Trade / Accounts Receivable",
+          "amount": [
+            5160,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash At Bank",
+          "amount": [
+            4000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Cash in Hand (RM270 + RM140)",
+          "amount": [
+            410,
+            17550
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Assets",
+          "amount": [
+            0,
+            34300
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Equity",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Capital",
+          "amount": [
+            0,
+            25000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Add: Net Profit",
+          "amount": [
+            0,
+            1450
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            26450
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Drawings",
+          "amount": [
+            0,
+            -320
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            26130
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Non-current Liabilities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Loan",
+          "amount": [
+            5000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Trade / Accounts Receivable",
+          "amount": [
+            3170,
+            8170
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Equity and Liabilities",
+          "amount": [
+            0,
+            34300
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}

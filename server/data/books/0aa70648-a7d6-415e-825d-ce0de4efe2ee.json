@@ -627,7 +627,7 @@
         },
         {
           "date": "30",
-          "particular": "Hire Purchase Interest Suspsense",
+          "particular": "Hire Purchase Interest Suspense",
           "side": "credit",
           "amount": [
             0
@@ -992,7 +992,7 @@
           ]
         },
         {
-          "particular": "Total amount of interest",
+          "particular": "Total amount of instalments",
           "amount": [
             83200
           ],
@@ -1001,7 +1001,9 @@
           ],
           "dashed": [
             false
-          ]
+          ],
+          "bold": true,
+          "particularUnderline": false
         },
         {
           "particular": " ",

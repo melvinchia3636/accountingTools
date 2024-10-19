@@ -1,0 +1,495 @@
+{
+  "code": "UEB-2020-1",
+  "entityName": "A Wholesale Business",
+  "topic": "Control Account",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Trade / Accounts Receivable Ledger Control",
+      "nature": "A",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            12480
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Sales",
+          "side": "debit",
+          "amount": [
+            53400
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bad Debts Recovered",
+          "side": "debit",
+          "amount": [
+            520
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Cash - Refund",
+          "side": "debit",
+          "amount": [
+            320
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            9170
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            120
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank (RM58,440 - RM20,600 - RM520)",
+          "side": "credit",
+          "amount": [
+            37320
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bills Receivable",
+          "side": "credit",
+          "amount": [
+            9000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Discounts Allowed",
+          "side": "credit",
+          "amount": [
+            2670
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Returns Inwards",
+          "side": "credit",
+          "amount": [
+            3700
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bad Debts",
+          "side": "credit",
+          "amount": [
+            1800
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bank - Bad Debts Recovered",
+          "side": "credit",
+          "amount": [
+            520
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Trade / Accounts Payable Ledger Control - Contra",
+          "side": "credit",
+          "amount": [
+            1350
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Trade / Accounts Payable Ledger Control - Contra",
+          "side": "credit",
+          "amount": [
+            1270
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            9170
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Trade / Accounte Payable Ledger Control",
+      "nature": "L",
+      "column": 1,
+      "topTextColumnCount": 1,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 30",
+          "particular": "Bank (RM20,450 - RM13,750)",
+          "side": "debit",
+          "amount": [
+            6700
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bills Payable",
+          "side": "debit",
+          "amount": [
+            4200
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Discounts Received",
+          "side": "debit",
+          "amount": [
+            1100
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Returns Outwards",
+          "side": "debit",
+          "amount": [
+            2900
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bills Receivable",
+          "side": "debit",
+          "amount": [
+            2000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Trade / Accounts Receivable Ledger Control - Contra",
+          "side": "debit",
+          "amount": [
+            1350
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Trade / Accounts Receivable Ledger Control - Contra",
+          "side": "debit",
+          "amount": [
+            1270
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Balance c/d",
+          "side": "debit",
+          "amount": [
+            23560
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jun 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            7360
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Purchases",
+          "side": "credit",
+          "amount": [
+            33000
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bills Payable - BIll Dishonoured",
+          "side": "credit",
+          "amount": [
+            2600
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Bills Payable - Noting Charges",
+          "side": "credit",
+          "amount": [
+            50
+          ]
+        },
+        {
+          "date": "30",
+          "particular": "Interest Expenses",
+          "side": "credit",
+          "amount": [
+            70
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2020",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "credit",
+          "amount": [
+            23560
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
