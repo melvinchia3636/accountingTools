@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Bills Payable",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -118,14 +117,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 2,
       "type": "ledger",
       "name": "Travis Bhd",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -267,7 +267,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     }
   ],
   "questionName": "UEB-2021-6"

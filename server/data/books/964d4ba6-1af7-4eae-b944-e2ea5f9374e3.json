@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Consignee - Hong Xian Trading",
       "nature": "TEMP",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -198,14 +197,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 2,
       "type": "ledger",
       "name": "Consignment",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -459,7 +459,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,

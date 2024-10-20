@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Head Office Current",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -166,7 +165,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     }
   ],
   "questionName": "UEB-2017-6"

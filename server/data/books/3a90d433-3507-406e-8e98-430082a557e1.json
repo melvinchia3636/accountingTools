@@ -507,7 +507,6 @@
       "type": "ledger",
       "name": "Cash Book (Bank Column Only)",
       "nature": "A",
-      "column": 1,
       "hasFolio": true,
       "topTextColumnCount": 1,
       "pageNumber": 15,
@@ -595,14 +594,14 @@
           ]
         }
       ],
-      "isInGL": false
+      "isInGL": false,
+      "columnCount": 1
     },
     {
       "id": 3,
       "type": "ledger",
       "name": "Postage and Stationery",
       "nature": "EX",
-      "column": 1,
       "hasFolio": true,
       "topTextColumnCount": 1,
       "pageNumber": 30,
@@ -670,7 +669,8 @@
           "folio": ""
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "columnCount": 1
     },
     {
       "id": 4,
@@ -678,7 +678,6 @@
       "name": "Traveling Expenses",
       "nature": "EX",
       "hasFolio": true,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 31,
       "headers": [
@@ -747,7 +746,8 @@
           "folio": ""
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "columnCount": 1
     },
     {
       "id": 5,
@@ -755,7 +755,6 @@
       "name": "Office Expenses",
       "nature": "EX",
       "hasFolio": true,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 32,
       "isInGL": true,
@@ -824,7 +823,8 @@
           ],
           "folio": ""
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 6,
@@ -832,7 +832,6 @@
       "name": "Sundry Expenses",
       "nature": "EX",
       "hasFolio": true,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 33,
       "isInGL": true,
@@ -901,7 +900,8 @@
           ],
           "folio": ""
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 7,
@@ -909,7 +909,6 @@
       "name": "Staff's Advance",
       "nature": "EX",
       "hasFolio": true,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 34,
       "isInGL": true,
@@ -978,7 +977,8 @@
           ],
           "folio": ""
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 8,
@@ -986,7 +986,6 @@
       "name": "Drawings",
       "nature": "E-",
       "hasFolio": true,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 35,
       "isInGL": true,
@@ -1073,7 +1072,8 @@
           ],
           "folio": ""
         }
-      ]
+      ],
+      "columnCount": 1
     }
   ]
 }

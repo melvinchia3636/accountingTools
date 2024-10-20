@@ -120,10 +120,10 @@ function PettyCashBook({
                   </th>
                 ))}
               <th className="py-2 print:py-0.5 text-center font-bold w-24 border-r-2 border-zinc-700">
-                Ledger Account
+                Sundries
               </th>
               <th className="py-2 print:py-0.5 text-center font-bold w-24 border-r-2 border-zinc-700">
-                Ledger Folio
+                Folio
               </th>
             </tr>
             <tr className="py-2 print:py-0.5 w-28 border-r-2 border-b-2 border-zinc-700 text-zinc-500">

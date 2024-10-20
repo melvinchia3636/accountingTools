@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Memorandum Joint Venture",
       "nature": "TEMP",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -278,7 +277,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     }
   ],
   "questionName": "UEB-2018-4"

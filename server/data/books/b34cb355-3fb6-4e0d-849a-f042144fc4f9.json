@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Cost of Control",
       "nature": "TEMP",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -118,14 +117,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 2,
       "type": "ledger",
       "name": "Non-controlling Interests",
       "nature": "E",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -219,14 +219,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,
       "type": "ledger",
       "name": "Consolidated Retained Profits",
       "nature": "E",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -336,7 +337,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 4,

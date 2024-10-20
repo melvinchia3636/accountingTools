@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Motor Vehicles",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -182,14 +181,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 2,
       "type": "ledger",
       "name": "Accumulated Depreciation - Motor Vehicles",
       "nature": "A-",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -379,14 +379,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,
       "type": "ledger",
       "name": "Disposal of Lorry",
       "nature": "TEMP",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -496,14 +497,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 4,
       "type": "ledger",
       "name": "Hire Purchase Vendor - Pacific Dealer",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -709,14 +711,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 5,
       "type": "ledger",
       "name": "Hire Purchase Interest Suspense",
       "nature": "EX",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -938,7 +941,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 6,

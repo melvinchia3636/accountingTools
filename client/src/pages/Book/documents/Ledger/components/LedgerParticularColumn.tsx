@@ -21,7 +21,8 @@ function LedgerParticularColumn({
   query,
   setQuery,
   updateEntry,
-  checkAndClearEmptyRow
+  checkAndClearEmptyRow,
+  addRowBelow
 }: {
   index: number
   side: LedgerSide
@@ -31,6 +32,7 @@ function LedgerParticularColumn({
   setQuery: (query: string) => void
   updateEntry: (data: ILedgerEntry[], index: number, side: LedgerSide) => void
   checkAndClearEmptyRow: () => void
+  addRowBelow: () => void
 }): React.ReactElement {
   return (
     <td className="py-2 print:py-0.5 border-r-2 p-4 border-zinc-700">
@@ -57,6 +59,16 @@ function LedgerParticularColumn({
             className={`min-w-96 print:min-w-64 w-full h-full bg-transparent ${
               entries[index]?.particular === 'TOTAL' ? 'text-transparent' : ''
             }`}
+            onKeyDown={(e) => {
+              if (
+                (e.metaKey || e.ctrlKey) &&
+                e.shiftKey &&
+                e.key === 'ArrowDown'
+              ) {
+                e.preventDefault()
+                addRowBelow()
+              }
+            }}
           />
           <ComboboxOptions
             anchor="bottom"

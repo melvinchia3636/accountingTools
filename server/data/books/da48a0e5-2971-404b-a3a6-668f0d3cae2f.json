@@ -9,7 +9,6 @@
       "name": "Branch Inventory",
       "nature": "TRADE",
       "hasFolio": false,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 0,
       "isInGL": true,
@@ -168,7 +167,8 @@
             0
           ]
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 2,
@@ -176,7 +176,6 @@
       "name": "Goods Sent to Branch",
       "nature": "TEMP",
       "hasFolio": false,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 0,
       "isInGL": true,
@@ -271,7 +270,8 @@
             0
           ]
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 3,
@@ -279,7 +279,6 @@
       "name": "Branch Cash",
       "nature": "A",
       "hasFolio": false,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 0,
       "isInGL": true,
@@ -438,7 +437,8 @@
             0
           ]
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 4,
@@ -446,7 +446,6 @@
       "name": "Branch Accounts Receivable",
       "nature": "A",
       "hasFolio": false,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 0,
       "isInGL": true,
@@ -605,7 +604,8 @@
             0
           ]
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 5,
@@ -613,7 +613,6 @@
       "name": "Branch Profit and Loss",
       "nature": "PL",
       "hasFolio": false,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 0,
       "isInGL": true,
@@ -756,7 +755,8 @@
             0
           ]
         }
-      ]
+      ],
+      "columnCount": 1
     }
   ]
 }

@@ -9,7 +9,6 @@
       "name": "Adjusted Cash Book (Bank Column)",
       "nature": "A",
       "hasFolio": false,
-      "column": 1,
       "topTextColumnCount": 1,
       "pageNumber": 0,
       "isInGL": true,
@@ -184,7 +183,8 @@
             0
           ]
         }
-      ]
+      ],
+      "columnCount": 1
     },
     {
       "id": 2,

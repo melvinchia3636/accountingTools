@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Trade Receivables",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -150,14 +149,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 2,
       "type": "ledger",
       "name": "Trade Payables",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -315,7 +315,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,

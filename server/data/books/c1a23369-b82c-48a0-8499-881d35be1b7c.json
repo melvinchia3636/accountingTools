@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "ABC Trading (Supplier)",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -118,14 +117,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 2,
       "type": "ledger",
       "name": "XYZ Company (Customer)",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -283,14 +283,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,
       "type": "ledger",
       "name": "Bills Receivable",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -400,14 +401,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 4,
       "type": "ledger",
       "name": "Bills Payable",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -517,14 +519,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 5,
       "type": "ledger",
       "name": "Bank",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -650,7 +653,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     }
   ],
   "questionName": "UEB-2019-4"

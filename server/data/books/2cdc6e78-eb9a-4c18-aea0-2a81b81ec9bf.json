@@ -8,7 +8,6 @@
       "type": "ledger",
       "name": "Motor Vehicle",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -134,14 +133,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 2,
       "type": "ledger",
       "name": "Hire Purchase Vendor",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -411,14 +411,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,
       "type": "ledger",
       "name": "Hire Purchase Interest Suspense",
       "nature": "EX",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -592,14 +593,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 4,
       "type": "ledger",
       "name": "Profit and Loss",
       "nature": "E",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -789,14 +791,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 5,
       "type": "ledger",
       "name": "Disposal of Vehicle",
       "nature": "TEMP",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -922,7 +925,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     }
   ],
   "questionName": "UEB-2022-6"

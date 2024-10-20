@@ -255,6 +255,18 @@ function Ledger({
                           filteredItems={filteredItems}
                           query={query}
                           setQuery={setQuery}
+                          addRowBelow={() => {
+                            const newData = [...debitEntries]
+                            newData.splice(index + 1, 0, {
+                              date: '',
+                              particular: '',
+                              side: LedgerSide.Debit,
+                              amount: Array(columnCount).fill(0),
+                              ...(hasFolio && { folio: '' })
+                            })
+                            setDebitEntries(newData)
+                            setData([...newData, ...creditEntries])
+                          }}
                         />
                         {hasFolio && (
                           <LedgerFolioColumn
@@ -315,6 +327,18 @@ function Ledger({
                           filteredItems={filteredItems}
                           query={query}
                           setQuery={setQuery}
+                          addRowBelow={() => {
+                            const newData = [...creditEntries]
+                            newData.splice(index + 1, 0, {
+                              date: '',
+                              particular: '',
+                              side: LedgerSide.Credit,
+                              amount: Array(columnCount).fill(0),
+                              ...(hasFolio && { folio: '' })
+                            })
+                            setCreditEntries(newData)
+                            setData([...debitEntries, ...newData])
+                          }}
                         />
                         {hasFolio && (
                           <LedgerFolioColumn

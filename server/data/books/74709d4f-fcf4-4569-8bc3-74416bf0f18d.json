@@ -399,7 +399,6 @@
       "type": "ledger",
       "name": "Trade Receivables",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -525,14 +524,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,
       "type": "ledger",
       "name": "Trade Payables",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -658,14 +658,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 4,
       "type": "ledger",
       "name": "Wages and Salaries",
       "nature": "EX",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -791,14 +792,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 5,
       "type": "ledger",
       "name": "Taxation",
       "nature": "EX",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -924,14 +926,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 6,
       "type": "ledger",
       "name": "Non-current Assets",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -1057,7 +1060,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     }
   ],
   "questionName": "GEA-2016-3"

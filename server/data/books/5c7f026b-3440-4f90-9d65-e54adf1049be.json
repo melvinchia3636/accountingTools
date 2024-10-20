@@ -1,14 +1,17 @@
 {
-  "code": "UEB-2020-4A",
-  "entityName": "Ling Bhd (Consignor)",
-  "topic": "Consignment Account",
+  "code": "CHKLB-2021-2",
+  "entityName": "Lee, Wan and Jia",
+  "topic": "Partnership Dissolution",
   "data": [
     {
       "id": 1,
       "type": "ledger",
-      "name": "Consignment to Mr. Tan",
+      "name": "Realisation",
       "nature": "TEMP",
+      "hasFolio": false,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -21,7 +24,7 @@
       ],
       "entries": [
         {
-          "date": "2020",
+          "date": "2021",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -29,11 +32,522 @@
           ]
         },
         {
-          "date": "Mar 1",
-          "particular": "Goods Sent on Consignment",
+          "date": "Sep 1",
+          "particular": "Premises",
           "side": "debit",
           "amount": [
-            60000
+            100000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Motor Vehicles",
+          "side": "debit",
+          "amount": [
+            30000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Office Equipment",
+          "side": "debit",
+          "amount": [
+            10000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Inventory",
+          "side": "debit",
+          "amount": [
+            7000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Accounts Receivable",
+          "side": "debit",
+          "amount": [
+            4000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Bank - Dissolution Expenses",
+          "side": "debit",
+          "amount": [
+            1200
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 1",
+          "particular": "Bank",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Premises",
+          "side": "credit",
+          "amount": [
+            70000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Office Equipment",
+          "side": "credit",
+          "amount": [
+            8000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Motor Vehicles",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Accounts Payable - Discounts Received",
+          "side": "credit",
+          "amount": [
+            300
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Capital: Motor Vehicles taken over - Lee",
+          "side": "credit",
+          "amount": [
+            15000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Capital: Inventory taken over - Wan (RM7,000 x 80%)",
+          "side": "credit",
+          "amount": [
+            5600
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Bank - Accounts Receivable",
+          "side": "credit",
+          "amount": [
+            3700
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Capital: Loss on Realisation",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Lee (RM44,600 x 5/10)",
+          "side": "credit",
+          "amount": [
+            22300
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Wan (RM44,600 x 3/10)",
+          "side": "credit",
+          "amount": [
+            13380
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- JIa (RM44,600 x 2/10)",
+          "side": "credit",
+          "amount": [
+            8920
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ],
+      "columnCount": 1
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Bank",
+      "nature": "A",
+      "hasFolio": false,
+      "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            3000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Realisation",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Premises",
+          "side": "debit",
+          "amount": [
+            70000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Office Equipment",
+          "side": "debit",
+          "amount": [
+            8000
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Motor Vehicles",
+          "side": "debit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Realisation - Accounts Receivable",
+          "side": "debit",
+          "amount": [
+            3700
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Capital - Jia",
+          "side": "debit",
+          "amount": [
+            7920
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 1",
+          "particular": "Realisation - Dissolution Expenses",
+          "side": "credit",
+          "amount": [
+            1200
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Accounts Payable",
+          "side": "credit",
+          "amount": [
+            14700
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Salaries",
+          "side": "credit",
+          "amount": [
+            5000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Capital",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Lee",
+          "side": "credit",
+          "amount": [
+            40700
+          ]
+        },
+        {
+          "date": "",
+          "particular": "- Wan",
+          "side": "credit",
+          "amount": [
+            36020
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ],
+      "columnCount": 1
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Capital",
+      "nature": "E",
+      "hasFolio": false,
+      "topTextColumnCount": 2,
+      "pageNumber": 0,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            "Lee",
+            "Wan",
+            "Jia"
+          ],
+          "credit": [
+            "Lee",
+            "Wan",
+            "Jia"
+          ]
+        },
+        {
+          "debit": [
+            "RM",
+            "RM",
+            "RM"
+          ],
+          "credit": [
+            "RM",
+            "RM",
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "date": "Sep 1",
+          "particular": "Current",
+          "side": "debit",
+          "amount": [
+            0,
+            0,
+            9000
+          ],
+          "dashed": [
+            true,
+            true,
+            false
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Realisation: Motor Vehicles taken over",
+          "side": "debit",
+          "amount": [
+            15000,
+            0,
+            0
+          ],
+          "dashed": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Realisation: Inventory taken over",
+          "side": "debit",
+          "amount": [
+            0,
+            5600,
+            0
+          ],
+          "dashed": [
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Realisation: Loss on Realisation",
+          "side": "debit",
+          "amount": [
+            22300,
+            13380,
+            8920
           ]
         },
         {
@@ -41,341 +555,14 @@
           "particular": "Bank",
           "side": "debit",
           "amount": [
+            40700,
+            36020,
             0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Freight Charges",
-          "side": "debit",
-          "amount": [
-            2100
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Insurance Expenses",
-          "side": "debit",
-          "amount": [
-            1000
-          ]
-        },
-        {
-          "date": "5",
-          "particular": "Consignee - Mr. Tan",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Carriage Charges",
-          "side": "debit",
-          "amount": [
-            500
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Storage Expenses",
-          "side": "debit",
-          "amount": [
-            400
-          ]
-        },
-        {
-          "date": "10",
-          "particular": "Bills Receivable - Discounting Charges",
-          "side": "debit",
-          "amount": [
-            500
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Consignee - Mr. Tan",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Selling Expenses",
-          "side": "debit",
-          "amount": [
-            480
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Sales Commission (RM54,000 x 5%)",
-          "side": "debit",
-          "amount": [
-            2700
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Del Credere Commission (RM54,000 x 1%)",
-          "side": "debit",
-          "amount": [
-            540
-          ]
-        },
-        {
-          "date": "30",
-          "particular": "Profit and Loss - Profit on Consignment",
-          "side": "debit",
-          "amount": [
-            11358
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "2020",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Mar 5",
-          "particular": "Goods Lost in Transit",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "(RM(60,000 + 2,100 + 1,000) x 2/50",
-          "side": "credit",
-          "amount": [
-            2524
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Consignee - Mr. Tan - Sales (RM1,800 x 30)",
-          "side": "credit",
-          "amount": [
-            54000
-          ]
-        },
-        {
-          "date": "30",
-          "particular": "Unsold Inventory c/d",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "(RM(60,000 + 2,100 + 1,000) x 18/50 + RM(500 + 400) x 18/48)",
-          "side": "credit",
-          "amount": [
-            23054
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        }
-      ],
-      "isInGL": true,
-      "pageNumber": 0,
-      "columnCount": 1
-    },
-    {
-      "id": 2,
-      "type": "ledger",
-      "name": "Consignee - Mr. Tan",
-      "nature": "A",
-      "topTextColumnCount": 1,
-      "headers": [
-        {
-          "debit": [
-            "RM"
           ],
-          "credit": [
-            "RM"
-          ]
-        }
-      ],
-      "entries": [
-        {
-          "date": "2020",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "May 20",
-          "particular": "Goods Lost in Transit - Insurance Claim",
-          "side": "debit",
-          "amount": [
-            2000
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Consignment to Mr. Tan - Sales",
-          "side": "debit",
-          "amount": [
-            54000
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
+          "dashed": [
+            false,
+            false,
+            true
           ]
         },
         {
@@ -383,6 +570,8 @@
           "particular": "TOTAL",
           "side": "debit",
           "amount": [
+            0,
+            0,
             0
           ]
         },
@@ -391,189 +580,79 @@
           "particular": "",
           "side": "debit",
           "amount": [
+            0,
+            0,
             0
           ]
         },
         {
-          "date": "2020",
+          "date": "2021",
           "particular": "",
           "side": "credit",
           "amount": [
+            0,
+            0,
             0
           ]
         },
         {
-          "date": "Mar 5",
-          "particular": "Bills Receivable",
+          "date": "Sep 1",
+          "particular": "Balance b/d",
           "side": "credit",
           "amount": [
-            40000
+            60000,
+            40000,
+            10000
           ]
         },
         {
-          "date": "5",
-          "particular": "Consignment to Mr. Tan",
+          "date": "1",
+          "particular": "Current",
           "side": "credit",
           "amount": [
+            18000,
+            15000,
             0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Carriage Charges",
-          "side": "credit",
-          "amount": [
-            500
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Storage Expenses",
-          "side": "credit",
-          "amount": [
-            400
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Consignment to Mr. Tan",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Selling Expenses",
-          "side": "credit",
-          "amount": [
-            480
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Sales Commission",
-          "side": "credit",
-          "amount": [
-            2700
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Del Credere Commission",
-          "side": "credit",
-          "amount": [
-            540
-          ]
-        },
-        {
-          "date": "30",
-          "particular": "Bank - Sight Draft",
-          "side": "credit",
-          "amount": [
-            11380
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        }
-      ],
-      "isInGL": true,
-      "pageNumber": 0,
-      "columnCount": 1
-    },
-    {
-      "id": 3,
-      "type": "ledger",
-      "name": "Goods Lost in Transit",
-      "nature": "TEMP",
-      "topTextColumnCount": 1,
-      "headers": [
-        {
-          "debit": [
-            "RM"
           ],
-          "credit": [
-            "RM"
-          ]
-        }
-      ],
-      "entries": [
-        {
-          "date": "2020",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
+          "dashed": [
+            false,
+            false,
+            true
           ]
         },
         {
-          "date": "Mar 5",
-          "particular": "Consignment to Mr. Tan",
-          "side": "debit",
+          "date": "1",
+          "particular": "Bank",
+          "side": "credit",
           "amount": [
-            2524
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
+            0,
+            0,
+            7920
+          ],
+          "dashed": [
+            true,
+            true,
+            false
           ]
         },
         {
           "date": "",
-          "particular": "TOTAL",
-          "side": "debit",
+          "particular": "",
+          "side": "credit",
           "amount": [
+            0,
+            0,
             0
           ]
         },
         {
           "date": "",
           "particular": "",
-          "side": "debit",
+          "side": "credit",
           "amount": [
+            0,
+            0,
             0
-          ]
-        },
-        {
-          "date": "2020",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "May 20",
-          "particular": "Consignee - Mr. Tan - Insurance Claim",
-          "side": "credit",
-          "amount": [
-            2000
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Profit and Loss ",
-          "side": "credit",
-          "amount": [
-            524
           ]
         },
         {
@@ -581,6 +660,8 @@
           "particular": "TOTAL",
           "side": "credit",
           "amount": [
+            0,
+            0,
             0
           ]
         },
@@ -589,13 +670,13 @@
           "particular": "",
           "side": "credit",
           "amount": [
+            0,
+            0,
             0
           ]
         }
       ],
-      "isInGL": true,
-      "pageNumber": 0,
-      "columnCount": 1
+      "columnCount": 3
     }
   ]
 }

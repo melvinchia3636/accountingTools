@@ -124,7 +124,6 @@
       "type": "ledger",
       "name": "Truck",
       "nature": "A",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -234,14 +233,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 3,
       "type": "ledger",
       "name": "Hire Purchase Vendor - South Motor Company",
       "nature": "L",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -415,14 +415,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 4,
       "type": "ledger",
       "name": "Hire Purchase Interest",
       "nature": "EX",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -500,14 +501,15 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 5,
       "type": "ledger",
       "name": "Accumulated Depreciation",
       "nature": "A-",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -617,7 +619,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     },
     {
       "id": 6,

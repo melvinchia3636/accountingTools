@@ -404,7 +404,6 @@
       "type": "ledger",
       "name": "Partners' Current",
       "nature": "E",
-      "column": 2,
       "topTextColumnCount": 2,
       "headers": [
         {
@@ -604,7 +603,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 2
     }
   ],
   "questionName": "UEB-2019-2"

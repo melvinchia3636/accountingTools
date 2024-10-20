@@ -92,7 +92,6 @@
       "type": "ledger",
       "name": "Capital Reduction",
       "nature": "TEMP",
-      "column": 1,
       "topTextColumnCount": 1,
       "headers": [
         {
@@ -218,7 +217,9 @@
           ]
         }
       ],
-      "isInGL": true
+      "isInGL": true,
+      "pageNumber": 0,
+      "columnCount": 1
     }
   ],
   "questionName": "GEA-2019-2"

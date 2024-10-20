@@ -15,6 +15,7 @@ function LedgerHeader({
   setHeaders: (headers: ILedgerHeader[]) => void
   hasFolio: boolean
 }): React.ReactElement {
+  console.log(topTextColumnCount, columnCount)
   return (
     <thead>
       {Array.from({ length: topTextColumnCount }).map((_, i) => (
