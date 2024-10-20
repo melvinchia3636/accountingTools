@@ -213,7 +213,8 @@
             0
           ]
         }
-      ]
+      ],
+      "isInGL": true
     }
   ],
   "questionName": "UEB-2017-4"

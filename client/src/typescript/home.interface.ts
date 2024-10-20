@@ -5,6 +5,7 @@ export interface IListEntry {
   topic: string
   docAmount: {
     journal: number
+    'petty-cash-book': number
     ledger: number
     statement: number
   }

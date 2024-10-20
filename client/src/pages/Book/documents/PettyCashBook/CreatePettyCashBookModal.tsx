@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/indent */
+/* eslint-disable @typescript-eslint/member-delimiter-style */
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useEffect, useState } from 'react'
@@ -6,7 +9,7 @@ import CreateButton from '../../../../components/CreateButton'
 import { toast } from 'react-toastify'
 import { useParams } from 'react-router-dom'
 
-function CreateJournalModal({
+function CreatePettyCashBookModal({
   isOpen,
   onClose,
   reloadBook
@@ -15,22 +18,24 @@ function CreateJournalModal({
   onClose: () => void
   reloadBook: () => void
 }): React.ReactElement {
-  const [name, setName] = useState('')
   const { id } = useParams()
+  const [analysisColumnCount, setColumnCount] = useState(1)
+  const [pageNumber, setPageNumber] = useState(0)
 
   function onSubmit(): void {
-    if (name.trim() === '') {
+    if (analysisColumnCount === 0) {
       toast.error('Please fill all the fields')
       return
     }
 
-    fetch(`http://localhost:3000/journals/${id}`, {
+    fetch(`http://localhost:3000/pcb/${id}`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name
+        analysisColumnCount,
+        pageNumber
       })
     })
       .then(async (res) => await res.json())
@@ -38,19 +43,22 @@ function CreateJournalModal({
         if (data.status === 'success') {
           onClose()
           setTimeout(() => {
-            toast.success('Journal created successfully')
+            toast.success('Petty Cash Book created successfully')
             reloadBook()
           }, 700)
         }
       })
       .catch((err) => {
         console.error(err)
-        toast.error('Failed to create journal')
+        toast.error('Failed to create petty cash book')
       })
   }
 
   useEffect(() => {
-    setName('')
+    if (isOpen) {
+      setColumnCount(1)
+      setPageNumber(0)
+    }
   }, [isOpen])
 
   return (
@@ -73,27 +81,37 @@ function CreateJournalModal({
                   as="h3"
                   className="text-xl flex gap-2 items-center text-zinc-200 font-medium"
                 >
-                  <Icon icon="uil:file-alt" className="w-6 h-6 shrink-0" />
-                  Create Journal
+                  <Icon icon="tabler:square-letter-p" className="w-6 h-6" />
+                  Create Petty Cash Book
                 </DialogTitle>
                 <p className="mt-2 text-zinc-500">
-                  Create a new journal to start recording transactions.
+                  Create a new petty cash book to start recording transactions.
                 </p>
               </div>
               <Icon
                 icon="uil:times"
-                className="w-6 h-6 cursor-pointer mt-2 text-zinc-500 hover:text-zinc-200"
+                className="w-6 h-6 shrink-0 mt-2 cursor-pointer text-zinc-500 hover:text-zinc-200"
                 onClick={onClose}
               />
             </div>
 
-            <div className="flex flex-col gap-6 mt-6">
+            <div className="flex flex-col gap-5 mt-6">
               <Input
-                name="Journal Name"
-                icon="tabler:file"
-                value={name}
+                name="Number of Analysis Columns"
+                icon="uil:grid"
+                value={
+                  analysisColumnCount === 0 ? '' : analysisColumnCount + ''
+                }
                 onChange={(e) => {
-                  setName(e.target.value)
+                  setColumnCount(parseInt(e.target.value) || 0)
+                }}
+              />
+              <Input
+                name="Page Number (Optional)"
+                icon="uil:file"
+                value={pageNumber === 0 ? '' : pageNumber + ''}
+                onChange={(e) => {
+                  setPageNumber(parseInt(e.target.value) || 0)
                 }}
               />
             </div>
@@ -105,4 +123,4 @@ function CreateJournalModal({
   )
 }
 
-export default CreateJournalModal
+export default CreatePettyCashBookModal

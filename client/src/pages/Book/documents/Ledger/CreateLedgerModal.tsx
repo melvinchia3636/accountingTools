@@ -10,7 +10,8 @@ import {
   DialogPanel,
   DialogTitle,
   Field,
-  Label
+  Label,
+  Switch
 } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React, { useEffect, useState } from 'react'
@@ -26,11 +27,14 @@ const NATURES = [
   { id: 'L', name: 'Liability' },
   { id: 'L-', name: 'Liability (Contra)' },
   { id: 'E', name: 'Equity' },
+  { id: 'E-', name: 'Equity (Contra)' },
   { id: 'IN', name: 'Income' },
   { id: 'IN-', name: 'Income (Contra)' },
   { id: 'EX', name: 'Expenses' },
-  { id: 'EX-', name: 'Income (Contra)' },
-  { id: 'TEMP', name: 'Temporary' }
+  { id: 'EX-', name: 'Expenses (Contra)' },
+  { id: 'TEMP', name: 'Temporary' },
+  { id: 'TRADE', name: 'Trading Account' },
+  { id: 'PL', name: 'Profit and Loss' }
 ]
 
 function CreateLedgerModal({
@@ -50,6 +54,9 @@ function CreateLedgerModal({
   } | null>(null)
   const [columnCount, setColumnCount] = useState(1)
   const [topTextColumnCount, setTopTextColumnCount] = useState(1)
+  const [pageNumber, setPageNumber] = useState(0)
+  const [hasFolio, setHasFolio] = useState(false)
+  const [isInGL, setIsInGL] = useState(false)
   const [query, setQuery] = useState('')
   const [nameAutofillData, setNameAutofillData] = useState<string[]>([])
 
@@ -94,7 +101,10 @@ function CreateLedgerModal({
         name,
         nature: selectedNature.id,
         columnCount,
-        topTextColumnCount
+        topTextColumnCount,
+        pageNumber,
+        hasFolio,
+        isInGL
       })
     })
       .then(async (res) => await res.json())
@@ -119,6 +129,9 @@ function CreateLedgerModal({
       setSelectedNature(null)
       setColumnCount(1)
       setTopTextColumnCount(1)
+      setPageNumber(0)
+      setHasFolio(false)
+      setIsInGL(true)
 
       fetchAutoFillData()
     }
@@ -130,7 +143,7 @@ function CreateLedgerModal({
       as="div"
       onClose={() => {}}
       transition
-      className="fixed z-[60] inset-0 flex w-screen items-center justify-center bg-black/30 p-4 transition duration-300 ease-out data-[closed]:opacity-0"
+      className="fixed z-[60] inset-0 flex w-screen items-center justify-center bg-black/20 backdrop-blur-sm p-4 transition duration-300 ease-out data-[closed]:opacity-0"
     >
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4">
@@ -158,7 +171,7 @@ function CreateLedgerModal({
               />
             </div>
 
-            <div className="flex flex-col gap-6 mt-6">
+            <div className="flex flex-col gap-5 mt-6">
               <AutofillInput
                 name="Ledger Name"
                 icon="tabler:square-letter-t"
@@ -227,7 +240,45 @@ function CreateLedgerModal({
                   setTopTextColumnCount(parseInt(e.target.value) || 0)
                 }}
               />
+              <Input
+                name="Page Number (Optional)"
+                icon="uil:file"
+                value={pageNumber === 0 ? '' : pageNumber + ''}
+                onChange={(e) => {
+                  setPageNumber(parseInt(e.target.value) || 0)
+                }}
+              />
+              <div className="flex items-center justify-between gap-4 h-14 border-[1.5px] border-zinc-700 rounded-md px-4">
+                <p className="text-zinc-500">Enable Folio Column</p>
+                <div className="flex items-center gap-4">
+                  <Switch
+                    checked={hasFolio}
+                    onChange={setHasFolio}
+                    className="group inline-flex h-6 w-11 items-center rounded-full bg-zinc-800 transition"
+                  >
+                    <span className="size-4 translate-x-1 rounded-full bg-zinc-500 group-data-[checked]:bg-zinc-100 transition group-data-[checked]:translate-x-6" />
+                  </Switch>
+                  <Icon icon="uil:folder" className="w-6 h-6 text-zinc-500" />
+                </div>
+              </div>
+              <div className="flex items-center justify-between gap-4 h-14 border-[1.5px] border-zinc-700 rounded-md px-4">
+                <p className="text-zinc-500">Include in General Ledger</p>
+                <div className="flex items-center gap-4">
+                  <Switch
+                    checked={isInGL}
+                    onChange={setIsInGL}
+                    className="group inline-flex h-6 w-11 items-center rounded-full bg-zinc-800 transition"
+                  >
+                    <span className="size-4 translate-x-1 rounded-full bg-zinc-500 group-data-[checked]:bg-zinc-100 transition group-data-[checked]:translate-x-6" />
+                  </Switch>
+                  <Icon
+                    icon="uil:book-open"
+                    className="w-6 h-6 text-zinc-500"
+                  />
+                </div>
+              </div>
             </div>
+
             <CreateButton action="Create" onSubmit={onSubmit} />
           </DialogPanel>
         </div>

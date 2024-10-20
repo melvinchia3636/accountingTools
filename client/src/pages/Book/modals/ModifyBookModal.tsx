@@ -112,7 +112,7 @@ function ModifyBookModal({
       as="div"
       onClose={() => {}}
       transition
-      className="fixed z-[60] inset-0 flex w-screen items-center justify-center bg-black/30 p-4 transition duration-300 ease-out data-[closed]:opacity-0"
+      className="fixed z-[60] inset-0 flex w-screen items-center justify-center bg-black/20 backdrop-blur-sm p-4 transition duration-300 ease-out data-[closed]:opacity-0"
     >
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4">
@@ -126,7 +126,12 @@ function ModifyBookModal({
                   as="h3"
                   className="text-xl flex gap-2 items-center text-zinc-200 font-medium"
                 >
-                  <Icon icon="tabler:pencil-plus" className="w-6 h-6" />
+                  <Icon
+                    icon={
+                      openType === 'update' ? 'tabler:pencil' : 'tabler:plus'
+                    }
+                    className="w-6 h-6"
+                  />
                   {openType === 'update' ? 'Update' : 'Create'} Book
                 </DialogTitle>
                 <p className="mt-2 text-zinc-500">

@@ -277,7 +277,8 @@
             0
           ]
         }
-      ]
+      ],
+      "isInGL": true
     }
   ],
   "questionName": "UEB-2018-4"

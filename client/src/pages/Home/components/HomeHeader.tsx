@@ -5,10 +5,12 @@ import { useSearchParams } from 'react-router-dom'
 
 function HomeHeader({
   setModifyBookModalOpenType,
-  setSidebarCollapsed
+  setSidebarCollapsed,
+  itemCount
 }: {
   setModifyBookModalOpenType: (type: 'create' | 'update' | null) => void
   setSidebarCollapsed: React.Dispatch<React.SetStateAction<boolean>>
+  itemCount: number
 }): React.ReactElement {
   const [searchParams] = useSearchParams()
 
@@ -24,7 +26,10 @@ function HomeHeader({
           <Icon icon="tabler:menu" className="w-6 h-6" />
         </button>
         <Icon icon="uil:book" className="w-9 h-9" />
-        {Array.from(searchParams.keys()).length > 0 ? 'Filtered' : 'All'} Books
+        <span>
+          {Array.from(searchParams.keys()).length > 0 ? 'Filtered' : 'All'}{' '}
+          Books <span className="text-zinc-500 text-sm">({itemCount})</span>
+        </span>
       </h1>
       <Button
         onClick={() => {

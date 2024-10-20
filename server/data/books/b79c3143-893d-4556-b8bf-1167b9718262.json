@@ -117,7 +117,8 @@
             0
           ]
         }
-      ]
+      ],
+      "isInGL": true
     },
     {
       "id": 2,
@@ -265,7 +266,8 @@
             0
           ]
         }
-      ]
+      ],
+      "isInGL": true
     }
   ],
   "questionName": "UEB-2021-6"

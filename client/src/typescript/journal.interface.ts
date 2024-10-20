@@ -1,6 +1,6 @@
 export interface IJournal {
   id: number
-  type: string
+  type: 'journal'
   name: string
   entries: IJournalEntry[]
 }

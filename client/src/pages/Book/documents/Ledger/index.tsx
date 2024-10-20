@@ -1,3 +1,5 @@
+/* eslint-disable multiline-ternary */
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
 /* eslint-disable @typescript-eslint/member-delimiter-style */
 /* eslint-disable @typescript-eslint/indent */
@@ -14,13 +16,17 @@ import LedgerDateColumn from './components/LedgerDateColumn'
 import LedgerParticularColumn from './components/LedgerParticularColumn'
 import LedgerTotalColumn from './components/LedgerTotalColumn'
 import LedgerAmountColumn from './components/LedgerAmountColumn'
+import LedgerFolioColumn from './components/LedgerFolioColumn'
 
 function Ledger({
   docRef,
   data,
   headers,
   name,
+  hasFolio,
+  isInGL,
   companyName,
+  pageNumber,
   setData,
   columnCount,
   setHeaders,
@@ -31,6 +37,9 @@ function Ledger({
   headers: ILedgerHeader[]
   companyName: string
   name: string
+  hasFolio: boolean
+  isInGL: boolean
+  pageNumber: number
   setData: (data: ILedger['entries']) => void
   setHeaders: (headers: ILedgerHeader[]) => void
   columnCount: number
@@ -98,6 +107,7 @@ function Ledger({
         date: '',
         particular: '',
         side: { debit: LedgerSide.Debit, credit: LedgerSide.Credit }[side],
+        ...(hasFolio && { folio: '' }),
         amount: Array(columnCount).fill(0)
       })
 
@@ -122,6 +132,8 @@ function Ledger({
           credit.date ||
           debit.particular ||
           credit.particular ||
+          debit.folio ||
+          credit.folio ||
           debit.amount.some((amount) => amount) ||
           credit.amount.some((amount) => amount) ||
           index === debitEntries.length - 1
@@ -145,7 +157,8 @@ function Ledger({
           date: '',
           particular: '',
           side: LedgerSide.Credit,
-          amount: Array(columnCount).fill(0)
+          amount: Array(columnCount).fill(0),
+          ...(hasFolio && { folio: '' })
         }))
       ])
     }
@@ -159,7 +172,8 @@ function Ledger({
           date: '',
           particular: '',
           side: LedgerSide.Debit,
-          amount: Array(columnCount).fill(0)
+          amount: Array(columnCount).fill(0),
+          ...(hasFolio && { folio: '' })
         }))
       ])
     }
@@ -177,12 +191,30 @@ function Ledger({
           {companyName}
         </span>
       </h2>
-      <h3 className="text-2xl print:text-base text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
-        General Ledger
-      </h3>
-      <h4 className="text-lg print:text-base text-center mt-8 print:mt-4 font-medium">
-        {name}
-      </h4>
+      {isInGL ? (
+        <>
+          <h3 className="text-2xl print:text-base text-center font-semibold mt-4 underline decoration-zinc-200 underline-offset-4 decoration-2">
+            General Ledger
+          </h3>
+          <h4 className="text-lg w-full relative print:text-base text-center mt-8 print:mt-4 font-medium">
+            {name}
+            {pageNumber !== 0 && (
+              <span className="absolute top-0 right-0 text-zinc-500 print:text-zinc-900">
+                Page {pageNumber.toString().padStart(2, '0')}
+              </span>
+            )}
+          </h4>
+        </>
+      ) : (
+        <h3 className="text-2xl relative print:text-base text-center font-semibold mt-8 print:mt-4">
+          {name}
+          {pageNumber !== 0 && (
+            <span className="absolute text-lg top-1/2 -translate-y-1/2 right-0 text-zinc-500 print:text-zinc-900">
+              Page {pageNumber.toString().padStart(2, '0')}
+            </span>
+          )}
+        </h3>
+      )}
       <div className="overflow-x-auto">
         <table className="w-full border-2 print:text-xs border-zinc-700 mt-2">
           <LedgerHeader
@@ -190,6 +222,7 @@ function Ledger({
             topTextColumnCount={topTextColumnCount}
             headers={headers}
             setHeaders={setHeaders}
+            hasFolio={hasFolio}
           />
           <tbody>
             {Array.from({ length: maxEntries }).map(
@@ -223,6 +256,15 @@ function Ledger({
                           query={query}
                           setQuery={setQuery}
                         />
+                        {hasFolio && (
+                          <LedgerFolioColumn
+                            index={index}
+                            side={LedgerSide.Debit}
+                            entries={debitEntries}
+                            updateEntry={updateEntry}
+                            checkAndClearEmptyRow={checkAndClearEmptyRow}
+                          />
+                        )}
                         {debitEntries[index]?.particular === 'TOTAL'
                           ? Array(columnCount)
                               .fill(0)
@@ -274,6 +316,15 @@ function Ledger({
                           query={query}
                           setQuery={setQuery}
                         />
+                        {hasFolio && (
+                          <LedgerFolioColumn
+                            index={index}
+                            side={LedgerSide.Credit}
+                            entries={creditEntries}
+                            updateEntry={updateEntry}
+                            checkAndClearEmptyRow={checkAndClearEmptyRow}
+                          />
+                        )}
                         {creditEntries[index]?.particular === 'TOTAL'
                           ? Array(columnCount)
                               .fill(0)

@@ -12,11 +12,12 @@ router.get("/", (req, res) => {
       code: data.code,
       name: data.entityName,
       topic: data.topic,
-      docAmount: {
-        journal: data.data.filter((doc) => doc.type === "journal").length,
-        ledger: data.data.filter((doc) => doc.type === "ledger").length,
-        statement: data.data.filter((doc) => doc.type === "statement").length,
-      },
+      docAmount: Object.fromEntries(
+        ["journal", "petty-cash-book", "ledger", "statement"].map((type) => [
+          type,
+          data.data.filter((doc) => doc.type === type).length,
+        ])
+      ),
     };
   });
 

@@ -7,6 +7,7 @@ const booksRoute = require("./routes/books");
 const journalRoute = require("./routes/journals");
 const ledgerRoute = require("./routes/ledgers");
 const statementRoute = require("./routes/statements");
+const PCBRoute = require("./routes/pcb");
 const categoriesRoute = require("./routes/categories");
 const autofillRoute = require("./routes/autofill");
 
@@ -19,6 +20,7 @@ app.use("/books", booksRoute);
 app.use("/journals", journalRoute);
 app.use("/ledgers", ledgerRoute);
 app.use("/statements", statementRoute);
+app.use("/pcb", PCBRoute);
 app.use("/categories", categoriesRoute);
 app.use("/autofill", autofillRoute);
 

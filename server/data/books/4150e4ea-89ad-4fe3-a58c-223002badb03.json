@@ -1,15 +1,18 @@
 {
-  "code": "UEB-2020-2",
-  "entityName": "Peh, Pak, Wee",
-  "topic": "Partnership Withdrawal and Admission",
+  "code": "UEB-2021-4",
+  "entityName": "CK Company",
+  "topic": "Branch (Centralised)",
   "data": [
     {
       "id": 1,
       "type": "ledger",
-      "name": "Revaluation",
-      "nature": "TEMP",
+      "name": "Branch Inventory",
+      "nature": "TRADE",
+      "hasFolio": false,
       "column": 1,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -30,51 +33,43 @@
           ]
         },
         {
-          "date": "Jul 1",
-          "particular": "Inventory",
+          "date": "Jan 1",
+          "particular": "Balance b/d",
           "side": "debit",
           "amount": [
-            365
+            2400
           ]
         },
         {
-          "date": "1",
-          "particular": "Allowance for Doubtful Debts",
+          "date": "Dec 31",
+          "particular": "Goods Sent to Branch",
           "side": "debit",
           "amount": [
-            255
+            9260
           ]
         },
         {
-          "date": "1",
-          "particular": "Partners' Capital - Profit on Revaluation",
+          "date": "31",
+          "particular": "Branch Accounts Receivable - Returns Inwards",
+          "side": "debit",
+          "amount": [
+            220
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Branch Profit and Loss - Gross Profit",
           "side": "debit",
           "amount": [
             0
           ]
         },
         {
-          "date": "",
-          "particular": "- Peh (1/2 * RM 16,780)",
+          "date": "31",
+          "particular": "Branch Profit and Loss - Gross Profit",
           "side": "debit",
           "amount": [
-            8390
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Pak (1/5 * RM 16,780)",
-          "side": "debit",
-          "amount": [
-            3356
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Wee (3/10 * RM 16,780)",
-          "side": "debit",
-          "amount": [
-            5034
+            5960
           ]
         },
         {
@@ -83,6 +78,22 @@
           "side": "debit",
           "amount": [
             0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            5960
           ]
         },
         {
@@ -102,51 +113,43 @@
           ]
         },
         {
-          "date": "Jul 1",
-          "particular": "Building",
+          "date": "Dec 31",
+          "particular": "Branch Accounts Receivable - Credit Sales",
           "side": "credit",
           "amount": [
-            5000
+            12100
           ]
         },
         {
-          "date": "1",
-          "particular": "Plant and Machinery",
+          "date": "31",
+          "particular": "Bank - Cash Sales",
           "side": "credit",
           "amount": [
-            5500
+            3590
           ]
         },
         {
-          "date": "1",
-          "particular": "Motor Vehicles",
+          "date": "31",
+          "particular": "Goods Sent to Branch - Returns",
           "side": "credit",
           "amount": [
-            6900
+            180
           ]
         },
         {
-          "date": "",
-          "particular": "",
+          "date": "31",
+          "particular": "Branch Profit and Loss - Abnormal Loss",
           "side": "credit",
           "amount": [
-            0
+            520
           ]
         },
         {
-          "date": "",
-          "particular": "",
+          "date": "31",
+          "particular": "Balance c/d",
           "side": "credit",
           "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
+            1450
           ]
         },
         {
@@ -164,17 +167,35 @@
           "amount": [
             0
           ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
         }
-      ],
-      "isInGL": true
+      ]
     },
     {
       "id": 2,
       "type": "ledger",
-      "name": "Goodwill",
+      "name": "Branch Accounts Receivable",
       "nature": "A",
+      "hasFolio": false,
       "column": 1,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -195,16 +216,24 @@
           ]
         },
         {
-          "date": "Jul 1",
+          "date": "Jan 1",
           "particular": "Balance b/d",
           "side": "debit",
           "amount": [
-            25000
+            5600
           ]
         },
         {
-          "date": "1",
-          "particular": "Partners' Capital",
+          "date": "Dec 31",
+          "particular": "Branch Inventory - Credit Sales",
+          "side": "debit",
+          "amount": [
+            12100
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
           "side": "debit",
           "amount": [
             0
@@ -212,26 +241,10 @@
         },
         {
           "date": "",
-          "particular": "- Peh (RM5,000 x 1/2)",
+          "particular": "",
           "side": "debit",
           "amount": [
-            2500
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Pak (RM 5,000 x 1/5)",
-          "side": "debit",
-          "amount": [
-            1000
-          ]
-        },
-        {
-          "date": "",
-          "particular": "- Wee (RM 5,000 x 3/10)",
-          "side": "debit",
-          "amount": [
-            1500
+            0
           ]
         },
         {
@@ -243,7 +256,7 @@
           ]
         },
         {
-          "date": "2020",
+          "date": "2021",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -251,11 +264,11 @@
           ]
         },
         {
-          "date": "Jul 1",
+          "date": "Jan 1",
           "particular": "Balance b/d",
           "side": "debit",
           "amount": [
-            15000
+            10290
           ]
         },
         {
@@ -275,43 +288,35 @@
           ]
         },
         {
-          "date": "Jul 1",
-          "particular": "Partners' Capital",
+          "date": "Dec 31",
+          "particular": "Branch Inventory - Returns Inwards",
           "side": "credit",
           "amount": [
-            0
+            220
           ]
         },
         {
-          "date": "",
-          "particular": "- Peh",
+          "date": "31",
+          "particular": "Bank",
           "side": "credit",
           "amount": [
-            5000
+            6400
           ]
         },
         {
-          "date": "",
-          "particular": "- Wee",
+          "date": "31",
+          "particular": "Branch Profit and Loss - Bad Debts",
           "side": "credit",
           "amount": [
-            5000
+            790
           ]
         },
         {
-          "date": "",
-          "particular": "- Wong",
-          "side": "credit",
-          "amount": [
-            5000
-          ]
-        },
-        {
-          "date": "1",
+          "date": "31",
           "particular": "Balance c/d",
           "side": "credit",
           "amount": [
-            15000
+            10290
           ]
         },
         {
@@ -346,42 +351,24 @@
             0
           ]
         }
-      ],
-      "isInGL": true
+      ]
     },
     {
       "id": 3,
       "type": "ledger",
-      "name": "Partners' Capital",
-      "nature": "E",
-      "column": 4,
-      "topTextColumnCount": 2,
+      "name": "Branch Profit and Loss",
+      "nature": "PL",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
-            "Peh",
-            "Pak",
-            "Wee",
-            "Wong"
-          ],
-          "credit": [
-            "Peh",
-            "Pak",
-            "Wee",
-            "Wong"
-          ]
-        },
-        {
-          "debit": [
-            "RM",
-            "RM",
-            "RM",
             "RM"
           ],
           "credit": [
-            "RM",
-            "RM",
-            "RM",
             "RM"
           ]
         }
@@ -392,112 +379,47 @@
           "particular": "",
           "side": "debit",
           "amount": [
-            0,
-            0,
-            0,
             0
           ]
         },
         {
-          "date": "Jul 1",
-          "particular": "Partners' Current",
+          "date": "Dec 31",
+          "particular": "Branch Inventory - Abnormal Loss",
           "side": "debit",
           "amount": [
-            0,
-            300,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
+            520
           ]
         },
         {
-          "date": "1",
-          "particular": "Goodwill - written off",
+          "date": "31",
+          "particular": "Bank - Salaries",
           "side": "debit",
           "amount": [
-            5000,
-            0,
-            5000,
-            5000
-          ],
-          "dashed": [
-            false,
-            true,
-            false,
-            false
+            2100
           ]
         },
         {
-          "date": "1",
-          "particular": "Office Equipment - taken over",
+          "date": "31",
+          "particular": "Bank - Sundry Expenses",
           "side": "debit",
           "amount": [
-            0,
-            30000,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
+            200
           ]
         },
         {
-          "date": "1",
-          "particular": "Loan from Pak",
+          "date": "31",
+          "particular": "Branch Accounts Receivable - Bad Debts",
           "side": "debit",
           "amount": [
-            0,
-            12014,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
+            790
           ]
         },
         {
-          "date": "1",
-          "particular": "Bank",
+          "date": "31",
+          "particular": "Net Profit",
           "side": "debit",
           "amount": [
-            0,
-            36042,
-            0,
-            0
-          ],
-          "dashed": [
-            true,
-            false,
-            true,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Balance c/d",
-          "side": "debit",
-          "amount": [
-            200000,
-            0,
-            200000,
-            200000
-          ],
-          "dashed": [
-            false,
-            true,
-            false,
-            false
+            2350
           ]
         },
         {
@@ -505,9 +427,6 @@
           "particular": "TOTAL",
           "side": "debit",
           "amount": [
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -516,9 +435,6 @@
           "particular": "",
           "side": "debit",
           "amount": [
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -527,78 +443,15 @@
           "particular": "",
           "side": "credit",
           "amount": [
-            0,
-            0,
-            0,
             0
           ]
         },
         {
-          "date": "Jul 1",
-          "particular": "Balance b/d",
+          "date": "Dec 31",
+          "particular": "Branch Inventory - Gross Profit",
           "side": "credit",
           "amount": [
-            185000,
-            74000,
-            111000,
-            0
-          ],
-          "dashed": [
-            false,
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Revaluation - Profit on Revaluation",
-          "side": "credit",
-          "amount": [
-            8390,
-            3356,
-            5034,
-            0
-          ],
-          "dashed": [
-            false,
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Goodwill",
-          "side": "credit",
-          "amount": [
-            2500,
-            1000,
-            1500,
-            0
-          ],
-          "dashed": [
-            false,
-            false,
-            false,
-            true
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Bank",
-          "side": "credit",
-          "amount": [
-            9110,
-            0,
-            87466,
-            205000
-          ],
-          "dashed": [
-            false,
-            true,
-            false,
-            false
+            5960
           ]
         },
         {
@@ -606,9 +459,6 @@
           "particular": "",
           "side": "credit",
           "amount": [
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -617,9 +467,22 @@
           "particular": "",
           "side": "credit",
           "amount": [
-            0,
-            0,
-            0,
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
             0
           ]
         },
@@ -628,9 +491,6 @@
           "particular": "TOTAL",
           "side": "credit",
           "amount": [
-            0,
-            0,
-            0,
             0
           ]
         },
@@ -639,15 +499,10 @@
           "particular": "",
           "side": "credit",
           "amount": [
-            0,
-            0,
-            0,
             0
           ]
         }
-      ],
-      "isInGL": true
+      ]
     }
-  ],
-  "questionName": "UEB-2020-2"
+  ]
 }

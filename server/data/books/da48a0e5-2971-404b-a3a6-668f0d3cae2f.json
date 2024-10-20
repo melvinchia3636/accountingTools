@@ -1,15 +1,18 @@
 {
-  "code": "UEB-2022-6",
-  "entityName": "Hew Enterprise",
-  "topic": "Hire Purchase",
+  "code": "UEB-2019-6",
+  "entityName": "JY Enterprise",
+  "topic": "Branch (Centralised)",
   "data": [
     {
       "id": 1,
       "type": "ledger",
-      "name": "Motor Vehicle",
-      "nature": "A",
+      "name": "Branch Inventory",
+      "nature": "TRADE",
+      "hasFolio": false,
       "column": 1,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -22,31 +25,7 @@
       ],
       "entries": [
         {
-          "date": "2020",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Mar 31",
-          "particular": "Hire Purchase Vendor",
-          "side": "debit",
-          "amount": [
-            100000
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "2021",
+          "date": "2018",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -58,15 +37,23 @@
           "particular": "Balance b/d",
           "side": "debit",
           "amount": [
-            100000
+            16500
           ]
         },
         {
-          "date": "",
-          "particular": "TOTAL",
+          "date": "Dec 31",
+          "particular": "Goods Sent to Branch",
           "side": "debit",
           "amount": [
-            0
+            8830
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Branch Profit and Loss - Gross Profit",
+          "side": "debit",
+          "amount": [
+            21800
           ]
         },
         {
@@ -78,7 +65,39 @@
           ]
         },
         {
-          "date": "2020",
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            18700
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2018",
           "particular": "",
           "side": "credit",
           "amount": [
@@ -87,10 +106,34 @@
         },
         {
           "date": "Dec 31",
+          "particular": "Goods Sent to Branch - Returns",
+          "side": "credit",
+          "amount": [
+            950
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Branch Cash - Cash Sales",
+          "side": "credit",
+          "amount": [
+            16650
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Branch Accounts Receivable - Credit Sales",
+          "side": "credit",
+          "amount": [
+            10830
+          ]
+        },
+        {
+          "date": "31",
           "particular": "Balance c/d",
           "side": "credit",
           "amount": [
-            100000
+            18700
           ]
         },
         {
@@ -102,7 +145,7 @@
           ]
         },
         {
-          "date": "2021",
+          "date": "",
           "particular": "",
           "side": "credit",
           "amount": [
@@ -110,16 +153,8 @@
           ]
         },
         {
-          "date": "Oct 1",
-          "particular": "Disposal of Vehicle",
-          "side": "credit",
-          "amount": [
-            100000
-          ]
-        },
-        {
           "date": "",
-          "particular": "TOTAL",
+          "particular": "",
           "side": "credit",
           "amount": [
             0
@@ -133,16 +168,18 @@
             0
           ]
         }
-      ],
-      "isInGL": true
+      ]
     },
     {
       "id": 2,
       "type": "ledger",
-      "name": "Hire Purchase Vendor",
-      "nature": "L",
+      "name": "Goods Sent to Branch",
+      "nature": "TEMP",
+      "hasFolio": false,
       "column": 1,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -155,115 +192,27 @@
       ],
       "entries": [
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "debit",
           "amount": [
             0
-          ]
-        },
-        {
-          "date": "Apr 1",
-          "particular": "Bank - Deposit (RM100,000 x 10%)",
-          "side": "debit",
-          "amount": [
-            10000
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Bank - 1st Instalment",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "[RM(100,000 x 90% +100,000 x 90% x 3% x 6) x 1/24]",
-          "side": "debit",
-          "amount": [
-            4425
-          ]
-        },
-        {
-          "date": "Sep 30",
-          "particular": "Bank - 2nd Instalment",
-          "side": "debit",
-          "amount": [
-            4425
           ]
         },
         {
           "date": "Dec 31",
-          "particular": "Bank - 3rd Instalment",
+          "particular": "Branch Inventory - Returns",
           "side": "debit",
           "amount": [
-            4425
+            950
           ]
         },
         {
-          "date": "",
-          "particular": "Balance c/d",
+          "date": "31",
+          "particular": "Trading",
           "side": "debit",
           "amount": [
-            92925
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "2021",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Mar 31",
-          "particular": "Bank - 4th Instalment",
-          "side": "debit",
-          "amount": [
-            4425
-          ]
-        },
-        {
-          "date": "Jun 30",
-          "particular": "Bank - 5th Instalment",
-          "side": "debit",
-          "amount": [
-            4425
-          ]
-        },
-        {
-          "date": "Sep 30",
-          "particular": "Bank - 6th Instalment",
-          "side": "debit",
-          "amount": [
-            4425
-          ]
-        },
-        {
-          "date": "Oct 1",
-          "particular": "Bank - Final Settlement",
-          "side": "debit",
-          "amount": [
-            69000
-          ]
-        },
-        {
-          "date": "1",
-          "particular": "Hire Purchase Interest Suspense",
-          "side": "debit",
-          "amount": [
-            12150
+            7880
           ]
         },
         {
@@ -283,107 +232,19 @@
           ]
         },
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "credit",
           "amount": [
             0
-          ]
-        },
-        {
-          "date": "Mar 31",
-          "particular": "Motor Vehicle",
-          "side": "credit",
-          "amount": [
-            100000
-          ]
-        },
-        {
-          "date": "Apr 1",
-          "particular": "Hire Purchase Interest Suspense",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "(RM100,000 x 90% x 3% x 24/4)",
-          "side": "credit",
-          "amount": [
-            16200
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "2021",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Jan 1",
-          "particular": "Balance b/d",
-          "side": "credit",
-          "amount": [
-            92925
           ]
         },
         {
           "date": "Dec 31",
-          "particular": "Profit and Loss - Termination Charges",
+          "particular": "Branch Inventory",
           "side": "credit",
           "amount": [
-            1500
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
+            8830
           ]
         },
         {
@@ -410,16 +271,18 @@
             0
           ]
         }
-      ],
-      "isInGL": true
+      ]
     },
     {
       "id": 3,
       "type": "ledger",
-      "name": "Hire Purchase Interest Suspense",
-      "nature": "EX",
+      "name": "Branch Cash",
+      "nature": "A",
+      "hasFolio": false,
       "column": 1,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -432,47 +295,7 @@
       ],
       "entries": [
         {
-          "date": "2020",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Apr 1",
-          "particular": "Hire Purchase Vendor",
-          "side": "debit",
-          "amount": [
-            16200
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "TOTAL",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "2021",
+          "date": "2018",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -484,7 +307,23 @@
           "particular": "Balance b/d",
           "side": "debit",
           "amount": [
-            14175
+            2450
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Branch Inventory - Cash Sales",
+          "side": "debit",
+          "amount": [
+            16650
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
           ]
         },
         {
@@ -504,6 +343,22 @@
           ]
         },
         {
+          "date": "2019",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            4900
+          ]
+        },
+        {
           "date": "",
           "particular": "",
           "side": "debit",
@@ -512,7 +367,7 @@
           ]
         },
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "credit",
           "amount": [
@@ -521,18 +376,26 @@
         },
         {
           "date": "Dec 31",
-          "particular": "Profit and Loss - Hire Purchase Interest",
+          "particular": "Branch Profit and Loss - Salaries",
           "side": "credit",
           "amount": [
-            0
+            12000
           ]
         },
         {
-          "date": "",
-          "particular": "(RM16,200 x 1/6 x 9/12)",
+          "date": "31",
+          "particular": "Branch Profit and Loss - Rental Expenses",
           "side": "credit",
           "amount": [
-            2025
+            1200
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Bank",
+          "side": "credit",
+          "amount": [
+            1000
           ]
         },
         {
@@ -540,7 +403,7 @@
           "particular": "Balance c/d",
           "side": "credit",
           "amount": [
-            14175
+            4900
           ]
         },
         {
@@ -552,7 +415,7 @@
           ]
         },
         {
-          "date": "2021",
+          "date": "",
           "particular": "",
           "side": "credit",
           "amount": [
@@ -560,24 +423,8 @@
           ]
         },
         {
-          "date": "Oct 1",
-          "particular": "Hire Purchase Vendor",
-          "side": "credit",
-          "amount": [
-            2025
-          ]
-        },
-        {
-          "date": "Dec 31",
-          "particular": "Profit and Loss - Hire Purchase Interest",
-          "side": "credit",
-          "amount": [
-            12150
-          ]
-        },
-        {
           "date": "",
-          "particular": "TOTAL",
+          "particular": "",
           "side": "credit",
           "amount": [
             0
@@ -591,16 +438,18 @@
             0
           ]
         }
-      ],
-      "isInGL": true
+      ]
     },
     {
       "id": 4,
       "type": "ledger",
-      "name": "Profit and Loss",
-      "nature": "E",
+      "name": "Branch Accounts Receivable",
+      "nature": "A",
+      "hasFolio": false,
       "column": 1,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -613,152 +462,120 @@
       ],
       "entries": [
         {
-          "date": "2020",
+          "date": "2018",
           "particular": "",
           "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            13820
+          ]
+        },
+        {
+          "date": "Dec 31",
+          "particular": "Branch Inventory - Credit Sales",
+          "side": "debit",
+          "amount": [
+            10830
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jan 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            3800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2018",
+          "particular": "",
+          "side": "credit",
           "amount": [
             0
           ]
         },
         {
           "date": "Dec 31",
-          "particular": "Hire Purchase Interest",
-          "side": "debit",
+          "particular": "Bank",
+          "side": "credit",
           "amount": [
-            2025
+            19650
           ]
         },
         {
           "date": "31",
-          "particular": "Depreciation of Motor Vehicle ",
-          "side": "debit",
+          "particular": "Branch Profit and Loss - Discounts Allowed",
+          "side": "credit",
           "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "(RM100,000 x 20% x 9/12)",
-          "side": "debit",
-          "amount": [
-            15000
-          ]
-        },
-        {
-          "date": "2021",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "Dec 31",
-          "particular": "Hire Purchase Interest",
-          "side": "debit",
-          "amount": [
-            2025
+            300
           ]
         },
         {
           "date": "31",
-          "particular": "Termination Charges",
-          "side": "debit",
+          "particular": "Branch Accounts Receivable - Bad Debts",
+          "side": "credit",
           "amount": [
-            1500
+            900
           ]
         },
         {
           "date": "31",
-          "particular": "Depreciation of Motor Vehicle ",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "(RM100,000 x 20% x 9/12)",
-          "side": "debit",
-          "amount": [
-            15999
-          ]
-        },
-        {
-          "date": "31",
-          "particular": "Loss on Disposal of Vehicle",
-          "side": "debit",
-          "amount": [
-            5000
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "debit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
+          "particular": "Balance c/d",
           "side": "credit",
           "amount": [
-            0
+            3800
           ]
         },
         {
           "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
-          "side": "credit",
-          "amount": [
-            0
-          ]
-        },
-        {
-          "date": "",
-          "particular": "",
+          "particular": "TOTAL",
           "side": "credit",
           "amount": [
             0
@@ -788,16 +605,18 @@
             0
           ]
         }
-      ],
-      "isInGL": true
+      ]
     },
     {
       "id": 5,
       "type": "ledger",
-      "name": "Disposal of Vehicle",
-      "nature": "TEMP",
+      "name": "Branch Profit and Loss",
+      "nature": "PL",
+      "hasFolio": false,
       "column": 1,
       "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
       "headers": [
         {
           "debit": [
@@ -810,7 +629,7 @@
       ],
       "entries": [
         {
-          "date": "2021",
+          "date": "2018",
           "particular": "",
           "side": "debit",
           "amount": [
@@ -818,35 +637,43 @@
           ]
         },
         {
-          "date": "Oct 1",
-          "particular": "Motor Vehicles",
+          "date": "Dec 31",
+          "particular": "Branch Cash - Salaries",
           "side": "debit",
           "amount": [
-            100000
+            12000
           ]
         },
         {
-          "date": "",
-          "particular": "",
+          "date": "31",
+          "particular": "Branch Cash - Rental Expenses",
           "side": "debit",
           "amount": [
-            0
+            1200
           ]
         },
         {
-          "date": "",
-          "particular": "",
+          "date": "31",
+          "particular": "Branch Accounts Receivable - Discounts Allowed",
           "side": "debit",
           "amount": [
-            0
+            300
           ]
         },
         {
-          "date": "",
-          "particular": "",
+          "date": "31",
+          "particular": "Branch Accounts Receivable - Bad Debts",
           "side": "debit",
           "amount": [
-            0
+            900
+          ]
+        },
+        {
+          "date": "31",
+          "particular": "Net Profit",
+          "side": "debit",
+          "amount": [
+            7400
           ]
         },
         {
@@ -866,7 +693,7 @@
           ]
         },
         {
-          "date": "2021",
+          "date": "2018",
           "particular": "",
           "side": "credit",
           "amount": [
@@ -874,8 +701,16 @@
           ]
         },
         {
-          "date": "Oct 1",
-          "particular": "Accumulated Depreciaton of Motor Vehicles",
+          "date": "Dec 31",
+          "particular": "Branch Inventory - Gross Profit",
+          "side": "credit",
+          "amount": [
+            21800
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
           "side": "credit",
           "amount": [
             0
@@ -883,26 +718,26 @@
         },
         {
           "date": "",
-          "particular": "(RM100,000 x 20% x 18/12)",
+          "particular": "",
           "side": "credit",
           "amount": [
-            30000
+            0
           ]
         },
         {
-          "date": "1",
-          "particular": "Insurance Company",
+          "date": "",
+          "particular": "",
           "side": "credit",
           "amount": [
-            65000
+            0
           ]
         },
         {
-          "date": "Dec 31",
-          "particular": "Profit and Loss - Loss on Disposal of Vehicle",
+          "date": "",
+          "particular": "",
           "side": "credit",
           "amount": [
-            5000
+            0
           ]
         },
         {
@@ -921,9 +756,7 @@
             0
           ]
         }
-      ],
-      "isInGL": true
+      ]
     }
-  ],
-  "questionName": "UEB-2022-6"
+  ]
 }

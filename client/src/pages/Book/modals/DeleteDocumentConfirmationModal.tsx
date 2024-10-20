@@ -13,7 +13,7 @@ function DeleteDocumentConfirmationModal({
 }: {
   isOpen: boolean
   onClose: () => void
-  documentID: string
+  documentID: number
   refreshData: () => void
 }): React.ReactElement {
   const [confirmation, setName] = useState('')
@@ -53,7 +53,7 @@ function DeleteDocumentConfirmationModal({
       as="div"
       onClose={() => {}}
       transition
-      className="fixed z-[60] inset-0 flex w-screen items-center justify-center bg-black/30 p-4 transition duration-300 ease-out data-[closed]:opacity-0"
+      className="fixed z-[60] inset-0 flex w-screen items-center justify-center bg-black/20 backdrop-blur-sm p-4 transition duration-300 ease-out data-[closed]:opacity-0"
     >
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-center justify-center p-4">

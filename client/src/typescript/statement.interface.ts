@@ -1,6 +1,6 @@
 export interface IStatement {
   id: number
-  type: string
+  type: 'statement'
   name: string
   subtitle: string
   columnCount: number

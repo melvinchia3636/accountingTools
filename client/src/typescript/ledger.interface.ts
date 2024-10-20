@@ -1,20 +1,24 @@
 export interface ILedger {
   id: number
-  type: string
+  type: 'ledger'
   name: string
+  pageNumber: number
+  hasFolio: boolean
+  isInGL: boolean
+  topTextColumnCount: number
   nature?: string
   column?: number
-  topTextColumnCount: number
-  headers: Array<string[] | ILedgerHeader>
+  headers: ILedgerHeader[]
   entries: ILedgerEntry[]
   subtitle?: string
-  columnCount?: number
+  columnCount: number
 }
 
 export interface ILedgerEntry {
   date?: string
   particular: string
   side?: LedgerSide
+  folio?: string
   amount: number[]
   dashed?: boolean[]
   underline?: Array<boolean | string> | boolean

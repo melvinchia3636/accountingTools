@@ -74,6 +74,7 @@ function Home(): React.ReactElement {
         <HomeHeader
           setSidebarCollapsed={setSidebarCollapsed}
           setModifyBookModalOpenType={setModifyBookModalOpenType}
+          itemCount={filteredData !== null ? filteredData.length : 0}
         />
         <ul className="mt-8 flex flex-col flex-1 gap-2 sm:grid-cols-2 lg:grid-cols-3">
           {filteredData !== null && filteredData.length > 0 ? (

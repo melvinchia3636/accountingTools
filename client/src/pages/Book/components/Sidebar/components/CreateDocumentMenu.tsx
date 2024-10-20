@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/indent */
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React from 'react'
@@ -6,7 +7,11 @@ function CreateDocumentMenu({
   openModal
 }: {
   openModal: (
-    type: 'createJournal' | 'createLedger' | 'createStatement'
+    type:
+      | 'createJournal'
+      | 'createLedger'
+      | 'createStatement'
+      | 'createPettyCashBook'
   ) => void
 }): React.ReactElement {
   return (
@@ -24,6 +29,7 @@ function CreateDocumentMenu({
           {[
             { name: 'Journal', icon: 'uil:file-alt' },
             { name: 'Ledger', icon: 'tabler:square-letter-t' },
+            { name: 'Petty Cash Book', icon: 'tabler:cash' },
             { name: 'Statement', icon: 'uil:chart-line' }
           ].map((item) => (
             <MenuItem key={item.name}>
@@ -31,10 +37,11 @@ function CreateDocumentMenu({
                 type="button"
                 onClick={() => {
                   openModal(
-                    `create${item.name}` as
+                    `create${item.name.replace(/\s/g, '')}` as
                       | 'createJournal'
                       | 'createLedger'
                       | 'createStatement'
+                      | 'createPettyCashBook'
                   )
                 }}
                 className="group flex w-full items-center gap-2 rounded-lg py-4 px-5 data-[focus]:text-zinc-200 data-[focus]:bg-white/10"

@@ -1,12 +1,17 @@
+/* eslint-disable multiline-ternary */
 import React, { useMemo, useState } from 'react'
 import SidebarDocumentItem from './SidebarDocumentItem'
 import SidebarSectionHeader from './SidebarSectionHeader'
-import { type Document, type IEverything } from '../../../../../typescript/everything.interface'
+import {
+  type Document,
+  type IEverything
+} from '../../../../../typescript/everything.interface'
 
 const ICONS = {
-  ledger: 'tabler:square-letter-j',
-  journal: 'tabler:square-letter-t',
-  statement: 'tabler:square-letter-s'
+  ledger: 'tabler:columns-2',
+  'petty-cash-book': 'tabler:cash',
+  journal: 'tabler:book-2',
+  statement: 'tabler:report'
 }
 
 function SidebarSection({
@@ -15,10 +20,10 @@ function SidebarSection({
   currentDocument,
   setCurrentDocument
 }: {
-  docType: 'ledger' | 'journal' | 'statement'
+  docType: 'ledger' | 'journal' | 'statement' | 'petty-cash-book'
   everything: IEverything
-  currentDocument: Document
-  setCurrentDocument: React.Dispatch<React.SetStateAction<Document>>
+  currentDocument: Document | null
+  setCurrentDocument: React.Dispatch<React.SetStateAction<Document | null>>
 }): React.ReactElement {
   const [expanded, setExpanded] = useState(true)
   const docs = useMemo(
@@ -29,21 +34,39 @@ function SidebarSection({
   return (
     <>
       <SidebarSectionHeader
-        name={docType.charAt(0).toUpperCase() + docType.slice(1) + 's'}
+        name={
+          docType
+            .split('-')
+            .map((word) => word[0].toUpperCase() + word.slice(1))
+            .join(' ') + 's'
+        }
         icon={ICONS[docType]}
         expanded={expanded}
         setExpanded={setExpanded}
       />
-      {docs.length !== 0
-        ? (
+      {docs.length !== 0 ? (
         <div className="pl-[10px]">
           <ul className="w-full mt-4 border-l-2 border-zinc-700">
             {docs.map((item) => (
               <SidebarDocumentItem
                 key={item.id}
-                isActive={currentDocument.id === item.id}
+                isActive={currentDocument?.id === item.id}
                 name={item.name}
-                nature={'nature' in item ? item.nature : ''}
+                nature={
+                  'nature' in item && item.nature !== undefined
+                    ? item.nature
+                    : ''
+                }
+                pageNumber={
+                  'pageNumber' in item && item.pageNumber !== undefined
+                    ? item.pageNumber
+                    : 0
+                }
+                isInGL={
+                  'isInGL' in item && item.isInGL !== undefined
+                    ? item.isInGL
+                    : false
+                }
                 onClick={() => {
                   setCurrentDocument(item)
                 }}
@@ -51,10 +74,16 @@ function SidebarSection({
             ))}
           </ul>
         </div>
-          )
-        : (
-        <p className="text-zinc-500 text-center mt-6">No {docType}s found</p>
-          )}
+      ) : (
+        <p className="text-zinc-500 text-center mt-6">
+          No{' '}
+          {docType
+            .split('-')
+            .map((word) => word[0].toUpperCase() + word.slice(1))
+            .join(' ')}
+          s found
+        </p>
+      )}
     </>
   )
 }

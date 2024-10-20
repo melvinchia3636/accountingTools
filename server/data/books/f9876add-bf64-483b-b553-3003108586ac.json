@@ -217,7 +217,8 @@
             0
           ]
         }
-      ]
+      ],
+      "isInGL": true
     }
   ],
   "questionName": "GEA-2019-2"

@@ -6,19 +6,26 @@ function LedgerHeader({
   columnCount,
   topTextColumnCount,
   headers,
-  setHeaders
+  setHeaders,
+  hasFolio
 }: {
   columnCount: number
   topTextColumnCount: number
   headers: ILedgerHeader[]
   setHeaders: (headers: ILedgerHeader[]) => void
+  hasFolio: boolean
 }): React.ReactElement {
   return (
     <thead>
       {Array.from({ length: topTextColumnCount }).map((_, i) => (
         <tr key={i} className="text-zinc-500 border-2 border-zinc-700">
-          <td className="py-2 print:py-0.5 border-r-2 w-24 border-zinc-700"></td>
-          <td className="py-2 print:py-0.5 border-r-2 border-zinc-700"></td>
+          <th className="py-2 print:py-0.5 border-r-2 w-24 border-zinc-700"></th>
+          <th className="py-2 print:py-0.5 border-r-2 border-zinc-700"></th>
+          {hasFolio && (
+            <th className="py-2 print:py-0.5 border-r-2 w-12 border-zinc-700">
+              {i === 0 ? 'Fol.' : ''}
+            </th>
+          )}
           {Array(columnCount)
             .fill(0)
             .map((_, j) => (
@@ -39,8 +46,13 @@ function LedgerHeader({
                 />
               </th>
             ))}
-          <td className="py-2 print:py-0.5 border-r-2 w-24 border-zinc-700"></td>
-          <td className="py-2 print:py-0.5 border-r-2 border-zinc-700"></td>
+          <th className="py-2 print:py-0.5 border-r-2 w-24 border-zinc-700"></th>
+          <th className="py-2 print:py-0.5 border-r-2 border-zinc-700"></th>
+          {hasFolio && (
+            <th className="py-2 print:py-0.5 border-r-2 w-12 border-zinc-700">
+              {i === 0 ? 'Fol.' : ''}
+            </th>
+          )}
           {Array(columnCount)
             .fill(0)
             .map((_, j) => (

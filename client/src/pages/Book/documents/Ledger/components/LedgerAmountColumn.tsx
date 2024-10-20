@@ -32,7 +32,6 @@ function LedgerAmountColumn({
 }): React.ReactElement {
   return (
     <td
-      key={i}
       className={`py-2 print:py-0.5 p-4 ${
         side === LedgerSide.Debit && i === columnCount - 1
           ? 'border-r-[6px] border-double'

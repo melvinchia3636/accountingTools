@@ -5,7 +5,15 @@ const router = express.Router();
 
 router.post("/:bookId", (req, res) => {
   const { bookId } = req.params;
-  const { name, nature, columnCount, topTextColumnCount } = req.body;
+  const {
+    name,
+    nature,
+    columnCount,
+    topTextColumnCount,
+    pageNumber,
+    hasFolio,
+    isInGL,
+  } = req.body;
 
   if (
     !bookId.match(
@@ -16,9 +24,21 @@ router.post("/:bookId", (req, res) => {
   }
 
   if (
-    !["A", "A-", "L", "L-", "E", "IN", "IN-", "EX", "EX-", "TEMP"].includes(
-      nature
-    )
+    ![
+      "A",
+      "A-",
+      "L",
+      "L-",
+      "E",
+      "E-",
+      "IN",
+      "IN-",
+      "EX",
+      "EX-",
+      "TEMP",
+      "TRADE",
+      "PL",
+    ].includes(nature)
   ) {
     return res.status(400).send("Invalid type");
   }
@@ -40,8 +60,11 @@ router.post("/:bookId", (req, res) => {
     type: "ledger",
     name,
     nature,
+    hasFolio,
     column: columnCount,
     topTextColumnCount,
+    pageNumber,
+    isInGL,
     headers: Array(topTextColumnCount).fill({
       debit: Array(columnCount).fill(""),
       credit: Array(columnCount).fill(""),
@@ -51,12 +74,14 @@ router.post("/:bookId", (req, res) => {
         date: "",
         particular: "",
         side: "debit",
+        ...(hasFolio && { folio: "" }),
         amount: Array(columnCount).fill(0),
       },
       {
         date: "",
         particular: "",
         side: "credit",
+        ...(hasFolio && { folio: "" }),
         amount: Array(columnCount).fill(0),
       },
     ],

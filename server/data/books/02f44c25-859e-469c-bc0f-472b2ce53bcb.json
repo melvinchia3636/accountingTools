@@ -413,7 +413,8 @@
             0
           ]
         }
-      ]
+      ],
+      "isInGL": true
     }
   ],
   "questionName": "GEA-2018-1"

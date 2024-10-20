@@ -21,15 +21,21 @@ function HomeListItem({ item }: { item: IListEntry }): React.ReactElement {
           <p className="text-zinc-500">{item.name}</p>
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-2">
-              <Icon icon="uil:file-alt" className="w-5 h-5" />
+              <Icon icon="tabler:book-2" className="w-5 h-5" />
               <span className="text-zinc-500">{item.docAmount.journal}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon icon="tabler:square-letter-t" className="w-5 h-5" />
+              <Icon icon="tabler:cash" className="w-5 h-5" />
+              <span className="text-zinc-500">
+                {item.docAmount['petty-cash-book']}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Icon icon="tabler:columns-2" className="w-5 h-5" />
               <span className="text-zinc-500">{item.docAmount.ledger}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Icon icon="tabler:chart-line" className="w-5 h-5" />
+              <Icon icon="tabler:report" className="w-5 h-5" />
               <span className="text-zinc-500">{item.docAmount.statement}</span>
             </div>
           </div>

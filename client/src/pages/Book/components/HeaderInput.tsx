@@ -1,27 +1,36 @@
 /* eslint-disable @typescript-eslint/indent */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import { type ILedgerHeader } from '../../../typescript/ledger.interface'
-
-interface IBaseHeaderProps {
-  i: number
-  j: number
-}
 
 interface IHeaderPropsWithSide {
   side: 'debit' | 'credit'
   headers: ILedgerHeader[]
   setHeaders: (headers: ILedgerHeader[]) => void
+  i: number
+  j: number
 }
 
-interface IHeaderPropsWithoutSide {
+interface IHeaderPropsWithoutSideWithJ {
   side?: never
   headers: string[][]
   setHeaders: (headers: string[][]) => void
+  i: number
+  j: number
 }
 
-type HeaderProps = (IHeaderPropsWithSide | IHeaderPropsWithoutSide) &
-  IBaseHeaderProps
+interface IHeaderPropsWithoutSideWithoutJ {
+  side?: never
+  headers: string[]
+  setHeaders: (headers: string[]) => void
+  i: number
+  j?: never
+}
+
+type HeaderProps =
+  | IHeaderPropsWithSide
+  | IHeaderPropsWithoutSideWithoutJ
+  | IHeaderPropsWithoutSideWithJ
 
 function HeaderInput({
   headers,
@@ -30,39 +39,37 @@ function HeaderInput({
   j,
   side
 }: HeaderProps): React.ReactElement {
-  const ref = useRef<HTMLTextAreaElement>(null)
-
-  useEffect(() => {
-    if (ref.current) {
-      ref.current.style.height = '1px'
-      ref.current.style.height = `${ref.current.scrollHeight}px`
-    }
-  }, [ref.current])
-
   return (
-    <textarea
-      ref={ref}
-      onChange={(e) => {
+    <div
+      contentEditable
+      onBlur={(e) => {
+        const target = e.target as HTMLDivElement
         if (side !== undefined) {
           const newHeaders = [...headers]
-          headers[i][side][j] = e.target.value
+          headers[i][side][j] = target.textContent ?? ''
           setHeaders(newHeaders)
         } else if (side === undefined) {
-          const newHeaders = [...headers]
-          newHeaders[i][j] = e.target.value
-          setHeaders(newHeaders)
+          if (j) {
+            const newHeaders = [...headers]
+            newHeaders[i][j] = target.textContent ?? ''
+            setHeaders(newHeaders)
+          } else if (j === undefined) {
+            const newHeaders = [...headers]
+            newHeaders[i] = target.textContent ?? ''
+            setHeaders(newHeaders)
+          }
         }
-      }}
-      onKeyUp={(e) => {
-        ;(e.target as HTMLTextAreaElement).style.height = '1px'
-        ;(e.target as HTMLTextAreaElement).style.height = `${
-          (e.target as HTMLTextAreaElement).scrollHeight
-        }px`
+        target.style.height = 'auto'
       }}
       id={`doc-header-${i}-${j}`}
-      value={side ? headers[i][side][j] : headers[i][j]}
-      className="w-full bg-transparent resize-none text-center"
-    />
+      className="w-full h-max px-2 whitespace-pre-wrap"
+    >
+      {side
+        ? headers[i][side][j]
+        : j === undefined
+        ? headers[i]
+        : headers[i][j]}
+    </div>
   )
 }
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CreateJournalModal from '../../documents/Journal/CreateJournalModal'
 import CreateLedgerModal from '../../documents/Ledger/CreateLedgerModal'
 import CreateStatementModal from '../../documents/Statement/CreateStatementModal'
+import CreatePettyCashBookModal from '../../documents/PettyCashBook/CreatePettyCashBookModal'
 import DeleteBookConfirmationModal from '../../modals/DeleteBookConfirmationModal'
 import SidebarSection from './components/SidebarSection'
 import CreateDocumentMenu from './components/CreateDocumentMenu'
@@ -21,8 +22,8 @@ function Sidebar({
   saved
 }: {
   everything: IEverything
-  currentDocument: Document
-  setCurrentDocument: React.Dispatch<React.SetStateAction<Document>>
+  currentDocument: Document | null
+  setCurrentDocument: React.Dispatch<React.SetStateAction<Document | null>>
   reloadEverything: () => void
   openModifyBookModal: () => void
   saved: boolean
@@ -31,6 +32,7 @@ function Sidebar({
     createJournal: false,
     createLedger: false,
     createStatement: false,
+    createPettyCashBook: false,
     deleteBook: false
   })
 
@@ -45,15 +47,17 @@ function Sidebar({
           }}
         />
         <div className="w-full flex-1 overflow-y-auto flex flex-col">
-          {(['journal', 'ledger', 'statement'] as const).map((docType) => (
-            <SidebarSection
-              key={docType}
-              docType={docType}
-              everything={everything}
-              currentDocument={currentDocument}
-              setCurrentDocument={setCurrentDocument}
-            />
-          ))}
+          {(['journal', 'petty-cash-book', 'ledger', 'statement'] as const).map(
+            (docType) => (
+              <SidebarSection
+                key={docType}
+                docType={docType}
+                everything={everything}
+                currentDocument={currentDocument}
+                setCurrentDocument={setCurrentDocument}
+              />
+            )
+          )}
         </div>
         <CreateDocumentMenu
           openModal={(type: keyof typeof modalsState) => {
@@ -64,7 +68,8 @@ function Sidebar({
       {Object.entries({
         createJournal: CreateJournalModal,
         createLedger: CreateLedgerModal,
-        createStatement: CreateStatementModal
+        createStatement: CreateStatementModal,
+        createPettyCashBook: CreatePettyCashBookModal
       } as const).map(([key, Modal]) => (
         <Modal
           key={key}

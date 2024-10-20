@@ -14,12 +14,17 @@ import { Icon } from '@iconify/react/dist/iconify.js'
 import { toast } from 'react-toastify'
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react'
 import UnsaveChangeLeaveConfirmationModal from './modals/UnsaveChangeLeaveConfirmationModal'
-import { type IEverything } from '../../typescript/everything.interface'
+import {
+  type Document,
+  type IEverything
+} from '../../typescript/everything.interface'
 import { type IStatement } from '../../typescript/statement.interface'
 import { type ILedger } from '../../typescript/ledger.interface'
 import ModifyBookModal from './modals/ModifyBookModal'
 import DeleteDocumentConfirmationModal from './modals/DeleteDocumentConfirmationModal'
 import { useReactToPrint } from 'react-to-print'
+import PettyCashBook from './documents/PettyCashBook'
+import { type IPCB } from '../../typescript/pcb.interface'
 
 declare global {
   interface Array<T> {
@@ -35,7 +40,7 @@ function Book(): React.ReactElement {
   const [everything, setEverything] = useState<IEverything | 'loading'>(
     'loading'
   )
-  const [data, setData] = useState<any>(null)
+  const [data, setData] = useState<Document | null>(null)
   const { id } = useParams()
   const navigate = useNavigate()
   const [modifyBookModalOpenType, setModifyBookModalOpenType] = useState<
@@ -46,33 +51,12 @@ function Book(): React.ReactElement {
   const [firstFetch, setFirstFetch] = useState(true)
   const docRef = useRef<HTMLDivElement>(null)
 
-  const onBeforePrint = (): void => {
-    const header = document.querySelectorAll('[id^="doc-header"]')
-    header.forEach((item) => {
-      ;(item as HTMLDivElement).style.fontSize = '0.75rem'
-      ;(item as HTMLDivElement).style.lineHeight = '1rem'
-      ;(item as HTMLDivElement).style.height = '1px'
-      ;(item as HTMLDivElement).style.height = `${
-        (item as HTMLDivElement).scrollHeight
-      }px`
-    })
-  }
-
-  const onAfterPrint = (): void => {
-    const header = document.querySelectorAll('[id^="doc-header"]')
-    header.forEach((item) => {
-      ;(item as HTMLDivElement).style.fontSize = ''
-      ;(item as HTMLDivElement).style.lineHeight = ''
-      ;(item as HTMLDivElement).style.height = '1px'
-      ;(item as HTMLDivElement).style.height = `${
-        (item as HTMLDivElement).scrollHeight
-      }px`
-    })
-  }
-
   const reactToPrintFn = useReactToPrint({
     contentRef: docRef,
-    onAfterPrint
+    documentTitle:
+      typeof everything !== 'string' && data !== null
+        ? `${everything.code} - ${everything.entityName} - ${data.name}`
+        : ''
   })
 
   function fetchData(): void {
@@ -155,16 +139,18 @@ function Book(): React.ReactElement {
 
   return (
     <>
-      <Sidebar
-        everything={everything}
-        currentDocument={data}
-        setCurrentDocument={setData}
-        reloadEverything={fetchData}
-        openModifyBookModal={() => {
-          setModifyBookModalOpenType('update')
-        }}
-        saved={saved}
-      />
+      {
+        <Sidebar
+          everything={everything}
+          currentDocument={data}
+          setCurrentDocument={setData}
+          reloadEverything={fetchData}
+          openModifyBookModal={() => {
+            setModifyBookModalOpenType('update')
+          }}
+          saved={saved}
+        />
+      }
       <div className="w-full h-full overflow-y-auto px-8 flex flex-col relative">
         <div className="absolute right-8 top-8 flex items-center gap-2">
           <a
@@ -187,17 +173,7 @@ function Book(): React.ReactElement {
               >
                 <MenuItem>
                   <button
-                    onClick={() => {}}
-                    className="group flex w-full items-center gap-2 rounded-lg py-4 px-5 data-[focus]:text-zinc-200 data-[focus]:bg-white/10"
-                  >
-                    <Icon icon="uil:edit" className="w-5 h-5" />
-                    Edit
-                  </button>
-                </MenuItem>
-                <MenuItem>
-                  <button
                     onClick={() => {
-                      onBeforePrint()
                       reactToPrintFn()
                     }}
                     className="group flex w-full items-center gap-2 rounded-lg py-4 px-5 data-[focus]:text-zinc-200 data-[focus]:bg-white/10"
@@ -251,8 +227,11 @@ function Book(): React.ReactElement {
                     data={data.entries}
                     headers={data.headers}
                     name={data.name}
+                    hasFolio={data.hasFolio}
+                    isInGL={data.isInGL}
+                    pageNumber={data.pageNumber}
                     companyName={everything.entityName}
-                    columnCount={data.column}
+                    columnCount={data.columnCount}
                     topTextColumnCount={data.topTextColumnCount}
                     setData={(newData) => {
                       const newEverything = { ...everything }
@@ -347,6 +326,40 @@ function Book(): React.ReactElement {
                     }}
                   />
                 )
+              case 'petty-cash-book':
+                return (
+                  <PettyCashBook
+                    docRef={docRef}
+                    key={`doc-${data.id}`}
+                    data={data.entries}
+                    headers={data.headers}
+                    companyName={everything.entityName}
+                    name={data.name}
+                    pageNumber={data.pageNumber}
+                    analysisColumnCount={data.analysisColumnCount}
+                    setData={(newData) => {
+                      const newEverything = { ...everything }
+
+                      const target = newEverything.data.find(
+                        (item) => item.id === data.id
+                      )
+                      if (target !== undefined) {
+                        target.entries = newData
+                      }
+                      setEverything(newEverything)
+                    }}
+                    setHeaders={(newHeaders) => {
+                      const newEverything = { ...everything }
+                      const target = newEverything.data.find(
+                        (item) => item.id === data.id
+                      ) as IPCB
+                      if (target !== undefined) {
+                        target.headers = newHeaders
+                      }
+                      setEverything(newEverything)
+                    }}
+                  />
+                )
               default:
                 return <h1>Default</h1>
             }
@@ -378,7 +391,7 @@ function Book(): React.ReactElement {
         onClose={() => {
           setDeleteDocumentModalOpen(false)
         }}
-        documentID={data?.id}
+        documentID={data?.id ?? 0}
         refreshData={fetchData}
       />
       <UnsaveChangeLeaveConfirmationModal

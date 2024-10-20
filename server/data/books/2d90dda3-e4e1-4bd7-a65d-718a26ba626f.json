@@ -1,0 +1,843 @@
+{
+  "code": "UEB-2021-3",
+  "entityName": "Chin Yang",
+  "topic": "Petty Cash Book",
+  "data": [
+    {
+      "id": 1,
+      "type": "petty-cash-book",
+      "pageNumber": 0,
+      "analysisColumnCount": 3,
+      "headers": [
+        "Postage and Stationery",
+        "Motor Expenses",
+        "General Expenses"
+      ],
+      "name": "Petty Cash Book",
+      "entries": [
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "2021",
+          "particular": "",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 32,
+          "folio": "",
+          "date": "Sep 1",
+          "particular": "Balance b/d (RM400 - RM368)",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 368,
+          "folio": "CB01",
+          "date": "1",
+          "particular": "Bank - Reimbursement",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "5",
+          "particular": "Ball point pens, erasers and marker pens",
+          "voucher": "1",
+          "payments": 38,
+          "analysis": [
+            38,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "8",
+          "particular": "Petrol for delivery van",
+          "voucher": "2",
+          "payments": 95,
+          "analysis": [
+            0,
+            95,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "10",
+          "particular": "Office cleaning",
+          "voucher": "3",
+          "payments": 16,
+          "analysis": [
+            0,
+            0,
+            16
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "13",
+          "particular": "Postage",
+          "voucher": "4",
+          "payments": 40,
+          "analysis": [
+            40,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "15",
+          "particular": "Motor car cleaning",
+          "voucher": "5",
+          "payments": 64,
+          "analysis": [
+            0,
+            64,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "17",
+          "particular": "Drawings",
+          "voucher": "6",
+          "payments": 50,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 50,
+          "ledgerFolio": "GL04"
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "18",
+          "particular": "Courier charges for parcel",
+          "voucher": "7",
+          "payments": 37,
+          "analysis": [
+            37,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "22",
+          "particular": "Duplication of office key",
+          "voucher": "8",
+          "payments": 22,
+          "analysis": [
+            0,
+            0,
+            22
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "27",
+          "particular": "Carriage inwards",
+          "voucher": "9",
+          "payments": 36,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 36,
+          "ledgerFolio": "GL05"
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "",
+          "particular": "TOTAL_PCB",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "30",
+          "particular": "Balance c/d",
+          "voucher": "",
+          "payments": 2,
+          "analysis": [
+            "GL01",
+            "GL02",
+            "GL03"
+          ],
+          "analysisIsText": [
+            true,
+            true,
+            true
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "",
+          "particular": "TOTAL_RP",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "2021",
+          "particular": "",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 2,
+          "folio": "",
+          "date": "Oct 1",
+          "particular": "Balance b/d",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 398,
+          "folio": "CB01",
+          "date": "1",
+          "particular": "Bank - Reimbursement",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        },
+        {
+          "receipts": 0,
+          "folio": "",
+          "date": "",
+          "particular": "",
+          "voucher": "",
+          "payments": 0,
+          "analysis": [
+            0,
+            0,
+            0
+          ],
+          "analysisIsText": [
+            false,
+            false,
+            false
+          ],
+          "ledgerAccounts": 0,
+          "ledgerFolio": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ledger",
+      "name": "Cash Book (Bank Column Only)",
+      "nature": "A",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 1,
+      "isInGL": false,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 1",
+          "particular": "Petty Cash Book",
+          "side": "credit",
+          "amount": [
+            368
+          ]
+        },
+        {
+          "date": "Oct 1",
+          "particular": "Petty Cash Book",
+          "side": "credit",
+          "amount": [
+            398
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ledger",
+      "name": "Postage and Stationery",
+      "nature": "EX",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 1,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Petty Cash Book",
+          "side": "debit",
+          "amount": [
+            115
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ledger",
+      "name": "Motor Expenses",
+      "nature": "EX",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 2,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Petty Cash Book",
+          "side": "debit",
+          "amount": [
+            159
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ledger",
+      "name": "General Expenses",
+      "nature": "EX",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 3,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 30",
+          "particular": "Petty Cash Book",
+          "side": "debit",
+          "amount": [
+            38
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ledger",
+      "name": "Drawings",
+      "nature": "E-",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 4,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            ""
+          ],
+          "credit": [
+            ""
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 17",
+          "particular": "Petty Cash Book",
+          "side": "debit",
+          "amount": [
+            50
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "type": "ledger",
+      "name": "Carriage Inwards",
+      "nature": "EX",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 5,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2021",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Sep 27",
+          "particular": "Petty Cash Book",
+          "side": "debit",
+          "amount": [
+            36
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}
