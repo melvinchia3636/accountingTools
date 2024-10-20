@@ -324,6 +324,20 @@ function Book(): React.ReactElement {
 
                       setEverything(newEverything)
                     }}
+                    addRow={(rowIndex: number) => {
+                      const newEverything = { ...everything }
+                      const target = newEverything.data.find(
+                        (item) => item.id === data.id
+                      ) as IStatement
+
+                      target.entries.insert(rowIndex, {
+                        particular: '',
+                        amount: Array(target.columnCount).fill(0),
+                        dashed: Array(target.columnCount).fill(false),
+                        underline: Array(target.columnCount).fill(false)
+                      })
+                      setEverything(newEverything)
+                    }}
                   />
                 )
               case 'petty-cash-book':

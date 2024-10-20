@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/indent */
 /* eslint-disable @typescript-eslint/strict-boolean-expressions */
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { type ILedgerHeader } from '../../../typescript/ledger.interface'
 
 interface IHeaderPropsWithSide {
@@ -39,8 +39,21 @@ function HeaderInput({
   j,
   side
 }: HeaderProps): React.ReactElement {
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.innerHTML = side
+        ? headers[i][side][j]
+        : j === undefined
+        ? headers[i]
+        : headers[i][j]
+    }
+  }, [headers, i, j, side])
+
   return (
     <div
+      ref={ref}
       contentEditable
       onBlur={(e) => {
         const target = e.target as HTMLDivElement
@@ -49,7 +62,7 @@ function HeaderInput({
           headers[i][side][j] = target.textContent ?? ''
           setHeaders(newHeaders)
         } else if (side === undefined) {
-          if (j) {
+          if (j !== undefined) {
             const newHeaders = [...headers]
             newHeaders[i][j] = target.textContent ?? ''
             setHeaders(newHeaders)
@@ -63,13 +76,7 @@ function HeaderInput({
       }}
       id={`doc-header-${i}-${j}`}
       className="w-full h-max px-2 whitespace-pre-wrap"
-    >
-      {side
-        ? headers[i][side][j]
-        : j === undefined
-        ? headers[i]
-        : headers[i][j]}
-    </div>
+    ></div>
   )
 }
 

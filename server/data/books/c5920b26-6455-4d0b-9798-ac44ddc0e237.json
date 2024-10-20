@@ -1,0 +1,991 @@
+{
+  "code": "CHKLB-2021-3",
+  "entityName": "Evergreen Sdn Bhd",
+  "topic": "Company Account",
+  "questionName": "CHKLB-2021-3",
+  "data": [
+    {
+      "id": 1,
+      "type": "statement",
+      "name": "Income Statement (Extract)",
+      "subtitle": "For The Year Ended 31 December 2020",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Gross Profit",
+          "amount": [
+            0,
+            78000
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Other Income",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Rental Income",
+          "amount": [
+            5000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Investment Income",
+          "amount": [
+            15000,
+            20000
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            98000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Expenses",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Loan Notes Interest (RM50,000 x 8%)",
+          "amount": [
+            4000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Wages and Salaries (RM21,000 - RM4,600)",
+          "amount": [
+            16400,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Administrative Expenses",
+          "amount": [
+            18000,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Increase in Allowance for Doubtful Debts (RM1,800 - RM1,500)",
+          "amount": [
+            300,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Repairs Expenses",
+          "amount": [
+            4600,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Depreciation of Motor Vehicles (RM(22,000 - 8,000) x 10%)",
+          "amount": [
+            1400,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Loss On Investment (RM200,000 - RM180,000)",
+          "amount": [
+            20000,
+            0
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "underline": [
+            false,
+            false
+          ],
+          "tabIn": true
+        },
+        {
+          "particular": "Audit Fees",
+          "amount": [
+            8500,
+            -73200
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Profit for the year",
+          "amount": [
+            0,
+            24800
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Statement of Changes in Equity",
+      "subtitle": "For The Year Ended 31 December 2020",
+      "columnCount": 6,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "Share Capital",
+          "Staff Welfare Fund",
+          "Assets Replacement Reserve",
+          "General Reserve",
+          "Retained Profits",
+          "Total"
+        ],
+        [
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Balance as at 1 January 2020",
+          "amount": [
+            320000,
+            8000,
+            0,
+            16000,
+            58100,
+            402100
+          ],
+          "dashed": [
+            false,
+            false,
+            true,
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Profit for the year",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            24800,
+            24800
+          ],
+          "underline": false,
+          "dashed": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Transfer to General Reserve",
+          "amount": [
+            0,
+            0,
+            0,
+            9000,
+            -9000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            true,
+            true,
+            true,
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Transfer to Assets Replacement Reserve",
+          "amount": [
+            0,
+            0,
+            10000,
+            0,
+            -10000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            true,
+            true,
+            false,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Transfer to Staff Welfare Fund",
+          "amount": [
+            0,
+            4000,
+            0,
+            0,
+            -4000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            true,
+            false,
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "particular": "Dividends Paid",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            -16000,
+            -16000
+          ],
+          "underline": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "dashed": [
+            true,
+            true,
+            true,
+            true,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Balance as at 31 December 2020",
+          "amount": [
+            320000,
+            12000,
+            10000,
+            25000,
+            43900,
+            410900
+          ],
+          "underline": [
+            "double",
+            "double",
+            "double",
+            "double",
+            "double",
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "statement",
+      "name": "Statement of Financial Position",
+      "subtitle": "As At 31 December 2020",
+      "columnCount": 3,
+      "topTextColumnCount": 2,
+      "headers": [
+        [
+          "RM",
+          "RM",
+          "RM"
+        ],
+        [
+          "Cost",
+          "Accumulated Depreciation",
+          "Carrying Amount"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Non-current Assets",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Freehold Premises",
+          "amount": [
+            250000,
+            0,
+            250000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            true,
+            false
+          ]
+        },
+        {
+          "particular": "Motor Vehicles",
+          "amount": [
+            22000,
+            -9400,
+            12600
+          ],
+          "underline": [
+            true,
+            true,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            272000,
+            -9400,
+            262600
+          ],
+          "underline": [
+            "double",
+            "double",
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Investment (quoted, at market vlaue, cost RM200,000)",
+          "amount": [
+            0,
+            0,
+            180000
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            442600
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Current Assets",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Inventory",
+          "amount": [
+            0,
+            12000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accounts Receivable",
+          "amount": [
+            10600,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Allowance for Doubtful Debts",
+          "amount": [
+            -1800,
+            8800,
+            0
+          ],
+          "underline": [
+            true,
+            false,
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accrued Income from Investment (RM15,000 - RM9,000)",
+          "amount": [
+            0,
+            6000,
+            0
+          ],
+          "underline": [
+            false,
+            false,
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Bank",
+          "amount": [
+            0,
+            26600,
+            53400
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "underline": [
+            false,
+            true,
+            true
+          ]
+        },
+        {
+          "particular": "Total Assets",
+          "amount": [
+            0,
+            0,
+            496000
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Equity",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Ordinary Share Capital",
+          "amount": [
+            0,
+            0,
+            200000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "6% Preferred Share Capital",
+          "amount": [
+            0,
+            0,
+            120000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Staff Welfare Fund",
+          "amount": [
+            0,
+            0,
+            12000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Assets Replacement Reserve",
+          "amount": [
+            0,
+            0,
+            10000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "General Reserve",
+          "amount": [
+            0,
+            0,
+            25000
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Retained Profits",
+          "amount": [
+            0,
+            0,
+            43900
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Equity",
+          "amount": [
+            0,
+            0,
+            410900
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Non-current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "8% Loan Notes",
+          "amount": [
+            0,
+            50000,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": " ",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "Current Liabilities",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false,
+          "bold": false,
+          "particularUnderline": true
+        },
+        {
+          "particular": "Accounts Payable",
+          "amount": [
+            25600,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accrued Audit Fees",
+          "amount": [
+            8500,
+            0,
+            0
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Accrued Interest on Loan Notes",
+          "amount": [
+            1000,
+            35100,
+            0
+          ],
+          "underline": [
+            true,
+            true,
+            false
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Liabilities",
+          "amount": [
+            0,
+            0,
+            85100
+          ],
+          "underline": [
+            false,
+            false,
+            true
+          ],
+          "bold": true,
+          "particularUnderline": false,
+          "dashed": [
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Total Equity and Liabilities",
+          "amount": [
+            0,
+            0,
+            496000
+          ],
+          "underline": [
+            false,
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "2021",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "May 1",
+          "particular": "Bank (RM1 x 120,000)",
+          "debit": 120000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Application and Allotment",
+          "debit": 0,
+          "credit": 120000
+        },
+        {
+          "isNew": false,
+          "date": "15",
+          "particular": "Application and Allotment (RM1 x 80,000)",
+          "debit": 80000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Ordinary Share Capital",
+          "debit": 0,
+          "credit": 80000
+        },
+        {
+          "isNew": false,
+          "date": "15",
+          "particular": "Application and Allotment",
+          "debit": 40000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank - Refunded",
+          "debit": 0,
+          "credit": 40000
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    }
+  ]
+}
