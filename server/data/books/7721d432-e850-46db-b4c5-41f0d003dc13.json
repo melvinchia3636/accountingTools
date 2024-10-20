@@ -1,0 +1,308 @@
+{
+  "code": "UEB-2019-1",
+  "entityName": "Zhen Xi Sdn Bhd",
+  "topic": "Bank Reconciliation Statement",
+  "data": [
+    {
+      "id": 1,
+      "type": "ledger",
+      "name": "Adjusted Cash Book (Bank Column)",
+      "nature": "A",
+      "hasFolio": false,
+      "column": 1,
+      "topTextColumnCount": 1,
+      "pageNumber": 0,
+      "isInGL": true,
+      "headers": [
+        {
+          "debit": [
+            "RM"
+          ],
+          "credit": [
+            "RM"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            130
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Dividends Income - Yue Mai Bhd",
+          "side": "debit",
+          "amount": [
+            1150
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Interest on Fixed Deposit",
+          "side": "debit",
+          "amount": [
+            500
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Shi Feng - Credit Transfer",
+          "side": "debit",
+          "amount": [
+            1250
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Balance b/d",
+          "side": "debit",
+          "amount": [
+            550
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "debit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "2019",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "Jul 1",
+          "particular": "Stamp Duties",
+          "side": "credit",
+          "amount": [
+            75
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Bank Charges",
+          "side": "credit",
+          "amount": [
+            55
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Mu Thong Trading - Cheque Dishonoured",
+          "side": "credit",
+          "amount": [
+            1000
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Insurance Expenses - Standing Order",
+          "side": "credit",
+          "amount": [
+            1350
+          ]
+        },
+        {
+          "date": "1",
+          "particular": "Balance c/d",
+          "side": "credit",
+          "amount": [
+            550
+          ]
+        },
+        {
+          "date": "",
+          "particular": "TOTAL",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        },
+        {
+          "date": "",
+          "particular": "",
+          "side": "credit",
+          "amount": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "statement",
+      "name": "Bank Reconciliation Statement",
+      "subtitle": "As At 30 June 2019",
+      "columnCount": 2,
+      "topTextColumnCount": 1,
+      "headers": [
+        [
+          "",
+          "RM"
+        ]
+      ],
+      "entries": [
+        {
+          "particular": "Balance as per Adjusted Cash Book",
+          "amount": [
+            0,
+            550
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "Add: Unpresented Cheque",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        },
+        {
+          "particular": "- Ka An Bhd (Cheque No. 100124)",
+          "amount": [
+            6700,
+            0
+          ],
+          "underline": false,
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "- Tong Xin Trading (Cheque No. 100125)",
+          "amount": [
+            14450,
+            21150
+          ],
+          "underline": [
+            true,
+            true
+          ],
+          "tabIn": true,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            21700
+          ],
+          "underline": false,
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Less: Uncredited Deposit - Cheng Sen Bhd",
+          "amount": [
+            0,
+            -5800
+          ],
+          "underline": [
+            false,
+            true
+          ],
+          "dashed": [
+            false,
+            false
+          ]
+        },
+        {
+          "particular": "Balance as per Bank Statement",
+          "amount": [
+            0,
+            15900
+          ],
+          "underline": [
+            false,
+            "double"
+          ],
+          "dashed": [
+            false,
+            false
+          ],
+          "bold": true,
+          "particularUnderline": false
+        },
+        {
+          "particular": "",
+          "amount": [
+            0,
+            0
+          ],
+          "underline": false
+        }
+      ]
+    }
+  ]
+}
