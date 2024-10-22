@@ -36,6 +36,12 @@ function Journal({
               <th className="py-2 w-28 border-r-2 border-zinc-700">Debit</th>
               <th className="py-2 w-28  border-r-2 border-zinc-700">Credit</th>
             </tr>
+            <tr className="text-zinc-500 border-2 border-zinc-700">
+              <th className="py-2 border-r-2 w-24 border-zinc-700"></th>
+              <th className="py-2 border-r-2 border-zinc-700"></th>
+              <th className="py-2 w-28 border-r-2 border-zinc-700">RM</th>
+              <th className="py-2 w-28  border-r-2 border-zinc-700">RM</th>
+            </tr>
           </thead>
           <tbody>
             {data.map((item, index) => (

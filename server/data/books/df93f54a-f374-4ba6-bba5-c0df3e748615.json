@@ -1,0 +1,239 @@
+{
+  "code": "CHKLB-2021-4",
+  "entityName": "Ji Min",
+  "topic": "Bills of Exchange",
+  "questionName": "CHKLB-2021-4",
+  "data": [
+    {
+      "id": 1,
+      "type": "journal",
+      "name": "General Journal",
+      "entries": [
+        {
+          "isNew": false,
+          "date": "2021",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "Jan 3",
+          "particular": "Bills Receivable (Bill 1, Feb 3)",
+          "debit": 2200,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill 2, Mar 3)",
+          "debit": 3000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Ho Yeon",
+          "debit": 0,
+          "credit": 5200
+        },
+        {
+          "isNew": false,
+          "date": "4",
+          "particular": "Bank - Bill 1 Discounted",
+          "debit": 2000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Discounting Charges",
+          "debit": 200,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill 1)",
+          "debit": 0,
+          "credit": 2200
+        },
+        {
+          "isNew": false,
+          "date": "6",
+          "particular": "Bills Receivable (Bill 3, 15 Mar)",
+          "debit": 1700,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Hae Soo",
+          "debit": 0,
+          "credit": 1700
+        },
+        {
+          "isNew": false,
+          "date": "12",
+          "particular": "Gong Li - Bill 2 Negotiated",
+          "debit": 3100,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill 2)",
+          "debit": 0,
+          "credit": 3000
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Discounts Received",
+          "debit": 0,
+          "credit": 100
+        },
+        {
+          "isNew": false,
+          "date": "22",
+          "particular": "Yumi",
+          "debit": 4000,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 0,
+          "credit": 500
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Payable (Bill 4, 22 Mar)",
+          "debit": 0,
+          "credit": 3500
+        },
+        {
+          "isNew": false,
+          "date": "Feb 3",
+          "particular": "Ho Yeon - Bill 1 Discounted Dishonoured",
+          "debit": 2200,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank",
+          "debit": 0,
+          "credit": 2200
+        },
+        {
+          "isNew": false,
+          "date": "3",
+          "particular": "Ho Yeon",
+          "debit": 50,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank - Noting Charges",
+          "debit": 0,
+          "credit": 50
+        },
+        {
+          "isNew": false,
+          "date": "3",
+          "particular": "Bills Receivable (Bill 5, 3 Apr)",
+          "debit": 2370,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Ho Yeon",
+          "debit": 0,
+          "credit": 2250
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Interest Income",
+          "debit": 0,
+          "credit": 120
+        },
+        {
+          "isNew": false,
+          "date": "Mar 15",
+          "particular": "Hae Soo - BIll 3 Dishonoured",
+          "debit": 1700,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill 3)",
+          "debit": 0,
+          "credit": 1700
+        },
+        {
+          "isNew": false,
+          "date": "15",
+          "particular": "Bank",
+          "debit": 3700,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Hae Soo",
+          "debit": 0,
+          "credit": 3700
+        },
+        {
+          "isNew": false,
+          "date": "22",
+          "particular": "Bills Payable (Bill 4)",
+          "debit": 3500,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bank - Bill 4 Matured",
+          "debit": 0,
+          "credit": 3500
+        },
+        {
+          "isNew": false,
+          "date": "24",
+          "particular": "Bank - Bill 5 Retired",
+          "debit": 2300,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Discounts Allowed",
+          "debit": 70,
+          "credit": 0
+        },
+        {
+          "isNew": false,
+          "date": "",
+          "particular": "Bills Receivable (Bill 5)",
+          "debit": 0,
+          "credit": 2370
+        },
+        {
+          "isNew": true,
+          "date": "",
+          "particular": "",
+          "debit": 0,
+          "credit": 0
+        }
+      ]
+    }
+  ]
+}
